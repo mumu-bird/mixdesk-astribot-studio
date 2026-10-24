@@ -49,6 +49,11 @@ class SamplerDeck {
     this.owner=owner; this.engine=owner.engine; this.context=owner.context; this.id=id;this.tails=new Set();
     this.settings=samplerSettings({target:id<2?id:id-2});
     this.output=this.context.createGain(); this.output.gain.value=this.settings.volume; this.output.connect(owner.output);
+    // Timeline one-shots must not share the live pad group's voice state. The
+    // dedicated bus still follows the sampler's master volume, while making
+    // every prelaid Kick/Clap/Hat hit independent from group replacement,
+    // hold, loop and toggle operations.
+    this.timelineOutput=this.context.createGain(); this.timelineOutput.gain.value=1; this.timelineOutput.connect(this.output);
     this.groups=Array.from({length:4},()=>{const level=this.context.createGain();level.connect(this.output);return {level,selected:0,active:null,pending:null,generation:0,timer:null,held:new Map()};});
     this.slots=Array.from({length:16},(_,i)=>this.prepareSlot(i,{config:this.defaultConfig(i)}));
   }
@@ -186,7 +191,7 @@ class SamplerDeck {
     source.buffer = slot.buffer;
     source.playbackRate.value = rate;
     gate.gain.value = slot.gain;
-    source.connect(gate).connect(group.level);
+    source.connect(gate).connect(this.timelineOutput);
     let disposed = false;
     const dispose = () => {
       if (disposed) return;
