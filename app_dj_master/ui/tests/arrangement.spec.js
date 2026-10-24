@@ -320,6 +320,30 @@ test('audition schedules mapped filter, bass and channel-level operations on the
   await page.getByRole('button', { name: /停止试听/ }).click();
 });
 
+test('audition applies mapped FX, tempo, pitch and sampler controls on the audio clock', async ({ page }) => {
+  await page.goto('/');
+  await resetDraft(page);
+  await page.getByRole('button', { name: '加载一分钟演示' }).click();
+  await expect(page.getByRole('button', { name: /试听混音/ })).toBeEnabled({ timeout: 15000 });
+  for (const id of ['fx-1', 'tempo-rate', 'pitch-shift', 'sampler-kick']) {
+    await page.locator(`.operation-card[data-operation="${id}"]`).click();
+  }
+  await page.getByRole('button', { name: /试听混音/ }).click();
+  await expect(page.getByText('正在试听')).toBeVisible();
+  const preview = await page.evaluate(() => window.__djMaster.state.previewEffects.map(item => ({
+    id: item.operation.id, target: item.target, execution: item.operation.preview,
+  })));
+  expect(preview).toEqual(expect.arrayContaining([
+    { id: 'fx-1', target: 'echo', execution: 'audio-effect' },
+    { id: 'tempo-rate', target: 1.08, execution: 'audio-rate' },
+    { id: 'pitch-shift', target: 1.122462048309373, execution: 'audio-pitch' },
+    { id: 'sampler-kick', target: 'kick', execution: 'audio-sample' },
+  ]));
+  const samplerScheduled = await page.evaluate(() => window.__djMaster.engine.sampler.decks[0].slots[0].startedAt >= window.__djMaster.state.startedAt);
+  expect(samplerScheduled).toBeTruthy();
+  await page.getByRole('button', { name: /停止试听/ }).click();
+});
+
 test('audition audibly applies and restores bass cut and channel level envelopes', async ({ page }) => {
   await page.goto('/');
   await resetDraft(page);
@@ -369,9 +393,9 @@ test('dragging a mapped DJ control creates an event with verified hardware mappi
   await overlap.focus(); await overlap.press('Home');
 
   const operation = page.locator('[data-operation="loop-4"]').first();
-  const lane = page.locator('[data-drop-lane="dj"]');
+  const lane = page.locator('[data-drop-lane="djfx"]');
   const box = await lane.boundingBox();
-  await watchDropPreview(page, 'dj');
+  await watchDropPreview(page, 'djfx');
   await operation.dragTo(lane, { targetPosition: { x: box.width * 0.28, y: box.height / 2 } });
   const preview = await page.evaluate(() => window.__djDropPreview);
   expect(preview.operation).toBe('loop-4');
@@ -394,6 +418,22 @@ test('dragging a mapped DJ control creates an event with verified hardware mappi
   await expect(page.locator('.event-clip[data-operation="loop-4"]')).toHaveCount(1);
   await page.locator('.event-clip[data-operation="loop-4"]').click();
   await expect(page.locator('.operation-parameters')).toContainText('"beats":8');
+});
+
+test('DJ operations and audio effects share one timeline lane while keeping source colors', async ({ page }) => {
+  await page.goto('/');
+  await resetDraft(page);
+  await addTrack(page, 0, 'Unified Lane A.wav', 440);
+  await addTrack(page, 1, 'Unified Lane B.wav', 660);
+  const lane = page.locator('[data-drop-lane="djfx"]');
+  await expect(lane).toHaveCount(1);
+  await page.locator('.operation-card[data-operation="loop-4"]').click();
+  await page.locator('.operation-card[data-operation="filter-sweep"]').click();
+  await expect(lane.locator('.event-clip[data-operation="loop-4"]')).toHaveCount(1);
+  await expect(lane.locator('.event-clip[data-operation="filter-sweep"]')).toHaveCount(1);
+  await expect(lane.locator('.event-clip.event-dj[data-operation="loop-4"]')).toHaveCount(1);
+  await expect(lane.locator('.event-clip.event-fx[data-operation="filter-sweep"]')).toHaveCount(1);
+  await expect(page.getByText('DJ 操作 / 音效菜单', { exact: true })).toBeVisible();
 });
 
 test('instant controls have fixed-width markers and overlapping controls occupy separate layers', async ({ page }) => {
@@ -429,7 +469,7 @@ test('instant controls use the live timeline width to avoid unnecessary vertical
     if (!response.ok) throw new Error('test draft setup failed');
   });
   await page.reload();
-  const lane = page.locator('[data-drop-lane="dj"]');
+  const lane = page.locator('[data-drop-lane="djfx"]');
   expect((await lane.boundingBox()).width).toBeGreaterThan(1088);
 
   await scrubTo(page, 0.1);
@@ -462,14 +502,14 @@ test('timeline zoom improves long-set precision and drop times stay aligned whil
   });
   await page.reload();
 
-  const lane = page.locator('[data-drop-lane="fx"]');
+  const lane = page.locator('[data-drop-lane="djfx"]');
   const baseWidth = (await lane.boundingBox()).width;
   await page.getByRole('button', { name: '放大时间轴' }).click();
   await expect(page.locator('.timeline-zoom-control > span')).toHaveText('125%');
   const zoomedWidth = (await lane.boundingBox()).width;
   expect(zoomedWidth).toBeGreaterThan(baseWidth);
 
-  await watchDropPreview(page, 'fx');
+  await watchDropPreview(page, 'djfx');
   await page.locator('.operation-card[data-operation="filter-sweep"]').dragTo(lane, { targetPosition: { x: zoomedWidth * 0.7, y: 18 } });
   const preview = await page.evaluate(() => window.__djDropPreview);
   expect(preview.operation).toBe('filter-sweep');
@@ -490,10 +530,10 @@ test('duration controls resize on the timeline, move cleanly, and persist after 
   const overlap = page.getByRole('slider', { name: '转场重叠时长' });
   await overlap.focus(); await overlap.press('Home');
 
-  const lane = page.locator('[data-drop-lane="fx"]');
+  const lane = page.locator('[data-drop-lane="djfx"]');
   await expect(page.locator('.operation-card[data-operation="filter-sweep"] .operation-timing')).toContainText('2.0s');
   const laneBox = await lane.boundingBox();
-  await watchDropPreview(page, 'fx');
+  await watchDropPreview(page, 'djfx');
   await page.locator('.operation-card[data-operation="filter-sweep"]').dragTo(lane, { targetPosition: { x: laneBox.width * 0.42, y: laneBox.height / 2 } });
   const preview = await page.evaluate(() => window.__djDropPreview);
   expect(preview.operation).toBe('filter-sweep');
@@ -543,9 +583,9 @@ test('duration drops keep their requested start near the timeline end and expose
   await expect(durationCard).toHaveAttribute('data-duration-mode', 'resizable');
   await expect(instantCard).toHaveAttribute('data-duration-mode', 'fixed');
 
-  const lane = page.locator('[data-drop-lane="fx"]');
+  const lane = page.locator('[data-drop-lane="djfx"]');
   const laneBox = await lane.boundingBox();
-  await watchDropPreview(page, 'fx');
+  await watchDropPreview(page, 'djfx');
   await durationCard.dragTo(lane, { targetPosition: { x: laneBox.width * 0.9, y: laneBox.height / 2 } });
   const preview = await page.evaluate(() => window.__djDropPreview);
   expect(preview.operation).toBe('filter-sweep');
@@ -581,7 +621,7 @@ test('beat snap follows track BPM and can be turned off for free placement', asy
   await page.getByRole('combobox', { name: '节拍吸附细分' }).selectOption('0.5');
 
   await page.locator('.timeline-section').scrollIntoViewIfNeeded();
-  const lane = page.locator('[data-drop-lane="fx"]');
+  const lane = page.locator('[data-drop-lane="djfx"]');
   const laneBox = await lane.boundingBox();
   await page.locator('.operation-card[data-operation="filter-sweep"]').dragTo(lane, {
     targetPosition: { x: laneBox.width * 0.28, y: laneBox.height / 2 },
@@ -839,7 +879,7 @@ test('stretching scratch reverse updates the source window and shifts later even
   const initialTotal = 32 + initialDuration * 2;
   await expect(reverse).toHaveAttribute('data-performance-duration', String(initialDuration * 2));
   await expect(reverse).toHaveAttribute('title', /倒放 2\.0 秒 \+ 回放 2\.0 秒 · 共占用 4\.0 秒/);
-  const lane = page.locator('[data-drop-lane="dj"]');
+  const lane = page.locator('[data-drop-lane="djfx"]');
   const laneBox = await lane.boundingBox();
   const initialBox = await reverse.boundingBox();
   expect(initialBox.width / laneBox.width * initialTotal).toBeCloseTo(initialDuration * 2, 1);

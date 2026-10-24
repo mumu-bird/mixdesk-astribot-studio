@@ -5,7 +5,7 @@ import * as Tooltip from '@radix-ui/react-tooltip';
 import {
   Activity, AudioLines, AudioWaveform, Check, ChevronDown, Clock3, FileAudio2, FolderOpen,
   Headphones, LoaderCircle, Music2, Pause, Play, Plus, Redo2, RotateCcw, Save, Scissors,
-  SkipBack, Sparkles, Tag, Trash2, Undo2, Upload, Volume2, WandSparkles, X, ZoomIn, ZoomOut,
+  SkipBack, Tag, Trash2, Undo2, Upload, Volume2, WandSparkles, X, ZoomIn, ZoomOut,
 } from 'lucide-react';
 import { AudioEngine, peaksFor } from './audio/audio.js';
 import { estimateBpm, estimateFirstBeat } from './audio/bpm.js';
@@ -18,11 +18,16 @@ const TRACK_COLORS = ['155 58% 57%', '210 100% 78%'];
 const INSTANT_CLIP_WIDTH = 30;
 const CLIP_LANE_HEIGHT = 22;
 const TYPES = [
-  { id: 'dj', label: 'DJ 操作', icon: AudioLines, color: 'event-dj' },
+  { id: 'djfx', label: 'DJ 操作 / 音效', icon: AudioLines, color: 'event-djfx', eventTypes: ['dj', 'fx'] },
   { id: 'action', label: '机器人动作', icon: Activity, color: 'event-action' },
-  { id: 'fx', label: '音效', icon: Sparkles, color: 'event-fx' },
   { id: 'marker', label: '标记', icon: Tag, color: 'event-marker' },
 ];
+
+const laneAcceptsEvent = (lane, event) => lane.eventTypes ? lane.eventTypes.includes(event.type) : event.type === lane.id;
+const operationFitsLane = (operation, lane) => lane.eventTypes ? lane.eventTypes.includes(operation.lane) : operation.lane === lane.id;
+const eventTypeLabel = event => event.type === 'dj' || event.type === 'fx'
+  ? 'DJ 操作 / 音效'
+  : TYPES.find(type => type.id === event.type)?.label || event.type;
 
 const deepCopy = value => JSON.parse(JSON.stringify(value));
 const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
@@ -160,28 +165,60 @@ function ensurePreviewFilterPath(deck) {
   return deck._djPreviewFilterPath;
 }
 
-function previewTarget(operation, deck) {
+const finiteNumber = value => Number.isFinite(Number(value));
+
+function operationControlValues(operation, deck) {
+  const parameters = operation?.parameters || {};
+  const controlId = operation?.controlId || ({
+    'filter-sweep': 'filter-amount',
+    'bass-cut': 'eq-low',
+    'channel-level': 'channel-volume',
+    crossfader: 'crossfader',
+  }[operation?.id]);
+  const current = controlId === 'eq-low'
+    ? Number(deck?.eqDb?.low) || 0
+    : controlId === 'channel-volume'
+      ? (finiteNumber(deck?._faderLevel) ? Number(deck._faderLevel) : 0.8)
+      : controlId === 'filter-amount'
+        ? Number(deck?._djPreviewFilterValue) || 0
+        : controlId === 'tempo-rate' || controlId === 'pitch-semitones'
+          ? (controlId === 'tempo-rate' ? 1 : 0)
+          : Number(parameters.startValue);
+  const from = finiteNumber(parameters.startValue) ? Number(parameters.startValue) : (finiteNumber(current) ? current : 0);
+  const fallback = controlId === 'filter-amount' ? parameters.amount : controlId === 'eq-low' || controlId === 'channel-volume' || controlId === 'crossfader' ? parameters.value : undefined;
+  const to = finiteNumber(parameters.endValue)
+    ? Number(parameters.endValue)
+    : finiteNumber(fallback) ? Number(fallback)
+      : finiteNumber(parameters.amount) ? Number(parameters.amount)
+        : finiteNumber(parameters.semitones) ? Number(parameters.semitones) : from;
+  return { from, to };
+}
+
+function previewTarget(operation, deck, values = operationControlValues(operation, deck)) {
   const parameters = operation?.parameters || {};
   if (operation?.id === 'filter-sweep') {
-    const amount = clamp(Number(parameters.amount) || 0, -1, 1);
+    const amount = clamp(Number(values.to), -1, 1);
     const filterType = amount <= 0 ? 'lowpass' : 'highpass';
     const filterPath = ensurePreviewFilterPath(deck);
-    const baseline = filterType === 'lowpass' ? 22000 : 25;
-    const target = filterType === 'lowpass' ? 22000 * Math.pow(0.006, -amount) : 25 * Math.pow(300, amount);
+    const fromAmount = clamp(Number(values.from), -1, 1);
+    const hzFor = value => value <= 0 ? 22000 * Math.pow(0.006, -value) : 25 * Math.pow(300, value);
+    const baseline = hzFor(fromAmount);
+    const target = hzFor(amount);
     return {
       parameter: filterType === 'lowpass' ? filterPath.lowpass.frequency : filterPath.highpass.frequency,
       baseline, target: clamp(target, 25, 22000),
+      from: clamp(filterType === 'lowpass' ? hzFor(fromAmount) : hzFor(fromAmount), 25, 22000),
       blend: [
-        { parameter: filterPath.lowpassGain.gain, baseline: 1, target: filterType === 'lowpass' ? 1 : 0 },
-        { parameter: filterPath.highpassGain.gain, baseline: 0, target: filterType === 'highpass' ? 1 : 0 },
+        { parameter: filterPath.lowpassGain.gain, from: fromAmount <= 0 ? 1 : 0, baseline: 1, target: filterType === 'lowpass' ? 1 : 0 },
+        { parameter: filterPath.highpassGain.gain, from: fromAmount > 0 ? 1 : 0, baseline: 0, target: filterType === 'highpass' ? 1 : 0 },
       ],
     };
   }
   if (operation?.id === 'bass-cut') {
-    return { parameter: deck.low.gain, baseline: 0, target: clamp(Number(parameters.value) || 0, -24, 12) };
+    return { parameter: deck.low.gain, baseline: 0, from: clamp(Number(values.from), -24, 12), target: clamp(Number(values.to), -24, 12) };
   }
   if (operation?.id === 'channel-level') {
-    return { parameter: deck.trim.gain, baseline: 0.8, target: clamp(Number(parameters.value) || 0, 0, 1) };
+    return { parameter: deck.trim.gain, baseline: 0.8, from: clamp(Number(values.from), 0, 1), target: clamp(Number(values.to), 0, 1) };
   }
   return null;
 }
@@ -198,6 +235,13 @@ function resetPreviewEffects(decks, time) {
       parameter.setTargetAtTime(value, time, 0.012);
     }
     deck._faderLevel = 0.8;
+    deck._djPreviewFilterValue = 0;
+    for (const slot of deck.effects?.slots || []) {
+      for (const [parameter, value] of [[slot.send.gain, 0], [slot.dry.gain, 1], [slot.wet.gain, 0]]) {
+        parameter.cancelScheduledValues(time);
+        parameter.setTargetAtTime(value, time, 0.012);
+      }
+    }
   }
 }
 
@@ -210,9 +254,9 @@ function previewEnvelopeValue(envelope, time) {
   if (time <= envelope.releaseStart) return envelope.target;
   if (time < envelope.end) {
     const progress = (time - envelope.releaseStart) / Math.max(1e-8, envelope.end - envelope.releaseStart);
-    return envelope.target + (envelope.baseline - envelope.target) * progress;
+    return envelope.target + (envelope.returnValue - envelope.target) * progress;
   }
-  return envelope.baseline;
+  return envelope.returnValue;
 }
 
 function schedulePreviewEffects(events, plan, decks, now) {
@@ -223,28 +267,32 @@ function schedulePreviewEffects(events, plan, decks, now) {
     if (!operation || event.kind === 'reverse') return [];
     const routeIndex = Math.max(0, plan.order.indexOf(Number(event.sourceTrack) || 0));
     const deck = decks[routeIndex];
-    const effect = previewTarget(operation, deck);
+    const values = operationControlValues(operation, deck);
+    const effect = previewTarget(operation, deck, values);
     if (!effect) return [];
-    return [{ event, operation, routeIndex, deck, effect, start: now + plan.starts[routeIndex] + Math.max(0, Number(event.trackTime) || 0) }];
+    return [{ event, operation, routeIndex, deck, effect, values, start: now + plan.starts[routeIndex] + Math.max(0, Number(event.trackTime) || 0) }];
   }).sort((a, b) => a.start - b.start);
-  for (const { event, operation, routeIndex, effect, start } of prepared) {
+  for (const { event, operation, routeIndex, deck, effect, values, start } of prepared) {
     const duration = clamp(Number(event.duration) || 1, 0.25, 300);
     const attack = Math.min(0.35, duration * 0.2);
     const release = Math.min(0.35, duration * 0.2);
-    const automation = [{ parameter: effect.parameter, baseline: effect.baseline, target: effect.target }, ...(effect.blend || [])];
-    for (const { parameter, baseline, target } of automation) {
+    const automation = [{ parameter: effect.parameter, baseline: effect.baseline, from: effect.from ?? values.from, target: effect.target }, ...(effect.blend || [])];
+    for (const { parameter, baseline, from: requestedFrom, target } of automation) {
       const previous = envelopes.get(parameter);
-      const from = previous ? previewEnvelopeValue(previous, start) : baseline;
+      const from = previous ? previewEnvelopeValue(previous, start) : (finiteNumber(requestedFrom) ? requestedFrom : baseline);
       parameter.cancelScheduledValues(start);
       parameter.setValueAtTime(from, start);
       parameter.linearRampToValueAtTime(target, start + attack);
-      parameter.setValueAtTime(target, start + duration - release);
-      parameter.linearRampToValueAtTime(baseline, start + duration);
+      const releaseStart = start + duration - release;
+      parameter.setValueAtTime(target, releaseStart);
+      if (operation.restore) parameter.linearRampToValueAtTime(from, start + duration);
       envelopes.set(parameter, {
-        start, from, target, baseline,
-        attackEnd: start + attack, releaseStart: start + duration - release, end: start + duration,
+        start, from, target, baseline, returnValue: operation.restore ? from : target,
+        attackEnd: start + attack, releaseStart, end: start + duration,
       });
     }
+    if (operation.controlId === 'filter-amount') deck._djPreviewFilterValue = values.to;
+    if (operation.controlId === 'channel-volume') deck._faderLevel = values.to;
     scheduled.push({ event, operation, deck: routeIndex, start, duration, target: effect.target });
   }
   return scheduled;
@@ -258,9 +306,11 @@ function schedulePreviewCrossfader(events, plan, decks, now) {
     const track = Math.max(0, plan.order.indexOf(Number(event.sourceTrack) || 0));
     const start = plan.starts[track] + Math.max(0, Number(event.trackTime) || 0);
     const duration = clamp(Number(event.duration) || 1, 0.25, 300);
-    const value = Number(event.operation.parameters?.value);
+    const params = event.operation.parameters || {};
+    const from = finiteNumber(params.startValue) ? Number(params.startValue) : 0;
+    const value = finiteNumber(params.endValue) ? Number(params.endValue) : Number(params.value);
     return { event, operation: event.operation, deck: track, start, duration,
-      end: start + duration, release: Math.min(0.15, duration * 0.2), target: clamp(Number.isFinite(value) ? value : 0.5, 0, 1) };
+      end: start + duration, release: Math.min(0.15, duration * 0.2), from: clamp(Number.isFinite(from) ? from : 0, 0, 1), target: clamp(Number.isFinite(value) ? value : 0.5, 0, 1) };
   }).sort((a, b) => a.start - b.start);
   const automation = [];
   const crossPosition = time => {
@@ -280,7 +330,10 @@ function schedulePreviewCrossfader(events, plan, decks, now) {
     }
     return clamp(value, 0, 1);
   };
-  for (const effect of prepared) automation.push({ ...effect, from: crossPosition(effect.start) });
+  for (const effect of prepared) {
+    if (!Number.isFinite(effect.from)) effect.from = crossPosition(effect.start);
+    automation.push(effect);
+  }
   const positions = new Set([0, plan.total, handoffStart, leftEnd]);
   for (let position = 0.05; position < plan.total; position += 0.05) positions.add(position);
   for (const effect of automation) {
@@ -301,6 +354,67 @@ function schedulePreviewCrossfader(events, plan, decks, now) {
   return automation.map(effect => ({ ...effect, start: now + effect.start }));
 }
 
+function schedulePreviewRatePitch(events, plan, trackSources, now) {
+  const scheduled = [];
+  for (const event of events || []) {
+    const operation = event.operation;
+    if (!operation || !['audio-rate', 'audio-pitch'].includes(operation.preview)) continue;
+    const routeIndex = Math.max(0, plan.order.indexOf(Number(event.sourceTrack) || 0));
+    const start = plan.starts[routeIndex] + Math.max(0, Number(event.trackTime) || 0);
+    const duration = clamp(Number(event.duration) || 1, 0.25, 300);
+    const params = operation.parameters || {};
+    const from = operation.preview === 'audio-rate'
+      ? (finiteNumber(params.startValue) ? Number(params.startValue) : 1)
+      : (finiteNumber(params.startValue) ? 2 ** (Number(params.startValue) / 12) : 1);
+    const to = operation.preview === 'audio-rate'
+      ? (finiteNumber(params.endValue) ? Number(params.endValue) : finiteNumber(params.value) ? Number(params.value) : 1)
+      : (finiteNumber(params.endValue) ? 2 ** (Number(params.endValue) / 12) : finiteNumber(params.semitones) ? 2 ** (Number(params.semitones) / 12) : 1);
+    const attack = Math.min(0.2, duration * 0.2);
+    for (const item of trackSources.filter(source => source.trackIndex === routeIndex)) {
+      const itemStart = item.when - now;
+      const itemEnd = itemStart + item.duration;
+      const overlapStart = Math.max(start, itemStart);
+      const overlapEnd = Math.min(start + duration, itemEnd);
+      if (overlapEnd <= overlapStart) continue;
+      const at = now + overlapStart;
+      const until = now + overlapEnd;
+      item.source.playbackRate.cancelScheduledValues(at);
+      item.source.playbackRate.setValueAtTime(from, at);
+      item.source.playbackRate.linearRampToValueAtTime(to, Math.min(until, at + attack));
+      if (operation.restore) item.source.playbackRate.linearRampToValueAtTime(from, until);
+    }
+    scheduled.push({ event, operation, deck: routeIndex, start: now + start, duration, target: to });
+  }
+  return scheduled;
+}
+
+function schedulePreviewFXButtons(events, plan, decks, now) {
+  const scheduled = [];
+  for (const event of events || []) {
+    const operation = event.operation;
+    if (!operation || operation.preview !== 'audio-effect') continue;
+    const routeIndex = Math.max(0, plan.order.indexOf(Number(event.sourceTrack) || 0));
+    const deck = decks[routeIndex];
+    const slotIndex = Number(operation.effectSlot);
+    const slot = deck?.effects?.slots?.[slotIndex];
+    if (!slot) continue;
+    const type = operation.effectType || ['echo', 'reverb', 'flanger'][slotIndex] || 'echo';
+    try { slot.setType(type); slot.setAmount(clamp(Number(operation.parameters?.amount) || 0.35, 0, 1)); } catch { continue; }
+    const start = now + plan.starts[routeIndex] + Math.max(0, Number(event.trackTime) || 0);
+    const duration = clamp(Number(event.duration) || Number(operation.holdDuration) || 2, 0.25, 300);
+    const end = start + duration;
+    for (const [parameter, value] of [[slot.send.gain, 1], [slot.dry.gain, 1 - slot.amount], [slot.wet.gain, slot.amount]]) {
+      parameter.cancelScheduledValues(start);
+      parameter.setValueAtTime(0, start);
+      parameter.linearRampToValueAtTime(value, start + 0.03);
+      parameter.setValueAtTime(value, end);
+      parameter.linearRampToValueAtTime(0, end + (slot.type === 'reverb' ? 1.2 : 0.15));
+    }
+    scheduled.push({ event, operation, deck: routeIndex, start, duration, target: type });
+  }
+  return scheduled;
+}
+
 function layoutEventLanes(events, total, measuredLaneWidth = 0, zoom = 1) {
   const duration = Math.max(1, total);
   const canvasWidth = Math.max(820, duration * 7) * zoom;
@@ -308,7 +422,7 @@ function layoutEventLanes(events, total, measuredLaneWidth = 0, zoom = 1) {
   const pixelsPerSecond = laneWidth / duration;
   const layouts = {};
   for (const type of TYPES) {
-    const laneEvents = events.filter(event => event.type === type.id)
+    const laneEvents = events.filter(event => laneAcceptsEvent(type, event))
       .sort((a, b) => Number(a.time) - Number(b.time) || String(a.id).localeCompare(String(b.id)));
     const layerEnds = [];
     for (const event of laneEvents) {
@@ -333,7 +447,7 @@ function layoutEventLanes(events, total, measuredLaneWidth = 0, zoom = 1) {
 }
 
 function parameterLabel(key) {
-  return ({ beats: '拍数', index: 'FX 序号', value: '目标值', direction: '方向', duration: '渐变时长', amount: '滤波量', seconds: '倒放时长' })[key] || key;
+  return ({ beats: '拍数', index: 'FX 序号', value: '兼容目标值', startValue: '起始值', endValue: '目标值', direction: '方向', duration: '渐变时长', amount: '滤波量', semitones: '半音', holdDuration: '按住时长', seconds: '倒放时长' })[key] || key;
 }
 
 function Waveform({ song, color, className = '' }) {
@@ -714,6 +828,7 @@ function App() {
       gain.setTargetAtTime(0, now, 0.012);
     }
     resetPreviewEffects(engine.decks.slice(0, 2), now);
+    for (const deck of engine.sampler.decks.slice(0, 2)) deck.stopAll();
     schedulerRef.current = { ...state, sources: [] };
     setPlaying(false);
   }
@@ -791,6 +906,7 @@ function App() {
       if (demoLoadingRef.current || currentProject !== projectRef.current) return;
       const now = engine.context.currentTime + 0.08;
       const sources = [];
+      const trackSources = [];
       schedulerRef.current = { sources, startedAt: now, duration: plan.total, groupId };
       const startDeck = (index, track, buffer) => {
         const deck = engine.decks[index];
@@ -818,6 +934,7 @@ function App() {
         source.start(at, clamp(sourceOffset, 0, sourceBuffer.duration), duration);
         source.onended = () => { try { source.disconnect(); gain.disconnect(); } catch { /* Already closed. */ } };
         sources.push({ source, gain, when: at });
+        trackSources.push({ source, gain, when: at, duration, trackIndex });
       };
 
       const trackActualEnds = [];
@@ -859,7 +976,23 @@ function App() {
       const previewEffects = [
         ...schedulePreviewEffects(currentGroup.events, plan, previewDecks, now),
         ...schedulePreviewCrossfader(currentGroup.events, plan, previewDecks, now),
+        ...schedulePreviewRatePitch(currentGroup.events, plan, trackSources, now),
+        ...schedulePreviewFXButtons(currentGroup.events, plan, previewDecks, now),
       ];
+      for (const event of currentGroup.events || []) {
+        const operation = event.operation;
+        if (operation?.preview !== 'audio-sample') continue;
+        const routeIndex = Math.max(0, plan.order.indexOf(Number(event.sourceTrack) || 0));
+        const when = now + plan.starts[routeIndex] + Math.max(0, Number(event.trackTime) || 0);
+        const sampleIndex = Number(operation.sampleIndex) || 0;
+        try {
+          const samplerDeck = engine.sampler.decks[routeIndex];
+          samplerDeck.triggerAt(sampleIndex, when);
+          previewEffects.push({ event, operation, deck: routeIndex, start: when, duration: 0.5, target: operation.sample });
+        } catch (error) {
+          console.warn('采样事件未能调度', error);
+        }
+      }
       schedulerRef.current = { sources, startedAt: now, duration: endAt - now, groupId, previewEffects };
       setPlaying(true);
       const selection = currentGroup.events?.find(event => event.id === selectedId);
@@ -958,18 +1091,26 @@ function App() {
     const sourceTime = findSourceTime(group, schedule, trackIndex, eventTime);
     const trackTime = Math.max(0, eventTime - schedule.starts[trackIndex]);
     const controller = operationController(operation, slotIndex);
-    const event = {
+      const controlMetadata = Object.fromEntries(['controlType', 'controlId', 'unit', 'min', 'max', 'curve', 'audioTarget', 'effectSlot', 'effectType', 'holdDuration', 'sample', 'sampleIndex', 'restore']
+        .filter(key => operation[key] !== undefined).map(key => [key, operation[key]]));
+      const operationParameters = {
+        ...operation.parameters,
+        ...(operation.controlType === 'continuous' ? { startValue: operation.startValue, endValue: operation.endValue, curve: operation.curve || 'linear' } : {}),
+        ...(operation.controlType === 'button' && operation.holdDuration ? { holdDuration: operation.holdDuration } : {}),
+      };
+      const event = {
       id: crypto.randomUUID(), type: operation.lane, name: operation.label,
       timing: operation.timing,
-      duration: operation.timing === 'duration' ? Number(operation.duration) || 1 : 0,
+        duration: operation.timing === 'duration' ? Number(operation.duration || operation.holdDuration) || 1 : 0,
       sourceTrack: slotIndex, sourceTime, trackTime, time: eventTime,
       resource: operation.action, verification: 'mapping-confirmed',
-      parameters: { ...operation.parameters },
+        parameters: { ...operationParameters },
       operation: {
         id: operation.id, group: operation.group, action: operation.action,
-        parameters: { ...operation.parameters }, timing: operation.timing, controller,
+        ...controlMetadata,
+        parameters: { ...operationParameters }, timing: operation.timing, controller,
         controlMap: operation.controlMap, preview: operation.preview || 'command-only',
-        execution: ['reverse-segment', 'audio-filter', 'audio-eq', 'audio-level', 'audio-crossfader'].includes(operation.preview) ? 'preview-audio' : 'not-connected',
+        execution: ['reverse-segment', 'audio-filter', 'audio-eq', 'audio-level', 'audio-crossfader', 'audio-rate', 'audio-pitch', 'audio-effect', 'audio-sample'].includes(operation.preview) ? 'preview-audio' : 'not-connected',
       },
     };
     editGroup(target => { target.events.push(event); refreshEventTimes(target); });
@@ -986,7 +1127,8 @@ function App() {
     const rect = event.currentTarget.getBoundingClientRect();
     const atTime = clamp((event.clientX - rect.left) / Math.max(1, rect.width), 0, 1) * schedule.total;
     const operation = DJ_OPERATION_BY_ID[operationId];
-    if (operation.lane !== type) { showToast(`请将“${operation.label}”放到 ${TYPES.find(item => item.id === operation.lane)?.label || '对应'}轨道`); return; }
+    const lane = TYPES.find(item => item.id === type);
+    if (!lane || !operationFitsLane(operation, lane)) { showToast(`请将“${operation.label}”放到 ${TYPES.find(item => item.eventTypes?.includes(operation.lane) || item.id === operation.lane)?.label || '对应'}轨道`); return; }
     addOperation(operationId, atTime);
   };
 
@@ -997,7 +1139,8 @@ function App() {
     setDragOverLane(type);
     const operationId = dragOperationRef.current || event.dataTransfer.getData('application/x-dj-operation');
     const operation = DJ_OPERATION_BY_ID[operationId];
-    if (!operation || operation.lane !== type || !schedule) {
+    const lane = TYPES.find(item => item.id === type);
+    if (!operation || !lane || !operationFitsLane(operation, lane) || !schedule) {
       setDragPreview(null);
       return;
     }
@@ -1006,7 +1149,7 @@ function App() {
     const time = snapPerformanceTime(schedule, clamp((event.clientX - rect.left) / laneWidth, 0, 1) * schedule.total);
     const previewEvent = {
       id: '__operation-drop-preview',
-      type,
+      type: operation.lane,
       time,
       duration: operation.timing === 'duration' ? Number(operation.duration) || 1 : 0,
       timing: operation.timing,
@@ -1143,6 +1286,13 @@ function App() {
     if (!Number.isFinite(nextValue)) return;
     event.operation.parameters[key] = nextValue;
     event.parameters = { ...event.parameters, [key]: nextValue };
+    if (key === 'endValue') {
+      const max = Number(event.operation.max);
+      const min = Number(event.operation.min);
+      const bounded = Number.isFinite(max) && Number.isFinite(min) ? clamp(nextValue, min, max) : nextValue;
+      event.operation.parameters[key] = bounded;
+      event.parameters[key] = bounded;
+    }
     if (key === 'seconds' && event.kind === 'reverse') {
       const trackIndex = Math.max(0, getSchedule(target).order.indexOf(Number(event.sourceTrack) || 0));
       const trackWindowValue = getSchedule(target).windows[trackIndex];
@@ -1373,10 +1523,10 @@ function App() {
                 <AudioWaveform size={14} />
                 {schedule.crossfadeDuration > 0 ? <><b>双曲混音 {fmt(schedule.crossfadeStart)}–{fmt(schedule.crossfadeStart + schedule.crossfadeDuration)}</b><span>{schedule.crossfadeDuration}s · 两首同时播放 · 等功率交叉淡变</span></> : <><b>同时起播</b><span>拖动音乐块调整入场点，再设置交叉淡变</span></>}
               </div>
-              <section className="operation-library" aria-label="DJ 操作菜单">
+              <section className="operation-library" aria-label="DJ 操作 / 音效菜单">
                 <div className="operation-library-head">
-                  <div><b>DJ 操作菜单</b><small>点击添加到播放头 · 拖拽到对应轨道</small></div>
-                  <div className="operation-filters" aria-label="DJ 操作类别">
+                  <div><b>DJ 操作 / 音效菜单</b><small>点击添加到播放头 · 拖拽到统一轨道</small></div>
+                  <div className="operation-filters" aria-label="DJ 操作 / 音效类别">
                     <Button size="sm" variant={operationFilter === '' ? 'default' : 'ghost'} onClick={() => setOperationFilter('')}>全部</Button>
                     {DJ_OPERATION_GROUPS.map(item => <Button size="sm" key={item.id} variant={operationFilter === item.id ? 'default' : 'ghost'} onClick={() => setOperationFilter(item.id)}>{item.label}</Button>)}
                   </div>
@@ -1390,7 +1540,7 @@ function App() {
                       data-timing={operation.timing} data-duration-mode={operation.timing === 'instant' ? 'fixed' : 'resizable'}
                       className="operation-card"
                       aria-label={`添加 ${operation.label} 到时间轴`}
-                      title={`${operation.label} · ${operation.controls.join(' / ')} · 拖到 ${TYPES.find(type => type.id === operation.lane)?.label || '轨道'}`}
+                      title={`${operation.label} · ${operation.controls.join(' / ')} · 拖到 ${TYPES.find(type => type.eventTypes?.includes(operation.lane) || type.id === operation.lane)?.label || '轨道'}`}
                       onClick={() => addOperation(operation.id)}
                       onDragStart={event => {
                         dragOperationRef.current = operation.id;
@@ -1402,8 +1552,8 @@ function App() {
                     ><span className="operation-icon"><OperationIcon size={15} /></span><span className="operation-copy"><b>{operation.label}</b><small>{operation.hint}{operation.preview && <i className="operation-audible-hint"> · 可试听</i>}</small></span><span className={`operation-timing ${operation.timing === 'instant' ? 'is-instant' : ''}`} title={operation.timing === 'instant' ? '固定按键：时间轴显示一次，不可拉伸' : `可拉伸效果：默认持续 ${Number(operation.duration || 1).toFixed(1)} 秒，可在时间轴拉伸`}>{operation.timing === 'instant' ? '单次' : `${Number(operation.duration || 1).toFixed(1)}s ↔`}</span><Plus size={13} className="operation-add" /></button>;
                   })}
                 </div>
-                <div className="operation-legend"><span className="operation-legend-item is-fixed"><i />固定按键：落点标记</span><span className="operation-legend-item is-resizable"><i />可拉伸效果：拖右端调整时长</span></div>
-                <div className="operation-disclaimer"><span className="legend-dot" />按 DJControl MIX 逆向映射编排；试听会应用搓碟、滤波、低频、音量与交叉推子效果，其余设备命令只保存在草稿。</div>
+                <div className="operation-legend"><span className="operation-legend-item is-fixed"><i />固定按键：落点标记</span><span className="operation-legend-item is-resizable"><i />可拉伸效果：拖右端调整时长</span><span className="operation-legend-item is-source"><i />紫色 DJ 操作 · 黄色音效</span></div>
+                <div className="operation-disclaimer"><span className="legend-dot" />按 DJControl MIX 逆向映射编排；试听会真实应用搓碟、滤波、低频、音量、交叉推子、变速、变调、FX 与内置 Kick / Clap / Hat，其余设备命令只保存在草稿。</div>
               </section>
               <div className="timeline-scroll" ref={timelineScrollRef}>
                 <div className="timeline-canvas" style={{ minWidth: `${timelineCanvasWidth}px` }}>
@@ -1464,7 +1614,7 @@ function App() {
                         ><span>{DJ_OPERATION_BY_ID[dragPreview.operationId]?.label} · {operationTimingLabel(DJ_OPERATION_BY_ID[dragPreview.operationId])}{DJ_OPERATION_BY_ID[dragPreview.operationId]?.timing === 'instant' ? '' : ` · ${Number(DJ_OPERATION_BY_ID[dragPreview.operationId]?.duration || 1).toFixed(1)}s`}</span></div>}
                         {dragPreview?.lane === type.id && <div className="operation-drop-cursor" aria-hidden="true" style={{ left: dragPreview.cursor }}><span>落点 {fmt(dragPreview.time)}</span></div>}
                         {beatGuides.map(guide => <div key={`beat-${guide.track}`} className={`beat-guide beat-guide-${guide.track}`} aria-hidden="true" style={{ left: `${guide.left}%`, width: `${guide.width}%`, '--beat-space': `${guide.beatSpace}px`, '--bar-space': `${guide.beatSpace * 4}px`, '--beat-offset': `${guide.beatOffset}px` }} />)}
-                        {currentEvents.filter(event => event.type === type.id).map(event => {
+                        {currentEvents.filter(event => laneAcceptsEvent(type, event)).map(event => {
                           const layout = laneLayouts[event.id] || { layer: 0, width: 22, instant: isInstantEvent(event) };
                           const instant = layout.instant;
                           const performanceDuration = eventPerformanceDuration(event);
@@ -1493,7 +1643,7 @@ function App() {
                             data-duration-mode={instant ? 'fixed' : 'resizable'}
                             data-layer={layout.layer}
                             data-slot={event.sourceTrack}
-                            className={`event-clip ${type.color} ${instant ? 'event-instant' : 'event-duration'} ${selectedId === event.id ? 'is-selected' : ''} ${isActive ? 'is-active' : ''}`}
+                            className={`event-clip ${event.type === 'fx' ? 'event-fx' : event.type === 'dj' ? 'event-dj' : type.color} ${instant ? 'event-instant' : 'event-duration'} ${selectedId === event.id ? 'is-selected' : ''} ${isActive ? 'is-active' : ''}`}
                             style={{ left: `${layout.left ?? clamp(event.time / total * 100, 0, 100)}%`, width, top: `${3 + layout.layer * CLIP_LANE_HEIGHT}px` }}
                             onPointerDown={pointerEvent => beginTimelineGesture(event, 'move', pointerEvent)}
                             onPointerMove={moveTimelineGesture}
@@ -1513,13 +1663,13 @@ function App() {
                   </div>
                 </div>
               </div>
-              <div className="timeline-footer"><div className="event-adds">{TYPES.map(type => <Button size="sm" variant="ghost" key={type.id} onClick={() => addEvent(type.id)}><Plus size={13} />{type.label}</Button>)}<Button size="sm" variant="outline" onClick={addReverse}><Scissors size={13} />插入搓碟倒放</Button></div><div className="timeline-note"><span className="legend-dot" />事件时间跟随试听时钟<span className="keyboard-hint">Ctrl/⌘+C/V 复制到播放头 · Ctrl/⌘+S 保存 · Ctrl/⌘+Z 撤销 · Space 试听 · Delete 删除</span></div></div>
+              <div className="timeline-footer"><div className="event-adds">{TYPES.filter(type => !type.eventTypes).map(type => <Button size="sm" variant="ghost" key={type.id} onClick={() => addEvent(type.id)}><Plus size={13} />{type.label}</Button>)}<Button size="sm" variant="outline" onClick={addReverse}><Scissors size={13} />插入搓碟倒放</Button></div><div className="timeline-note"><span className="legend-dot" />事件时间跟随试听时钟<span className="keyboard-hint">Ctrl/⌘+C/V 复制到播放头 · Ctrl/⌘+S 保存 · Ctrl/⌘+Z 撤销 · Space 试听 · Delete 删除</span></div></div>
             </div>
           </section>
 
           <aside className="properties-column">
             <section className="property-panel">
-              <div className="property-heading"><div><span className="section-kicker">03 / EVENT</span><h2>事件属性</h2></div>{selectedEvent && <span className="event-type-label">{TYPES.find(item => item.id === selectedEvent.type)?.label}</span>}</div>
+              <div className="property-heading"><div><span className="section-kicker">03 / EVENT</span><h2>事件属性</h2></div>{selectedEvent && <span className="event-type-label">{eventTypeLabel(selectedEvent)}</span>}</div>
               {selectedEvent ? <div className="property-body">
                 {selectedEvent.verification === 'unverified' && <div className="unverified-banner"><span />未验证动作</div>}
                 {selectedEvent.operation && <div className={`operation-provenance ${selectedEvent.operation.execution === 'preview-audio' ? 'audio-confirmed' : ''}`}>
@@ -1529,9 +1679,11 @@ function App() {
                   <div className="operation-provenance-row"><span>原始命令</span><code>{selectedEvent.operation.action}</code></div>
                   <div className="operation-provenance-row"><span>逆向映射值</span><code>{selectedEvent.operation.controller?.mappingValue || '—'}</code></div>
                   <div className="operation-parameters"><span>参数</span><code>{JSON.stringify(selectedEvent.operation.parameters)}</code></div>
+                  {selectedEvent.operation.controlType === 'continuous' && <div className="operation-control-summary"><span>连续控件</span><b>{selectedEvent.operation.controlId}</b><small>{selectedEvent.operation.unit || ''} · {selectedEvent.operation.curve || 'linear'}</small></div>}
+                  {selectedEvent.operation.controlType === 'button' && <div className="operation-control-summary"><span>按键语义</span><b>按下 → 保持 → 释放</b><small>固定按键会按时间轴落点触发</small></div>}
                   {Object.entries(selectedEvent.operation.parameters || {}).filter(([, value]) => typeof value === 'number' && Number.isFinite(value) && selectedEvent.kind !== 'reverse').map(([key, value]) => <label className="operation-parameter-field" key={key}>
-                    <span>{parameterLabel(key)}</span>
-                    <input type="number" step={key === 'value' || key === 'amount' ? '0.1' : '0.25'} value={value} onChange={event => updateOperationParameter(selectedEvent.id, key, event.target.value)} aria-label={`操作参数 ${parameterLabel(key)}`} />
+                    <span>{parameterLabel(key)}{selectedEvent.operation.unit && ['startValue', 'endValue'].includes(key) ? ` (${selectedEvent.operation.unit})` : ''}</span>
+                    <input type="number" min={selectedEvent.operation.min} max={selectedEvent.operation.max} step={key === 'value' || key === 'amount' || key === 'startValue' || key === 'endValue' ? '0.1' : '0.25'} value={value} onChange={event => updateOperationParameter(selectedEvent.id, key, event.target.value)} aria-label={`操作参数 ${parameterLabel(key)}`} />
                   </label>)}
                 </div>}
                 <label className="field-label">事件名称<input value={selectedEvent.name} onChange={event => updateEvent(selectedEvent.id, { name: event.target.value })} /></label>

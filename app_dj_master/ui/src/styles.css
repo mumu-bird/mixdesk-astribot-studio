@@ -179,6 +179,8 @@ h2 { margin-top: 4px; font-size: 14px; font-weight: 600; }
 .operation-legend-item.is-fixed i { width: 3px; border-radius: 0; background: currentColor; }
 .operation-legend-item.is-resizable { color: hsl(var(--info)); }
 .operation-legend-item.is-resizable i { background: hsl(var(--info) / .2); border-style: dashed; }
+.operation-legend-item.is-source { color: hsl(var(--muted-foreground)); }
+.operation-legend-item.is-source i { background: linear-gradient(90deg, hsl(258 80% 60% / .6) 50%, hsl(40 94% 50% / .6) 50%); border-color: hsl(var(--muted-foreground) / .5); }
 .timeline-scroll { width: 100%; overflow-x: auto; overflow-y: hidden; scrollbar-color: hsl(var(--border)) transparent; scrollbar-width: thin; }
 .timeline-canvas { position: relative; padding: 0 13px 10px; }
 .ruler-row, .track-lanes, .event-lane { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 10px; }
@@ -232,6 +234,7 @@ h2 { margin-top: 4px; font-size: 14px; font-weight: 600; }
 .event-resize-handle::after { position: absolute; top: 5px; bottom: 5px; right: 3px; width: 1px; content: ''; background: hsl(var(--foreground) / .72); box-shadow: -2px 0 hsl(var(--foreground) / .45); }
 .event-duration:hover .event-resize-handle, .event-duration.is-selected .event-resize-handle { opacity: .95; }
 .event-dj { background: hsl(258 80% 60% / .16); color: hsl(258 100% 82%); border-color: hsl(258 80% 70% / .38); }
+.event-djfx { background: linear-gradient(90deg, hsl(258 80% 60% / .16), hsl(40 94% 50% / .14)); color: hsl(258 100% 82%); border-color: hsl(258 80% 70% / .38); }
 .event-action { background: hsl(155 58% 48% / .14); color: hsl(155 70% 70%); border-color: hsl(155 58% 57% / .38); }
 .event-fx { background: hsl(40 94% 50% / .13); color: hsl(40 100% 73%); border-color: hsl(40 94% 58% / .36); }
 .event-marker { background: hsl(204 76% 60% / .13); color: hsl(204 86% 77%); border-color: hsl(204 76% 68% / .38); }

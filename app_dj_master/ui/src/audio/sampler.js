@@ -134,7 +134,7 @@ class SamplerDeck {
     this.groups.forEach(g=>{for(const [key,index] of [...g.held])if(key.startsWith(prefix)){g.held.delete(key);this.release(index,key);}});
     this.slots.forEach((s,i)=>{for(const key of [...s.held])if(key.startsWith(prefix))this.release(i,key);});
   }
-  async start(index,preserveHolds=false){
+  async start(index,preserveHolds=false,scheduledWhen=null){
     const slot=this.slots[index],group=this.group(index);if(!slot?.buffer)return;
     const held=preserveHolds?new Set(slot.held):new Set();this.cancelPending(group);slot.held=held;
     const token=group.generation,pending={index,voice:null,when:Infinity};group.pending=pending;slot.pending=true;this.changed();
@@ -144,7 +144,10 @@ class SamplerDeck {
       if(token!==group.generation)return;
       if(slot.keyLock&&!this.engine.pitchAvailable)throw new Error('当前浏览器不支持采样 Key Lock');
       await this.context.resume();if(token!==group.generation)return;
-      const {when,rate}=this.timing(slot),source=this.context.createBufferSource(),gate=this.context.createGain();
+      const timing = this.timing(slot);
+      const when = Number.isFinite(Number(scheduledWhen)) ? Math.max(this.context.currentTime, Number(scheduledWhen)) : timing.when;
+      const rate = timing.rate;
+      const source=this.context.createBufferSource(),gate=this.context.createGain();
       voice={index,source,gate,gain:slot.gain,pitch:null,silence:null};
       gate.gain.value=slot.gain;gate.connect(group.level);source.buffer=slot.buffer;source.playbackRate.value=rate;
       if(slot.keyLock){
@@ -168,6 +171,7 @@ class SamplerDeck {
       this.changed();
     }catch(error){this.disposeVoice(voice);if(token===group.generation)this.cancelPending(group);this.changed();throw error;}
   }
+  async triggerAt(index, when){ return this.start(index, false, when); }
   stop(index){for(const voice of this.tails)if(voice.index===index)this.disposeVoice(voice);const group=this.group(index);if(!group)return;for(const [key,heldIndex] of [...group.held])if(heldIndex===index)group.held.delete(key);this.settle(group);if(group.pending?.index===index)this.cancelPending(group);if(group.active?.index===index){this.disposeVoice(group.active);group.active=null;}this.slots[index].held.clear();this.slots[index].pending=false;this.changed();}
   stopGroup(index){for(const voice of this.tails)if(Math.floor(voice.index/4)===index)this.disposeVoice(voice);const g=this.groups[index];if(!g)return;this.cancelPending(g);this.disposeVoice(g.active);g.active=null;g.held.clear();this.slots.slice(index*4,index*4+4).forEach(s=>s.held.clear());this.changed();}
   playGroup(index){const g=this.groups[index];if(!g)return;if(this.groupActive(index)){this.stopGroup(index);return;}return this.start(index*4+g.selected);}
@@ -200,6 +204,7 @@ export class Sampler {
   triggerMode(i){return this.bank.triggerMode(i);}
   timing(s){return this.bank.timing(s);}
   trigger(i){return this.bank.trigger(i);}
+  triggerAt(i,when,deck=this.activeDeck){return this.decks[deck].triggerAt(i,when);}
   press(i,key,deck=this.activeDeck){return this.decks[deck].press(i,key);}
   release(i,key,deck=this.activeDeck){return this.decks[deck].release(i,key);}
   pressGroup(group,key,deck=this.activeDeck){return this.decks[deck].pressGroup(group,key);}
