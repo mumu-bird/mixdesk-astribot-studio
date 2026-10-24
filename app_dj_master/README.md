@@ -21,6 +21,8 @@ The presentation leaves 5 seconds for the opening, then schedules filter at 5–
 
 The timed presentation walkthrough is in [doc/一分钟演示.md](doc/一分钟演示.md).
 
+项目功能、使用流程、音频映射和当前边界详见 [doc/项目介绍.md](doc/项目介绍.md)。
+
 The DJ operation / effect library follows the recovered `DJControl_Mix.djm` mapping names. Cards can be clicked to add at the playhead or dragged onto the unified **DJ 操作 / 音效** timeline lane. Legacy drafts still store `type: "dj"` and `type: "fx"`; the UI renders both in that lane and keeps their purple/yellow source colors. Events retain the source control name, action, channel and mapping value. The app does not send commands to a physical controller. Each menu item declares whether it is a continuous control (`startValue → endValue`), a button with a hold duration, or a one-shot sampler trigger. During local audition, scratch reverse, filter sweep, bass cut, channel level, crossfader, tempo/rate, pitch, FX slots and Kick/Clap/Hat sampler events are scheduled against the Web Audio clock. Transport, loop and Cue commands remain saved control mappings unless they have a dedicated audio preview path. These local DSP effects follow the recovered action and parameter intent, not proprietary DJUCED sound processing.
 
 Overlapping audio-effect events on the same parameter continue from the active automated value, avoiding a jump back to the neutral setting when a new event begins.
