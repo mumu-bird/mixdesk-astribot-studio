@@ -344,6 +344,29 @@ test('audition applies mapped FX, tempo, pitch and sampler controls on the audio
   await page.getByRole('button', { name: /停止试听/ }).click();
 });
 
+test('timeline sampler hits are independent so repeated Clap and Kick events all sound', async ({ page }) => {
+  await page.goto('/');
+  await resetDraft(page);
+  await page.getByRole('button', { name: '加载一分钟演示' }).click();
+  await expect(page.getByRole('button', { name: /试听混音/ })).toBeEnabled({ timeout: 15000 });
+  // Keep all hits at the same audio-clock position to catch the old
+  // monophonic-group cancellation bug. They must still create independent
+  // voices, just as repeated pad presses do in a performance.
+  await page.locator('.operation-card[data-operation="sampler-clap"]').click();
+  await page.locator('.operation-card[data-operation="sampler-clap"]').click();
+  await page.locator('.operation-card[data-operation="sampler-clap"]').click();
+  await page.locator('.operation-card[data-operation="sampler-kick"]').click();
+  await page.locator('.operation-card[data-operation="sampler-kick"]').click();
+  await page.getByRole('button', { name: /试听混音/ }).click();
+  const voiceCounts = await page.evaluate(() => {
+    const voices = window.__djMaster.state.sources.filter(item => Number.isInteger(item.index));
+    return { clap: voices.filter(item => item.index === 1).length, kick: voices.filter(item => item.index === 0).length };
+  });
+  expect(voiceCounts).toEqual({ clap: 3, kick: 2 });
+  await page.getByRole('button', { name: /停止试听/ }).click();
+  await expect.poll(() => page.evaluate(() => window.__djMaster.state.sources.length)).toBe(0);
+});
+
 test('audition audibly applies and restores bass cut and channel level envelopes', async ({ page }) => {
   await page.goto('/');
   await resetDraft(page);
@@ -409,7 +432,7 @@ test('dragging a mapped DJ control creates an event with verified hardware mappi
   await expect(page.locator('.operation-provenance')).toContainText('loop');
   await expect(page.locator('.operation-provenance')).toContainText('逆向映射值');
   await expect(page.locator('.operation-provenance')).toContainText('4');
-  await expect(page.locator('.operation-provenance')).toContainText('尚未连接');
+  await expect(page.locator('.operation-provenance')).toContainText('试听中会实际应用到音频');
   const beats = page.getByRole('spinbutton', { name: '操作参数 拍数' });
   await beats.fill('8');
   await expect(page.locator('.operation-parameters')).toContainText('"beats":8');

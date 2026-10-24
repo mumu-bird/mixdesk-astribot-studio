@@ -415,6 +415,128 @@ function schedulePreviewFXButtons(events, plan, decks, now) {
   return scheduled;
 }
 
+// Transport and performance commands are scheduled against the same audio
+// clock as the two deck sources.  They deliberately operate on the preview
+// buses/extra voices instead of React timers, so a timeline event changes the
+// sound even when the UI is throttled.
+function schedulePreviewTransport(events, plan, decks, buffers, trackSources, trackBuses, sources, now) {
+  const scheduled = [];
+  const states = [true, true];
+  const loopStates = [null, null];
+  const syncStates = [false, false];
+  const scheduleGain = (gain, value, at, ramp = 0.012) => {
+    gain.cancelScheduledValues(at);
+    gain.setValueAtTime(gain.value, at);
+    gain.linearRampToValueAtTime(value, at + ramp);
+  };
+  const addVoice = (track, buffer, sourceOffset, duration, at, gainValue = 0.85, reverse = false, loop = false, destination = trackBuses[track]) => {
+    if (!buffer || duration <= 0.01) return null;
+    const source = decks[track].context.createBufferSource();
+    const gain = decks[track].context.createGain();
+    const sourceBuffer = reverse ? decks[track].getReverseBuffer() : buffer;
+    source.buffer = sourceBuffer;
+    source.playbackRate.value = 1;
+    gain.gain.setValueAtTime(0, at);
+    gain.linearRampToValueAtTime(gainValue, at + Math.min(0.015, duration / 4));
+    gain.setValueAtTime(gainValue, at + Math.max(0.016, duration - 0.03));
+    gain.linearRampToValueAtTime(0, at + duration);
+    source.connect(gain).connect(destination);
+    const offset = reverse ? sourceBuffer.duration - clamp(sourceOffset, 0, buffer.duration) : clamp(sourceOffset, 0, buffer.duration);
+    if (loop) {
+      source.loop = true;
+      source.loopStart = reverse ? sourceBuffer.duration - Math.min(buffer.duration, sourceOffset + duration) : offset;
+      source.loopEnd = reverse ? sourceBuffer.duration - offset : Math.min(sourceBuffer.duration, offset + duration);
+    }
+    source.start(at, clamp(offset, 0, sourceBuffer.duration));
+    source.stop(at + duration);
+    source.onended = () => { try { source.disconnect(); gain.disconnect(); } catch {} };
+    sources.push({ source, gain, when: at, dispose: () => { try { source.stop(); } catch {} try { source.disconnect(); gain.disconnect(); } catch {} } });
+    return source;
+  };
+  const byTime = (events || []).filter(event => event.operation && event.kind !== 'reverse')
+    .map(event => ({ event, route: Math.max(0, plan.order.indexOf(Number(event.sourceTrack) || 0)) }))
+    .sort((a, b) => Number(a.event.time) - Number(b.event.time));
+  for (const { event, route } of byTime) {
+    const operation = event.operation;
+    const start = plan.starts[route] + Math.max(0, Number(event.trackTime) || 0);
+    const at = now + start;
+    const buffer = buffers[route];
+    const bus = trackBuses[route];
+    switch (operation.id) {
+      case 'play-pause':
+        states[route] = !states[route];
+        scheduleGain(bus.gain, states[route] ? 1 : 0, at);
+        scheduled.push({ event, operation, deck: route, start: at, duration: 0, target: states[route] ? 'play' : 'pause' });
+        break;
+      case 'stop-deck':
+        states[route] = false;
+        scheduleGain(bus.gain, 0, at);
+        scheduled.push({ event, operation, deck: route, start: at, duration: 0, target: 'stop' });
+        break;
+      case 'cue-preview': {
+        const cue = clamp(Number(decks[route].cuePoint) || 0, 0, Math.max(0, buffer?.duration - 0.01));
+        addVoice(route, buffer, cue, Math.min(Number(operation.holdDuration) || 1, Math.max(0.1, (buffer?.duration || 1) - cue)), at, 0.65);
+        scheduled.push({ event, operation, deck: route, start: at, duration: Number(operation.holdDuration) || 1, target: 'cue-preview' });
+        break;
+      }
+      case 'hot_cue': {
+        const index = Math.max(0, Number(operation.parameters?.index) - 1 || 0);
+        const cue = Number.isFinite(Number(decks[route].hotcues?.[index])) ? Number(decks[route].hotcues[index]) : Math.min(buffer?.duration || 0, 0.25 + index * 0.5);
+        const duration = Math.min(1.25, Math.max(0.08, (buffer?.duration || 1) - cue));
+        addVoice(route, buffer, cue, duration, at, 0.82);
+        scheduled.push({ event, operation, deck: route, start: at, duration, target: 'hot-cue' });
+        break;
+      }
+      case 'loop': {
+        const beats = clamp(Number(operation.parameters?.beats) || 4, 1, 8);
+        const source = findSourceTime({ order: plan.order }, plan, route, start);
+        const seconds = Math.max(0.08, beats * 60 / (Number(plan.songs[route]?.bpm) || 120));
+        const duration = Math.max(seconds, Math.min(4, Number(event.duration) || seconds));
+        const loopEnd = at + duration;
+        scheduleGain(bus.gain, 0, at, 0.006);
+        scheduleGain(bus.gain, 1, loopEnd, 0.02);
+        addVoice(route, buffer, source, duration, at, 0.65, false, true, decks[route].stems.input);
+        scheduled.push({ event, operation, deck: route, start: at, duration, target: `${beats}-beat-loop` });
+        break;
+      }
+      case 'seek_loop': {
+        const direction = Number(operation.parameters?.direction) || 1;
+        const source = clamp(findSourceTime({ order: plan.order }, plan, route, start) + direction * 4 * 60 / (Number(plan.songs[route]?.bpm) || 120), 0, buffer?.duration || 0);
+        scheduleGain(bus.gain, 0, at, 0.006);
+        scheduleGain(bus.gain, 1, at + 0.08, 0.02);
+        addVoice(route, buffer, source, Math.min(0.6, Math.max(0.08, (buffer?.duration || 1) - source)), at + 0.06, 0.8);
+        scheduled.push({ event, operation, deck: route, start: at, duration: 0.6, target: direction > 0 ? '+4-beat' : '-4-beat' });
+        break;
+      }
+      case 'sync': {
+        syncStates[route] = !syncStates[route];
+        const other = route ^ 1;
+        const ratio = (Number(plan.songs[other]?.bpm) || 120) / (Number(plan.songs[route]?.bpm) || 120);
+        for (const item of trackSources.filter(sourceItem => sourceItem.trackIndex === route)) {
+          const itemStart = item.when - now;
+          const itemEnd = itemStart + item.duration;
+          if (itemEnd <= start) continue;
+          const changeAt = now + Math.max(start, itemStart);
+          item.source.playbackRate.cancelScheduledValues(changeAt);
+          item.source.playbackRate.setValueAtTime(syncStates[route] ? ratio : 1, changeAt);
+        }
+        scheduled.push({ event, operation, deck: route, start: at, duration: 0, target: syncStates[route] ? ratio : 1 });
+        break;
+      }
+      case 'scratch_mode': {
+        const source = findSourceTime({ order: plan.order }, plan, route, start);
+        const duration = 0.32;
+        addVoice(route, buffer, source, duration, at, 0.75, true);
+        scheduled.push({ event, operation, deck: route, start: at, duration, target: 'scratch-grain' });
+        break;
+      }
+      default:
+        break;
+    }
+  }
+  return scheduled;
+}
+
 function layoutEventLanes(events, total, measuredLaneWidth = 0, zoom = 1) {
   const duration = Math.max(1, total);
   const canvasWidth = Math.max(820, duration * 7) * zoom;
@@ -819,8 +941,14 @@ function App() {
     stopSingleTrackPreview();
     const now = engine.context.currentTime;
     for (const item of state.sources) {
-      try { item.source.stop(Math.max(now + 0.01, item.when)); } catch { /* Already ended. */ }
-      item.source.onended = () => { try { item.source.disconnect(); item.gain?.disconnect(); } catch { /* Already closed. */ } };
+      if (typeof item.dispose === 'function') item.dispose();
+      else {
+        try { item.source.stop(Math.max(now + 0.01, item.when)); } catch { /* Already ended. */ }
+        item.source.onended = () => { try { item.source.disconnect(); item.gain?.disconnect(); } catch { /* Already closed. */ } };
+      }
+    }
+    for (const bus of state.trackBuses || []) {
+      try { bus.disconnect(); } catch { /* Already disconnected. */ }
     }
     for (const deck of engine.decks.slice(0, 2)) {
       const gain = deck.crossGain.gain;
@@ -829,7 +957,7 @@ function App() {
     }
     resetPreviewEffects(engine.decks.slice(0, 2), now);
     for (const deck of engine.sampler.decks.slice(0, 2)) deck.stopAll();
-    schedulerRef.current = { ...state, sources: [] };
+    schedulerRef.current = { ...state, sources: [], trackBuses: [] };
     setPlaying(false);
   }
 
@@ -916,6 +1044,12 @@ function App() {
       };
       plan.songs.forEach((track, index) => startDeck(index, track, buffers[index]));
       resetPreviewEffects(engine.decks.slice(0, 2), now);
+      const trackBuses = engine.decks.slice(0, 2).map(deck => {
+        const bus = engine.context.createGain();
+        bus.gain.setValueAtTime(1, now);
+        bus.connect(deck.stems.input);
+        return bus;
+      });
 
       const addSegment = (trackIndex, startSource, duration, at, reverse = false) => {
         if (duration <= 0.004) return;
@@ -929,7 +1063,7 @@ function App() {
         gain.gain.linearRampToValueAtTime(1, at + fade);
         gain.gain.setValueAtTime(1, at + duration - fade);
         gain.gain.linearRampToValueAtTime(0, at + duration);
-        source.connect(gain).connect(deck.stems.input);
+        source.connect(gain).connect(trackBuses[trackIndex]);
         const sourceOffset = reverse ? sourceBuffer.duration - startSource : startSource;
         source.start(at, clamp(sourceOffset, 0, sourceBuffer.duration), duration);
         source.onended = () => { try { source.disconnect(); gain.disconnect(); } catch { /* Already closed. */ } };
@@ -979,6 +1113,9 @@ function App() {
         ...schedulePreviewRatePitch(currentGroup.events, plan, trackSources, now),
         ...schedulePreviewFXButtons(currentGroup.events, plan, previewDecks, now),
       ];
+      previewEffects.push(...schedulePreviewTransport(
+        currentGroup.events, plan, previewDecks, buffers, trackSources, trackBuses, sources, now,
+      ));
       for (const event of currentGroup.events || []) {
         const operation = event.operation;
         if (operation?.preview !== 'audio-sample') continue;
@@ -987,13 +1124,14 @@ function App() {
         const sampleIndex = Number(operation.sampleIndex) || 0;
         try {
           const samplerDeck = engine.sampler.decks[routeIndex];
-          samplerDeck.triggerAt(sampleIndex, when);
+          const voice = samplerDeck.triggerAt(sampleIndex, when);
+          if (voice) sources.push(voice);
           previewEffects.push({ event, operation, deck: routeIndex, start: when, duration: 0.5, target: operation.sample });
         } catch (error) {
           console.warn('采样事件未能调度', error);
         }
       }
-      schedulerRef.current = { sources, startedAt: now, duration: endAt - now, groupId, previewEffects };
+      schedulerRef.current = { sources, trackBuses, startedAt: now, duration: endAt - now, groupId, previewEffects };
       setPlaying(true);
       const selection = currentGroup.events?.find(event => event.id === selectedId);
       if (selection) setSelectedId(selection.id);
@@ -1091,7 +1229,7 @@ function App() {
     const sourceTime = findSourceTime(group, schedule, trackIndex, eventTime);
     const trackTime = Math.max(0, eventTime - schedule.starts[trackIndex]);
     const controller = operationController(operation, slotIndex);
-      const controlMetadata = Object.fromEntries(['controlType', 'controlId', 'unit', 'min', 'max', 'curve', 'audioTarget', 'effectSlot', 'effectType', 'holdDuration', 'sample', 'sampleIndex', 'restore']
+      const controlMetadata = Object.fromEntries(['controlType', 'controlId', 'unit', 'min', 'max', 'curve', 'audioTarget', 'audioMethod', 'effectSlot', 'effectType', 'holdDuration', 'sample', 'sampleIndex', 'restore']
         .filter(key => operation[key] !== undefined).map(key => [key, operation[key]]));
       const operationParameters = {
         ...operation.parameters,
@@ -1110,7 +1248,7 @@ function App() {
         ...controlMetadata,
         parameters: { ...operationParameters }, timing: operation.timing, controller,
         controlMap: operation.controlMap, preview: operation.preview || 'command-only',
-        execution: ['reverse-segment', 'audio-filter', 'audio-eq', 'audio-level', 'audio-crossfader', 'audio-rate', 'audio-pitch', 'audio-effect', 'audio-sample'].includes(operation.preview) ? 'preview-audio' : 'not-connected',
+        execution: ['reverse-segment', 'audio-filter', 'audio-eq', 'audio-level', 'audio-crossfader', 'audio-rate', 'audio-pitch', 'audio-effect', 'audio-sample', 'audio-transport'].includes(operation.preview) ? 'preview-audio' : 'not-connected',
       },
     };
     editGroup(target => { target.events.push(event); refreshEventTimes(target); });
@@ -1553,7 +1691,7 @@ function App() {
                   })}
                 </div>
                 <div className="operation-legend"><span className="operation-legend-item is-fixed"><i />固定按键：落点标记</span><span className="operation-legend-item is-resizable"><i />可拉伸效果：拖右端调整时长</span><span className="operation-legend-item is-source"><i />紫色 DJ 操作 · 黄色音效</span></div>
-                <div className="operation-disclaimer"><span className="legend-dot" />按 DJControl MIX 逆向映射编排；试听会真实应用搓碟、滤波、低频、音量、交叉推子、变速、变调、FX 与内置 Kick / Clap / Hat，其余设备命令只保存在草稿。</div>
+                <div className="operation-disclaimer"><span className="legend-dot" />按 DJControl MIX 逆向映射编排；菜单中的每个 DJ 按键、推杆和 Kick / Clap / Hat 都有对应的本地试听路径。试听使用 Web Audio 时钟执行；实体控制器连接仍由 MIXDESK 负责。</div>
               </section>
               <div className="timeline-scroll" ref={timelineScrollRef}>
                 <div className="timeline-canvas" style={{ minWidth: `${timelineCanvasWidth}px` }}>
@@ -1677,6 +1815,7 @@ function App() {
                   <div className="operation-provenance-row"><span>逆向映射</span><b>{selectedEvent.operation.controlMap}</b></div>
                   <div className="operation-provenance-row"><span>设备控件</span><code>{selectedEvent.operation.controller?.control || '—'}</code></div>
                   <div className="operation-provenance-row"><span>原始命令</span><code>{selectedEvent.operation.action}</code></div>
+                  {selectedEvent.operation.audioMethod && <div className="operation-provenance-row"><span>试听调用</span><code>{selectedEvent.operation.audioMethod}</code></div>}
                   <div className="operation-provenance-row"><span>逆向映射值</span><code>{selectedEvent.operation.controller?.mappingValue || '—'}</code></div>
                   <div className="operation-parameters"><span>参数</span><code>{JSON.stringify(selectedEvent.operation.parameters)}</code></div>
                   {selectedEvent.operation.controlType === 'continuous' && <div className="operation-control-summary"><span>连续控件</span><b>{selectedEvent.operation.controlId}</b><small>{selectedEvent.operation.unit || ''} · {selectedEvent.operation.curve || 'linear'}</small></div>}

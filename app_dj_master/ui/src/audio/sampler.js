@@ -171,7 +171,45 @@ class SamplerDeck {
       this.changed();
     }catch(error){this.disposeVoice(voice);if(token===group.generation)this.cancelPending(group);this.changed();throw error;}
   }
-  async triggerAt(index, when){ return this.start(index, false, when); }
+  // Timeline one-shot events are independent performance hits. The live
+  // sampler keeps each group monophonic for held/looping pads, but a prelaid
+  // Kick/Clap/Hat sequence must not cancel an earlier hit merely because all
+  // three events use the same sampler group. Schedule a standalone voice for
+  // one-shots and leave the interactive group state untouched.
+  triggerAt(index, when){
+    const slot = this.slots[index], group = this.group(index);
+    if (!slot?.buffer || !group || !Number.isFinite(Number(when))) return null;
+    if (isSampleLoop(slot.mode) || isSampleHold(slot.mode) || isSampleToggle(slot.mode)) return this.start(index, false, when);
+    const source = this.context.createBufferSource(), gate = this.context.createGain();
+    const startAt = Math.max(this.context.currentTime, Number(when));
+    const rate = 1;
+    source.buffer = slot.buffer;
+    source.playbackRate.value = rate;
+    gate.gain.value = slot.gain;
+    source.connect(gate).connect(group.level);
+    let disposed = false;
+    const dispose = () => {
+      if (disposed) return;
+      disposed = true;
+      source.onended = null;
+      try { source.stop(); } catch {}
+      try { source.disconnect(); gate.disconnect(); } catch {}
+    };
+    const voice = { source, gain: gate, when: startAt, index, dispose, stop: dispose };
+    source.onended = () => {
+      source.onended = null;
+      disposed = true;
+      try { source.disconnect(); gate.disconnect(); } catch {}
+    };
+    source.start(startAt, slot.start);
+    source.stop(startAt + Math.max(0.01, (slot.end - slot.start) / rate));
+    // Keep the same scheduling metadata exposed by interactive sampler voices
+    // so diagnostics and the timeline inspector can prove that every
+    // one-shot hit was placed on the audio clock.
+    slot.startedAt = startAt;
+    slot.rate = rate;
+    return voice;
+  }
   stop(index){for(const voice of this.tails)if(voice.index===index)this.disposeVoice(voice);const group=this.group(index);if(!group)return;for(const [key,heldIndex] of [...group.held])if(heldIndex===index)group.held.delete(key);this.settle(group);if(group.pending?.index===index)this.cancelPending(group);if(group.active?.index===index){this.disposeVoice(group.active);group.active=null;}this.slots[index].held.clear();this.slots[index].pending=false;this.changed();}
   stopGroup(index){for(const voice of this.tails)if(Math.floor(voice.index/4)===index)this.disposeVoice(voice);const g=this.groups[index];if(!g)return;this.cancelPending(g);this.disposeVoice(g.active);g.active=null;g.held.clear();this.slots.slice(index*4,index*4+4).forEach(s=>s.held.clear());this.changed();}
   playGroup(index){const g=this.groups[index];if(!g)return;if(this.groupActive(index)){this.stopGroup(index);return;}return this.start(index*4+g.selected);}

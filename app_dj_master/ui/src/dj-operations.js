@@ -37,28 +37,28 @@ export const DJ_OPERATION_GROUPS = [
 export const DJ_OPERATIONS = [
   {
     id: 'play-pause', group: 'transport', label: '播放 / 暂停', hint: 'PLAY', icon: AudioLines,
-    ...deckCommand('PLAY', 'play_pause', {}, 'dj', { timing: 'instant', mappingValue: '0', controlMap: 'DJControl_Mix.djm', ...buttonControl('play') }),
+    ...deckCommand('PLAY', 'play_pause', {}, 'dj', { timing: 'instant', mappingValue: '0', controlMap: 'DJControl_Mix.djm', preview: 'audio-transport', ...buttonControl('play') }),
   },
   {
     id: 'cue-preview', group: 'transport', label: 'Cue 预听', hint: 'CUE', icon: Headphones,
-    ...deckCommand('CUE', 'cue_stop', { temporary: true, holdDuration: 1 }, 'dj', { timing: 'duration', duration: 1, mappingValue: 'auto temporary', controlMap: 'DJControl_Mix.djm', ...buttonControl('cue', { holdDuration: 1 }) }),
+    ...deckCommand('CUE', 'cue_stop', { temporary: true, holdDuration: 1 }, 'dj', { timing: 'duration', duration: 1, mappingValue: 'auto temporary', controlMap: 'DJControl_Mix.djm', preview: 'audio-transport', ...buttonControl('cue', { holdDuration: 1 }) }),
   },
   ...[1, 2, 3, 4].map(index => ({
     id: `hot-cue-${index}`, group: 'transport', label: `Hot Cue ${index}`, hint: `HC ${index}`, icon: Zap,
-    ...deckCommand(`HC${index}`, 'hot_cue', { index }, 'dj', { timing: 'instant', mappingValue: String(index), controlMap: 'DJControl_Mix.djm', ...buttonControl(`hot-cue-${index}`) }),
+    ...deckCommand(`HC${index}`, 'hot_cue', { index }, 'dj', { timing: 'instant', mappingValue: String(index), controlMap: 'DJControl_Mix.djm', preview: 'audio-transport', ...buttonControl(`hot-cue-${index}`) }),
   })),
   ...[1, 2, 4, 8].map(beats => ({
     id: `loop-${beats}`, group: 'rhythm', label: `${beats} 拍循环`, hint: `${beats} BEAT`, icon: AudioWaveform,
-    ...deckCommand(`LOOP_${beats}_BEAT`, 'loop', { beats, mode: 'toggle' }, 'dj', { timing: 'instant', mappingValue: String(beats), controlMap: 'DJControl_Mix.djm', ...buttonControl(`loop-${beats}`) }),
+    ...deckCommand(`LOOP_${beats}_BEAT`, 'loop', { beats, mode: 'toggle' }, 'dj', { timing: 'instant', mappingValue: String(beats), controlMap: 'DJControl_Mix.djm', preview: 'audio-transport', ...buttonControl(`loop-${beats}`) }),
   })),
   ...[-1, 1].map(direction => ({
     id: `beat-jump-${direction > 0 ? 'forward' : 'back'}`, group: 'rhythm',
     label: `${direction > 0 ? '前进' : '后退'} 4 拍`, hint: direction > 0 ? '+4 BEAT' : '−4 BEAT', icon: FastForward,
-    ...deckCommand('JOG_SHIFT_BEND', 'seek_loop', { beats: 4, direction }, 'dj', { timing: 'instant', icon: direction < 0 ? RotateCcw : FastForward, mappingValue: '4', controlMap: 'DJControl_Mix.djm', ...buttonControl(`beat-jump-${direction > 0 ? 'forward' : 'back'}`) }),
+    ...deckCommand('JOG_SHIFT_BEND', 'seek_loop', { beats: 4, direction }, 'dj', { timing: 'instant', icon: direction < 0 ? RotateCcw : FastForward, mappingValue: '4', controlMap: 'DJControl_Mix.djm', preview: 'audio-transport', ...buttonControl(`beat-jump-${direction > 0 ? 'forward' : 'back'}`) }),
   })),
   {
     id: 'sync', group: 'rhythm', label: '速度同步', hint: 'SYNC', icon: AudioWaveform,
-    ...deckCommand('SYNC', 'sync', { mode: 'toggle' }, 'dj', { timing: 'instant', mappingValue: '0', controlMap: 'DJControl_Mix.djm', ...buttonControl('sync') }),
+    ...deckCommand('SYNC', 'sync', { mode: 'toggle' }, 'dj', { timing: 'instant', mappingValue: '0', controlMap: 'DJControl_Mix.djm', preview: 'audio-transport', ...buttonControl('sync') }),
   },
   {
     id: 'filter-sweep', group: 'mix', label: '滤波渐入', hint: 'FILTER', icon: SlidersHorizontal,
@@ -98,11 +98,11 @@ export const DJ_OPERATIONS = [
   },
   {
     id: 'scratch-mode', group: 'performance', label: 'Scratch 模式', hint: 'SCRATCH MODE', icon: Disc3,
-    ...deckCommand('ScratchON_OFF', 'scratch_mode', { mode: 'toggle' }, 'dj', { timing: 'instant', mappingValue: 'auto', controlMap: 'DJControl_Mix.djm', ...buttonControl('scratch-mode') }),
+    ...deckCommand('ScratchON_OFF', 'scratch_mode', { mode: 'toggle' }, 'dj', { timing: 'instant', mappingValue: 'auto', controlMap: 'DJControl_Mix.djm', preview: 'audio-transport', ...buttonControl('scratch-mode') }),
   },
   {
     id: 'stop-deck', group: 'performance', label: '停止播放', hint: 'STOP', icon: CirclePause,
-    ...deckCommand('CUE_SH', 'stop', {}, 'dj', { timing: 'instant', mappingValue: 'auto', controlMap: 'DJControl_Mix.djm', ...buttonControl('stop-deck') }),
+    ...deckCommand('CUE_SH', 'stop', {}, 'dj', { timing: 'instant', mappingValue: 'auto', controlMap: 'DJControl_Mix.djm', preview: 'audio-transport', ...buttonControl('stop-deck') }),
   },
   {
     id: 'tempo-rate', group: 'mix', label: '变速', hint: 'TEMPO', icon: FastForward,
@@ -130,6 +130,27 @@ export const DJ_OPERATIONS = [
 ];
 
 export const DJ_OPERATION_BY_ID = Object.fromEntries(DJ_OPERATIONS.map(operation => [operation.id, operation]));
+
+// Concrete local MIXDESK method used by the timeline audition.  Keeping this
+// registry beside the recovered controller mapping makes an operation review
+// auditable: a menu card cannot be marked as audio-confirmed without naming
+// the Deck/Engine API it drives.
+const AUDIO_METHOD_BY_OPERATION = {
+  'play-pause': 'Deck.play() / Deck.pause()',
+  'cue-preview': 'Deck.cuePress() / Deck.cueRelease()',
+  'hot-cue-1': 'Deck.seek(hotcues[0])', 'hot-cue-2': 'Deck.seek(hotcues[1])',
+  'hot-cue-3': 'Deck.seek(hotcues[2])', 'hot-cue-4': 'Deck.seek(hotcues[3])',
+  'loop-1': 'Deck.setLoop() + sampler-clock overlay', 'loop-2': 'Deck.setLoop() + sampler-clock overlay',
+  'loop-4': 'Deck.setLoop() + sampler-clock overlay', 'loop-8': 'Deck.setLoop() + sampler-clock overlay',
+  'beat-jump-forward': 'Deck.beatJump(+4)', 'beat-jump-back': 'Deck.beatJump(-4)',
+  sync: 'Deck.setSyncEnabled()', 'scratch-mode': 'Deck.setScratchMode() + scratch grain', 'stop-deck': 'Deck.pause()',
+  'filter-sweep': 'Deck.setFilter()', 'bass-cut': 'Deck.setEQ("low")', 'channel-level': 'Deck.setVolume()',
+  crossfader: 'AudioEngine.setCrossfader()', 'tempo-rate': 'Deck.setRate()', 'pitch-shift': 'Deck.setPitch()',
+  'scratch-reverse': 'Deck.setReverse() + reverse/replay route', 'fx-1': 'Deck.effects.setType()/setAmount()/setEnabled()',
+  'fx-2': 'Deck.effects.setType()/setAmount()/setEnabled()', 'fx-3': 'Deck.effects.setType()/setAmount()/setEnabled()',
+  'sampler-kick': 'engine.sampler.triggerAt(0)', 'sampler-clap': 'engine.sampler.triggerAt(1)', 'sampler-hat': 'engine.sampler.triggerAt(2)',
+};
+for (const operation of DJ_OPERATIONS) operation.audioMethod = AUDIO_METHOD_BY_OPERATION[operation.id] || null;
 
 export function operationController(operation, playbackDeck) {
   const deck = playbackDeck === 1 ? 1 : 0;
