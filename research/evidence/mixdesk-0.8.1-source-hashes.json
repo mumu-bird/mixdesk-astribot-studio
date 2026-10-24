@@ -1,0 +1,18 @@
+{
+  "time": "2026-10-20T10:29:14.992Z",
+  "note": "120-test full regression passed before final experimental wording and button contrast; production smoke verified final build",
+  "hashes": {
+    "src/sample-pack.js": "b4b9a60f6184ce6f5c0aa9a858398b80a849d2541436d7f4ab8ffa39e25702ab",
+    "src/sampler-ui.js": "e9482ce273c49589b4ca2d0bf3de63972ef161783cc1496867c3c712e425b9f1",
+    "src/sampler.css": "ae1a77ee7e26a5427c7e0a4be32e8c38d77cc38aeac92650cea38f9b1c6b674f",
+    "src/djz.js": "8b3433aa6304a4627db3efad9272b6c18f34954d7132d9ab23c526b82e1bb217",
+    "src/djz-worker.js": "dc6e64a7b61ad969c435a522541b453ab00e89d5031c1df22ff0b8722ec7f2d2",
+    "src/main.js": "b9fa173c1cc2d98a0d486103abdef2e620c9eb4b96f473f30ed8a489af722f65",
+    "src/library.js": "fd79f381c787e9218b18d295ddf18d0b9de0c5614980451568de550062b9ba95",
+    "vite.config.js": "28df859c156db1e91d21c65bdb7f93ac77c7b9aabd065aa15b5148dc884ef980",
+    "package.json": "c6988eccca502040f3257488a45b61b7bcd8adbc6f095a321fecb4c49ec4f0fb",
+    "package-lock.json": "c01e8e940a29feb8836ab97b47a958aca521a852783eeade465e8f04bcfa4e8e",
+    "tests/djz-export.spec.js": "79bfb0e5f7d8d9deee4d905eeb41ccd59264857f181b1febaf5a9c9cac9fe83b",
+    "scripts/smoke-djz.mjs": "d8015792af1fea8520265828d0cd022f2366c6e60e8e33387cce3c134d5b6acb"
+  }
+}

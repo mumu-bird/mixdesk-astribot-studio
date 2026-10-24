@@ -1,0 +1,227 @@
+
+Running 171 tests using 1 worker
+
+(node:48248) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/171] tests/audio-core.spec.js:13:5 › transport fades bound PCM discontinuities on play, seek and pause
+[2/171] tests/audio-core.spec.js:55:9 › Slip scratch restores the forward audio clock
+[3/171] tests/audio-core.spec.js:55:9 › Slip scratch restores the forward audio clock inside a loop
+[4/171] tests/audio-core.spec.js:55:9 › Slip scratch restores the reverse audio clock
+[5/171] tests/audio-core.spec.js:55:9 › Slip scratch restores the reverse audio clock inside a loop
+[6/171] tests/audio-core.spec.js:103:5 › Slip Hot Cue release during a scratch rebases the held transport; pause cancels late releases
+[7/171] tests/audio-core.spec.js:128:5 › live stereo key changes keep audio flowing without refilling the pitch processor
+[8/171] tests/audio-core.spec.js:172:5 › replacing held scratch transport and disabling Slip discard its old background clock
+[9/171] tests/audio-core.spec.js:202:5 › rapid pitch-enabled transport replacements drain old voices without cutting the current voice
+[10/171] tests/djz-export.spec.js:15:5 › DJZ is readable by libarchive and preserves six modes, holes and real cropped stereo PCM
+tests/djz-export.spec.js:15:5 › DJZ is readable by libarchive and preserves six modes, holes and real cropped stereo PCM
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[11/171] tests/djz-export.spec.js:49:5 › empty decks export four groups, quantize off and no invented audio
+tests/djz-export.spec.js:49:5 › empty decks export four groups, quantize off and no invented audio
+
+
+[12/171] tests/djz-export.spec.js:56:5 › export reports clipping, preserves the source and rejects unsupported channels
+tests/djz-export.spec.js:56:5 › export reports clipping, preserves the source and rejects unsupported channels
+
+
+[13/171] tests/djz-export.spec.js:66:5 › export can cancel a loading compressor and recover for another download
+[14/171] tests/djz-export.spec.js:74:5 › export works on mobile with local assets only
+[15/171] tests/djz-export.spec.js:80:5 › DJS pack tempo survives reload and MXPACK, and can be changed for the exported DJZ
+tests/djz-export.spec.js:80:5 › DJS pack tempo survives reload and MXPACK, and can be changed for the exported DJZ
+
+
+[16/171] tests/djz-import.spec.js:21:5 › single independent DJZ imports six modes, holes, nested paths, PCM and settings into only the selected deck
+tests/djz-import.spec.js:21:5 › single independent DJZ imports six modes, holes, nested paths, PCM and settings into only the selected deck
+
+
+[17/171] tests/djz-import.spec.js:32:5 › bad archives leave the current voice and saved records intact
+tests/djz-import.spec.js:32:5 › bad archives leave the current voice and saved records intact
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[18/171] tests/djz-import.spec.js:55:5 › actual extraction cannot exceed the preflight size manifest
+[19/171] tests/djz-import.spec.js:64:5 › encrypted data and encrypted headers fail without a password prompt
+[20/171] tests/djz-import.spec.js:73:5 › cancel during worker load keeps playback and permits another import
+[21/171] tests/djz-import.spec.js:81:5 › cancel during audio decode discards the late result and restores controls
+[22/171] tests/djz-import.spec.js:89:5 › target deck is captured before asynchronous decode
+[23/171] tests/djz-import.spec.js:97:5 › IDB abort after staging restores the original playing voice and persisted samples
+[24/171] tests/djz-import.spec.js:108:5 › mobile import uses only local assets and requires one archive at a time
+[25/171] tests/four-decks.spec.js:16:5 › all four decks render audio independently with crossfader assignment and PFL taps
+[26/171] tests/four-decks.spec.js:35:5 › four-deck sync source and Instant Double target the chosen deck
+[27/171] tests/four-decks.spec.js:56:5 › eight hot cues persist across reload and four-deck layout fits desktop and phone
+[28/171] tests/four-decks.spec.js:76:5 › DJUCED layout presets keep deck state and expose distinct workspace modes
+[29/171] tests/library.spec.js:22:5 › ordinary lists deduplicate, reorder, persist, rename and remove membership
+[30/171] tests/library.spec.js:37:5 › smart lists combine rules and follow favorites and metadata changes
+[31/171] tests/library.spec.js:51:5 › metadata updates loaded copies and escapes markup across reload
+[32/171] tests/library.spec.js:64:5 › embedded tags and artwork import, persist and reread without rewriting the file
+[33/171] tests/library.spec.js:78:5 › metadata export creates a tagged WAV copy and preserves the imported bytes
+[34/171] tests/library.spec.js:100:5 › relink swaps the audio while preserving identity, catalog membership and markers
+[35/171] tests/library.spec.js:143:5 › failed relink leaves the original file and runtime state intact
+[36/171] tests/library.spec.js:161:5 › JSON and M3U round trips preserve order and never fetch unresolved URLs
+[37/171] tests/library.spec.js:176:5 › Rekordbox XML export and import match local tracks without fetching paths
+[38/171] tests/library.spec.js:186:5 › Rekordbox XML export uses standard Location, TEMPO and POSITION_MARK fields
+[39/171] tests/library.spec.js:204:5 › Rekordbox XML import accepts nested playlists and Location attributes without fetching paths
+[40/171] tests/library.spec.js:211:5 › Serato Crate import parses bounded UTF-16BE track records without opening paths
+[41/171] tests/library.spec.js:232:5 › simultaneous tabs retain edits and broadcast refreshed metadata
+[42/171] tests/library.spec.js:241:5 › filters, sorting, drag to deck/list and compact layout remain usable
+[43/171] tests/library.spec.js:259:5 › measured main output creates one persisted play per load after fifteen seconds
+[44/171] tests/library.spec.js:272:5 › history excludes previews, unobserved gaps and silence, resets per load
+[45/171] tests/monitor.spec.js:30:5 › PFL survives channel/master silence, stays out of recorder, and responds to MIX
+[46/171] tests/monitor.spec.js:59:5 › same-device routes and denied outputs never enable PFL
+[47/171] tests/monitor.spec.js:73:5 › hot-unplug mutes cue and disables LED feedback
+[48/171] tests/monitor.spec.js:84:5 › disable during pending sink change prevents late cue playback
+[49/171] tests/pads.spec.js:26:5 › Roll audio, changing tempo and release agree with the audio clock
+[50/171] tests/pads.spec.js:51:5 › Slicer selects audible regions and handles overlapping held pads in last-pressed order
+[51/171] tests/pads.spec.js:69:5 › Slicer fixed mode keeps the selected region while the deck advances
+[52/171] tests/pads.spec.js:84:5 › Slip loops restore background progress while ordinary loops exit at the audible position
+[53/171] tests/pads.spec.js:101:5 › Slip Hot Cue previews a cue and returns to the background clock
+[54/171] tests/pads.spec.js:123:5 › Turning Slip off while a Hot Cue is held restores the background position
+[55/171] tests/pads.spec.js:138:5 › roll over a slip loop restores the loop first, then restores its outer timeline
+[56/171] tests/pads.spec.js:152:5 › pause, seek, load and end-of-track prevent late pad releases from restarting or replaying tails
+[57/171] tests/pads.spec.js:170:5 › manual loop boundaries and saved slots persist, recall exact times and delete with Shift
+[58/171] tests/pads.spec.js:188:5 › pointer release outside pads, keyboard key-up and window blur all release Roll
+[59/171] tests/pads.spec.js:201:5 › Cue hold previews from Cue, release returns, and Play latches the preview
+[60/171] tests/pads.spec.js:220:5 › Cue release during audio resume and MIDI disconnect cancel pending preview
+[61/171] tests/pads.spec.js:235:5 › editing cues on another loaded copy preserves shared saved loops
+[62/171] tests/pads.spec.js:250:5 › hot cues support editable names and colors and persist across reload
+[63/171] tests/pads.spec.js:269:5 › MIDI Slip Hot Cue keeps one background clock and ignores older or repeated releases
+[64/171] tests/pads.spec.js:298:5 › MIX HOTCUE_TAB selects the Hot Cue pad page without changing cue data
+[65/171] tests/pads.spec.js:306:5 › Digit Hot Cue release follows its original deck and cannot end a MIDI hold on the same pad
+[66/171] tests/pads.spec.js:327:5 › Hot Cue pointer cancellation and focused button keys release Slip without swallowing Shift clear
+[67/171] tests/pads.spec.js:343:5 › jumping to an existing Hot Cue does not rewrite its saved annotation
+[68/171] tests/pads.spec.js:361:5 › simulated MIX ports release Slip on hot unplug, retain keyboard ownership and send Cue LEDs
+[69/171] tests/performance.spec.js:4:5 › MIX protocol distinguishes note release, pads, channels and unsupported devices
+[70/171] tests/performance.spec.js:60:5 › MIDI outputs are deduplicated and disconnect turns off owned LEDs only
+[71/171] tests/performance.spec.js:80:5 › MIDI Hot Cue note repeats do not retrigger and only a matching release ends the hold
+[72/171] tests/performance.spec.js:120:5 › MIX Shift-touch Jog selects songs and Load restores Hot Cues with matching pad feedback
+[73/171] tests/performance.spec.js:146:5 › MIX browsing respects mouse selection, sorted and filtered lists, boundaries and empty results
+[74/171] tests/performance.spec.js:182:5 › every effect changes audio, bypass is transparent and Echo produces delayed audio
+[75/171] tests/performance.spec.js:218:5 › Gater uses a square gate and the selected beat length controls its cycle
+[76/171] tests/performance.spec.js:243:5 › shared FX racks keep per-deck lanes isolated and can be assigned together
+[77/171] tests/performance.spec.js:264:5 › FX bank wetness is transparent at zero and parameter limits survive lanes and snapshots
+[78/171] tests/performance.spec.js:296:5 › local stem approximation is transparent at defaults and only changes the path after control input
+[79/171] tests/performance.spec.js:321:5 › sampler reaches master output and stop silences it
+[80/171] tests/performance.spec.js:333:5 › Inpulse-style sampler page action wraps after the last page
+[81/171] tests/performance.spec.js:341:5 › platter scratch holds the audio timeline and resumes transport on release
+[82/171] tests/performance.spec.js:359:5 › reverse scratch grains read reversed PCM and release restores a coherent transport
+[83/171] tests/performance.spec.js:380:5 › 14-bit MIDI actions retain fractional DSP precision while the control UI rounds only its display
+[84/171] tests/performance.spec.js:390:5 › MIX tempo control uses software pickup before taking over the pitch slider
+[85/171] tests/performance.spec.js:406:5 › stems controls route real audio, support mute and solo, and persist
+[86/171] tests/performance.spec.js:427:5 › manual grid, quantized cue, phase alignment and cue persistence
+[87/171] tests/performance.spec.js:449:5 › mixer and FX session settings persist across reload
+[88/171] tests/performance.spec.js:472:5 › FX Rack assignment and shared slot edits persist across reload
+[89/171] tests/performance.spec.js:491:5 › mixer settings alter crossfader shape, limiter path and persist
+[90/171] tests/performance.spec.js:511:5 › Filter FX slots stay synchronized across channels, settings and filter amount
+[91/171] tests/performance.spec.js:544:5 › mixer EQ kill switches mute and restore individual bands
+[92/171] tests/performance.spec.js:557:5 › tempo range exposes DJUCED ranges and zero stops transport
+[93/171] tests/performance.spec.js:572:5 › MIDI actions drive UI, DSP state and matching FX feedback
+[94/171] tests/performance.spec.js:602:5 › MIX VU feedback follows the mapped channels and their different ranges
+[95/171] tests/performance.spec.js:615:5 › post-crossfader FX routing and fader start follow the channel controls
+[96/171] tests/performance.spec.js:630:5 › normal jog pitch bend briefly changes transport speed and returns to the set tempo
+[97/171] tests/performance.spec.js:642:5 › controller panel reports denied access without claiming a connection
+[98/171] tests/performance.spec.js:652:5 › Key Lock holds a 440 Hz tone while speed changes; key shift moves it by semitones
+[99/171] tests/performance.spec.js:688:5 › instant double copies timeline, rate, cues, loop and playing state
+[100/171] tests/performance.spec.js:706:5 › browser MIDI connect, live FX feedback and hot unplug use actual UI paths with simulated ports
+[101/171] tests/performance.spec.js:717:5 › Key Lock drains and disposes its processor at end of track
+[102/171] tests/recording.spec.js:9:33 › native 16 bit WAV captures actual stereo PCM and persists for re-export
+[103/171] tests/recording.spec.js:9:33 › native 24 bit WAV captures actual stereo PCM and persists for re-export
+[104/171] tests/recording.spec.js:32:5 › WAV records real master mix and samples while PFL-only playback stays silent
+[105/171] tests/recording.spec.js:45:5 › native WAV can be encoded to a real MP3 download
+[106/171] tests/recording.spec.js:54:5 › interrupted WAV recording recovers committed chunks after a page reload
+[107/171] tests/recording.spec.js:62:5 › processor clamps PCM, counts clipped samples, flushes partial chunks and enforces frame limit
+[108/171] tests/recording.spec.js:74:5 › storage rejects out-of-order chunks atomically and keeps the last good export
+[109/171] tests/recording.spec.js:83:5 › processor failure stops capture and exposes already committed audio for recovery
+[110/171] tests/recording.spec.js:91:5 › recording settings fit a phone and lock format changes during capture
+[111/171] tests/recording.spec.js:97:5 › storage failure stops recording and preserves previously committed chunks
+[112/171] tests/reverse.spec.js:18:5 › REV reverses PCM and makes the transport clock decrease
+[113/171] tests/reverse.spec.js:36:5 › reverse loops stay inside their original timeline and continue backwards
+[114/171] tests/reverse.spec.js:57:5 › reverse Slip Hot Cue restores its descending background clock
+[115/171] tests/sampler-groups.spec.js:9:5 › group pagination follows every group and each deck remembers its own settings
+[116/171] tests/sampler-groups.spec.js:24:5 › three-page sampler layout follows DJUCED integer page visibility and persists
+[117/171] tests/sampler-groups.spec.js:40:5 › four groups mix actual audio while selecting a sibling replaces only its group
+[118/171] tests/sampler-groups.spec.js:56:5 › all six trigger modes distinguish loop, retrigger, toggle and release
+[119/171] tests/sampler-groups.spec.js:67:5 › quantized switching keeps the old tone until the boundary and cancelling a hold restores it
+[120/171] tests/sampler-groups.spec.js:87:5 › failed and stale pending selections keep the previous voice and cannot start later
+[121/171] tests/sampler-groups.spec.js:100:5 › MIX pads and feedback address C and D sampler groups independently of the visible deck
+[122/171] tests/sampler-groups.spec.js:112:5 › MIX sampler pads trigger the selected sample in each group and release the same held slot
+[123/171] tests/sampler-groups.spec.js:126:5 › v4 packages preserve audio, empty cells and settings across all four decks and reload
+[124/171] tests/sampler-groups.spec.js:135:5 › v4 packages preserve the native three-page sampler setting and current page
+[125/171] tests/sampler-groups.spec.js:156:5 › legacy v1 to v3 packages migrate every layer to a selectable sample without dropping audio
+[126/171] tests/sampler-groups.spec.js:166:5 › old IndexedDB migrates transactionally and preserves original records and audio
+[127/171] tests/sampler-groups.spec.js:174:5 › DJS six modes, quantization fallback and empty cells apply to the selected deck only
+[128/171] tests/sampler-groups.spec.js:183:5 › corrupt v4 package metadata never replaces active voices or durable data
+[129/171] tests/sampler-groups.spec.js:193:5 › migration failure retains all legacy data and retries on the next load
+[130/171] tests/sampler-groups.spec.js:202:5 › rapid switching cancels stale resume calls, and Key Lock readiness respects release
+[131/171] tests/sampler-groups.spec.js:210:5 › a stopped group replays its selected sample and an empty cell stays silent after reload
+[132/171] tests/sampler-groups.spec.js:215:5 › DJS missing type uses the observed zero type and ambiguous filenames are rejected
+[133/171] tests/sampler-groups.spec.js:220:5 › deck default type governs later file imports without overriding DJS cell types
+[134/171] tests/sampler.spec.js:15:5 › custom sample audio, trim, gain, mode and global options persist across reload
+[135/171] tests/sampler.spec.js:24:5 › sample trim selects the audible region and enforces one-shot duration
+[136/171] tests/sampler.spec.js:32:5 › hold mode releases outside, on blur and on key-up, without restarting after a click
+[137/171] tests/sampler.spec.js:40:5 › MIDI hold handles releases, overlapping holds and disconnect cleanup
+[138/171] tests/sampler.spec.js:46:5 › quantized sampler starts at a real beat boundary with speed matching and cancellation
+[139/171] tests/sampler.spec.js:56:5 › sampler Key Lock preserves pitch while synced playback changes speed
+[140/171] tests/sampler.spec.js:71:5 › active deck loop can be extracted into its assigned sampler bank
+[141/171] tests/sampler.spec.js:81:5 › release during pending audio resume prevents delayed held playback
+[142/171] tests/sampler.spec.js:86:5 › sample packs round trip audio and edits atomically; damaged imports leave slots intact
+[143/171] tests/sampler.spec.js:97:5 › sample pack runtime failure rolls back both IndexedDB and active audio
+[144/171] tests/sampler.spec.js:110:5 › a transaction aborted after sampler staging restores the playing runtime and all stored records
+[145/171] tests/sampler.spec.js:122:5 › invalid trim and failed persistence leave the previous sample usable
+[146/171] tests/sampler.spec.js:130:5 › sampler editor and controls fit a mobile viewport
+[147/171] tests/sampler.spec.js:134:5 › DJUCED XML sample packs import selected local WAV files and preserve loop metadata
+[148/171] tests/sampler.spec.js:153:5 › DJUCED pack failures preserve saved slots and active playback
+[149/171] tests/vj.spec.js:8:5 › VJ panel exposes two independent muted video channels
+[150/171] tests/vj.spec.js:38:5 › VJ fullscreen keeps the same video and transport controls, then returns to the workstation
+[151/171] tests/vj.spec.js:50:5 › VJ opacity, visibility and transport state follow the local controller API
+[152/171] tests/vj.spec.js:70:5 › VJ effects and animations are per-channel and persist after reload
+[153/171] tests/vj.spec.js:100:5 › VJ transport controls play, seek and stop independently when deck sync is off
+[154/171] tests/vj.spec.js:134:5 › VJ follows deck play, pause, seek and tempo without adding a second audio path
+[155/171] tests/vj.spec.js:157:5 › a real local video loads, seeks, stays muted, and restores from IndexedDB
+[156/171] tests/vj.spec.js:282:5 › local LRC and SRT lyrics follow VJ position and persist styling
+[157/171] tests/vj.spec.js:301:5 › parseLyrics accepts SRT and pipe timeline text
+[158/171] tests/workstation.spec.js:13:5 › two real audio decks render without runtime errors or overflow
+[159/171] tests/workstation.spec.js:30:5 › seek, cue and hot cues preserve exact timeline positions
+[160/171] tests/workstation.spec.js:45:5 › tempo sync and loop boundaries agree with the audio clock
+[161/171] tests/workstation.spec.js:61:5 › continuous SYNC follows source tempo and manual override releases the target
+[162/171] tests/workstation.spec.js:80:5 › Auto Gain estimates a bounded per-track gain and auto Hot Cue analysis follows the grid
+[163/171] tests/workstation.spec.js:98:5 › crossfader, channel volume, EQ and master affect the actual output signal
+[164/171] tests/workstation.spec.js:134:5 › real local file import, BPM estimate, persistence, manual correction and removal
+[165/171] tests/workstation.spec.js:153:5 › automatic first-beat estimate provides a conservative grid anchor
+[166/171] tests/workstation.spec.js:166:5 › dynamic beat-grid analysis preserves a deliberate tempo change
+[167/171] tests/workstation.spec.js:182:5 › variable-tempo timeline math preserves later segments and counts beats across boundaries
+[168/171] tests/workstation.spec.js:201:5 › untagged imported audio receives an editable estimated key hint
+[169/171] tests/workstation.spec.js:209:5 › waveform analysis exposes separate low, mid and high frequency energy
+[170/171] tests/workstation.spec.js:230:5 › recording exports nonempty audio from the mixed output
+[171/171] tests/workstation.spec.js:263:5 › search, help and compact viewport remain usable
+  171 passed (12.7m)

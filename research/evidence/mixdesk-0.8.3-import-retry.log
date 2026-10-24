@@ -1,0 +1,101 @@
+
+> mixdesk@0.8.2 test
+> playwright test tests/djz-import.spec.js
+
+
+Running 8 tests using 1 worker
+
+(node:30143) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+  ✓  1 tests/djz-import.spec.js:20:5 › single independent DJZ imports six modes, holes, nested paths, PCM and settings into only the selected deck (3.0s)
+
+  ✘  2 tests/djz-import.spec.js:31:5 › bad archives leave the current voice and saved records intact (7.9s)
+(node:30326) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+  ✘  3 tests/djz-import.spec.js:51:5 › encrypted data and encrypted headers fail without a password prompt (7.0s)
+(node:30362) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+  ✓  4 tests/djz-import.spec.js:60:5 › cancel during worker load keeps playback and permits another import (2.2s)
+  ✓  5 tests/djz-import.spec.js:68:5 › cancel during audio decode discards the late result and restores controls (1.8s)
+  ✓  6 tests/djz-import.spec.js:76:5 › target deck is captured before asynchronous decode (1.5s)
+  ✓  7 tests/djz-import.spec.js:84:5 › IDB abort after staging restores the original playing voice and persisted samples (2.5s)
+  ✓  8 tests/djz-import.spec.js:95:5 › mobile import uses only local assets and requires one archive at a time (1.4s)
+
+
+  1) tests/djz-import.spec.js:31:5 › bad archives leave the current voice and saved records intact ─
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('#sampler-status')
+    Expected substring: "目录无效"
+    Received string:    "采样包包含未声明的文件路径"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toContainText" locator('#sampler-status') with timeout 5000ms
+      - waiting for locator('#sampler-status')
+        - locator resolved to <p role="status" id="sampler-status">正在读取采样包…</p>
+        - unexpected value "正在读取采样包…"
+        - locator resolved to <p role="status" id="sampler-status">正在检查采样包…</p>
+        - unexpected value "正在检查采样包…"
+        12 × locator resolved to <p role="status" id="sampler-status">采样包包含未声明的文件路径</p>
+           - unexpected value "采样包包含未声明的文件路径"
+
+
+      45 |     [nativeArchive({...packFiles(),'default.djs':'x'.repeat(1024**2+1)}),'1 MB'],
+      46 |   ];
+    > 47 |   for(const [bytes,message] of cases){await load(page,bytes);await expect(page.locator('#sampler-status')).toContainText(message);await unchanged(page);await expect(page.locator('#sample-import-cancel')).toBeHidden();await expect(page.locator('#sample-djs-import')).toBeEnabled();}
+         |                                                                                                            ^
+      48 |   await page.reload();await expect(page.locator('#sampler-status')).toContainText('已就绪');await expect(page.locator('[data-sample="0"] strong')).toHaveText('Kick');
+      49 | });
+      50 |
+        at /Users/pomelo/dj工作台/tests/djz-import.spec.js:47:108
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/djz-import-bad-archives-le-3300f-ce-and-saved-records-intact/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/djz-import-bad-archives-le-3300f-ce-and-saved-records-intact/error-context.md
+
+  2) tests/djz-import.spec.js:51:5 › encrypted data and encrypted headers fail without a password prompt 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('#sampler-status')
+    Expected substring: "加密"
+    Received string:    "DJUCED 采样包压缩失败"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toContainText" locator('#sampler-status') with timeout 5000ms
+      - waiting for locator('#sampler-status')
+        - locator resolved to <p role="status" id="sampler-status">正在读取采样包…</p>
+        - unexpected value "正在读取采样包…"
+        - locator resolved to <p role="status" id="sampler-status">正在检查采样包…</p>
+        - unexpected value "正在检查采样包…"
+        12 × locator resolved to <p role="status" id="sampler-status">DJUCED 采样包压缩失败</p>
+           - unexpected value "DJUCED 采样包压缩失败"
+
+
+      54 |     const z=await SevenZip({print:()=>{},printErr:()=>{},stdin:()=>null});z.FS.mkdir('/input');z.FS.chdir('/input');z.FS.writeFile('default.djs',packXml);
+      55 |     expect(z.callMain(['a','-t7z','-psecret',...(headers?['-mhe=on']:[]),'/encrypted.djz','default.djs'])).toBe(0);
+    > 56 |     await load(page,Buffer.from(z.FS.readFile('/encrypted.djz')));await expect(page.locator('#sampler-status')).toContainText('加密');await unchanged(page);
+         |                                                                                                                 ^
+      57 |   }
+      58 | });
+      59 |
+        at /Users/pomelo/dj工作台/tests/djz-import.spec.js:56:113
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/djz-import-encrypted-data--5640a-l-without-a-password-prompt/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/djz-import-encrypted-data--5640a-l-without-a-password-prompt/error-context.md
+
+  2 failed
+    tests/djz-import.spec.js:31:5 › bad archives leave the current voice and saved records intact ──
+    tests/djz-import.spec.js:51:5 › encrypted data and encrypted headers fail without a password prompt 
+  6 passed (29.8s)

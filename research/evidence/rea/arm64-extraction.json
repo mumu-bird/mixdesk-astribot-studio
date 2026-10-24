@@ -1,0 +1,10 @@
+{
+  "source": "/Applications/DJUCED/DJUCED.app/Contents/MacOS/DJUCED",
+  "source_sha256": "a8860c525115bc3e510f9f3f167e969bc54d6bbdd8776ca3ffbfed4b1a2a7554",
+  "parent_evidence_id": "ev_8b97f5c23a2caa54ad6417f64c08276e0d48d3b24738f1872e05c7e8e3e9c06f",
+  "operation": "exact arm64 slice byte extraction",
+  "offset": 444825600,
+  "size": 442766304,
+  "output": "/Users/pomelo/dj\u5de5\u4f5c\u53f0/research/.analysis/DJUCED-arm64",
+  "sha256": "3d833a5175d99f6324bad3bd370b97bf46f9e82dad7f886ac6f5b08a83ccf5d8"
+}

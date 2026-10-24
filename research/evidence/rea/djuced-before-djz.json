@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "provenance": {
+      "untrusted_content": true,
+      "source": "analysis_target"
+    }
+  },
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"error\":{\"code\":\"capability_unavailable\",\"category\":\"unsupported_provider\",\"message\":\"This analysis is unavailable for the current target. Choose another analysis or target.\",\"retryable\":false,\"remediation\":{\"action\":\"This analysis is unavailable for the current target. Choose another analysis or target.\"},\"details\":{\"provider_id\":\"native-macos\",\"operation\":\"observe_native_ui\",\"reason\":\"target-mismatch: Selected PID executable /Applications/DJUCED/DJUCED.app/Contents/MacOS/DJUCED differs from active target /Users/pomelo/dj工作台/research/.analysis/DJUCED-arm64\"}}}"
+    }
+  ],
+  "isError": true
+}

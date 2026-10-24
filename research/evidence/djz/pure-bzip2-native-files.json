@@ -1,0 +1,44 @@
+[
+  {
+    "name": "default.djs",
+    "bytes": 1115,
+    "matches_source": true,
+    "sha256": "841186d658dfa1545eae949fee7c59a7cbfac7140c9c308f169865493e7df2eb"
+  },
+  {
+    "name": "sample-1-3.wav",
+    "bytes": 145248,
+    "matches_source": false,
+    "sha256": "282389bd8aed20d3d4d5703266fc02fc02256d951c27e33550bf41c029e37d0d"
+  },
+  {
+    "name": "sample-1-1.wav",
+    "bytes": 145248,
+    "matches_source": false,
+    "sha256": "24a8f20ff4a18db65864752b6bdd2c6cf777837afd847d4b373b302d0f4169bf"
+  },
+  {
+    "name": "sample-3-3.wav",
+    "bytes": 145248,
+    "matches_source": false,
+    "sha256": "5eac15cee406e4fdc520460cf4288e9beaf69ff310a11f87d9c0b14bd8845f2b"
+  },
+  {
+    "name": "sample-4-4.wav",
+    "bytes": 145248,
+    "matches_source": false,
+    "sha256": "29706330d2645413d94209493b1b082bf6f7c85a1d152e03d297c8cdde59b63d"
+  },
+  {
+    "name": "sample-2-1.wav",
+    "bytes": 145248,
+    "matches_source": false,
+    "sha256": "c74659655a3e246be4ffebeda63a8558f84a6785c7b5f711385bfbb2421f7c52"
+  },
+  {
+    "name": "sample-2-4.wav",
+    "bytes": 145248,
+    "matches_source": false,
+    "sha256": "63136b39434208f66737a5ca8635f1bd30546a926ec31cc63968ab02149cb54e"
+  }
+]

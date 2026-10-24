@@ -1,0 +1,91 @@
+{
+  "archive": "/Users/pomelo/dj工作台/research/evidence/djz/MIXDESK-interop-0.8.2.djz",
+  "archive_sha256": "d0ac88da90b8440073ffe8415908eecdd5235f941e73e68a8f85ba0f9445ca72",
+  "installed": "/Users/pomelo/Music/DJUCED/Samples/MIXDESK-082-ACTUAL-20261020",
+  "pack_title": "MIXDESK 互通验证 & \"六模式\"",
+  "pack_bpm": "120",
+  "quant": "4",
+  "quant_enabled": "1",
+  "default_type": "3",
+  "descriptor_equal": true,
+  "samples": [
+    {
+      "group": 0,
+      "cell": 0,
+      "type": 0,
+      "file": "sample-1-1.wav",
+      "bpm": "120",
+      "frames": 36000,
+      "channels": 2,
+      "sample_rate": 48000,
+      "pcm_equal": true,
+      "pcm_sha256": "4002f9f6433cfd64e1fe3442d0d6d2a462b21404582495ed397892a0c07639ad",
+      "native_file_changed": true
+    },
+    {
+      "group": 0,
+      "cell": 2,
+      "type": 1,
+      "file": "sample-1-3.wav",
+      "bpm": "120",
+      "frames": 36000,
+      "channels": 2,
+      "sample_rate": 48000,
+      "pcm_equal": true,
+      "pcm_sha256": "636e9b3be0a868d7e7c45659a5f46f5af97cd5d4b87cf4feb09845209818c9f8",
+      "native_file_changed": true
+    },
+    {
+      "group": 1,
+      "cell": 0,
+      "type": 2,
+      "file": "sample-2-1.wav",
+      "bpm": "120",
+      "frames": 36000,
+      "channels": 2,
+      "sample_rate": 48000,
+      "pcm_equal": true,
+      "pcm_sha256": "f9e691a1a56c524b1a14389176cf8fbe9d945ded6306610c6fc342996adf9a5d",
+      "native_file_changed": true
+    },
+    {
+      "group": 1,
+      "cell": 3,
+      "type": 3,
+      "file": "sample-2-4.wav",
+      "bpm": "120",
+      "frames": 36000,
+      "channels": 2,
+      "sample_rate": 48000,
+      "pcm_equal": true,
+      "pcm_sha256": "49628715247dfec246cd3a91b2dbbf327498598165dd2178146b09efde5838ae",
+      "native_file_changed": true
+    },
+    {
+      "group": 2,
+      "cell": 2,
+      "type": 4,
+      "file": "sample-3-3.wav",
+      "bpm": "120",
+      "frames": 36000,
+      "channels": 2,
+      "sample_rate": 48000,
+      "pcm_equal": true,
+      "pcm_sha256": "a8aec0ad2fff4cae15ccf8122393bc28138e2a37d65b290784c222fc9c574661",
+      "native_file_changed": true
+    },
+    {
+      "group": 3,
+      "cell": 3,
+      "type": 5,
+      "file": "sample-4-4.wav",
+      "bpm": "120",
+      "frames": 36000,
+      "channels": 2,
+      "sample_rate": 48000,
+      "pcm_equal": true,
+      "pcm_sha256": "7a988b7d3343232b434d9e81a54f8492da927e3217529a2039b59ea235b66d2b",
+      "native_file_changed": true
+    }
+  ]
+}

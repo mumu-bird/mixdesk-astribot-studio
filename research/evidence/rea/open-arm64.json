@@ -1,0 +1,23 @@
+{
+  "_meta": {
+    "provenance": {
+      "untrusted_content": true,
+      "source": "analysis_target"
+    }
+  },
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"result\":{\"path\":\"/Users/pomelo/dj工作台/research/.analysis/DJUCED-arm64\",\"format\":\"mach-o\",\"kind\":\"executable\",\"sha256\":\"3d833a5175d99f6324bad3bd370b97bf46f9e82dad7f886ac6f5b08a83ccf5d8\",\"architecture\":\"arm64\"}}"
+    }
+  ],
+  "structuredContent": {
+    "result": {
+      "path": "/Users/pomelo/dj工作台/research/.analysis/DJUCED-arm64",
+      "format": "mach-o",
+      "kind": "executable",
+      "sha256": "3d833a5175d99f6324bad3bd370b97bf46f9e82dad7f886ac6f5b08a83ccf5d8",
+      "architecture": "arm64"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "src/sampler.js": "0548ddb4c2693fae44c112888d1124baf62f229ef75b6d7c0c93cbe1e729e62a",
+  "src/sampler-ui.js": "d5a3d8ece444c06b5dab2be0a7e3332cb7b4e358f4d6947a6a555007febc1756",
+  "src/sample-pack.js": "657c0236403fd73513548c08d1ee4115853fd34adc1faa61a239188b7870388a",
+  "src/performance.js": "d9985df28618c319db049d31340780faf87d112b2b43aa18207293f817fbf011",
+  "src/midi.js": "1ca0408b11268aa7289b84ce597297439c29da0bcb50654d3551bd940d15e2dd",
+  "src/main.js": "3e56857b9ffb6eb8a7aefbe6b2ad9033f69417b9f30f134bc103d4e3c12c3877",
+  "src/sampler.css": "f4e41e1cf3754a6ec3fabae9fd129585c8018f5c8f6c1ed324c0016e16bf0e69",
+  "tests/sampler.spec.js": "5513141271279389b6eaad3b593b815b42ffd89694c2d5320a3b90c784a133b9",
+  "tests/sampler-groups.spec.js": "7519365c32fa7c202c6fd0ddb7bfe8277d05e64edb5b23a1fec6e0c84a804a2d",
+  "tests/performance.spec.js": "427de2ab98faed04026dc8c0ce2604bc088acaacfc07d5a931934fb326b4a79f",
+  "package.json": "bdfee212007fcea137b4825910186439ce9668c485703365f5db83d2e29daf4f"
+}

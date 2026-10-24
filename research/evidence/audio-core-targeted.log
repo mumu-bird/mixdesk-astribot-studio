@@ -1,0 +1,17 @@
+
+Running 9 tests using 1 worker
+
+(node:48083) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/9] tests/audio-core.spec.js:13:5 › transport fades bound PCM discontinuities on play, seek and pause
+[2/9] tests/audio-core.spec.js:55:9 › Slip scratch restores the forward audio clock
+[3/9] tests/audio-core.spec.js:55:9 › Slip scratch restores the forward audio clock inside a loop
+[4/9] tests/audio-core.spec.js:55:9 › Slip scratch restores the reverse audio clock
+[5/9] tests/audio-core.spec.js:55:9 › Slip scratch restores the reverse audio clock inside a loop
+[6/9] tests/audio-core.spec.js:103:5 › Slip Hot Cue release during a scratch rebases the held transport; pause cancels late releases
+[7/9] tests/audio-core.spec.js:128:5 › live stereo key changes keep audio flowing without refilling the pitch processor
+[8/9] tests/audio-core.spec.js:172:5 › replacing held scratch transport and disabling Slip discard its old background clock
+[9/9] tests/audio-core.spec.js:202:5 › rapid pitch-enabled transport replacements drain old voices without cutting the current voice
+  9 passed (15.7s)

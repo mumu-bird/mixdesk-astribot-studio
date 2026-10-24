@@ -1,0 +1,483 @@
+0x1017433d8 qt_incomplete_metaTypeArray<qt_meta_stringdata_SampleInfoDialog_t, QtPrivate::TypeAndForceComplete<SampleInfoDialog, std::__1::integral_constant<bool, true>>, QtPrivate::TypeAndForceComplete<void, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<void, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<void, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<int, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<void, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<QString const&, std::__1::integral_constant<bool, false>>>
+0x101743688 qt_incomplete_metaTypeArray<qt_meta_stringdata_SamplePackInfoDialog_t, QtPrivate::TypeAndForceComplete<SamplePackInfoDialog, std::__1::integral_constant<bool, true>>, QtPrivate::TypeAndForceComplete<void, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<dj::UIActionEnum, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<int, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<dj::control_value, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<void, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<void, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<void, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<void, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<void, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<QObject*, std::__1::integral_constant<bool, false>>>
+0x101738c70 qt_incomplete_metaTypeArray<qt_meta_stringdata_dj__audio__BassSample3_t, QtPrivate::TypeAndForceComplete<dj::audio::BassSample3, std::__1::integral_constant<bool, true>>, QtPrivate::TypeAndForceComplete<void, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<dj::AUDIOEnum, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<int, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<QVariant, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<void, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<dj::DJErrorEnum, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<int, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<QVariant, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<void, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<void, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<int, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<int, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<void, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<int, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<void, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<long long, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<double, std::__1::integral_constant<bool, false>>>
+0x10174f608 qt_incomplete_metaTypeArray<qt_meta_stringdata_dj__sample_pack_widget_t, QtPrivate::TypeAndForceComplete<dj::sample_pack_widget, std::__1::integral_constant<bool, true>>, QtPrivate::TypeAndForceComplete<void, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<dj::UIActionEnum, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<int, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<dj::control_value, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<void, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<float, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<void, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<bool, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<void, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<void, std::__1::integral_constant<bool, false>>>
+0x10174f258 qt_incomplete_metaTypeArray<qt_meta_stringdata_dj__sample_unpack_widget_t, QtPrivate::TypeAndForceComplete<dj::sample_unpack_widget, std::__1::integral_constant<bool, true>>, QtPrivate::TypeAndForceComplete<void, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<dj::UIActionEnum, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<int, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<dj::control_value, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<void, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<float, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<void, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<bool, std::__1::integral_constant<bool, false>>>
+0x101739540 qt_incomplete_metaTypeArray<qt_meta_stringdata_dj__audio__SamplerateChanger_t, QtPrivate::TypeAndForceComplete<dj::audio::SamplerateChanger, std::__1::integral_constant<bool, true>>, QtPrivate::TypeAndForceComplete<void, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<int, std::__1::integral_constant<bool, false>>>
+0x101792760 qt_incomplete_metaTypeArray<qt_meta_stringdata_dj__view__performance_sampler_cell_t, QtPrivate::TypeAndForceComplete<dj::view::performance_sampler_cell, std::__1::integral_constant<bool, true>>, QtPrivate::TypeAndForceComplete<void, std::__1::integral_constant<bool, false>>>
+0x1017929c0 qt_incomplete_metaTypeArray<qt_meta_stringdata_dj__view__performance_deck_samplers_t, QtPrivate::TypeAndForceComplete<dj::view::performance_deck_samplers, std::__1::integral_constant<bool, true>>, QtPrivate::TypeAndForceComplete<void, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<dj::UIActionEnum, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<int, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<dj::control_value, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<void, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<dj::AUDIOEnum, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<int, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<QVariant, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<void, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<dj::AUDIOEnum, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<int, std::__1::integral_constant<bool, false>>, QtPrivate::TypeAndForceComplete<QVariant, std::__1::integral_constant<bool, false>>>
+0x10004a5f4 DebugWindow::deckCSamplerEnabledCheckBoxToggled(int)
+0x10004a77c DebugWindow::deckDSamplerEnabledCheckBoxToggled(int)
+0x10004a400 DebugWindow::deckSamplerFilelistComboBoxChanged(int)
+0x10004a904 DebugWindow::deckCSamplerQuantizationSizeChanged(int)
+0x10004aae4 DebugWindow::deckDSamplerQuantizationSizeChanged(int)
+0x10004acc4 DebugWindow::deckCSamplerQuantizationCheckBoxToggled(int)
+0x10004ae4c DebugWindow::deckDSamplerQuantizationCheckBoxToggled(int)
+0x1002c2834 TurntableFilter::processSamples(float*, int)
+0x1004c7478 SampleInfoDialog::apply_info()
+0x1004c7734 SampleInfoDialog::close_info()
+0x1005813d8 SampleInfoDialog::qt_metacall(QMetaObject::Call, int, void**)
+0x10058137c SampleInfoDialog::qt_metacast(char const*)
+0x1004c7738 SampleInfoDialog::getSampleInfo()
+0x1004c7154 SampleInfoDialog::onBPMtextChanged(QString const&)
+0x101743410 SampleInfoDialog::staticMetaObject
+0x1004c721c SampleInfoDialog::colorComboHighlight(int)
+0x1004c7150 SampleInfoDialog::SampleInfoDialog(SamplesInfo, QWidget*)
+0x1004c48e0 SampleInfoDialog::SampleInfoDialog(SamplesInfo, QWidget*)
+0x1004c73cc SampleInfoDialog::~SampleInfoDialog()
+0x1004c7328 SampleInfoDialog::~SampleInfoDialog()
+0x1004c72d8 SampleInfoDialog::~SampleInfoDialog()
+0x1004d3a04 SamplePackInfoDialog::apply_info()
+0x1004d595c SamplePackInfoDialog::close_info()
+0x1004d5960 SamplePackInfoDialog::editSample(QObject*)
+0x1004d78f0 SamplePackInfoDialog::fillTables()
+0x1004d2f58 SamplePackInfoDialog::initTables()
+0x1004d39e0 SamplePackInfoDialog::moveDialog(QPoint)
+0x1004d62bc SamplePackInfoDialog::eventFilter(QObject*, QEvent*)
+0x100587230 SamplePackInfoDialog::qt_metacall(QMetaObject::Call, int, void**)
+0x1005871d4 SamplePackInfoDialog::qt_metacast(char const*)
+0x1004d34d4 SamplePackInfoDialog::verifyColor(QColor)
+0x1004d355c SamplePackInfoDialog::change_cover()
+0x1004d4f38 SamplePackInfoDialog::new_samplePack()
+0x10058714c SamplePackInfoDialog::send_ui_action(dj::UIActionEnum, int, dj::control_value)
+0x1017436e0 SamplePackInfoDialog::staticMetaObject
+0x1004d58b4 SamplePackInfoDialog::getQuantizationSize()
+0x1004d43e0 SamplePackInfoDialog::apply_samples_changes()
+0x1004d3840 SamplePackInfoDialog::SamplePackInfoDialog(dj::AUDIOPackInfo&, dj::AUDIODeckSamplersInfo, int, QWidget*)
+0x1004cd698 SamplePackInfoDialog::SamplePackInfoDialog(dj::AUDIOPackInfo&, dj::AUDIODeckSamplersInfo, int, QWidget*)
+0x1004d39b4 SamplePackInfoDialog::~SamplePackInfoDialog()
+0x1004d39a8 SamplePackInfoDialog::~SamplePackInfoDialog()
+0x1004d3844 SamplePackInfoDialog::~SamplePackInfoDialog()
+0x10028e79c dj::TempoClock::setSampleRate(int)
+0x10028e7f8 dj::TempoClock::incrementSamplePosition(int)
+0x100ead540 dj::getDJSFromXML(QString, dj::AudioMediaInfo*, QString*, float*, bool*, dj::SampleType*)
+0x1007a21a0 dj::sample_pack_widget::qt_metacall(QMetaObject::Call, int, void**)
+0x1007a2144 dj::sample_pack_widget::qt_metacast(char const*)
+0x1006d1074 dj::sample_pack_widget::exportToFile(QString)
+0x1006d104c dj::sample_pack_widget::GetSamplePath()
+0x1006d1450 dj::sample_pack_widget::UploadFinished(bool)
+0x1007a20bc dj::sample_pack_widget::send_ui_action(dj::UIActionEnum, int, dj::control_value)
+0x10174f660 dj::sample_pack_widget::staticMetaObject
+0x1006d07c8 dj::sample_pack_widget::onAcceptButtonPressed()
+0x1006d07b8 dj::sample_pack_widget::onCancelButtonPressed()
+0x1006d1444 dj::sample_pack_widget::receiveUnpackProgress(float)
+0x1006d07b4 dj::sample_pack_widget::showEvent(QShowEvent*)
+0x1006d06c8 dj::sample_pack_widget::sample_pack_widget(dj::AUDIOPackInfo, QWidget*)
+0x1006cf5f4 dj::sample_pack_widget::sample_pack_widget(dj::AUDIOPackInfo, QWidget*)
+0x1006d0788 dj::sample_pack_widget::~sample_pack_widget()
+0x1006d077c dj::sample_pack_widget::~sample_pack_widget()
+0x1006d06cc dj::sample_pack_widget::~sample_pack_widget()
+0x100e9fe50 dj::getChannelAndSample(int, int*, int*)
+0x1007a1594 dj::sample_unpack_widget::qt_metacall(QMetaObject::Call, int, void**)
+0x1007a1538 dj::sample_unpack_widget::qt_metacast(char const*)
+0x1006ce700 dj::sample_unpack_widget::UploadFinished(bool)
+0x1007a14b0 dj::sample_unpack_widget::send_ui_action(dj::UIActionEnum, int, dj::control_value)
+0x10174f2a0 dj::sample_unpack_widget::staticMetaObject
+0x1006ced0c dj::sample_unpack_widget::receiveUnpackProgress(float)
+0x1006cdfa4 dj::sample_unpack_widget::showEvent(QShowEvent*)
+0x1006cde98 dj::sample_unpack_widget::sample_unpack_widget(dj::UIActionEnum, int, dj::control_value, bool, QWidget*)
+0x1006cd834 dj::sample_unpack_widget::sample_unpack_widget(dj::UIActionEnum, int, dj::control_value, bool, QWidget*)
+0x1006cdf78 dj::sample_unpack_widget::~sample_unpack_widget()
+0x1006cdf6c dj::sample_unpack_widget::~sample_unpack_widget()
+0x1006cde9c dj::sample_unpack_widget::~sample_unpack_widget()
+0x100d4aeec dj::get_samples_directory()
+0x100e9fe94 dj::mergeChannelAndSample(int, int)
+0x100eb00b0 dj::saveDJSSamplePackToXML(QString, dj::AudioMediaInfo*, QList<QList<dj::SampleInfo>>*, QString, float, bool, dj::SampleType)
+0x100ea0034 dj::getChannelAndSampleName(dj::UIChannelIdEnum)
+0x100eae328 dj::getDJSSampleListFromXML(QString, QList<QList<dj::SampleInfo>>*)
+0x100d4add0 dj::get_old_samples_directory()
+0x100d4b124 dj::get_sample_pack_directory()
+0x100d4b600 dj::get_loop_samples_directory()
+0x100d4b008 dj::get_old_sample_pack_directory()
+0x100d4b4fc dj::get_old_loop_samples_directory()
+0x1005e94e4 dj::view::button_view::loadSample(QAction*)
+0x1005f0fd4 dj::view::button_view::setChannelAndValueForPerformanceSampler(int, int, bool)
+0x10062fd18 dj::view::browser_view::isOnSampler()
+0x10067e690 dj::view::TrackListView::filterAllSamples()
+0x10067e93c dj::view::TrackListView::filterLoopSamples()
+0x10067e774 dj::view::TrackListView::filterSamplesPacks()
+0x100669790 dj::view::textzone_view::updateSamplersInfo(int, int, int)
+0x100841d14 dj::view::sampler_top_left_corner::sampler_top_left_corner(QWidget*)
+0x100841be4 dj::view::sampler_top_left_corner::sampler_top_left_corner(QWidget*)
+0x10084b40c dj::view::performance_sampler_cell::paintEvent(QPaintEvent*)
+0x10088aa60 dj::view::performance_sampler_cell::qt_metacall(QMetaObject::Call, int, void**)
+0x10088aa04 dj::view::performance_sampler_cell::qt_metacast(char const*)
+0x10084bd58 dj::view::performance_sampler_cell::resizeEvent(QResizeEvent*)
+0x10084be48 dj::view::performance_sampler_cell::set_cell_color(QString)
+0x10084beb8 dj::view::performance_sampler_cell::set_sample_name(QString)
+0x101792770 dj::view::performance_sampler_cell::staticMetaObject
+0x10084bf20 dj::view::performance_sampler_cell::repaint_if_needed()
+0x10084b958 dj::view::performance_sampler_cell::update_label_image()
+0x10084bd7c dj::view::performance_sampler_cell::set_progress_in_seconds(double, double, bool)
+0x10084be2c dj::view::performance_sampler_cell::set_quantization_beat_progress(double)
+0x10084b320 dj::view::performance_sampler_cell::performance_sampler_cell(QWidget*)
+0x10084b150 dj::view::performance_sampler_cell::performance_sampler_cell(QWidget*)
+0x10084b3e0 dj::view::performance_sampler_cell::~performance_sampler_cell()
+0x10084b3d4 dj::view::performance_sampler_cell::~performance_sampler_cell()
+0x10084b324 dj::view::performance_sampler_cell::~performance_sampler_cell()
+0x100850378 dj::view::performance_deck_samplers::paintEvent(QPaintEvent*)
+0x10085004c dj::view::performance_deck_samplers::eventFilter(QObject*, QEvent*)
+0x10088b5a8 dj::view::performance_deck_samplers::qt_metacall(QMetaObject::Call, int, void**)
+0x10088b54c dj::view::performance_deck_samplers::qt_metacast(char const*)
+0x10084f0b8 dj::view::performance_deck_samplers::resizeEvent(QResizeEvent*)
+0x10084f0c0 dj::view::performance_deck_samplers::dragEnterEvent(QDragEnterEvent*)
+0x10084c7d4 dj::view::performance_deck_samplers::initConnections(dj::view::GUIView*)
+0x101792a28 dj::view::performance_deck_samplers::staticMetaObject
+0x10084d3d0 dj::view::performance_deck_samplers::addSamplerWidgets()
+0x10084cba4 dj::view::performance_deck_samplers::setSamplerPageNumber(int, int)
+0x10084cc90 dj::view::performance_deck_samplers::received_audio_position_changed(dj::AUDIOEnum, int, QVariant)
+0x10084ecf0 dj::view::performance_deck_samplers::received_audio_property_changed(dj::AUDIOEnum, int, QVariant)
+0x10088b4c4 dj::view::performance_deck_samplers::do_action(dj::UIActionEnum, int, dj::control_value)
+0x10084f0f8 dj::view::performance_deck_samplers::dropEvent(QDropEvent*, QPoint)
+0x10084f0bc dj::view::performance_deck_samplers::showEvent(QShowEvent*)
+0x10084c758 dj::view::performance_deck_samplers::performance_deck_samplers(int, QWidget*)
+0x10084c6dc dj::view::performance_deck_samplers::performance_deck_samplers(int, QWidget*)
+0x10084d3a4 dj::view::performance_deck_samplers::~performance_deck_samplers()
+0x10084d398 dj::view::performance_deck_samplers::~performance_deck_samplers()
+0x10084d0ac dj::view::performance_deck_samplers::~performance_deck_samplers()
+0x100849294 dj::view::deck1_linear_songpos_sample1::deck1_linear_songpos_sample1(QWidget*)
+0x100849164 dj::view::deck1_linear_songpos_sample1::deck1_linear_songpos_sample1(QWidget*)
+0x1008493c8 dj::view::deck1_linear_songpos_sample2::deck1_linear_songpos_sample2(QWidget*)
+0x100849298 dj::view::deck1_linear_songpos_sample2::deck1_linear_songpos_sample2(QWidget*)
+0x1008494fc dj::view::deck1_linear_songpos_sample3::deck1_linear_songpos_sample3(QWidget*)
+0x1008493cc dj::view::deck1_linear_songpos_sample3::deck1_linear_songpos_sample3(QWidget*)
+0x100849630 dj::view::deck1_linear_songpos_sample4::deck1_linear_songpos_sample4(QWidget*)
+0x100849500 dj::view::deck1_linear_songpos_sample4::deck1_linear_songpos_sample4(QWidget*)
+0x100849764 dj::view::deck2_linear_songpos_sample1::deck2_linear_songpos_sample1(QWidget*)
+0x100849634 dj::view::deck2_linear_songpos_sample1::deck2_linear_songpos_sample1(QWidget*)
+0x100849898 dj::view::deck2_linear_songpos_sample2::deck2_linear_songpos_sample2(QWidget*)
+0x100849768 dj::view::deck2_linear_songpos_sample2::deck2_linear_songpos_sample2(QWidget*)
+0x1008499cc dj::view::deck2_linear_songpos_sample3::deck2_linear_songpos_sample3(QWidget*)
+0x10084989c dj::view::deck2_linear_songpos_sample3::deck2_linear_songpos_sample3(QWidget*)
+0x100849b00 dj::view::deck2_linear_songpos_sample4::deck2_linear_songpos_sample4(QWidget*)
+0x1008499d0 dj::view::deck2_linear_songpos_sample4::deck2_linear_songpos_sample4(QWidget*)
+0x1007fde28 dj::view::DJDeck::setSamplerPageNumber(int, int)
+0x1007fdf0c dj::view::DJDeck::updateSamplersLayout(int)
+0x1007fdfd8 dj::view::DJDeck::getSamplerNumberOfPages()
+0x1007fdb00 dj::view::DJDeck::hideStuffSoSamplersIsAbleToShrink(bool)
+0x100099858 dj::audio::BassStream::loadSample(int, int)
+0x1000998c0 dj::audio::BassStream::loadSample(int, int, QString)
+0x10009a17c dj::audio::BassStream::playSample(int)
+0x10009a5e0 dj::audio::BassStream::saveSample(int, QString)
+0x10009a1ec dj::audio::BassStream::stopSample(int)
+0x1000980f4 dj::audio::BassStream::readSamples()
+0x10008add0 dj::audio::BassStream::saveSamples(dj::SamplePackSave_enum)
+0x100097aa0 dj::audio::BassStream::sendSamples(int)
+0x10009a4fc dj::audio::BassStream::recordSample(int)
+0x10008623c dj::audio::BassStream::getSamplerate(unsigned int)
+0x10013b8e8 dj::audio::BassStream::getSamplerate()
+0x10009a344 dj::audio::BassStream::restartSample(int)
+0x100099f80 dj::audio::BassStream::sampleRenamed(QString, QString)
+0x10013b950 dj::audio::BassStream::setSamplerate(int)
+0x10009851c dj::audio::BassStream::loadSamplePack(QString)
+0x10009a2bc dj::audio::BassStream::stopAllSamples()
+0x10009a374 dj::audio::BassStream::toggleSamplers()
+0x10009a6f4 dj::audio::BassStream::getSampleVolume(int)
+0x10013b9a8 dj::audio::BassStream::resetSamplerate()
+0x10009a144 dj::audio::BassStream::sampleIsPlaying(int)
+0x10009a6a0 dj::audio::BassStream::setSampleVolume(int, float)
+0x10009a254 dj::audio::BassStream::stopIfSampleHold(int)
+0x10009a570 dj::audio::BassStream::stopRecordSample(int)
+0x10009944c dj::audio::BassStream::getSamplePosition(int)
+0x1002d1104 dj::audio::BassStream::samplerateChanged(int)
+0x10009ae78 dj::audio::BassStream::setNextSamplePage()
+0x10009afe8 dj::audio::BassStream::getSamplerPageInfo()
+0x100099e98 dj::audio::BassStream::setSamplerCellInfo(int, int, dj::SampleCellInfo)
+0x10009a468 dj::audio::BassStream::toggleLoopForSample(int, int)
+0x1000852f8 dj::audio::BassStream::SamplerTempoClockDSP(unsigned int, unsigned int, void*, unsigned int, void*)
+0x10013a274 dj::audio::BassStream::getPercentSamplerate()
+0x10012eda0 dj::audio::BassStream::setDefaultSampleType(dj::SampleType)
+0x10013a5c4 dj::audio::BassStream::setPercentSamplerate(float)
+0x10013b8e0 dj::audio::BassStream::getOriginalSamplerate()
+0x100099740 dj::audio::BassStream::sendSamplesProperties()
+0x10009a7b4 dj::audio::BassStream::generateSampleFromFile(int, int, QString, double, double)
+0x100099d54 dj::audio::BassStream::loadSamplePackInSampler(int, QList<QString>)
+0x10009cabc dj::audio::BassStream::setSamplersQuantization(bool)
+0x1000994dc dj::audio::BassStream::getSampleCurrentTrackIndex(int)
+0x10009ad4c dj::audio::BassStream::setCurrentSamplerPageNumber(dj::control_value)
+0x10008e2e8 dj::audio::BassStream::plugSamplerIntoAudioPipeLine()
+0x10009af2c dj::audio::BassStream::setCurrentSamplerNumberOfPages(int)
+0x100099480 dj::audio::BassStream::getSampleQuantizationInProgress(int)
+0x10009565c dj::audio::BassStream::getBeatsOffsetToPositionInSamples(double)
+0x10009cd88 dj::audio::BassStream::performSamplerSyncFromAudioThread()
+0x10009cba4 dj::audio::BassStream::setSamplerQuantizationSizeInBeats(double)
+0x100171a2c dj::audio::AudioDevice::CanSampleRate(int)
+0x10017178c dj::audio::AudioDevice::GetSamplingRate()
+0x100171a34 dj::audio::AudioDevice::SetSamplingRate(int)
+0x1000c198c dj::audio::BassControl::readSamples()
+0x1000c19d4 dj::audio::BassControl::sendSamples()
+0x100150fa4 dj::audio::BassControl::getSamplesVolume()
+0x100150f6c dj::audio::BassControl::setSamplesVolume(float)
+0x1000e2f50 dj::audio::BassControl::UpdateSyncForStopedSamplers()
+0x10015f6ac dj::audio::BassSample3::enableSync(bool)
+0x10015efbc dj::audio::BassSample3::saveSample(QString)
+0x10015c4f8 dj::audio::BassSample3::setKeyLock(bool)
+0x10015b128 dj::audio::BassSample3::updateName(QString)
+0x10015662c dj::audio::BassSample3::loadNewData(dj::audio::BassSample3*)
+0x10015b1c4 dj::audio::BassSample3::plugToMixer()
+0x1002d8b98 dj::audio::BassSample3::qt_metacall(QMetaObject::Call, int, void**)
+0x1002d8b3c dj::audio::BassSample3::qt_metacast(char const*)
+0x1002d8ab4 dj::audio::BassSample3::sample_error(dj::DJErrorEnum, int, QVariant)
+0x10015f6a4 dj::audio::BassSample3::enableSampler(bool)
+0x10015ef34 dj::audio::BassSample3::getSampleType(int)
+0x10015c1ac dj::audio::BassSample3::initElastique(int, int)
+0x10015c1a8 dj::audio::BassSample3::loadAudioData()
+0x10015c174 dj::audio::BassSample3::restartSample()
+0x100158c6c dj::audio::BassSample3::SetAudioMixers(unsigned int, int)
+0x10015ef40 dj::audio::BassSample3::getSampleColor(int)
+0x10015b640 dj::audio::BassSample3::openSampleList(QList<QString>)
+0x10015ae10 dj::audio::BassSample3::sendProperties()
+0x10015ef70 dj::audio::BassSample3::setSampleColor(int, QString)
+0x10015c4e8 dj::audio::BassSample3::setStrechRatio(float)
+0x10015eab4 dj::audio::BassSample3::fileTagsUpdated(QString)
+0x100158258 dj::audio::BassSample3::getBeatProgress()
+0x10015b000 dj::audio::BassSample3::getPosInSeconds()
+0x10015c500 dj::audio::BassSample3::onRecordTimeout()
+0x10015f6d8 dj::audio::BassSample3::setQuantization(bool)
+0x10015b4fc dj::audio::BassSample3::unplugFromMixer()
+0x1001568e8 dj::audio::BassSample3::BufferStreamProc(unsigned int, void*, unsigned int, void*)
+0x10015ef28 dj::audio::BassSample3::changeSampleType(int, dj::SampleType)
+0x101738d00 dj::audio::BassSample3::staticMetaObject
+0x10015c378 dj::audio::BassSample3::stopIfSampleHold()
+0x10015a62c dj::audio::BassSample3::initAudioPipeLine()
+0x10015671c dj::audio::BassSample3::compute_target_bpm()
+0x100158304 dj::audio::BassSample3::getElastiquePosFix()
+0x100158228 dj::audio::BassSample3::getCurrentLoopState()
+0x10015f68c dj::audio::BassSample3::received_timer_stop(int)
+0x10015f6e8 dj::audio::BassSample3::getCurrentTrackIndex()
+0x10015ea30 dj::audio::BassSample3::receiveBeatFromTrack(long long, double)
+0x10015f670 dj::audio::BassSample3::received_timer_start(int, int)
+0x100158ea4 dj::audio::BassSample3::releaseAudioPipeLine()
+0x100156984 dj::audio::BassSample3::BufferStreamProcPartial(unsigned int, void*, unsigned int, void*)
+0x1002d8a48 dj::audio::BassSample3::sample_property_changed(dj::AUDIOEnum, int, QVariant)
+0x10015b108 dj::audio::BassSample3::getCurrentLengthInSeconds()
+0x10015f6e0 dj::audio::BassSample3::setQuantizationSizeInBeats(double)
+0x11a059840 dj::audio::BassSample3::_elastiqueProcessCallsDoneThisTurn
+0x10015afcc dj::audio::BassSample3::getLengthOfLastOpenedSampleInSeconds()
+0x10015ef84 dj::audio::BassSample3::run()
+0x100158f3c dj::audio::BassSample3::open(QString, int, bool, bool)
+0x10015c048 dj::audio::BassSample3::open(int)
+0x10015a6a0 dj::audio::BassSample3::play()
+0x10015bf7c dj::audio::BassSample3::stop()
+0x10015a818 dj::audio::BassSample3::close(bool)
+0x10015b4f0 dj::audio::BassSample3::pause()
+0x10015c458 dj::audio::BassSample3::getLoop(int)
+0x10015c484 dj::audio::BassSample3::setLoop(bool, int)
+0x10015e258 dj::audio::BassSample3::clipFile(QString, QString, double, double)
+0x10015b078 dj::audio::BassSample3::getPos01()
+0x10015c5a4 dj::audio::BassSample3::openLoop(QString, double, double, int, dj::SampleType)
+0x10015b4d8 dj::audio::BassSample3::getVolume()
+0x10015b35c dj::audio::BassSample3::setVolume(float)
+0x100158c68 dj::audio::BassSample3::BassSample3(int, int, dj::IBeatProgressSource*, int volatile*, float*)
+0x10015831c dj::audio::BassSample3::BassSample3(int, int, dj::IBeatProgressSource*, int volatile*, float*)
+0x10015adfc dj::audio::BassSample3::~BassSample3()
+0x10015adf8 dj::audio::BassSample3::~BassSample3()
+0x10015a904 dj::audio::BassSample3::~BassSample3()
+0x10026c538 dj::audio::ZPFilterAGC::SetSampleRate(int)
+0x10027346c dj::audio::GFilterGater::SetSampleRate(int)
+0x10027983c dj::audio::GFilterNoise::SetSampleRate(int)
+0x1001f6ee0 dj::audio::ZPFilterDelay::SetSampleRate(int)
+0x100289ff4 dj::audio::ScratcherProxy::samples2Seconds(double)
+0x10028a06c dj::audio::ScratcherProxy::seconds2Samples(double)
+0x100289f88 dj::audio::ScratcherProxy::getLengthInSamples()
+0x10025d438 dj::audio::ZPFilterPhaser::SetSampleRate(int)
+0x100245cc8 dj::audio::ZPFilterPramEQ::SetSampleRate(int)
+0x100239d40 dj::audio::ZPFilterReverb::SetSampleRate(int)
+0x10021837c dj::audio::ZPFilterWahWah::SetSampleRate(int)
+0x11a05a8a0 dj::audio::sample_changer
+0x1001a98f0 dj::audio::settings_audio::onSamplerateChanged(int)
+0x1001a9294 dj::audio::settings_audio::SetMacDeviceSamplerate(unsigned int, int)
+0x1001a50e4 dj::audio::settings_audio::PopulateComboSamplerate()
+0x1001adfa4 dj::audio::settings_audio::set_global_sampling_rate()
+0x1001a9a1c dj::audio::settings_audio::onCombobox_samplerate_changed(int)
+0x10027e8b4 dj::audio::GFilterDynamics::SetSampleRate(int)
+0x100167bfc dj::audio::BassRecordStream::recordSampleStop(dj::audio::BassSample3*, bool)
+0x100167608 dj::audio::BassRecordStream::recordSampleStart(dj::audio::BassSample3*, unsigned int)
+0x1001e8cec dj::audio::ZPFilterBitCrush::SetSampleRate(int)
+0x10024f704 dj::audio::ZPFilterDynamics::SetSampleRate(int)
+0x100221220 dj::audio::ZPFilterLoopRoll::SetSampleRate(int)
+0x1002e5c74 dj::audio::SamplerateChanger::qt_metacall(QMetaObject::Call, int, void**)
+0x1002e5c18 dj::audio::SamplerateChanger::qt_metacast(char const*)
+0x101739558 dj::audio::SamplerateChanger::staticMetaObject
+0x1002e5b98 dj::audio::SamplerateChanger::samplerateChanged(int)
+0x10022ad58 dj::audio::ZPFilterResonance::SetSampleRate(int)
+0x1000af25c dj::audio::BassCircularBuffer::initResampler()
+0x1000b2f58 dj::audio::BassCircularBuffer::getLeftoverSamples(float (*) [2], int)
+0x1000b2f78 dj::audio::BassCircularBuffer::hasLeftOverSamples()
+0x1000b2f98 dj::audio::BassCircularBuffer::clearLeftOverSamples()
+0x1000b3270 dj::audio::BassCircularBuffer::getAvailableDataInSamples()
+0x1001d3c90 dj::audio::CAudioDoubleEffect::SetSampleRate(int)
+0x1001d236c dj::audio::CAudioEffectZPEffect::SetSampleRate(int)
+0x100209c60 dj::audio::ZPFilterChorusFlanger::SetSampleRate(int)
+0x1000b7fa0 dj::audio::Scratcher::saveSampleOutMix(dj::audio::BassCircularBuffer*)
+0x1000b81cc dj::audio::Scratcher::mixInTheSampleOutMix(float (*) [2], int)
+0x100323ef8 dj::dbase::QOBUZTrack::SetIsSample(bool)
+0x1003af5a0 dj::dbase::SearchTableModel::filterAllSamples()
+0x1003afba0 dj::dbase::SearchTableModel::filterLoopSamples()
+0x1003af2a0 dj::dbase::SearchTableModel::filterSamplesPacks()
+0x100354898 dj::dbase::HPlaylistDatabase::getSamples(bool)
+0x10033e6b0 dj::dbase::HPlaylistDatabase::SaveSampleToDB(QString)
+0x10035469c dj::dbase::HPlaylistDatabase::CheckAndAddSample(QString)
+0x100336b08 dj::dbase::HPlaylistDatabase::createSamplesTable()
+0x10036cccc dj::dbase::HPlaylistDatabase::AddSamplePackToDatabase(QString, QList<QList<dj::SampleInfo>> const&, QString, float*, bool*, dj::SampleType*)
+0x100491298 dj::dbase::ScanTracksFolderWorker::filterAllSamples()
+0x100492ed8 dj::dbase::ScanTracksFolderWorker::filterLoopSamples()
+0x100493a38 dj::dbase::ScanTracksFolderWorker::filterSamplesPacks()
+0x1003f5704 dj::dbase::Track::SetIsSample(bool)
+0x1003f3f0c dj::dbase::Track::isSamplePack()
+0x1003f5958 dj::dbase::Track::SetIsQOBUZSample(bool)
+0x1003f6d6c dj::dbase::Track::getDefaultSampleColor(QString, QString)
+0x1008ac994 TagLib::IT::Properties::setSampleCount(unsigned short)
+0x1008d3854 TagLib::XM::Properties::setSampleCount(unsigned int)
+0x1008a64ec TagLib::ASF::Properties::setSampleRate(int)
+0x1008a6504 TagLib::ASF::Properties::setBitsPerSample(int)
+0x1008c3e4c TagLib::S3M::Properties::setSampleCount(unsigned short)
+0x1002b9344 ableton::linkaudio::AbletonLinkHelper::setSampleRate(double)
+0x1004d9ed8 QtPrivate::QSlotObject<void (SamplePackInfoDialog::*)(), QtPrivate::List<>, void>::impl(int, QtPrivate::QSlotObjectBase*, QObject*, void**, bool*)
+0x1014683c7 QtPrivate::QMetaTypeForType<SampleInfoDialog>::name
+0x10146862d QtPrivate::QMetaTypeForType<SamplePackInfoDialog>::name
+0x101449896 QtPrivate::QMetaTypeForType<dj::SampleType>::name
+0x101449870 QtPrivate::QMetaTypeForType<dj::SampleCellInfo>::name
+0x101448924 QtPrivate::QMetaTypeForType<dj::SamplerPageInfo>::name
+0x101473fa2 QtPrivate::QMetaTypeForType<dj::sample_pack_widget>::name
+0x101473c3c QtPrivate::QMetaTypeForType<dj::sample_unpack_widget>::name
+0x101448984 QtPrivate::QMetaTypeForType<dj::AUDIODeckSamplersInfo>::name
+0x10147be15 QtPrivate::QMetaTypeForType<dj::view::performance_sampler_cell>::name
+0x10147c04a QtPrivate::QMetaTypeForType<dj::view::performance_deck_samplers>::name
+0x1014573d1 QtPrivate::QMetaTypeForType<dj::audio::BassSample3>::name
+0x1014587c7 QtPrivate::QMetaTypeForType<dj::audio::SamplerateChanger>::name
+0x1000ee21c QtPrivate::QEqualityOperatorForType<dj::SampleType, true>::equals(QtPrivate::QMetaTypeInterface const*, void const*, void const*)
+0x1000ee230 QtPrivate::QLessThanOperatorForType<dj::SampleType, true>::lessThan(QtPrivate::QMetaTypeInterface const*, void const*, void const*)
+0x119fb8200 QtPrivate::QMetaTypeInterfaceWrapper<SampleInfoDialog>::metaType
+0x119fb8270 QtPrivate::QMetaTypeInterfaceWrapper<SamplePackInfoDialog>::metaType
+0x119fb3c58 QtPrivate::QMetaTypeInterfaceWrapper<dj::SampleType>::metaType
+0x119fb3be0 QtPrivate::QMetaTypeInterfaceWrapper<dj::SampleCellInfo>::metaType
+0x119fb33b0 QtPrivate::QMetaTypeInterfaceWrapper<dj::SamplerPageInfo>::metaType
+0x119fb9888 QtPrivate::QMetaTypeInterfaceWrapper<dj::sample_pack_widget>::metaType
+0x119fb97a8 QtPrivate::QMetaTypeInterfaceWrapper<dj::sample_unpack_widget>::metaType
+0x119fb28f0 QtPrivate::QMetaTypeInterfaceWrapper<dj::AUDIODeckSamplersInfo>::metaType
+0x119fbae88 QtPrivate::QMetaTypeInterfaceWrapper<dj::view::performance_sampler_cell>::metaType
+0x119fbaef8 QtPrivate::QMetaTypeInterfaceWrapper<dj::view::performance_deck_samplers>::metaType
+0x119fb50d0 QtPrivate::QMetaTypeInterfaceWrapper<dj::audio::BassSample3>::metaType
+0x119fb54c8 QtPrivate::QMetaTypeInterfaceWrapper<dj::audio::SamplerateChanger>::metaType
+0x1000ee298 QtPrivate::QDataStreamOperatorForType<dj::SampleType, true>::dataStreamIn(QtPrivate::QMetaTypeInterface const*, QDataStream&, void*)
+0x1000ee28c QtPrivate::QDataStreamOperatorForType<dj::SampleType, true>::dataStreamOut(QtPrivate::QMetaTypeInterface const*, QDataStream&, void const*)
+0x1000ee244 QtPrivate::QDebugStreamOperatorForType<dj::SampleType, true>::debugStream(QtPrivate::QMetaTypeInterface const*, QDebug&, void const*)
+0x100581360 SampleInfoDialog::metaObject() const
+0x1005871b8 SamplePackInfoDialog::metaObject() const
+0x1007a2128 dj::sample_pack_widget::metaObject() const
+0x1007a151c dj::sample_unpack_widget::metaObject() const
+0x10088a9e8 dj::view::performance_sampler_cell::metaObject() const
+0x10088b530 dj::view::performance_deck_samplers::metaObject() const
+0x1002d8b20 dj::audio::BassSample3::metaObject() const
+0x10015e9ec dj::audio::BassSample3::isFileLoopable(double, double) const
+0x1002e5bfc dj::audio::SamplerateChanger::metaObject() const
+0x100323e90 dj::dbase::QOBUZTrack::GetIsSample() const
+0x1008ac8a4 TagLib::IT::Properties::sampleRate() const
+0x1008ac8e0 TagLib::IT::Properties::sampleCount() const
+0x1008d378c TagLib::XM::Properties::sampleRate() const
+0x1008d37dc TagLib::XM::Properties::sampleCount() const
+0x10089d414 TagLib::APE::Properties::sampleRate() const
+0x10089d444 TagLib::APE::Properties::sampleFrames() const
+0x10089d438 TagLib::APE::Properties::bitsPerSample() const
+0x1008a6420 TagLib::ASF::Properties::sampleRate() const
+0x1008a6438 TagLib::ASF::Properties::bitsPerSample() const
+0x1008b1108 TagLib::MP4::Properties::sampleRate() const
+0x1008b1174 TagLib::MP4::Properties::bitsPerSample() const
+0x1008b8fa4 TagLib::MPC::Properties::sampleRate() const
+0x1008b8fd4 TagLib::MPC::Properties::sampleFrames() const
+0x1008adcd4 TagLib::Mod::Properties::sampleRate() const
+0x1008de540 TagLib::Ogg::Opus::Properties::sampleRate() const
+0x1008de554 TagLib::Ogg::Opus::Properties::inputSampleRate() const
+0x1008def20 TagLib::Ogg::Speex::Properties::sampleRate() const
+0x1008c3d90 TagLib::S3M::Properties::sampleRate() const
+0x1008c3dbc TagLib::S3M::Properties::sampleCount() const
+0x1008ab20c TagLib::FLAC::Properties::sampleRate() const
+0x1008ab224 TagLib::FLAC::Properties::sampleWidth() const
+0x1008ab23c TagLib::FLAC::Properties::sampleFrames() const
+0x1008ab218 TagLib::FLAC::Properties::bitsPerSample() const
+0x1008bb3cc TagLib::MPEG::Properties::sampleRate() const
+0x1008bac2c TagLib::MPEG::Header::sampleRate() const
+0x1008bac74 TagLib::MPEG::Header::samplesPerFrame() const
+0x1008e3274 TagLib::RIFF::WAV::Properties::sampleRate() const
+0x1008e3298 TagLib::RIFF::WAV::Properties::sampleWidth() const
+0x1008e32a4 TagLib::RIFF::WAV::Properties::sampleFrames() const
+0x1008e328c TagLib::RIFF::WAV::Properties::bitsPerSample() const
+0x1008e0764 TagLib::RIFF::AIFF::Properties::sampleRate() const
+0x1008e0788 TagLib::RIFF::AIFF::Properties::sampleWidth() const
+0x1008e0794 TagLib::RIFF::AIFF::Properties::sampleFrames() const
+0x1008e077c TagLib::RIFF::AIFF::Properties::bitsPerSample() const
+0x1008df9a8 TagLib::Vorbis::Properties::sampleRate() const
+0x1008d18f0 TagLib::WavPack::Properties::sampleRate() const
+0x1008d192c TagLib::WavPack::Properties::sampleFrames() const
+0x1008d1914 TagLib::WavPack::Properties::bitsPerSample() const
+0x1008d0a2c TagLib::TrueAudio::Properties::sampleRate() const
+0x1008d0a50 TagLib::TrueAudio::Properties::sampleFrames() const
+0x1008d0a38 TagLib::TrueAudio::Properties::bitsPerSample() const
+0x101743670 typeinfo for SampleInfoDialog
+0x101743940 typeinfo for SamplePackInfoDialog
+0x10174f950 typeinfo for dj::sample_pack_widget
+0x10174f590 typeinfo for dj::sample_unpack_widget
+0x1017929a8 typeinfo for dj::view::performance_sampler_cell
+0x101792c70 typeinfo for dj::view::performance_deck_samplers
+0x101738db0 typeinfo for dj::audio::BassSample3
+0x101739990 typeinfo for dj::audio::SamplerateChanger
+0x1014683b4 typeinfo name for SampleInfoDialog
+0x1014685f0 typeinfo name for SamplePackInfoDialog
+0x101473f76 typeinfo name for dj::sample_pack_widget
+0x101473c0c typeinfo name for dj::sample_unpack_widget
+0x10147bdf0 typeinfo name for dj::view::performance_sampler_cell
+0x10147c024 typeinfo name for dj::view::performance_deck_samplers
+0x1014573b8 typeinfo name for dj::audio::BassSample3
+0x1014585ab typeinfo name for dj::audio::SamplerateChanger
+0x101743448 vtable for SampleInfoDialog
+0x101743718 vtable for SamplePackInfoDialog
+0x10174f728 vtable for dj::sample_pack_widget
+0x10174f368 vtable for dj::sample_unpack_widget
+0x1017927a8 vtable for dj::view::performance_sampler_cell
+0x101792a60 vtable for dj::view::performance_deck_samplers
+0x101738d38 vtable for dj::audio::BassSample3
+0x101739920 vtable for dj::audio::SamplerateChanger
+0x1004c7420 non-virtual thunk to SampleInfoDialog::~SampleInfoDialog()
+0x1004c7378 non-virtual thunk to SampleInfoDialog::~SampleInfoDialog()
+0x1004d39c8 non-virtual thunk to SamplePackInfoDialog::~SamplePackInfoDialog()
+0x1004d39ac non-virtual thunk to SamplePackInfoDialog::~SamplePackInfoDialog()
+0x1006d079c non-virtual thunk to dj::sample_pack_widget::~sample_pack_widget()
+0x1006d0780 non-virtual thunk to dj::sample_pack_widget::~sample_pack_widget()
+0x1006cdf8c non-virtual thunk to dj::sample_unpack_widget::~sample_unpack_widget()
+0x1006cdf70 non-virtual thunk to dj::sample_unpack_widget::~sample_unpack_widget()
+0x10084b3f4 non-virtual thunk to dj::view::performance_sampler_cell::~performance_sampler_cell()
+0x10084b3d8 non-virtual thunk to dj::view::performance_sampler_cell::~performance_sampler_cell()
+0x10084d3b8 non-virtual thunk to dj::view::performance_deck_samplers::~performance_deck_samplers()
+0x10084d39c non-virtual thunk to dj::view::performance_deck_samplers::~performance_deck_samplers()
+0x119fb3cc8 QMetaTypeId<dj::SampleType>::qt_metatype_id()::metatype_id
+0x119fb3c50 QMetaTypeId<dj::SampleCellInfo>::qt_metatype_id()::metatype_id
+0x119fb3420 QMetaTypeId<dj::SamplerPageInfo>::qt_metatype_id()::metatype_id
+0x119fb2960 QMetaTypeId<dj::AUDIODeckSamplersInfo>::qt_metatype_id()::metatype_id
+0x10058149c QtPrivate::QMetaTypeForType<SampleInfoDialog>::getDtor()::'lambda'(QtPrivate::QMetaTypeInterface const*, void*)::__invoke(QtPrivate::QMetaTypeInterface const*, void*)
+0x1005872e0 QtPrivate::QMetaTypeForType<SamplePackInfoDialog>::getDtor()::'lambda'(QtPrivate::QMetaTypeInterface const*, void*)::__invoke(QtPrivate::QMetaTypeInterface const*, void*)
+0x1000ee204 QtPrivate::QMetaTypeForType<dj::SampleType>::getCopyCtr()::'lambda'(QtPrivate::QMetaTypeInterface const*, void*, void const*)::__invoke(QtPrivate::QMetaTypeInterface const*, void*, void const*)
+0x1000ee210 QtPrivate::QMetaTypeForType<dj::SampleType>::getMoveCtr()::'lambda'(QtPrivate::QMetaTypeInterface const*, void*, void*)::__invoke(QtPrivate::QMetaTypeInterface const*, void*, void*)
+0x1000ee1fc QtPrivate::QMetaTypeForType<dj::SampleType>::getDefaultCtr()::'lambda'(QtPrivate::QMetaTypeInterface const*, void*)::__invoke(QtPrivate::QMetaTypeInterface const*, void*)
+0x1000ee2a4 QtPrivate::QMetaTypeForType<dj::SampleType>::getLegacyRegister()::'lambda'()::__invoke()
+0x1000ede48 QtPrivate::QMetaTypeForType<dj::SampleCellInfo>::getCopyCtr()::'lambda'(QtPrivate::QMetaTypeInterface const*, void*, void const*)::__invoke(QtPrivate::QMetaTypeInterface const*, void*, void const*)
+0x1000ede74 QtPrivate::QMetaTypeForType<dj::SampleCellInfo>::getMoveCtr()::'lambda'(QtPrivate::QMetaTypeInterface const*, void*, void*)::__invoke(QtPrivate::QMetaTypeInterface const*, void*, void*)
+0x1000ede3c QtPrivate::QMetaTypeForType<dj::SampleCellInfo>::getDefaultCtr()::'lambda'(QtPrivate::QMetaTypeInterface const*, void*)::__invoke(QtPrivate::QMetaTypeInterface const*, void*)
+0x1000edec4 QtPrivate::QMetaTypeForType<dj::SampleCellInfo>::getLegacyRegister()::'lambda'()::__invoke()
+0x1000ede98 QtPrivate::QMetaTypeForType<dj::SampleCellInfo>::getDtor()::'lambda'(QtPrivate::QMetaTypeInterface const*, void*)::__invoke(QtPrivate::QMetaTypeInterface const*, void*)
+0x1000a3584 QtPrivate::QMetaTypeForType<dj::SamplerPageInfo>::getCopyCtr()::'lambda'(QtPrivate::QMetaTypeInterface const*, void*, void const*)::__invoke(QtPrivate::QMetaTypeInterface const*, void*, void const*)
+0x1000a3590 QtPrivate::QMetaTypeForType<dj::SamplerPageInfo>::getMoveCtr()::'lambda'(QtPrivate::QMetaTypeInterface const*, void*, void*)::__invoke(QtPrivate::QMetaTypeInterface const*, void*, void*)
+0x1000a3574 QtPrivate::QMetaTypeForType<dj::SamplerPageInfo>::getDefaultCtr()::'lambda'(QtPrivate::QMetaTypeInterface const*, void*)::__invoke(QtPrivate::QMetaTypeInterface const*, void*)
+0x1000a359c QtPrivate::QMetaTypeForType<dj::SamplerPageInfo>::getLegacyRegister()::'lambda'()::__invoke()
+0x1007a222c QtPrivate::QMetaTypeForType<dj::sample_pack_widget>::getDtor()::'lambda'(QtPrivate::QMetaTypeInterface const*, void*)::__invoke(QtPrivate::QMetaTypeInterface const*, void*)
+0x1007a1620 QtPrivate::QMetaTypeForType<dj::sample_unpack_widget>::getDtor()::'lambda'(QtPrivate::QMetaTypeInterface const*, void*)::__invoke(QtPrivate::QMetaTypeInterface const*, void*)
+0x100050ae0 QtPrivate::QMetaTypeForType<dj::AUDIODeckSamplersInfo>::getCopyCtr()::'lambda'(QtPrivate::QMetaTypeInterface const*, void*, void const*)::__invoke(QtPrivate::QMetaTypeInterface const*, void*, void const*)
+0x100050b14 QtPrivate::QMetaTypeForType<dj::AUDIODeckSamplersInfo>::getMoveCtr()::'lambda'(QtPrivate::QMetaTypeInterface const*, void*, void*)::__invoke(QtPrivate::QMetaTypeInterface const*, void*, void*)
+0x100050ac8 QtPrivate::QMetaTypeForType<dj::AUDIODeckSamplersInfo>::getDefaultCtr()::'lambda'(QtPrivate::QMetaTypeInterface const*, void*)::__invoke(QtPrivate::QMetaTypeInterface const*, void*)
+0x100050ba8 QtPrivate::QMetaTypeForType<dj::AUDIODeckSamplersInfo>::getLegacyRegister()::'lambda'()::__invoke()
+0x100050b40 QtPrivate::QMetaTypeForType<dj::AUDIODeckSamplersInfo>::getDtor()::'lambda'(QtPrivate::QMetaTypeInterface const*, void*)::__invoke(QtPrivate::QMetaTypeInterface const*, void*)
+0x10088aac8 QtPrivate::QMetaTypeForType<dj::view::performance_sampler_cell>::getDtor()::'lambda'(QtPrivate::QMetaTypeInterface const*, void*)::__invoke(QtPrivate::QMetaTypeInterface const*, void*)
+0x10088b624 QtPrivate::QMetaTypeForType<dj::view::performance_deck_samplers>::getDtor()::'lambda'(QtPrivate::QMetaTypeInterface const*, void*)::__invoke(QtPrivate::QMetaTypeInterface const*, void*)
+0x1002d8c14 QtPrivate::QMetaTypeForType<dj::audio::BassSample3>::getDtor()::'lambda'(QtPrivate::QMetaTypeInterface const*, void*)::__invoke(QtPrivate::QMetaTypeInterface const*, void*)
+0x1002e6030 QtPrivate::QMetaTypeForType<dj::audio::SamplerateChanger>::getDefaultCtr()::'lambda'(QtPrivate::QMetaTypeInterface const*, void*)::__invoke(QtPrivate::QMetaTypeInterface const*, void*)
+0x1002e605c QtPrivate::QMetaTypeForType<dj::audio::SamplerateChanger>::getDtor()::'lambda'(QtPrivate::QMetaTypeInterface const*, void*)::__invoke(QtPrivate::QMetaTypeInterface const*, void*)

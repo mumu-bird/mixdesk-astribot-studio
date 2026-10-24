@@ -1,0 +1,1450 @@
+{
+  "app": "/Applications/DJUCED/DJUCED.app",
+  "version": "6.6.1",
+  "build": "6.6.1 build 0ba386762 64bit MAC",
+  "binary_sha256": "a8860c525115bc3e510f9f3f167e969bc54d6bbdd8776ca3ffbfed4b1a2a7554",
+  "binary_size": 887591904,
+  "architectures": [
+    "x86_64",
+    "arm64"
+  ],
+  "file_count": 280,
+  "files": [
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/BugsplatMac",
+      "size": 614912
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Frameworks/CrashReporter.framework/Versions/A/CrashReporter",
+      "size": 867616
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Frameworks/CrashReporter.framework/Versions/A/Headers/CrashReporter.h",
+      "size": 16951
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Frameworks/CrashReporter.framework/Versions/A/Headers/PLCrashFeatureConfig.h",
+      "size": 3705
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Frameworks/CrashReporter.framework/Versions/A/Headers/PLCrashMacros.h",
+      "size": 5387
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Frameworks/CrashReporter.framework/Versions/A/Headers/PLCrashNamespace.h",
+      "size": 22301
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Frameworks/CrashReporter.framework/Versions/A/Headers/PLCrashReport.h",
+      "size": 7005
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Frameworks/CrashReporter.framework/Versions/A/Headers/PLCrashReportApplicationInfo.h",
+      "size": 2375
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Frameworks/CrashReporter.framework/Versions/A/Headers/PLCrashReportBinaryImageInfo.h",
+      "size": 2687
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Frameworks/CrashReporter.framework/Versions/A/Headers/PLCrashReportExceptionInfo.h",
+      "size": 2313
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Frameworks/CrashReporter.framework/Versions/A/Headers/PLCrashReportFormatter.h",
+      "size": 2113
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Frameworks/CrashReporter.framework/Versions/A/Headers/PLCrashReportMachExceptionInfo.h",
+      "size": 1820
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Frameworks/CrashReporter.framework/Versions/A/Headers/PLCrashReportMachineInfo.h",
+      "size": 3058
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Frameworks/CrashReporter.framework/Versions/A/Headers/PLCrashReportProcessInfo.h",
+      "size": 3583
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Frameworks/CrashReporter.framework/Versions/A/Headers/PLCrashReportProcessorInfo.h",
+      "size": 2434
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Frameworks/CrashReporter.framework/Versions/A/Headers/PLCrashReportRegisterInfo.h",
+      "size": 1724
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Frameworks/CrashReporter.framework/Versions/A/Headers/PLCrashReportSignalInfo.h",
+      "size": 1874
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Frameworks/CrashReporter.framework/Versions/A/Headers/PLCrashReportStackFrameInfo.h",
+      "size": 1951
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Frameworks/CrashReporter.framework/Versions/A/Headers/PLCrashReportSymbolInfo.h",
+      "size": 2207
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Frameworks/CrashReporter.framework/Versions/A/Headers/PLCrashReportSystemInfo.h",
+      "size": 6444
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Frameworks/CrashReporter.framework/Versions/A/Headers/PLCrashReportTextFormatter.h",
+      "size": 2179
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Frameworks/CrashReporter.framework/Versions/A/Headers/PLCrashReportThreadInfo.h",
+      "size": 2629
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Frameworks/CrashReporter.framework/Versions/A/Headers/PLCrashReporter.h",
+      "size": 5431
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Frameworks/CrashReporter.framework/Versions/A/Headers/PLCrashReporterConfig.h",
+      "size": 8735
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Frameworks/CrashReporter.framework/Versions/A/Modules/module.modulemap",
+      "size": 138
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Frameworks/CrashReporter.framework/Versions/A/Resources/Info.plist",
+      "size": 1365
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Frameworks/CrashReporter.framework/Versions/A/_CodeSignature/CodeResources",
+      "size": 7709
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Headers/BugsplatAttachment.h",
+      "size": 1241
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Headers/BugsplatMac.h",
+      "size": 307
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Headers/BugsplatStartupManager.h",
+      "size": 2511
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Headers/BugsplatStartupManagerDelegate.h",
+      "size": 3914
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Modules/module.modulemap",
+      "size": 103
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Resources/BITCrashReportUI.nib/keyedobjects-101300.nib",
+      "size": 22797
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Resources/BITCrashReportUI.nib/keyedobjects.nib",
+      "size": 28870
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Resources/Info.plist",
+      "size": 1453
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Resources/de.lproj/HockeySDK.strings",
+      "size": 3886
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Resources/en.lproj/HockeySDK.strings",
+      "size": 3750
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Resources/fi.lproj/HockeySDK.strings",
+      "size": 4186
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Resources/fr.lproj/HockeySDK.strings",
+      "size": 4446
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Resources/it.lproj/HockeySDK.strings",
+      "size": 4154
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Resources/ja.lproj/HockeySDK.strings",
+      "size": 3368
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Resources/logo.pdf",
+      "size": 24503
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Resources/nb.lproj/HockeySDK.strings",
+      "size": 3928
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Resources/sv.lproj/HockeySDK.strings",
+      "size": 3880
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Resources/upload-archive-cl.sh",
+      "size": 2730
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/Resources/upload-archive.sh",
+      "size": 2621
+    },
+    {
+      "path": "Contents/Frameworks/BugsplatMac.framework/Versions/A/_CodeSignature/CodeResources",
+      "size": 9212
+    },
+    {
+      "path": "Contents/Frameworks/Ogg.framework/Versions/1.3.5/Headers/config_types.h",
+      "size": 538
+    },
+    {
+      "path": "Contents/Frameworks/Ogg.framework/Versions/1.3.5/Headers/ogg.h",
+      "size": 8373
+    },
+    {
+      "path": "Contents/Frameworks/Ogg.framework/Versions/1.3.5/Headers/os_types.h",
+      "size": 4781
+    },
+    {
+      "path": "Contents/Frameworks/Ogg.framework/Versions/1.3.5/Ogg",
+      "size": 159936
+    },
+    {
+      "path": "Contents/Frameworks/Ogg.framework/Versions/1.3.5/Resources/Info.plist",
+      "size": 1322
+    },
+    {
+      "path": "Contents/Frameworks/Ogg.framework/Versions/1.3.5/_CodeSignature/CodeResources",
+      "size": 2861
+    },
+    {
+      "path": "Contents/Frameworks/QtCharts.framework/Versions/A/QtCharts",
+      "size": 3639600
+    },
+    {
+      "path": "Contents/Frameworks/QtCharts.framework/Versions/A/Resources/Info.plist",
+      "size": 768
+    },
+    {
+      "path": "Contents/Frameworks/QtCharts.framework/Versions/A/Resources/QtCharts.prl",
+      "size": 620
+    },
+    {
+      "path": "Contents/Frameworks/QtCharts.framework/Versions/A/Resources/QtCharts.prl.bak",
+      "size": 648
+    },
+    {
+      "path": "Contents/Frameworks/QtCharts.framework/Versions/A/_CodeSignature/CodeResources",
+      "size": 2910
+    },
+    {
+      "path": "Contents/Frameworks/QtConcurrent.framework/Versions/A/QtConcurrent",
+      "size": 156448
+    },
+    {
+      "path": "Contents/Frameworks/QtConcurrent.framework/Versions/A/Resources/Info.plist",
+      "size": 776
+    },
+    {
+      "path": "Contents/Frameworks/QtConcurrent.framework/Versions/A/Resources/QtConcurrent.prl",
+      "size": 308
+    },
+    {
+      "path": "Contents/Frameworks/QtConcurrent.framework/Versions/A/_CodeSignature/CodeResources",
+      "size": 2680
+    },
+    {
+      "path": "Contents/Frameworks/QtCore.framework/Versions/A/QtCore",
+      "size": 11383456
+    },
+    {
+      "path": "Contents/Frameworks/QtCore.framework/Versions/A/Resources/Info.plist",
+      "size": 764
+    },
+    {
+      "path": "Contents/Frameworks/QtCore.framework/Versions/A/Resources/QtCore.prl",
+      "size": 222
+    },
+    {
+      "path": "Contents/Frameworks/QtCore.framework/Versions/A/_CodeSignature/CodeResources",
+      "size": 2668
+    },
+    {
+      "path": "Contents/Frameworks/QtCore5Compat.framework/Versions/A/QtCore5Compat",
+      "size": 1746160
+    },
+    {
+      "path": "Contents/Frameworks/QtCore5Compat.framework/Versions/A/Resources/Info.plist",
+      "size": 778
+    },
+    {
+      "path": "Contents/Frameworks/QtCore5Compat.framework/Versions/A/Resources/QtCore5Compat.prl",
+      "size": 309
+    },
+    {
+      "path": "Contents/Frameworks/QtCore5Compat.framework/Versions/A/_CodeSignature/CodeResources",
+      "size": 2682
+    },
+    {
+      "path": "Contents/Frameworks/QtDBus.framework/Versions/A/QtDBus",
+      "size": 1403968
+    },
+    {
+      "path": "Contents/Frameworks/QtDBus.framework/Versions/A/Resources/Info.plist",
+      "size": 764
+    },
+    {
+      "path": "Contents/Frameworks/QtDBus.framework/Versions/A/Resources/QtDBus.prl",
+      "size": 302
+    },
+    {
+      "path": "Contents/Frameworks/QtDBus.framework/Versions/A/_CodeSignature/CodeResources",
+      "size": 2668
+    },
+    {
+      "path": "Contents/Frameworks/QtGui.framework/Versions/A/QtGui",
+      "size": 15486848
+    },
+    {
+      "path": "Contents/Frameworks/QtGui.framework/Versions/A/Resources/Info.plist",
+      "size": 762
+    },
+    {
+      "path": "Contents/Frameworks/QtGui.framework/Versions/A/Resources/QtGui.prl",
+      "size": 447
+    },
+    {
+      "path": "Contents/Frameworks/QtGui.framework/Versions/A/Resources/QtGui.prl.bak",
+      "size": 475
+    },
+    {
+      "path": "Contents/Frameworks/QtGui.framework/Versions/A/_CodeSignature/CodeResources",
+      "size": 2898
+    },
+    {
+      "path": "Contents/Frameworks/QtMultimedia.framework/Versions/A/QtMultimedia",
+      "size": 1937280
+    },
+    {
+      "path": "Contents/Frameworks/QtMultimedia.framework/Versions/A/Resources/Info.plist",
+      "size": 776
+    },
+    {
+      "path": "Contents/Frameworks/QtMultimedia.framework/Versions/A/Resources/QtMultimedia.prl",
+      "size": 530
+    },
+    {
+      "path": "Contents/Frameworks/QtMultimedia.framework/Versions/A/Resources/QtMultimedia.prl.bak",
+      "size": 558
+    },
+    {
+      "path": "Contents/Frameworks/QtMultimedia.framework/Versions/A/_CodeSignature/CodeResources",
+      "size": 2926
+    },
+    {
+      "path": "Contents/Frameworks/QtMultimediaWidgets.framework/Versions/A/QtMultimediaWidgets",
+      "size": 223424
+    },
+    {
+      "path": "Contents/Frameworks/QtMultimediaWidgets.framework/Versions/A/Resources/Info.plist",
+      "size": 790
+    },
+    {
+      "path": "Contents/Frameworks/QtMultimediaWidgets.framework/Versions/A/Resources/QtMultimediaWidgets.prl",
+      "size": 627
+    },
+    {
+      "path": "Contents/Frameworks/QtMultimediaWidgets.framework/Versions/A/Resources/QtMultimediaWidgets.prl.bak",
+      "size": 655
+    },
+    {
+      "path": "Contents/Frameworks/QtMultimediaWidgets.framework/Versions/A/_CodeSignature/CodeResources",
+      "size": 2954
+    },
+    {
+      "path": "Contents/Frameworks/QtNetwork.framework/Versions/A/QtNetwork",
+      "size": 3107216
+    },
+    {
+      "path": "Contents/Frameworks/QtNetwork.framework/Versions/A/Resources/Info.plist",
+      "size": 770
+    },
+    {
+      "path": "Contents/Frameworks/QtNetwork.framework/Versions/A/Resources/QtNetwork.prl",
+      "size": 305
+    },
+    {
+      "path": "Contents/Frameworks/QtNetwork.framework/Versions/A/_CodeSignature/CodeResources",
+      "size": 2674
+    },
+    {
+      "path": "Contents/Frameworks/QtOpenGL.framework/Versions/A/QtOpenGL",
+      "size": 1252864
+    },
+    {
+      "path": "Contents/Frameworks/QtOpenGL.framework/Versions/A/Resources/Info.plist",
+      "size": 768
+    },
+    {
+      "path": "Contents/Frameworks/QtOpenGL.framework/Versions/A/Resources/QtOpenGL.prl",
+      "size": 484
+    },
+    {
+      "path": "Contents/Frameworks/QtOpenGL.framework/Versions/A/Resources/QtOpenGL.prl.bak",
+      "size": 512
+    },
+    {
+      "path": "Contents/Frameworks/QtOpenGL.framework/Versions/A/_CodeSignature/CodeResources",
+      "size": 2910
+    },
+    {
+      "path": "Contents/Frameworks/QtOpenGLWidgets.framework/Versions/A/QtOpenGLWidgets",
+      "size": 220512
+    },
+    {
+      "path": "Contents/Frameworks/QtOpenGLWidgets.framework/Versions/A/Resources/Info.plist",
+      "size": 782
+    },
+    {
+      "path": "Contents/Frameworks/QtOpenGLWidgets.framework/Versions/A/Resources/QtOpenGLWidgets.prl",
+      "size": 573
+    },
+    {
+      "path": "Contents/Frameworks/QtOpenGLWidgets.framework/Versions/A/Resources/QtOpenGLWidgets.prl.bak",
+      "size": 601
+    },
+    {
+      "path": "Contents/Frameworks/QtOpenGLWidgets.framework/Versions/A/_CodeSignature/CodeResources",
+      "size": 2938
+    },
+    {
+      "path": "Contents/Frameworks/QtPrintSupport.framework/Versions/A/QtPrintSupport",
+      "size": 1008288
+    },
+    {
+      "path": "Contents/Frameworks/QtPrintSupport.framework/Versions/A/Resources/Info.plist",
+      "size": 780
+    },
+    {
+      "path": "Contents/Frameworks/QtPrintSupport.framework/Versions/A/Resources/QtPrintSupport.prl",
+      "size": 608
+    },
+    {
+      "path": "Contents/Frameworks/QtPrintSupport.framework/Versions/A/Resources/QtPrintSupport.prl.bak",
+      "size": 636
+    },
+    {
+      "path": "Contents/Frameworks/QtPrintSupport.framework/Versions/A/_CodeSignature/CodeResources",
+      "size": 2934
+    },
+    {
+      "path": "Contents/Frameworks/QtQml.framework/Versions/A/QtQml",
+      "size": 9166304
+    },
+    {
+      "path": "Contents/Frameworks/QtQml.framework/Versions/A/Resources/Info.plist",
+      "size": 762
+    },
+    {
+      "path": "Contents/Frameworks/QtQml.framework/Versions/A/Resources/QtQml.prl",
+      "size": 343
+    },
+    {
+      "path": "Contents/Frameworks/QtQml.framework/Versions/A/_CodeSignature/CodeResources",
+      "size": 2666
+    },
+    {
+      "path": "Contents/Frameworks/QtSql.framework/Versions/A/QtSql",
+      "size": 622800
+    },
+    {
+      "path": "Contents/Frameworks/QtSql.framework/Versions/A/Resources/Info.plist",
+      "size": 762
+    },
+    {
+      "path": "Contents/Frameworks/QtSql.framework/Versions/A/Resources/QtSql.prl",
+      "size": 301
+    },
+    {
+      "path": "Contents/Frameworks/QtSql.framework/Versions/A/_CodeSignature/CodeResources",
+      "size": 2666
+    },
+    {
+      "path": "Contents/Frameworks/QtSvg.framework/Versions/A/QtSvg",
+      "size": 758832
+    },
+    {
+      "path": "Contents/Frameworks/QtSvg.framework/Versions/A/Resources/Info.plist",
+      "size": 762
+    },
+    {
+      "path": "Contents/Frameworks/QtSvg.framework/Versions/A/Resources/QtSvg.prl",
+      "size": 481
+    },
+    {
+      "path": "Contents/Frameworks/QtSvg.framework/Versions/A/Resources/QtSvg.prl.bak",
+      "size": 509
+    },
+    {
+      "path": "Contents/Frameworks/QtSvg.framework/Versions/A/_CodeSignature/CodeResources",
+      "size": 2898
+    },
+    {
+      "path": "Contents/Frameworks/QtWidgets.framework/Versions/A/QtWidgets",
+      "size": 12336352
+    },
+    {
+      "path": "Contents/Frameworks/QtWidgets.framework/Versions/A/Resources/Info.plist",
+      "size": 770
+    },
+    {
+      "path": "Contents/Frameworks/QtWidgets.framework/Versions/A/Resources/QtWidgets.prl",
+      "size": 485
+    },
+    {
+      "path": "Contents/Frameworks/QtWidgets.framework/Versions/A/Resources/QtWidgets.prl.bak",
+      "size": 513
+    },
+    {
+      "path": "Contents/Frameworks/QtWidgets.framework/Versions/A/_CodeSignature/CodeResources",
+      "size": 2914
+    },
+    {
+      "path": "Contents/Frameworks/QtXml.framework/Versions/A/QtXml",
+      "size": 400192
+    },
+    {
+      "path": "Contents/Frameworks/QtXml.framework/Versions/A/Resources/Info.plist",
+      "size": 762
+    },
+    {
+      "path": "Contents/Frameworks/QtXml.framework/Versions/A/Resources/QtXml.prl",
+      "size": 301
+    },
+    {
+      "path": "Contents/Frameworks/QtXml.framework/Versions/A/_CodeSignature/CodeResources",
+      "size": 2666
+    },
+    {
+      "path": "Contents/Frameworks/libNNPredictionDispatcher_fd.dylib",
+      "size": 1531360
+    },
+    {
+      "path": "Contents/Frameworks/libNNPredictionDispatcher_on.dylib",
+      "size": 42493760
+    },
+    {
+      "path": "Contents/Frameworks/libbass.dylib",
+      "size": 926160
+    },
+    {
+      "path": "Contents/Frameworks/libbass_fx.dylib",
+      "size": 369872
+    },
+    {
+      "path": "Contents/Frameworks/libbassenc.dylib",
+      "size": 290144
+    },
+    {
+      "path": "Contents/Frameworks/libbassenc_mp3.dylib",
+      "size": 564640
+    },
+    {
+      "path": "Contents/Frameworks/libbassmix.dylib",
+      "size": 289104
+    },
+    {
+      "path": "Contents/Frameworks/libopencv_calib3d.409.dylib",
+      "size": 4496352
+    },
+    {
+      "path": "Contents/Frameworks/libopencv_core.409.dylib",
+      "size": 7550304
+    },
+    {
+      "path": "Contents/Frameworks/libopencv_dnn.409.dylib",
+      "size": 12172944
+    },
+    {
+      "path": "Contents/Frameworks/libopencv_features2d.409.dylib",
+      "size": 1555824
+    },
+    {
+      "path": "Contents/Frameworks/libopencv_flann.409.dylib",
+      "size": 1214768
+    },
+    {
+      "path": "Contents/Frameworks/libopencv_gapi.409.dylib",
+      "size": 10061680
+    },
+    {
+      "path": "Contents/Frameworks/libopencv_highgui.409.dylib",
+      "size": 504960
+    },
+    {
+      "path": "Contents/Frameworks/libopencv_imgcodecs.409.dylib",
+      "size": 6821808
+    },
+    {
+      "path": "Contents/Frameworks/libopencv_imgproc.409.dylib",
+      "size": 8246240
+    },
+    {
+      "path": "Contents/Frameworks/libopencv_ml.409.dylib",
+      "size": 1212560
+    },
+    {
+      "path": "Contents/Frameworks/libopencv_objdetect.409.dylib",
+      "size": 2390352
+    },
+    {
+      "path": "Contents/Frameworks/libopencv_photo.409.dylib",
+      "size": 1402608
+    },
+    {
+      "path": "Contents/Frameworks/libopencv_stitching.409.dylib",
+      "size": 1177744
+    },
+    {
+      "path": "Contents/Frameworks/libopencv_video.409.dylib",
+      "size": 1181280
+    },
+    {
+      "path": "Contents/Frameworks/libopencv_videoio.409.dylib",
+      "size": 783488
+    },
+    {
+      "path": "Contents/Info.plist",
+      "size": 4085
+    },
+    {
+      "path": "Contents/MacOS/DJUCED",
+      "size": 887591904
+    },
+    {
+      "path": "Contents/MacOS/font/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVtzpbCFPrEHJA.woff2",
+      "size": 13272
+    },
+    {
+      "path": "Contents/MacOS/font/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVtzpbCGPrEHJA.woff2",
+      "size": 16600
+    },
+    {
+      "path": "Contents/MacOS/font/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVtzpbCHPrEHJA.woff2",
+      "size": 7236
+    },
+    {
+      "path": "Contents/MacOS/font/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVtzpbCIPrE.woff2",
+      "size": 21904
+    },
+    {
+      "path": "Contents/MacOS/font/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVtzpbCMPrEHJA.woff2",
+      "size": 12528
+    },
+    {
+      "path": "Contents/MacOS/font/8AttGsyxM5KQQU-Y4MTwVan3qRrgBg.woff2",
+      "size": 22480
+    },
+    {
+      "path": "Contents/MacOS/font/8AttGsyxM5KQQU-Y4MTwVanUqRo.woff2",
+      "size": 25900
+    },
+    {
+      "path": "Contents/MacOS/font/8AttGsyxM5KQQU-Y4MTwVanaqRrgBg.woff2",
+      "size": 20532
+    },
+    {
+      "path": "Contents/MacOS/font/8AttGsyxM5KQQU-Y4MTwVanbqRrgBg.woff2",
+      "size": 11484
+    },
+    {
+      "path": "Contents/MacOS/plugins/libbassflac.dylib",
+      "size": 316576
+    },
+    {
+      "path": "Contents/PkgInfo",
+      "size": 9
+    },
+    {
+      "path": "Contents/PlugIns/iconengines/libqsvgicon.dylib",
+      "size": 225968
+    },
+    {
+      "path": "Contents/PlugIns/imageformats/libqgif.dylib",
+      "size": 189584
+    },
+    {
+      "path": "Contents/PlugIns/imageformats/libqico.dylib",
+      "size": 191504
+    },
+    {
+      "path": "Contents/PlugIns/imageformats/libqjpeg.dylib",
+      "size": 886816
+    },
+    {
+      "path": "Contents/PlugIns/imageformats/libqsvg.dylib",
+      "size": 191888
+    },
+    {
+      "path": "Contents/PlugIns/platforms/libqcocoa.dylib",
+      "size": 1804864
+    },
+    {
+      "path": "Contents/PlugIns/sqldrivers/libqsqlite.dylib",
+      "size": 3302432
+    },
+    {
+      "path": "Contents/PlugIns/sqldrivers/libqsqlodbc.dylib",
+      "size": 337728
+    },
+    {
+      "path": "Contents/PlugIns/sqldrivers/libqsqlpsql.dylib",
+      "size": 288592
+    },
+    {
+      "path": "Contents/PlugIns/styles/libqmacstyle.dylib",
+      "size": 529632
+    },
+    {
+      "path": "Contents/PlugIns/tls/libqcertonlybackend.dylib",
+      "size": 261104
+    },
+    {
+      "path": "Contents/PlugIns/tls/libqopensslbackend.dylib",
+      "size": 719968
+    },
+    {
+      "path": "Contents/PlugIns/tls/libqsecuretransportbackend.dylib",
+      "size": 530320
+    },
+    {
+      "path": "Contents/Resources/DJUCED.icns",
+      "size": 146364
+    },
+    {
+      "path": "Contents/Resources/Demo/DJUCED - ElectroHouse vol1.mp3",
+      "size": 4568893
+    },
+    {
+      "path": "Contents/Resources/Demo/DJUCED - House vol1.mp3",
+      "size": 3551865
+    },
+    {
+      "path": "Contents/Resources/Demo/DJUCED_Scratch_Tools.mp3",
+      "size": 1408703
+    },
+    {
+      "path": "Contents/Resources/Demo/House_Loop_1.mp3",
+      "size": 3453550
+    },
+    {
+      "path": "Contents/Resources/Demo/House_Loop_2.mp3",
+      "size": 3376170
+    },
+    {
+      "path": "Contents/Resources/Demo/LOOPMASTER_ShotsAndBeats/BM_808_CHat.wav",
+      "size": 88518
+    },
+    {
+      "path": "Contents/Resources/Demo/LOOPMASTER_ShotsAndBeats/BM_808_Clap.wav",
+      "size": 161102
+    },
+    {
+      "path": "Contents/Resources/Demo/LOOPMASTER_ShotsAndBeats/BM_808_Cym MidTone.wav",
+      "size": 409458
+    },
+    {
+      "path": "Contents/Resources/Demo/LOOPMASTER_ShotsAndBeats/BM_808_HConga.wav",
+      "size": 23964
+    },
+    {
+      "path": "Contents/Resources/Demo/LOOPMASTER_ShotsAndBeats/BM_808_Kick1.wav",
+      "size": 154304
+    },
+    {
+      "path": "Contents/Resources/Demo/LOOPMASTER_ShotsAndBeats/BM_808_OHat.wav",
+      "size": 63138
+    },
+    {
+      "path": "Contents/Resources/Demo/LOOPMASTER_ShotsAndBeats/BM_808_RShot.wav",
+      "size": 88622
+    },
+    {
+      "path": "Contents/Resources/Demo/LOOPMASTER_ShotsAndBeats/BM_808_Snare1.wav",
+      "size": 19432
+    },
+    {
+      "path": "Contents/Resources/Demo/LOOPMASTER_ShotsAndBeats/DDFX_SUBDROP_04.wav",
+      "size": 613670
+    },
+    {
+      "path": "Contents/Resources/Demo/LOOPMASTER_ShotsAndBeats/DJUCED_Sample_ShotBeats.png",
+      "size": 130728
+    },
+    {
+      "path": "Contents/Resources/Demo/LOOPMASTER_ShotsAndBeats/DJU_AIRHORN.wav",
+      "size": 1167650
+    },
+    {
+      "path": "Contents/Resources/Demo/LOOPMASTER_ShotsAndBeats/ECFX_Data_Flare_1.wav",
+      "size": 705898
+    },
+    {
+      "path": "Contents/Resources/Demo/LOOPMASTER_ShotsAndBeats/FIH_Spinback.wav",
+      "size": 240930
+    },
+    {
+      "path": "Contents/Resources/Demo/LOOPMASTER_ShotsAndBeats/JHE_DISCO_LAZER_F#2.wav",
+      "size": 352974
+    },
+    {
+      "path": "Contents/Resources/Demo/LOOPMASTER_ShotsAndBeats/Loopmasters End User Licence Agreement-2017-18.pdf",
+      "size": 66654
+    },
+    {
+      "path": "Contents/Resources/Demo/LOOPMASTER_ShotsAndBeats/NOIZE HIT 005.wav",
+      "size": 2646290
+    },
+    {
+      "path": "Contents/Resources/Demo/LOOPMASTER_ShotsAndBeats/TJ_airhorn01.wav",
+      "size": 1060134
+    },
+    {
+      "path": "Contents/Resources/Demo/LOOPMASTER_ShotsAndBeats/UGE_Gunshot_02.wav",
+      "size": 420694
+    },
+    {
+      "path": "Contents/Resources/Demo/LOOPMASTER_ShotsAndBeats/default.djs",
+      "size": 3550
+    },
+    {
+      "path": "Contents/Resources/Demo/LOOPMASTER_Trance/Allure Bass.wav",
+      "size": 1284384
+    },
+    {
+      "path": "Contents/Resources/Demo/LOOPMASTER_Trance/Allure Drums.wav",
+      "size": 1284416
+    },
+    {
+      "path": "Contents/Resources/Demo/LOOPMASTER_Trance/Allure Melody.wav",
+      "size": 2568188
+    },
+    {
+      "path": "Contents/Resources/Demo/LOOPMASTER_Trance/Allure Snare Fx.wav",
+      "size": 1284384
+    },
+    {
+      "path": "Contents/Resources/Demo/LOOPMASTER_Trance/Crest Bass.wav",
+      "size": 1284384
+    },
+    {
+      "path": "Contents/Resources/Demo/LOOPMASTER_Trance/Crest Crash Fx.wav",
+      "size": 1284384
+    },
+    {
+      "path": "Contents/Resources/Demo/LOOPMASTER_Trance/Crest Drums.wav",
+      "size": 1284412
+    },
+    {
+      "path": "Contents/Resources/Demo/LOOPMASTER_Trance/Crest Melody.wav",
+      "size": 5135812
+    },
+    {
+      "path": "Contents/Resources/Demo/LOOPMASTER_Trance/DJUCED_Samplepack_Trance.png",
+      "size": 348071
+    },
+    {
+      "path": "Contents/Resources/Demo/LOOPMASTER_Trance/Elate Bass.wav",
+      "size": 1284384
+    },
+    {
+      "path": "Contents/Resources/Demo/LOOPMASTER_Trance/Elate Drums.wav",
+      "size": 1284412
+    },
+    {
+      "path": "Contents/Resources/Demo/LOOPMASTER_Trance/Elate Fx.wav",
+      "size": 2568162
+    },
+    {
+      "path": "Contents/Resources/Demo/LOOPMASTER_Trance/Elate Melody.wav",
+      "size": 2568184
+    },
+    {
+      "path": "Contents/Resources/Demo/LOOPMASTER_Trance/Loopmasters_Info_2015.pdf",
+      "size": 4371505
+    },
+    {
+      "path": "Contents/Resources/Demo/LOOPMASTER_Trance/Vertex Bass.wav",
+      "size": 1284384
+    },
+    {
+      "path": "Contents/Resources/Demo/LOOPMASTER_Trance/Vertex Drums.wav",
+      "size": 1284412
+    },
+    {
+      "path": "Contents/Resources/Demo/LOOPMASTER_Trance/Vertex Fx.wav",
+      "size": 1284384
+    },
+    {
+      "path": "Contents/Resources/Demo/LOOPMASTER_Trance/Vertex Melody.wav",
+      "size": 1284412
+    },
+    {
+      "path": "Contents/Resources/Demo/LOOPMASTER_Trance/default.djs",
+      "size": 2070
+    },
+    {
+      "path": "Contents/Resources/Demo/demo.xml",
+      "size": 717
+    },
+    {
+      "path": "Contents/Resources/ThirdPartiesSoftware.rtf",
+      "size": 328914
+    },
+    {
+      "path": "Contents/Resources/changelog.txt",
+      "size": 22521
+    },
+    {
+      "path": "Contents/Resources/colors.xml",
+      "size": 1692
+    },
+    {
+      "path": "Contents/Resources/empty.lproj",
+      "size": 0
+    },
+    {
+      "path": "Contents/Resources/font/OpenSans-Bold.ttf",
+      "size": 224592
+    },
+    {
+      "path": "Contents/Resources/font/Roboto-Bold.ttf",
+      "size": 206440
+    },
+    {
+      "path": "Contents/Resources/font/Roboto-Medium.ttf",
+      "size": 207824
+    },
+    {
+      "path": "Contents/Resources/font/Roboto-Regular.ttf",
+      "size": 171272
+    },
+    {
+      "path": "Contents/Resources/icon_midi.icns",
+      "size": 133855
+    },
+    {
+      "path": "Contents/Resources/keyboard/keyboard.xml",
+      "size": 1054
+    },
+    {
+      "path": "Contents/Resources/locale/strings.ar.qm",
+      "size": 373949
+    },
+    {
+      "path": "Contents/Resources/locale/strings.de.qm",
+      "size": 401764
+    },
+    {
+      "path": "Contents/Resources/locale/strings.el.qm",
+      "size": 415982
+    },
+    {
+      "path": "Contents/Resources/locale/strings.es.qm",
+      "size": 402720
+    },
+    {
+      "path": "Contents/Resources/locale/strings.fr.qm",
+      "size": 409706
+    },
+    {
+      "path": "Contents/Resources/locale/strings.it.qm",
+      "size": 402856
+    },
+    {
+      "path": "Contents/Resources/locale/strings.ja.qm",
+      "size": 308413
+    },
+    {
+      "path": "Contents/Resources/locale/strings.nl.qm",
+      "size": 394646
+    },
+    {
+      "path": "Contents/Resources/locale/strings.pl.qm",
+      "size": 398448
+    },
+    {
+      "path": "Contents/Resources/locale/strings.pt.qm",
+      "size": 405732
+    },
+    {
+      "path": "Contents/Resources/locale/strings.qm",
+      "size": 66284
+    },
+    {
+      "path": "Contents/Resources/locale/strings.ru.qm",
+      "size": 397515
+    },
+    {
+      "path": "Contents/Resources/locale/strings.tr.qm",
+      "size": 381891
+    },
+    {
+      "path": "Contents/Resources/locale/strings.zh.qm",
+      "size": 279669
+    },
+    {
+      "path": "Contents/Resources/midi/DJ Control Air.djm",
+      "size": 33575
+    },
+    {
+      "path": "Contents/Resources/midi/DJ Control Instinct.djm",
+      "size": 35424
+    },
+    {
+      "path": "Contents/Resources/midi/DJ Control MP3 LE.djm",
+      "size": 30041
+    },
+    {
+      "path": "Contents/Resources/midi/DJConsole 4-Mx.djm",
+      "size": 52824
+    },
+    {
+      "path": "Contents/Resources/midi/DJConsole Rmx2.djm",
+      "size": 55582
+    },
+    {
+      "path": "Contents/Resources/midi/DJControl AIR+.djm",
+      "size": 44676
+    },
+    {
+      "path": "Contents/Resources/midi/DJControl Inpulse 200 MK2.djm",
+      "size": 82873
+    },
+    {
+      "path": "Contents/Resources/midi/DJControl Inpulse 200 Mk3.djm",
+      "size": 126516
+    },
+    {
+      "path": "Contents/Resources/midi/DJControl Inpulse 300 MK2.djm",
+      "size": 148397
+    },
+    {
+      "path": "Contents/Resources/midi/DJControl Inpulse T7.djm",
+      "size": 159668
+    },
+    {
+      "path": "Contents/Resources/midi/DJControl InstinctP8-Gain.djm",
+      "size": 84716
+    },
+    {
+      "path": "Contents/Resources/midi/DJControl InstinctP8.djm",
+      "size": 84298
+    },
+    {
+      "path": "Contents/Resources/midi/DJControl Jogvision.djm",
+      "size": 79806
+    },
+    {
+      "path": "Contents/Resources/midi/DJControl MP3 E2.djm",
+      "size": 30040
+    },
+    {
+      "path": "Contents/Resources/midi/DJControl Starlight.djm",
+      "size": 38823
+    },
+    {
+      "path": "Contents/Resources/midi/DJControl T10.djm",
+      "size": 162450
+    },
+    {
+      "path": "Contents/Resources/midi/DJControlUniversal.djm",
+      "size": 67429
+    },
+    {
+      "path": "Contents/Resources/midi/DJControlUniversalNight.djm",
+      "size": 70234
+    },
+    {
+      "path": "Contents/Resources/midi/DJControlWave.djm",
+      "size": 36848
+    },
+    {
+      "path": "Contents/Resources/midi/DJControl_Compact.djm",
+      "size": 36769
+    },
+    {
+      "path": "Contents/Resources/midi/DJControl_MP3_GLOW.djm",
+      "size": 19557
+    },
+    {
+      "path": "Contents/Resources/midi/DJControl_Mix.djm",
+      "size": 80201
+    },
+    {
+      "path": "Contents/Resources/midi/Hercules DJ Console Rmx MIDI.djm",
+      "size": 31373
+    },
+    {
+      "path": "Contents/Resources/midi/Hercules DJ Inpulse 200.djm",
+      "size": 77820
+    },
+    {
+      "path": "Contents/Resources/midi/Hercules DJ Inpulse 300.djm",
+      "size": 130786
+    },
+    {
+      "path": "Contents/Resources/midi/Hercules DJ Inpulse 500.djm",
+      "size": 154847
+    },
+    {
+      "path": "Contents/Resources/midi/Master.djm",
+      "size": 42265
+    },
+    {
+      "path": "Contents/Resources/midi/P32DJ_2020.djm",
+      "size": 128237
+    },
+    {
+      "path": "Contents/Resources/midi/P32DJ_2020_Deck_3_4.djm",
+      "size": 134183
+    },
+    {
+      "path": "Contents/Resources/midi/P32DJ_2020_Extended.djm",
+      "size": 124933
+    },
+    {
+      "path": "Contents/Resources/midi/P32DJ_2020_Gain.djm",
+      "size": 128446
+    },
+    {
+      "path": "Contents/Resources/qt.conf",
+      "size": 77
+    },
+    {
+      "path": "Contents/_CodeSignature/CodeResources",
+      "size": 56519
+    }
+  ],
+  "global_symbol_line_count": 26215,
+  "selected_symbol_count": 765,
+  "controllers": [
+    {
+      "file": "DJ Control Air.djm",
+      "name": "DJ Control Air",
+      "mapping_count": 107
+    },
+    {
+      "file": "DJ Control Instinct.djm",
+      "name": "Hercules DJControl Instinct",
+      "mapping_count": 106
+    },
+    {
+      "file": "DJ Control MP3 LE.djm",
+      "name": "DJControl MP3 LE MIDI",
+      "mapping_count": 76
+    },
+    {
+      "file": "DJConsole 4-Mx.djm",
+      "name": "DJ Console 4-Mx MIDI",
+      "mapping_count": 199
+    },
+    {
+      "file": "DJConsole Rmx2.djm",
+      "name": "DJConsole Rmx2",
+      "mapping_count": 182
+    },
+    {
+      "file": "DJControl AIR+.djm",
+      "name": "DJControl AIR+",
+      "mapping_count": 153
+    },
+    {
+      "file": "DJControl Inpulse 200 MK2.djm",
+      "name": "DJControl Inpulse 200 Mk2",
+      "mapping_count": 178
+    },
+    {
+      "file": "DJControl Inpulse 200 Mk3.djm",
+      "name": "DJControl Inpulse 200 Mk3",
+      "mapping_count": 172
+    },
+    {
+      "file": "DJControl Inpulse 300 MK2.djm",
+      "name": "DJControl Inpulse 300 Mk2",
+      "mapping_count": 388
+    },
+    {
+      "file": "DJControl Inpulse T7.djm",
+      "name": "DJControl Inpulse T7",
+      "mapping_count": 423
+    },
+    {
+      "file": "DJControl InstinctP8-Gain.djm",
+      "name": "DJControl Instinct P8",
+      "mapping_count": 195
+    },
+    {
+      "file": "DJControl InstinctP8.djm",
+      "name": "DJControl Instinct P8",
+      "mapping_count": 191
+    },
+    {
+      "file": "DJControl Jogvision.djm",
+      "name": "DJControl Jogvision",
+      "mapping_count": 231
+    },
+    {
+      "file": "DJControl MP3 E2.djm",
+      "name": "DJ Control MP3 e2 MIDI",
+      "mapping_count": 76
+    },
+    {
+      "file": "DJControl Starlight.djm",
+      "name": "DJControl Starlight",
+      "mapping_count": 99
+    },
+    {
+      "file": "DJControl T10.djm",
+      "name": "DJControl T10",
+      "mapping_count": 455
+    },
+    {
+      "file": "DJControlUniversal.djm",
+      "name": "DJHERCULESMIX Universal DJ",
+      "mapping_count": 254
+    },
+    {
+      "file": "DJControlUniversalNight.djm",
+      "name": "DJHERCULESMIX Universal DJ",
+      "mapping_count": 255
+    },
+    {
+      "file": "DJControlWave.djm",
+      "name": "DJControlWave",
+      "mapping_count": 136
+    },
+    {
+      "file": "DJControl_Compact.djm",
+      "name": "DJControl Compact",
+      "mapping_count": 118
+    },
+    {
+      "file": "DJControl_MP3_GLOW.djm",
+      "name": "Hercules DJControl Glow",
+      "mapping_count": 74
+    },
+    {
+      "file": "DJControl_Mix.djm",
+      "name": "DJCONTROL MIX",
+      "mapping_count": 91
+    },
+    {
+      "file": "Hercules DJ Console Rmx MIDI.djm",
+      "name": "DJ Console Rmx Port 1",
+      "mapping_count": 66
+    },
+    {
+      "file": "Hercules DJ Inpulse 200.djm",
+      "name": "DJControl Inpulse 200",
+      "mapping_count": 180
+    },
+    {
+      "file": "Hercules DJ Inpulse 300.djm",
+      "name": "DJControl Inpulse 300",
+      "mapping_count": 390
+    },
+    {
+      "file": "Hercules DJ Inpulse 500.djm",
+      "name": "DJControl Inpulse 500",
+      "mapping_count": 448
+    },
+    {
+      "file": "Master.djm",
+      "name": "Master",
+      "mapping_count": 177
+    },
+    {
+      "file": "P32DJ_2020.djm",
+      "name": "Hercules P32 DJ",
+      "mapping_count": 434
+    },
+    {
+      "file": "P32DJ_2020_Deck_3_4.djm",
+      "name": "Hercules P32 DJ",
+      "mapping_count": 433
+    },
+    {
+      "file": "P32DJ_2020_Extended.djm",
+      "name": "Hercules P32 DJ",
+      "mapping_count": 429
+    },
+    {
+      "file": "P32DJ_2020_Gain.djm",
+      "name": "Hercules P32 DJ",
+      "mapping_count": 436
+    }
+  ],
+  "mapping_count": 7152,
+  "actions": {
+    "sample_play_now": 418,
+    "sample_load_play": 402,
+    "hot_cue": 386,
+    "sample_stop": 350,
+    "delete_cue": 278,
+    "sample_play": 272,
+    "loop": 230,
+    "toggle_effect": 228,
+    "loop_slice": 192,
+    "slice_position": 192,
+    "sample_load": 192,
+    "loop_extract_single": 184,
+    "level": 170,
+    "set_effect_param1": 160,
+    "key_shift": 160,
+    "browse_effect_2": 112,
+    "loop_roll": 112,
+    "pitch_bend": 105,
+    "bass": 100,
+    "skip_beat": 96,
+    "scratch": 93,
+    "high": 92,
+    "medium": 87,
+    "pfl_select": 74,
+    "set_pass_filter_amount": 74,
+    "gain": 72,
+    "condition_one": 66,
+    "pitch": 66,
+    "cue_stop": 64,
+    "sync": 64,
+    "show_track_tab": 64,
+    "condition_two": 63,
+    "play_pause": 62,
+    "toggle_slicer": 62,
+    "track_phase": 58,
+    "track_beat": 56,
+    "browser_load_deck_or_expand": 55,
+    "browse_effect_1": 50,
+    "condition_three": 49,
+    "seek": 47,
+    "browser_up_down": 44,
+    "loop_half_double": 44,
+    "stop": 44,
+    "loop_half": 42,
+    "loop_double": 42,
+    "seek_loop": 42,
+    "track_speed": 42,
+    "browser_load_deck": 40,
+    "browse_effect_3": 40,
+    "sample_volume": 40,
+    "loop_toggle": 38,
+    "loop_move_selection": 36,
+    "select": 36,
+    "loop_in": 34,
+    "loop_out": 34,
+    "led_jog": 34,
+    "scratch_mode": 31,
+    "pitch_reset": 30,
+    "crossfader": 29,
+    "set_macro_fx_amount": 28,
+    "bank_wetness": 28,
+    "moveGrid": 28,
+    "toggle_macro_fx_panel": 27,
+    "condition_four": 26,
+    "browser_toggle_folder_or_files": 24,
+    "browse_filter_fx": 24,
+    "toggle_deck_samplers": 22,
+    "nothing": 21,
+    "toggle_pass_filter": 20,
+    "set_next_sampler_page": 20,
+    "slip_mode": 20,
+    "master_volume": 19,
+    "cue_play": 18,
+    "reset_first_beat_notPlaying": 18,
+    "browser_folder/files": 16,
+    "show_assistant": 16,
+    "toggle_fx_panel": 16,
+    "toggle_quantization": 16,
+    "toggle_stem": 16,
+    "pitch_range": 15,
+    "record": 14,
+    "browser_main_folders": 12,
+    "scratch_touchwheel": 10,
+    "set_energy_target": 10,
+    "browser_step_up_down": 10,
+    "loop_in_move": 10,
+    "loop_out_move": 10,
+    "send_energy": 10,
+    "send_energy_target": 10,
+    "toggle_fixed_slicer": 10,
+    "headphone_mix": 8,
+    "kill_high": 8,
+    "kill_bass": 8,
+    "kill_medium": 8,
+    "toggle_keylock": 8,
+    "pitch_bend_variable": 8,
+    "toggle_filter_fx": 8,
+    "resetBPM": 8,
+    "extend_browser": 7,
+    "set_effect_param2": 6,
+    "level_left": 6,
+    "level_right": 6,
+    "stem_voice": 6,
+    "stem_melody": 6,
+    "stem_bass": 6,
+    "stem_drum": 6,
+    "stem_instru": 6,
+    "stem_acapp": 6,
+    "play_live": 6,
+    "song_end_time_alert": 6,
+    "sync_on": 6,
+    "browse_effect": 4,
+    "loop_shift": 4,
+    "set_deck_mode": 4,
+    "spin_wheel": 4,
+    "shift": 4,
+    "play_wheel": 4,
+    "loop_extract": 4,
+    "modify_bpm": 4,
+    "automix": 3,
+    "headphone_cue": 2,
+    "mix_best_song": 2,
+    "show_panel": 2,
+    "start_time": 2,
+    "stop_time": 2,
+    "set_crossfader_enabled": 2,
+    "set_crossfader_mode": 2,
+    "led_pos": 2,
+    "in_use_dual": 2,
+    "toggle_effect_bank": 2,
+    "sliprelease_next": 2,
+    "sliprelease_previous": 2,
+    "slip_cooldown": 2,
+    "slip_cooldown_value": 2,
+    "active_slip": 2,
+    "track_not_ready": 2,
+    "track_ready": 2,
+    "headphone_volume": 2,
+    "browse_effect_4": 2,
+    "load_best_song": 2,
+    "toggle_key": 2,
+    "key": 2,
+    "smart_mix": 1,
+    "action=toggle_macro_fx_panel": 1,
+    "magic_fade": 1,
+    "mic_start_stop": 1,
+    "set_crossfader_slope": 1,
+    "set_crossfader_reverse": 1,
+    "refresh_ui": 1
+  },
+  "limitations": [
+    "Static inspection only; no runtime call tracing.",
+    "Symbols and linked libraries do not establish complete implementation.",
+    "Original source code has not been recovered."
+  ]
+}

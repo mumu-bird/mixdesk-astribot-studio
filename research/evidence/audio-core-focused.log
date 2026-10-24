@@ -1,0 +1,100 @@
+
+Running 63 tests using 1 worker
+
+(node:47161) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/63] tests/audio-core.spec.js:8:5 › transport fades bound PCM discontinuities on play, seek and pause
+[2/63] tests/audio-core.spec.js:49:9 › Slip scratch restores the forward audio clock
+[3/63] tests/audio-core.spec.js:49:9 › Slip scratch restores the forward audio clock inside a loop
+[4/63] tests/audio-core.spec.js:49:9 › Slip scratch restores the reverse audio clock
+[5/63] tests/audio-core.spec.js:49:9 › Slip scratch restores the reverse audio clock inside a loop
+[6/63] tests/audio-core.spec.js:96:5 › Slip Hot Cue release during a scratch rebases the held transport; pause cancels late releases
+  1) tests/audio-core.spec.js:96:5 › Slip Hot Cue release during a scratch rebases the held transport; pause cancels late releases 
+
+    Error: expect(received).toBeGreaterThan(expected)
+
+    Expected: > 5.14
+    Received:   0
+
+      111 |     return { expected, actual, playing, stopped, after: deck.position, restarted: deck.playing };
+      112 |   });
+    > 113 |   expect(result.expected).toBeGreaterThan(5.14);
+          |                           ^
+      114 |   expect(Math.abs(result.actual - result.expected)).toBeLessThan(0.015);
+      115 |   expect(result.playing).toBe(true);
+      116 |   expect(result.after).toBe(result.stopped);
+        at /Users/pomelo/dj工作台/tests/audio-core.spec.js:113:27
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/audio-core-Slip-Hot-Cue-re-be4bd-pause-cancels-late-releases/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/audio-core-Slip-Hot-Cue-re-be4bd-pause-cancels-late-releases/error-context.md
+
+
+(node:47211) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[7/63] tests/audio-core.spec.js:120:5 › live stereo key changes keep audio flowing without refilling the pitch processor
+[8/63] tests/pads.spec.js:26:5 › Roll audio, changing tempo and release agree with the audio clock
+[9/63] tests/pads.spec.js:51:5 › Slicer selects audible regions and handles overlapping held pads in last-pressed order
+[10/63] tests/pads.spec.js:69:5 › Slicer fixed mode keeps the selected region while the deck advances
+[11/63] tests/pads.spec.js:84:5 › Slip loops restore background progress while ordinary loops exit at the audible position
+[12/63] tests/pads.spec.js:101:5 › Slip Hot Cue previews a cue and returns to the background clock
+[13/63] tests/pads.spec.js:123:5 › Turning Slip off while a Hot Cue is held restores the background position
+[14/63] tests/pads.spec.js:138:5 › roll over a slip loop restores the loop first, then restores its outer timeline
+[15/63] tests/pads.spec.js:152:5 › pause, seek, load and end-of-track prevent late pad releases from restarting or replaying tails
+[16/63] tests/pads.spec.js:170:5 › manual loop boundaries and saved slots persist, recall exact times and delete with Shift
+[17/63] tests/pads.spec.js:188:5 › pointer release outside pads, keyboard key-up and window blur all release Roll
+[18/63] tests/pads.spec.js:201:5 › Cue hold previews from Cue, release returns, and Play latches the preview
+[19/63] tests/pads.spec.js:220:5 › Cue release during audio resume and MIDI disconnect cancel pending preview
+[20/63] tests/pads.spec.js:235:5 › editing cues on another loaded copy preserves shared saved loops
+[21/63] tests/pads.spec.js:250:5 › hot cues support editable names and colors and persist across reload
+[22/63] tests/pads.spec.js:269:5 › MIDI Slip Hot Cue keeps one background clock and ignores older or repeated releases
+[23/63] tests/pads.spec.js:298:5 › MIX HOTCUE_TAB selects the Hot Cue pad page without changing cue data
+[24/63] tests/pads.spec.js:306:5 › Digit Hot Cue release follows its original deck and cannot end a MIDI hold on the same pad
+[25/63] tests/pads.spec.js:327:5 › Hot Cue pointer cancellation and focused button keys release Slip without swallowing Shift clear
+[26/63] tests/pads.spec.js:343:5 › jumping to an existing Hot Cue does not rewrite its saved annotation
+[27/63] tests/pads.spec.js:361:5 › simulated MIX ports release Slip on hot unplug, retain keyboard ownership and send Cue LEDs
+[28/63] tests/performance.spec.js:4:5 › MIX protocol distinguishes note release, pads, channels and unsupported devices
+[29/63] tests/performance.spec.js:60:5 › MIDI outputs are deduplicated and disconnect turns off owned LEDs only
+[30/63] tests/performance.spec.js:80:5 › MIDI Hot Cue note repeats do not retrigger and only a matching release ends the hold
+[31/63] tests/performance.spec.js:120:5 › MIX Shift-touch Jog selects songs and Load restores Hot Cues with matching pad feedback
+[32/63] tests/performance.spec.js:146:5 › MIX browsing respects mouse selection, sorted and filtered lists, boundaries and empty results
+[33/63] tests/performance.spec.js:182:5 › every effect changes audio, bypass is transparent and Echo produces delayed audio
+[34/63] tests/performance.spec.js:218:5 › Gater uses a square gate and the selected beat length controls its cycle
+[35/63] tests/performance.spec.js:243:5 › shared FX racks keep per-deck lanes isolated and can be assigned together
+[36/63] tests/performance.spec.js:264:5 › FX bank wetness is transparent at zero and parameter limits survive lanes and snapshots
+[37/63] tests/performance.spec.js:296:5 › local stem approximation is transparent at defaults and only changes the path after control input
+[38/63] tests/performance.spec.js:321:5 › sampler reaches master output and stop silences it
+[39/63] tests/performance.spec.js:333:5 › Inpulse-style sampler page action wraps after the last page
+[40/63] tests/performance.spec.js:341:5 › platter scratch holds the audio timeline and resumes transport on release
+[41/63] tests/performance.spec.js:359:5 › reverse scratch grains read reversed PCM and release restores a coherent transport
+[42/63] tests/performance.spec.js:380:5 › 14-bit MIDI actions retain fractional DSP precision while the control UI rounds only its display
+[43/63] tests/performance.spec.js:390:5 › MIX tempo control uses software pickup before taking over the pitch slider
+[44/63] tests/performance.spec.js:406:5 › stems controls route real audio, support mute and solo, and persist
+[45/63] tests/performance.spec.js:427:5 › manual grid, quantized cue, phase alignment and cue persistence
+[46/63] tests/performance.spec.js:449:5 › mixer and FX session settings persist across reload
+[47/63] tests/performance.spec.js:472:5 › FX Rack assignment and shared slot edits persist across reload
+[48/63] tests/performance.spec.js:491:5 › mixer settings alter crossfader shape, limiter path and persist
+[49/63] tests/performance.spec.js:511:5 › Filter FX slots stay synchronized across channels, settings and filter amount
+[50/63] tests/performance.spec.js:544:5 › mixer EQ kill switches mute and restore individual bands
+[51/63] tests/performance.spec.js:557:5 › tempo range exposes DJUCED ranges and zero stops transport
+[52/63] tests/performance.spec.js:572:5 › MIDI actions drive UI, DSP state and matching FX feedback
+[53/63] tests/performance.spec.js:602:5 › MIX VU feedback follows the mapped channels and their different ranges
+[54/63] tests/performance.spec.js:615:5 › post-crossfader FX routing and fader start follow the channel controls
+[55/63] tests/performance.spec.js:630:5 › normal jog pitch bend briefly changes transport speed and returns to the set tempo
+[56/63] tests/performance.spec.js:642:5 › controller panel reports denied access without claiming a connection
+[57/63] tests/performance.spec.js:652:5 › Key Lock holds a 440 Hz tone while speed changes; key shift moves it by semitones
+[58/63] tests/performance.spec.js:688:5 › instant double copies timeline, rate, cues, loop and playing state
+[59/63] tests/performance.spec.js:706:5 › browser MIDI connect, live FX feedback and hot unplug use actual UI paths with simulated ports
+[60/63] tests/performance.spec.js:717:5 › Key Lock drains and disposes its processor at end of track
+[61/63] tests/reverse.spec.js:18:5 › REV reverses PCM and makes the transport clock decrease
+[62/63] tests/reverse.spec.js:36:5 › reverse loops stay inside their original timeline and continue backwards
+[63/63] tests/reverse.spec.js:57:5 › reverse Slip Hot Cue restores its descending background clock
+  1 failed
+    tests/audio-core.spec.js:96:5 › Slip Hot Cue release during a scratch rebases the held transport; pause cancels late releases 
+  62 passed (3.3m)

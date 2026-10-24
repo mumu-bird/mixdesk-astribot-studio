@@ -1,0 +1,629 @@
+{
+  "_meta": {
+    "provenance": {
+      "untrusted_content": true,
+      "source": "analysis_target"
+    }
+  },
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"evidence_id\":\"ev_71ce770028a2c64f1d475caecc5eec47ffa375bfd7908a1596707077521764d8\",\"subject\":{\"name\":\"DJUCED-arm64\",\"digest\":{\"sha256\":\"3d833a5175d99f6324bad3bd370b97bf46f9e82dad7f886ac6f5b08a83ccf5d8\"},\"local_path\":\"/Users/pomelo/dj工作台/research/.analysis/DJUCED-arm64\",\"format\":\"mach-o\",\"architecture\":\"arm64\"},\"provider\":{\"id\":\"ghidra\",\"name\":\"Ghidra\",\"version\":\"12.1.4\"},\"analysis_profile\":{\"provider\":{\"id\":\"ghidra\",\"name\":\"Ghidra\",\"version\":\"12.1.4\"},\"parameters\":{\"target_kind\":\"executable\",\"target_format\":\"mach-o\",\"architecture\":\"arm64\",\"available_architectures\":[\"arm64\"],\"import_mode\":\"ephemeral-source-immutable\",\"annotation_policy\":\"atomic-function-entry-metadata-v1\",\"load_image_observations\":\"source-mappings-entry-context-v2\",\"function_body_evidence\":\"complete-inclusive-ranges-v1\",\"function_references\":\"complete-body-and-entry-reference-manager-v2\",\"call_relationship_coverage\":\"function-body-call-coverage-v5\",\"function_dossier_coverage\":\"observed-facets-and-call-relationships-v1\",\"string_inventory_evidence\":\"defined-data-coverage-v1\",\"location_resolution\":\"explicit-address-exact-entry-symbol-first-v3\",\"procedure_file_offset_resolution\":\"address-first-unique-target-source-mapping-v2\",\"instruction_flow_evidence\":\"decoded-return-pcode-v1\",\"instruction_references\":\"exact-address-incoming-without-synthetic-entry-v2\",\"function_boundary_observations\":\"ghidra-function-boundary-limitations-v4\",\"no_return_repair\":\"returning-imports-decoded-return-v2\",\"process_launch\":\"inspected-jvm-launch-support-v1\",\"jump_table_evidence\":\"typed-case-default-blocks-v1\",\"decompiler_jump_loads\":true,\"loader\":\"auto-from-header\",\"language_id\":\"auto-from-header\",\"compiler_spec_id\":\"auto-default\",\"analyzer_preset\":\"ghidra-default\"},\"digest\":\"3fc72c9b4b78498fb992b938f8f3389dc670244a293c1d40abf5e1d10162ed3b\"},\"predicate_type\":\"rea.analysis\",\"operation\":\"search_procedures\",\"parameters\":{\"pattern\":\"BassSample3\",\"mode\":\"literal\",\"case_sensitive\":false},\"raw_result\":[{\"address\":\"0x10015662c\",\"value\":\"__ZN2dj5audio11BassSample311loadNewDataEPS1_\"},{\"address\":\"0x10015671c\",\"value\":\"__ZN2dj5audio11BassSample318compute_target_bpmEv\"},{\"address\":\"0x1001568e8\",\"value\":\"__ZN2dj5audio11BassSample316BufferStreamProcEjPvjS2_\"},{\"address\":\"0x100156984\",\"value\":\"__ZN2dj5audio11BassSample323BufferStreamProcPartialEjPvjS2_\"},{\"address\":\"0x100158228\",\"value\":\"__ZN2dj5audio11BassSample319getCurrentLoopStateEv\"},{\"address\":\"0x100158258\",\"value\":\"__ZN2dj5audio11BassSample315getBeatProgressEv\"},{\"address\":\"0x100158304\",\"value\":\"__ZN2dj5audio11BassSample318getElastiquePosFixEv\"},{\"address\":\"0x10015831c\",\"value\":\"__ZN2dj5audio11BassSample3C2EiiPNS_19IBeatProgressSourceEPViPf\"},{\"address\":\"0x100158c68\",\"value\":\"__ZN2dj5audio11BassSample3C1EiiPNS_19IBeatProgressSourceEPViPf\"},{\"address\":\"0x100158c6c\",\"value\":\"__ZN2dj5audio11BassSample314SetAudioMixersEji\"},{\"address\":\"0x100158ea4\",\"value\":\"__ZN2dj5audio11BassSample320releaseAudioPipeLineEv\"},{\"address\":\"0x100158f3c\",\"value\":\"__ZN2dj5audio11BassSample34openE7QStringibb\"},{\"address\":\"0x10015a62c\",\"value\":\"__ZN2dj5audio11BassSample317initAudioPipeLineEv\"},{\"address\":\"0x10015a6a0\",\"value\":\"__ZN2dj5audio11BassSample34playEv\"},{\"address\":\"0x10015a818\",\"value\":\"__ZN2dj5audio11BassSample35closeEb\"},{\"address\":\"0x10015a904\",\"value\":\"__ZN2dj5audio11BassSample3D2Ev\"},{\"address\":\"0x10015adf8\",\"value\":\"__ZN2dj5audio11BassSample3D1Ev\"},{\"address\":\"0x10015adfc\",\"value\":\"__ZN2dj5audio11BassSample3D0Ev\"},{\"address\":\"0x10015ae10\",\"value\":\"__ZN2dj5audio11BassSample314sendPropertiesEv\"},{\"address\":\"0x10015afcc\",\"value\":\"__ZN2dj5audio11BassSample336getLengthOfLastOpenedSampleInSecondsEv\"},{\"address\":\"0x10015b000\",\"value\":\"__ZN2dj5audio11BassSample315getPosInSecondsEv\"},{\"address\":\"0x10015b078\",\"value\":\"__ZN2dj5audio11BassSample38getPos01Ev\"},{\"address\":\"0x10015b108\",\"value\":\"__ZN2dj5audio11BassSample325getCurrentLengthInSecondsEv\"},{\"address\":\"0x10015b128\",\"value\":\"__ZN2dj5audio11BassSample310updateNameE7QString\"},{\"address\":\"0x10015b1c4\",\"value\":\"__ZN2dj5audio11BassSample311plugToMixerEv\"},{\"address\":\"0x10015b35c\",\"value\":\"__ZN2dj5audio11BassSample39setVolumeEf\"},{\"address\":\"0x10015b4d8\",\"value\":\"__ZN2dj5audio11BassSample39getVolumeEv\"},{\"address\":\"0x10015b4f0\",\"value\":\"__ZN2dj5audio11BassSample35pauseEv\"},{\"address\":\"0x10015b4fc\",\"value\":\"__ZN2dj5audio11BassSample315unplugFromMixerEv\"},{\"address\":\"0x10015b640\",\"value\":\"__ZN2dj5audio11BassSample314openSampleListE5QListI7QStringE\"},{\"address\":\"0x10015bf7c\",\"value\":\"__ZN2dj5audio11BassSample34stopEv\"},{\"address\":\"0x10015c048\",\"value\":\"__ZN2dj5audio11BassSample34openEi\"},{\"address\":\"0x10015c174\",\"value\":\"__ZN2dj5audio11BassSample313restartSampleEv\"},{\"address\":\"0x10015c1a8\",\"value\":\"__ZN2dj5audio11BassSample313loadAudioDataEv\"},{\"address\":\"0x10015c1ac\",\"value\":\"__ZN2dj5audio11BassSample313initElastiqueEii\"},{\"address\":\"0x10015c378\",\"value\":\"__ZN2dj5audio11BassSample316stopIfSampleHoldEv\"},{\"address\":\"0x10015c458\",\"value\":\"__ZN2dj5audio11BassSample37getLoopEi\"},{\"address\":\"0x10015c484\",\"value\":\"__ZN2dj5audio11BassSample37setLoopEbi\"},{\"address\":\"0x10015c4e8\",\"value\":\"__ZN2dj5audio11BassSample314setStrechRatioEf\"},{\"address\":\"0x10015c4f8\",\"value\":\"__ZN2dj5audio11BassSample310setKeyLockEb\"},{\"address\":\"0x10015c500\",\"value\":\"__ZN2dj5audio11BassSample315onRecordTimeoutEv\"},{\"address\":\"0x10015c5a4\",\"value\":\"__ZN2dj5audio11BassSample38openLoopE7QStringddiNS_10SampleTypeE\"},{\"address\":\"0x10015e258\",\"value\":\"__ZN2dj5audio11BassSample38clipFileE7QStringS2_dd\"},{\"address\":\"0x10015e9ec\",\"value\":\"__ZNK2dj5audio11BassSample314isFileLoopableEdd\"},{\"address\":\"0x10015ea30\",\"value\":\"__ZN2dj5audio11BassSample320receiveBeatFromTrackExd\"},{\"address\":\"0x10015eab4\",\"value\":\"__ZN2dj5audio11BassSample315fileTagsUpdatedE7QString\"},{\"address\":\"0x10015ef28\",\"value\":\"__ZN2dj5audio11BassSample316changeSampleTypeEiNS_10SampleTypeE\"},{\"address\":\"0x10015ef34\",\"value\":\"__ZN2dj5audio11BassSample313getSampleTypeEi\"},{\"address\":\"0x10015ef40\",\"value\":\"__ZN2dj5audio11BassSample314getSampleColorEi\"},{\"address\":\"0x10015ef70\",\"value\":\"__ZN2dj5audio11BassSample314setSampleColorEi7QString\"},{\"address\":\"0x10015ef84\",\"value\":\"__ZN2dj5audio11BassSample33runEv\"},{\"address\":\"0x10015efbc\",\"value\":\"__ZN2dj5audio11BassSample310saveSampleE7QString\"},{\"address\":\"0x10015f670\",\"value\":\"__ZN2dj5audio11BassSample320received_timer_startEii\"},{\"address\":\"0x10015f68c\",\"value\":\"__ZN2dj5audio11BassSample319received_timer_stopEi\"},{\"address\":\"0x10015f6a4\",\"value\":\"__ZN2dj5audio11BassSample313enableSamplerEb\"},{\"address\":\"0x10015f6ac\",\"value\":\"__ZN2dj5audio11BassSample310enableSyncEb\"},{\"address\":\"0x10015f6d8\",\"value\":\"__ZN2dj5audio11BassSample315setQuantizationEb\"},{\"address\":\"0x10015f6e0\",\"value\":\"__ZN2dj5audio11BassSample326setQuantizationSizeInBeatsEd\"},{\"address\":\"0x10015f6e8\",\"value\":\"__ZN2dj5audio11BassSample320getCurrentTrackIndexEv\"},{\"address\":\"0x100167608\",\"value\":\"__ZN2dj5audio16BassRecordStream17recordSampleStartEPNS0_11BassSample3Ej\"},{\"address\":\"0x100167bfc\",\"value\":\"__ZN2dj5audio16BassRecordStream16recordSampleStopEPNS0_11BassSample3Eb\"},{\"address\":\"0x1002d8a48\",\"value\":\"__ZN2dj5audio11BassSample323sample_property_changedENS_9AUDIOEnumEi8QVariant\"},{\"address\":\"0x1002d8ab4\",\"value\":\"__ZN2dj5audio11BassSample312sample_errorENS_11DJErrorEnumEi8QVariant\"},{\"address\":\"0x1002d8b20\",\"value\":\"__ZNK2dj5audio11BassSample310metaObjectEv\"},{\"address\":\"0x1002d8b3c\",\"value\":\"__ZN2dj5audio11BassSample311qt_metacastEPKc\"},{\"address\":\"0x1002d8b98\",\"value\":\"__ZN2dj5audio11BassSample311qt_metacallEN11QMetaObject4CallEiPPv\"},{\"address\":\"0x1002d8c14\",\"value\":\"__ZZN9QtPrivate16QMetaTypeForTypeIN2dj5audio11BassSample3EE7getDtorEvENUlPKNS_18QMetaTypeInterfaceEPvE_8__invokeES7_S8_\"}],\"normalized_result\":[{\"address\":\"0x10015662c\",\"value\":\"__ZN2dj5audio11BassSample311loadNewDataEPS1_\"},{\"address\":\"0x10015671c\",\"value\":\"__ZN2dj5audio11BassSample318compute_target_bpmEv\"},{\"address\":\"0x1001568e8\",\"value\":\"__ZN2dj5audio11BassSample316BufferStreamProcEjPvjS2_\"},{\"address\":\"0x100156984\",\"value\":\"__ZN2dj5audio11BassSample323BufferStreamProcPartialEjPvjS2_\"},{\"address\":\"0x100158228\",\"value\":\"__ZN2dj5audio11BassSample319getCurrentLoopStateEv\"},{\"address\":\"0x100158258\",\"value\":\"__ZN2dj5audio11BassSample315getBeatProgressEv\"},{\"address\":\"0x100158304\",\"value\":\"__ZN2dj5audio11BassSample318getElastiquePosFixEv\"},{\"address\":\"0x10015831c\",\"value\":\"__ZN2dj5audio11BassSample3C2EiiPNS_19IBeatProgressSourceEPViPf\"},{\"address\":\"0x100158c68\",\"value\":\"__ZN2dj5audio11BassSample3C1EiiPNS_19IBeatProgressSourceEPViPf\"},{\"address\":\"0x100158c6c\",\"value\":\"__ZN2dj5audio11BassSample314SetAudioMixersEji\"},{\"address\":\"0x100158ea4\",\"value\":\"__ZN2dj5audio11BassSample320releaseAudioPipeLineEv\"},{\"address\":\"0x100158f3c\",\"value\":\"__ZN2dj5audio11BassSample34openE7QStringibb\"},{\"address\":\"0x10015a62c\",\"value\":\"__ZN2dj5audio11BassSample317initAudioPipeLineEv\"},{\"address\":\"0x10015a6a0\",\"value\":\"__ZN2dj5audio11BassSample34playEv\"},{\"address\":\"0x10015a818\",\"value\":\"__ZN2dj5audio11BassSample35closeEb\"},{\"address\":\"0x10015a904\",\"value\":\"__ZN2dj5audio11BassSample3D2Ev\"},{\"address\":\"0x10015adf8\",\"value\":\"__ZN2dj5audio11BassSample3D1Ev\"},{\"address\":\"0x10015adfc\",\"value\":\"__ZN2dj5audio11BassSample3D0Ev\"},{\"address\":\"0x10015ae10\",\"value\":\"__ZN2dj5audio11BassSample314sendPropertiesEv\"},{\"address\":\"0x10015afcc\",\"value\":\"__ZN2dj5audio11BassSample336getLengthOfLastOpenedSampleInSecondsEv\"},{\"address\":\"0x10015b000\",\"value\":\"__ZN2dj5audio11BassSample315getPosInSecondsEv\"},{\"address\":\"0x10015b078\",\"value\":\"__ZN2dj5audio11BassSample38getPos01Ev\"},{\"address\":\"0x10015b108\",\"value\":\"__ZN2dj5audio11BassSample325getCurrentLengthInSecondsEv\"},{\"address\":\"0x10015b128\",\"value\":\"__ZN2dj5audio11BassSample310updateNameE7QString\"},{\"address\":\"0x10015b1c4\",\"value\":\"__ZN2dj5audio11BassSample311plugToMixerEv\"},{\"address\":\"0x10015b35c\",\"value\":\"__ZN2dj5audio11BassSample39setVolumeEf\"},{\"address\":\"0x10015b4d8\",\"value\":\"__ZN2dj5audio11BassSample39getVolumeEv\"},{\"address\":\"0x10015b4f0\",\"value\":\"__ZN2dj5audio11BassSample35pauseEv\"},{\"address\":\"0x10015b4fc\",\"value\":\"__ZN2dj5audio11BassSample315unplugFromMixerEv\"},{\"address\":\"0x10015b640\",\"value\":\"__ZN2dj5audio11BassSample314openSampleListE5QListI7QStringE\"},{\"address\":\"0x10015bf7c\",\"value\":\"__ZN2dj5audio11BassSample34stopEv\"},{\"address\":\"0x10015c048\",\"value\":\"__ZN2dj5audio11BassSample34openEi\"},{\"address\":\"0x10015c174\",\"value\":\"__ZN2dj5audio11BassSample313restartSampleEv\"},{\"address\":\"0x10015c1a8\",\"value\":\"__ZN2dj5audio11BassSample313loadAudioDataEv\"},{\"address\":\"0x10015c1ac\",\"value\":\"__ZN2dj5audio11BassSample313initElastiqueEii\"},{\"address\":\"0x10015c378\",\"value\":\"__ZN2dj5audio11BassSample316stopIfSampleHoldEv\"},{\"address\":\"0x10015c458\",\"value\":\"__ZN2dj5audio11BassSample37getLoopEi\"},{\"address\":\"0x10015c484\",\"value\":\"__ZN2dj5audio11BassSample37setLoopEbi\"},{\"address\":\"0x10015c4e8\",\"value\":\"__ZN2dj5audio11BassSample314setStrechRatioEf\"},{\"address\":\"0x10015c4f8\",\"value\":\"__ZN2dj5audio11BassSample310setKeyLockEb\"},{\"address\":\"0x10015c500\",\"value\":\"__ZN2dj5audio11BassSample315onRecordTimeoutEv\"},{\"address\":\"0x10015c5a4\",\"value\":\"__ZN2dj5audio11BassSample38openLoopE7QStringddiNS_10SampleTypeE\"},{\"address\":\"0x10015e258\",\"value\":\"__ZN2dj5audio11BassSample38clipFileE7QStringS2_dd\"},{\"address\":\"0x10015e9ec\",\"value\":\"__ZNK2dj5audio11BassSample314isFileLoopableEdd\"},{\"address\":\"0x10015ea30\",\"value\":\"__ZN2dj5audio11BassSample320receiveBeatFromTrackExd\"},{\"address\":\"0x10015eab4\",\"value\":\"__ZN2dj5audio11BassSample315fileTagsUpdatedE7QString\"},{\"address\":\"0x10015ef28\",\"value\":\"__ZN2dj5audio11BassSample316changeSampleTypeEiNS_10SampleTypeE\"},{\"address\":\"0x10015ef34\",\"value\":\"__ZN2dj5audio11BassSample313getSampleTypeEi\"},{\"address\":\"0x10015ef40\",\"value\":\"__ZN2dj5audio11BassSample314getSampleColorEi\"},{\"address\":\"0x10015ef70\",\"value\":\"__ZN2dj5audio11BassSample314setSampleColorEi7QString\"},{\"address\":\"0x10015ef84\",\"value\":\"__ZN2dj5audio11BassSample33runEv\"},{\"address\":\"0x10015efbc\",\"value\":\"__ZN2dj5audio11BassSample310saveSampleE7QString\"},{\"address\":\"0x10015f670\",\"value\":\"__ZN2dj5audio11BassSample320received_timer_startEii\"},{\"address\":\"0x10015f68c\",\"value\":\"__ZN2dj5audio11BassSample319received_timer_stopEi\"},{\"address\":\"0x10015f6a4\",\"value\":\"__ZN2dj5audio11BassSample313enableSamplerEb\"},{\"address\":\"0x10015f6ac\",\"value\":\"__ZN2dj5audio11BassSample310enableSyncEb\"},{\"address\":\"0x10015f6d8\",\"value\":\"__ZN2dj5audio11BassSample315setQuantizationEb\"},{\"address\":\"0x10015f6e0\",\"value\":\"__ZN2dj5audio11BassSample326setQuantizationSizeInBeatsEd\"},{\"address\":\"0x10015f6e8\",\"value\":\"__ZN2dj5audio11BassSample320getCurrentTrackIndexEv\"},{\"address\":\"0x100167608\",\"value\":\"__ZN2dj5audio16BassRecordStream17recordSampleStartEPNS0_11BassSample3Ej\"},{\"address\":\"0x100167bfc\",\"value\":\"__ZN2dj5audio16BassRecordStream16recordSampleStopEPNS0_11BassSample3Eb\"},{\"address\":\"0x1002d8a48\",\"value\":\"__ZN2dj5audio11BassSample323sample_property_changedENS_9AUDIOEnumEi8QVariant\"},{\"address\":\"0x1002d8ab4\",\"value\":\"__ZN2dj5audio11BassSample312sample_errorENS_11DJErrorEnumEi8QVariant\"},{\"address\":\"0x1002d8b20\",\"value\":\"__ZNK2dj5audio11BassSample310metaObjectEv\"},{\"address\":\"0x1002d8b3c\",\"value\":\"__ZN2dj5audio11BassSample311qt_metacastEPKc\"},{\"address\":\"0x1002d8b98\",\"value\":\"__ZN2dj5audio11BassSample311qt_metacallEN11QMetaObject4CallEiPPv\"},{\"address\":\"0x1002d8c14\",\"value\":\"__ZZN9QtPrivate16QMetaTypeForTypeIN2dj5audio11BassSample3EE7getDtorEvENUlPKNS_18QMetaTypeInterfaceEPvE_8__invokeES7_S8_\"}],\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"The session serves operations only after Ghidra reports default auto-analysis complete; incomplete analysis does not expose partial results.\",\"The imported Program and temporary project are ephemeral and deleted on close. Annotation operations edit session database metadata; original executable bytes are never written.\",\"Cancelling an active Ghidra request terminates its ephemeral database and discards session annotations. The selected target remains open; the next provider query imports the original artifact again.\",\"Default-space addresses use lowercase 0x-prefixed hexadecimal; other address spaces use <percent-encoded-space>:0x<hex>.\",\"Regex mode uses Java Pattern semantics. Matcher or compiler stack exhaustion returns a resource constraint without closing the session; literal mode avoids regex recursion and returns complete matching values.\",\"macOS sessions require a matching executable Ghidra native decompiler; REA checks for it but does not build native components or change Gatekeeper quarantine state.\"],\"relationship_coverage\":null,\"locations\":[],\"evidence_links\":[]}"
+    }
+  ],
+  "structuredContent": {
+    "evidence_id": "ev_71ce770028a2c64f1d475caecc5eec47ffa375bfd7908a1596707077521764d8",
+    "subject": {
+      "name": "DJUCED-arm64",
+      "digest": {
+        "sha256": "3d833a5175d99f6324bad3bd370b97bf46f9e82dad7f886ac6f5b08a83ccf5d8"
+      },
+      "local_path": "/Users/pomelo/dj工作台/research/.analysis/DJUCED-arm64",
+      "format": "mach-o",
+      "architecture": "arm64"
+    },
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    },
+    "analysis_profile": {
+      "provider": {
+        "id": "ghidra",
+        "name": "Ghidra",
+        "version": "12.1.4"
+      },
+      "parameters": {
+        "target_kind": "executable",
+        "target_format": "mach-o",
+        "architecture": "arm64",
+        "available_architectures": [
+          "arm64"
+        ],
+        "import_mode": "ephemeral-source-immutable",
+        "annotation_policy": "atomic-function-entry-metadata-v1",
+        "load_image_observations": "source-mappings-entry-context-v2",
+        "function_body_evidence": "complete-inclusive-ranges-v1",
+        "function_references": "complete-body-and-entry-reference-manager-v2",
+        "call_relationship_coverage": "function-body-call-coverage-v5",
+        "function_dossier_coverage": "observed-facets-and-call-relationships-v1",
+        "string_inventory_evidence": "defined-data-coverage-v1",
+        "location_resolution": "explicit-address-exact-entry-symbol-first-v3",
+        "procedure_file_offset_resolution": "address-first-unique-target-source-mapping-v2",
+        "instruction_flow_evidence": "decoded-return-pcode-v1",
+        "instruction_references": "exact-address-incoming-without-synthetic-entry-v2",
+        "function_boundary_observations": "ghidra-function-boundary-limitations-v4",
+        "no_return_repair": "returning-imports-decoded-return-v2",
+        "process_launch": "inspected-jvm-launch-support-v1",
+        "jump_table_evidence": "typed-case-default-blocks-v1",
+        "decompiler_jump_loads": true,
+        "loader": "auto-from-header",
+        "language_id": "auto-from-header",
+        "compiler_spec_id": "auto-default",
+        "analyzer_preset": "ghidra-default"
+      },
+      "digest": "3fc72c9b4b78498fb992b938f8f3389dc670244a293c1d40abf5e1d10162ed3b"
+    },
+    "predicate_type": "rea.analysis",
+    "operation": "search_procedures",
+    "parameters": {
+      "pattern": "BassSample3",
+      "mode": "literal",
+      "case_sensitive": false
+    },
+    "raw_result": [
+      {
+        "address": "0x10015662c",
+        "value": "__ZN2dj5audio11BassSample311loadNewDataEPS1_"
+      },
+      {
+        "address": "0x10015671c",
+        "value": "__ZN2dj5audio11BassSample318compute_target_bpmEv"
+      },
+      {
+        "address": "0x1001568e8",
+        "value": "__ZN2dj5audio11BassSample316BufferStreamProcEjPvjS2_"
+      },
+      {
+        "address": "0x100156984",
+        "value": "__ZN2dj5audio11BassSample323BufferStreamProcPartialEjPvjS2_"
+      },
+      {
+        "address": "0x100158228",
+        "value": "__ZN2dj5audio11BassSample319getCurrentLoopStateEv"
+      },
+      {
+        "address": "0x100158258",
+        "value": "__ZN2dj5audio11BassSample315getBeatProgressEv"
+      },
+      {
+        "address": "0x100158304",
+        "value": "__ZN2dj5audio11BassSample318getElastiquePosFixEv"
+      },
+      {
+        "address": "0x10015831c",
+        "value": "__ZN2dj5audio11BassSample3C2EiiPNS_19IBeatProgressSourceEPViPf"
+      },
+      {
+        "address": "0x100158c68",
+        "value": "__ZN2dj5audio11BassSample3C1EiiPNS_19IBeatProgressSourceEPViPf"
+      },
+      {
+        "address": "0x100158c6c",
+        "value": "__ZN2dj5audio11BassSample314SetAudioMixersEji"
+      },
+      {
+        "address": "0x100158ea4",
+        "value": "__ZN2dj5audio11BassSample320releaseAudioPipeLineEv"
+      },
+      {
+        "address": "0x100158f3c",
+        "value": "__ZN2dj5audio11BassSample34openE7QStringibb"
+      },
+      {
+        "address": "0x10015a62c",
+        "value": "__ZN2dj5audio11BassSample317initAudioPipeLineEv"
+      },
+      {
+        "address": "0x10015a6a0",
+        "value": "__ZN2dj5audio11BassSample34playEv"
+      },
+      {
+        "address": "0x10015a818",
+        "value": "__ZN2dj5audio11BassSample35closeEb"
+      },
+      {
+        "address": "0x10015a904",
+        "value": "__ZN2dj5audio11BassSample3D2Ev"
+      },
+      {
+        "address": "0x10015adf8",
+        "value": "__ZN2dj5audio11BassSample3D1Ev"
+      },
+      {
+        "address": "0x10015adfc",
+        "value": "__ZN2dj5audio11BassSample3D0Ev"
+      },
+      {
+        "address": "0x10015ae10",
+        "value": "__ZN2dj5audio11BassSample314sendPropertiesEv"
+      },
+      {
+        "address": "0x10015afcc",
+        "value": "__ZN2dj5audio11BassSample336getLengthOfLastOpenedSampleInSecondsEv"
+      },
+      {
+        "address": "0x10015b000",
+        "value": "__ZN2dj5audio11BassSample315getPosInSecondsEv"
+      },
+      {
+        "address": "0x10015b078",
+        "value": "__ZN2dj5audio11BassSample38getPos01Ev"
+      },
+      {
+        "address": "0x10015b108",
+        "value": "__ZN2dj5audio11BassSample325getCurrentLengthInSecondsEv"
+      },
+      {
+        "address": "0x10015b128",
+        "value": "__ZN2dj5audio11BassSample310updateNameE7QString"
+      },
+      {
+        "address": "0x10015b1c4",
+        "value": "__ZN2dj5audio11BassSample311plugToMixerEv"
+      },
+      {
+        "address": "0x10015b35c",
+        "value": "__ZN2dj5audio11BassSample39setVolumeEf"
+      },
+      {
+        "address": "0x10015b4d8",
+        "value": "__ZN2dj5audio11BassSample39getVolumeEv"
+      },
+      {
+        "address": "0x10015b4f0",
+        "value": "__ZN2dj5audio11BassSample35pauseEv"
+      },
+      {
+        "address": "0x10015b4fc",
+        "value": "__ZN2dj5audio11BassSample315unplugFromMixerEv"
+      },
+      {
+        "address": "0x10015b640",
+        "value": "__ZN2dj5audio11BassSample314openSampleListE5QListI7QStringE"
+      },
+      {
+        "address": "0x10015bf7c",
+        "value": "__ZN2dj5audio11BassSample34stopEv"
+      },
+      {
+        "address": "0x10015c048",
+        "value": "__ZN2dj5audio11BassSample34openEi"
+      },
+      {
+        "address": "0x10015c174",
+        "value": "__ZN2dj5audio11BassSample313restartSampleEv"
+      },
+      {
+        "address": "0x10015c1a8",
+        "value": "__ZN2dj5audio11BassSample313loadAudioDataEv"
+      },
+      {
+        "address": "0x10015c1ac",
+        "value": "__ZN2dj5audio11BassSample313initElastiqueEii"
+      },
+      {
+        "address": "0x10015c378",
+        "value": "__ZN2dj5audio11BassSample316stopIfSampleHoldEv"
+      },
+      {
+        "address": "0x10015c458",
+        "value": "__ZN2dj5audio11BassSample37getLoopEi"
+      },
+      {
+        "address": "0x10015c484",
+        "value": "__ZN2dj5audio11BassSample37setLoopEbi"
+      },
+      {
+        "address": "0x10015c4e8",
+        "value": "__ZN2dj5audio11BassSample314setStrechRatioEf"
+      },
+      {
+        "address": "0x10015c4f8",
+        "value": "__ZN2dj5audio11BassSample310setKeyLockEb"
+      },
+      {
+        "address": "0x10015c500",
+        "value": "__ZN2dj5audio11BassSample315onRecordTimeoutEv"
+      },
+      {
+        "address": "0x10015c5a4",
+        "value": "__ZN2dj5audio11BassSample38openLoopE7QStringddiNS_10SampleTypeE"
+      },
+      {
+        "address": "0x10015e258",
+        "value": "__ZN2dj5audio11BassSample38clipFileE7QStringS2_dd"
+      },
+      {
+        "address": "0x10015e9ec",
+        "value": "__ZNK2dj5audio11BassSample314isFileLoopableEdd"
+      },
+      {
+        "address": "0x10015ea30",
+        "value": "__ZN2dj5audio11BassSample320receiveBeatFromTrackExd"
+      },
+      {
+        "address": "0x10015eab4",
+        "value": "__ZN2dj5audio11BassSample315fileTagsUpdatedE7QString"
+      },
+      {
+        "address": "0x10015ef28",
+        "value": "__ZN2dj5audio11BassSample316changeSampleTypeEiNS_10SampleTypeE"
+      },
+      {
+        "address": "0x10015ef34",
+        "value": "__ZN2dj5audio11BassSample313getSampleTypeEi"
+      },
+      {
+        "address": "0x10015ef40",
+        "value": "__ZN2dj5audio11BassSample314getSampleColorEi"
+      },
+      {
+        "address": "0x10015ef70",
+        "value": "__ZN2dj5audio11BassSample314setSampleColorEi7QString"
+      },
+      {
+        "address": "0x10015ef84",
+        "value": "__ZN2dj5audio11BassSample33runEv"
+      },
+      {
+        "address": "0x10015efbc",
+        "value": "__ZN2dj5audio11BassSample310saveSampleE7QString"
+      },
+      {
+        "address": "0x10015f670",
+        "value": "__ZN2dj5audio11BassSample320received_timer_startEii"
+      },
+      {
+        "address": "0x10015f68c",
+        "value": "__ZN2dj5audio11BassSample319received_timer_stopEi"
+      },
+      {
+        "address": "0x10015f6a4",
+        "value": "__ZN2dj5audio11BassSample313enableSamplerEb"
+      },
+      {
+        "address": "0x10015f6ac",
+        "value": "__ZN2dj5audio11BassSample310enableSyncEb"
+      },
+      {
+        "address": "0x10015f6d8",
+        "value": "__ZN2dj5audio11BassSample315setQuantizationEb"
+      },
+      {
+        "address": "0x10015f6e0",
+        "value": "__ZN2dj5audio11BassSample326setQuantizationSizeInBeatsEd"
+      },
+      {
+        "address": "0x10015f6e8",
+        "value": "__ZN2dj5audio11BassSample320getCurrentTrackIndexEv"
+      },
+      {
+        "address": "0x100167608",
+        "value": "__ZN2dj5audio16BassRecordStream17recordSampleStartEPNS0_11BassSample3Ej"
+      },
+      {
+        "address": "0x100167bfc",
+        "value": "__ZN2dj5audio16BassRecordStream16recordSampleStopEPNS0_11BassSample3Eb"
+      },
+      {
+        "address": "0x1002d8a48",
+        "value": "__ZN2dj5audio11BassSample323sample_property_changedENS_9AUDIOEnumEi8QVariant"
+      },
+      {
+        "address": "0x1002d8ab4",
+        "value": "__ZN2dj5audio11BassSample312sample_errorENS_11DJErrorEnumEi8QVariant"
+      },
+      {
+        "address": "0x1002d8b20",
+        "value": "__ZNK2dj5audio11BassSample310metaObjectEv"
+      },
+      {
+        "address": "0x1002d8b3c",
+        "value": "__ZN2dj5audio11BassSample311qt_metacastEPKc"
+      },
+      {
+        "address": "0x1002d8b98",
+        "value": "__ZN2dj5audio11BassSample311qt_metacallEN11QMetaObject4CallEiPPv"
+      },
+      {
+        "address": "0x1002d8c14",
+        "value": "__ZZN9QtPrivate16QMetaTypeForTypeIN2dj5audio11BassSample3EE7getDtorEvENUlPKNS_18QMetaTypeInterfaceEPvE_8__invokeES7_S8_"
+      }
+    ],
+    "normalized_result": [
+      {
+        "address": "0x10015662c",
+        "value": "__ZN2dj5audio11BassSample311loadNewDataEPS1_"
+      },
+      {
+        "address": "0x10015671c",
+        "value": "__ZN2dj5audio11BassSample318compute_target_bpmEv"
+      },
+      {
+        "address": "0x1001568e8",
+        "value": "__ZN2dj5audio11BassSample316BufferStreamProcEjPvjS2_"
+      },
+      {
+        "address": "0x100156984",
+        "value": "__ZN2dj5audio11BassSample323BufferStreamProcPartialEjPvjS2_"
+      },
+      {
+        "address": "0x100158228",
+        "value": "__ZN2dj5audio11BassSample319getCurrentLoopStateEv"
+      },
+      {
+        "address": "0x100158258",
+        "value": "__ZN2dj5audio11BassSample315getBeatProgressEv"
+      },
+      {
+        "address": "0x100158304",
+        "value": "__ZN2dj5audio11BassSample318getElastiquePosFixEv"
+      },
+      {
+        "address": "0x10015831c",
+        "value": "__ZN2dj5audio11BassSample3C2EiiPNS_19IBeatProgressSourceEPViPf"
+      },
+      {
+        "address": "0x100158c68",
+        "value": "__ZN2dj5audio11BassSample3C1EiiPNS_19IBeatProgressSourceEPViPf"
+      },
+      {
+        "address": "0x100158c6c",
+        "value": "__ZN2dj5audio11BassSample314SetAudioMixersEji"
+      },
+      {
+        "address": "0x100158ea4",
+        "value": "__ZN2dj5audio11BassSample320releaseAudioPipeLineEv"
+      },
+      {
+        "address": "0x100158f3c",
+        "value": "__ZN2dj5audio11BassSample34openE7QStringibb"
+      },
+      {
+        "address": "0x10015a62c",
+        "value": "__ZN2dj5audio11BassSample317initAudioPipeLineEv"
+      },
+      {
+        "address": "0x10015a6a0",
+        "value": "__ZN2dj5audio11BassSample34playEv"
+      },
+      {
+        "address": "0x10015a818",
+        "value": "__ZN2dj5audio11BassSample35closeEb"
+      },
+      {
+        "address": "0x10015a904",
+        "value": "__ZN2dj5audio11BassSample3D2Ev"
+      },
+      {
+        "address": "0x10015adf8",
+        "value": "__ZN2dj5audio11BassSample3D1Ev"
+      },
+      {
+        "address": "0x10015adfc",
+        "value": "__ZN2dj5audio11BassSample3D0Ev"
+      },
+      {
+        "address": "0x10015ae10",
+        "value": "__ZN2dj5audio11BassSample314sendPropertiesEv"
+      },
+      {
+        "address": "0x10015afcc",
+        "value": "__ZN2dj5audio11BassSample336getLengthOfLastOpenedSampleInSecondsEv"
+      },
+      {
+        "address": "0x10015b000",
+        "value": "__ZN2dj5audio11BassSample315getPosInSecondsEv"
+      },
+      {
+        "address": "0x10015b078",
+        "value": "__ZN2dj5audio11BassSample38getPos01Ev"
+      },
+      {
+        "address": "0x10015b108",
+        "value": "__ZN2dj5audio11BassSample325getCurrentLengthInSecondsEv"
+      },
+      {
+        "address": "0x10015b128",
+        "value": "__ZN2dj5audio11BassSample310updateNameE7QString"
+      },
+      {
+        "address": "0x10015b1c4",
+        "value": "__ZN2dj5audio11BassSample311plugToMixerEv"
+      },
+      {
+        "address": "0x10015b35c",
+        "value": "__ZN2dj5audio11BassSample39setVolumeEf"
+      },
+      {
+        "address": "0x10015b4d8",
+        "value": "__ZN2dj5audio11BassSample39getVolumeEv"
+      },
+      {
+        "address": "0x10015b4f0",
+        "value": "__ZN2dj5audio11BassSample35pauseEv"
+      },
+      {
+        "address": "0x10015b4fc",
+        "value": "__ZN2dj5audio11BassSample315unplugFromMixerEv"
+      },
+      {
+        "address": "0x10015b640",
+        "value": "__ZN2dj5audio11BassSample314openSampleListE5QListI7QStringE"
+      },
+      {
+        "address": "0x10015bf7c",
+        "value": "__ZN2dj5audio11BassSample34stopEv"
+      },
+      {
+        "address": "0x10015c048",
+        "value": "__ZN2dj5audio11BassSample34openEi"
+      },
+      {
+        "address": "0x10015c174",
+        "value": "__ZN2dj5audio11BassSample313restartSampleEv"
+      },
+      {
+        "address": "0x10015c1a8",
+        "value": "__ZN2dj5audio11BassSample313loadAudioDataEv"
+      },
+      {
+        "address": "0x10015c1ac",
+        "value": "__ZN2dj5audio11BassSample313initElastiqueEii"
+      },
+      {
+        "address": "0x10015c378",
+        "value": "__ZN2dj5audio11BassSample316stopIfSampleHoldEv"
+      },
+      {
+        "address": "0x10015c458",
+        "value": "__ZN2dj5audio11BassSample37getLoopEi"
+      },
+      {
+        "address": "0x10015c484",
+        "value": "__ZN2dj5audio11BassSample37setLoopEbi"
+      },
+      {
+        "address": "0x10015c4e8",
+        "value": "__ZN2dj5audio11BassSample314setStrechRatioEf"
+      },
+      {
+        "address": "0x10015c4f8",
+        "value": "__ZN2dj5audio11BassSample310setKeyLockEb"
+      },
+      {
+        "address": "0x10015c500",
+        "value": "__ZN2dj5audio11BassSample315onRecordTimeoutEv"
+      },
+      {
+        "address": "0x10015c5a4",
+        "value": "__ZN2dj5audio11BassSample38openLoopE7QStringddiNS_10SampleTypeE"
+      },
+      {
+        "address": "0x10015e258",
+        "value": "__ZN2dj5audio11BassSample38clipFileE7QStringS2_dd"
+      },
+      {
+        "address": "0x10015e9ec",
+        "value": "__ZNK2dj5audio11BassSample314isFileLoopableEdd"
+      },
+      {
+        "address": "0x10015ea30",
+        "value": "__ZN2dj5audio11BassSample320receiveBeatFromTrackExd"
+      },
+      {
+        "address": "0x10015eab4",
+        "value": "__ZN2dj5audio11BassSample315fileTagsUpdatedE7QString"
+      },
+      {
+        "address": "0x10015ef28",
+        "value": "__ZN2dj5audio11BassSample316changeSampleTypeEiNS_10SampleTypeE"
+      },
+      {
+        "address": "0x10015ef34",
+        "value": "__ZN2dj5audio11BassSample313getSampleTypeEi"
+      },
+      {
+        "address": "0x10015ef40",
+        "value": "__ZN2dj5audio11BassSample314getSampleColorEi"
+      },
+      {
+        "address": "0x10015ef70",
+        "value": "__ZN2dj5audio11BassSample314setSampleColorEi7QString"
+      },
+      {
+        "address": "0x10015ef84",
+        "value": "__ZN2dj5audio11BassSample33runEv"
+      },
+      {
+        "address": "0x10015efbc",
+        "value": "__ZN2dj5audio11BassSample310saveSampleE7QString"
+      },
+      {
+        "address": "0x10015f670",
+        "value": "__ZN2dj5audio11BassSample320received_timer_startEii"
+      },
+      {
+        "address": "0x10015f68c",
+        "value": "__ZN2dj5audio11BassSample319received_timer_stopEi"
+      },
+      {
+        "address": "0x10015f6a4",
+        "value": "__ZN2dj5audio11BassSample313enableSamplerEb"
+      },
+      {
+        "address": "0x10015f6ac",
+        "value": "__ZN2dj5audio11BassSample310enableSyncEb"
+      },
+      {
+        "address": "0x10015f6d8",
+        "value": "__ZN2dj5audio11BassSample315setQuantizationEb"
+      },
+      {
+        "address": "0x10015f6e0",
+        "value": "__ZN2dj5audio11BassSample326setQuantizationSizeInBeatsEd"
+      },
+      {
+        "address": "0x10015f6e8",
+        "value": "__ZN2dj5audio11BassSample320getCurrentTrackIndexEv"
+      },
+      {
+        "address": "0x100167608",
+        "value": "__ZN2dj5audio16BassRecordStream17recordSampleStartEPNS0_11BassSample3Ej"
+      },
+      {
+        "address": "0x100167bfc",
+        "value": "__ZN2dj5audio16BassRecordStream16recordSampleStopEPNS0_11BassSample3Eb"
+      },
+      {
+        "address": "0x1002d8a48",
+        "value": "__ZN2dj5audio11BassSample323sample_property_changedENS_9AUDIOEnumEi8QVariant"
+      },
+      {
+        "address": "0x1002d8ab4",
+        "value": "__ZN2dj5audio11BassSample312sample_errorENS_11DJErrorEnumEi8QVariant"
+      },
+      {
+        "address": "0x1002d8b20",
+        "value": "__ZNK2dj5audio11BassSample310metaObjectEv"
+      },
+      {
+        "address": "0x1002d8b3c",
+        "value": "__ZN2dj5audio11BassSample311qt_metacastEPKc"
+      },
+      {
+        "address": "0x1002d8b98",
+        "value": "__ZN2dj5audio11BassSample311qt_metacallEN11QMetaObject4CallEiPPv"
+      },
+      {
+        "address": "0x1002d8c14",
+        "value": "__ZZN9QtPrivate16QMetaTypeForTypeIN2dj5audio11BassSample3EE7getDtorEvENUlPKNS_18QMetaTypeInterfaceEPvE_8__invokeES7_S8_"
+      }
+    ],
+    "confidence": "observed",
+    "authority": "shipped-artifact",
+    "environment": null,
+    "limitations": [
+      "The session serves operations only after Ghidra reports default auto-analysis complete; incomplete analysis does not expose partial results.",
+      "The imported Program and temporary project are ephemeral and deleted on close. Annotation operations edit session database metadata; original executable bytes are never written.",
+      "Cancelling an active Ghidra request terminates its ephemeral database and discards session annotations. The selected target remains open; the next provider query imports the original artifact again.",
+      "Default-space addresses use lowercase 0x-prefixed hexadecimal; other address spaces use <percent-encoded-space>:0x<hex>.",
+      "Regex mode uses Java Pattern semantics. Matcher or compiler stack exhaustion returns a resource constraint without closing the session; literal mode avoids regex recursion and returns complete matching values.",
+      "macOS sessions require a matching executable Ghidra native decompiler; REA checks for it but does not build native components or change Gatekeeper quarantine state."
+    ],
+    "relationship_coverage": null,
+    "locations": [],
+    "evidence_links": []
+  }
+}

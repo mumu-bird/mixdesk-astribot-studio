@@ -1,0 +1,5 @@
+(node:28573) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/pomelo/dj%E5%B7%A5%E4%BD%9C%E5%8F%B0/tests/fixtures/audio.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/pomelo/dj工作台/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"production":true,"archive":"7z","sampleSeconds":1,"pcmBits":16,"nativeCompatibilityNotice":true,"desktop":true,"mobile":true,"errors":[],"remoteRequests":[]}

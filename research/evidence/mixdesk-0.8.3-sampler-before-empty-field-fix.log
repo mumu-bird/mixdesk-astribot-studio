@@ -1,0 +1,104 @@
+
+> mixdesk@0.8.3 test
+> playwright test tests/djz-import.spec.js tests/djz-export.spec.js tests/sampler.spec.js tests/sampler-groups.spec.js
+
+
+Running 46 tests using 1 worker
+
+(node:31221) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+  ✓   1 tests/djz-export.spec.js:15:5 › DJZ is readable by libarchive and preserves six modes, holes and real cropped stereo PCM (4.4s)
+
+  ✓   2 tests/djz-export.spec.js:49:5 › empty decks export four groups, quantize off and no invented audio (1.7s)
+
+  ✓   3 tests/djz-export.spec.js:56:5 › export reports clipping, preserves the source and rejects unsupported channels (1.9s)
+  ✓   4 tests/djz-export.spec.js:66:5 › export can cancel a loading compressor and recover for another download (2.0s)
+  ✓   5 tests/djz-export.spec.js:74:5 › export works on mobile with local assets only (1.9s)
+
+  ✓   6 tests/djz-export.spec.js:80:5 › DJS pack tempo survives reload and MXPACK, and can be changed for the exported DJZ (3.1s)
+
+  ✓   7 tests/djz-import.spec.js:21:5 › single independent DJZ imports six modes, holes, nested paths, PCM and settings into only the selected deck (2.5s)
+
+  ✘   8 tests/djz-import.spec.js:32:5 › bad archives leave the current voice and saved records intact (8.1s)
+(node:31604) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+  ✓   9 tests/djz-import.spec.js:55:5 › actual extraction cannot exceed the preflight size manifest (25ms)
+  ✓  10 tests/djz-import.spec.js:64:5 › encrypted data and encrypted headers fail without a password prompt (2.1s)
+  ✓  11 tests/djz-import.spec.js:73:5 › cancel during worker load keeps playback and permits another import (1.7s)
+  ✓  12 tests/djz-import.spec.js:81:5 › cancel during audio decode discards the late result and restores controls (1.8s)
+  ✓  13 tests/djz-import.spec.js:89:5 › target deck is captured before asynchronous decode (1.5s)
+  ✓  14 tests/djz-import.spec.js:97:5 › IDB abort after staging restores the original playing voice and persisted samples (2.6s)
+  ✓  15 tests/djz-import.spec.js:108:5 › mobile import uses only local assets and requires one archive at a time (1.4s)
+  ✓  16 tests/sampler-groups.spec.js:9:5 › group pagination follows every group and each deck remembers its own settings (2.7s)
+  ✓  17 tests/sampler-groups.spec.js:24:5 › four groups mix actual audio while selecting a sibling replaces only its group (1.8s)
+  ✓  18 tests/sampler-groups.spec.js:40:5 › all six trigger modes distinguish loop, retrigger, toggle and release (2.5s)
+  ✓  19 tests/sampler-groups.spec.js:51:5 › quantized switching keeps the old tone until the boundary and cancelling a hold restores it (3.1s)
+  ✓  20 tests/sampler-groups.spec.js:71:5 › failed and stale pending selections keep the previous voice and cannot start later (1.3s)
+  ✓  21 tests/sampler-groups.spec.js:84:5 › MIX pads and feedback address C and D sampler groups independently of the visible deck (1.3s)
+  ✓  22 tests/sampler-groups.spec.js:96:5 › v4 packages preserve audio, empty cells and settings across all four decks and reload (2.8s)
+  ✓  23 tests/sampler-groups.spec.js:105:5 › legacy v1 to v3 packages migrate every layer to a selectable sample without dropping audio (4.9s)
+  ✓  24 tests/sampler-groups.spec.js:115:5 › old IndexedDB migrates transactionally and preserves original records and audio (2.3s)
+  ✓  25 tests/sampler-groups.spec.js:123:5 › DJS six modes, quantization fallback and empty cells apply to the selected deck only (1.6s)
+  ✓  26 tests/sampler-groups.spec.js:132:5 › corrupt v4 package metadata never replaces active voices or durable data (4.9s)
+  ✓  27 tests/sampler-groups.spec.js:142:5 › migration failure retains all legacy data and retries on the next load (3.7s)
+  ✓  28 tests/sampler-groups.spec.js:151:5 › rapid switching cancels stale resume calls, and Key Lock readiness respects release (1.5s)
+  ✓  29 tests/sampler-groups.spec.js:159:5 › a stopped group replays its selected sample and an empty cell stays silent after reload (3.1s)
+  ✓  30 tests/sampler-groups.spec.js:164:5 › DJS missing type uses the observed zero type and ambiguous filenames are rejected (1.5s)
+  ✓  31 tests/sampler-groups.spec.js:169:5 › deck default type governs later file imports without overriding DJS cell types (3.4s)
+  ✓  32 tests/sampler.spec.js:15:5 › custom sample audio, trim, gain, mode and global options persist across reload (4.7s)
+  ✓  33 tests/sampler.spec.js:24:5 › sample trim selects the audible region and enforces one-shot duration (2.4s)
+  ✓  34 tests/sampler.spec.js:32:5 › hold mode releases outside, on blur and on key-up, without restarting after a click (2.1s)
+  ✓  35 tests/sampler.spec.js:40:5 › MIDI hold handles releases, overlapping holds and disconnect cleanup (1.5s)
+  ✓  36 tests/sampler.spec.js:46:5 › quantized sampler starts at a real beat boundary with speed matching and cancellation (2.7s)
+  ✓  37 tests/sampler.spec.js:56:5 › sampler Key Lock preserves pitch while synced playback changes speed (1.8s)
+  ✓  38 tests/sampler.spec.js:71:5 › active deck loop can be extracted into its assigned sampler bank (1.7s)
+  ✓  39 tests/sampler.spec.js:81:5 › release during pending audio resume prevents delayed held playback (1.4s)
+  ✓  40 tests/sampler.spec.js:86:5 › sample packs round trip audio and edits atomically; damaged imports leave slots intact (4.5s)
+  ✓  41 tests/sampler.spec.js:97:5 › sample pack runtime failure rolls back both IndexedDB and active audio (3.8s)
+  ✓  42 tests/sampler.spec.js:110:5 › a transaction aborted after sampler staging restores the playing runtime and all stored records (2.5s)
+  ✓  43 tests/sampler.spec.js:122:5 › invalid trim and failed persistence leave the previous sample usable (2.2s)
+  ✓  44 tests/sampler.spec.js:130:5 › sampler editor and controls fit a mobile viewport (1.5s)
+  ✓  45 tests/sampler.spec.js:134:5 › DJUCED XML sample packs import selected local WAV files and preserve loop metadata (5.0s)
+  ✓  46 tests/sampler.spec.js:153:5 › DJUCED pack failures preserve saved slots and active playback (3.1s)
+
+
+  1) tests/djz-import.spec.js:32:5 › bad archives leave the current voice and saved records intact ─
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('#sampler-status')
+    Expected substring: "无效文件路径"
+    Received string:    "采样包目录无效"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toContainText" locator('#sampler-status') with timeout 5000ms
+      - waiting for locator('#sampler-status')
+        - locator resolved to <p role="status" id="sampler-status">正在读取采样包…</p>
+        - unexpected value "正在读取采样包…"
+        - locator resolved to <p role="status" id="sampler-status">正在检查采样包…</p>
+        - unexpected value "正在检查采样包…"
+        12 × locator resolved to <p role="status" id="sampler-status">采样包目录无效</p>
+           - unexpected value "采样包目录无效"
+
+
+      49 |     [tarArchive({'default.djs':packXml,...Object.fromEntries(Array.from({length:256},(_,i)=>['empty'+i,'']))}),'文件数量'],
+      50 |   ];
+    > 51 |   for(const [bytes,message] of cases){await load(page,bytes);await expect(page.locator('#sampler-status')).toContainText(message);await unchanged(page);await expect(page.locator('#sample-import-cancel')).toBeHidden();await expect(page.locator('#sample-djs-import')).toBeEnabled();}
+         |                                                                                                            ^
+      52 |   await page.reload();await expect(page.locator('#sampler-status')).toContainText('已就绪');await expect(page.locator('[data-sample="0"] strong')).toHaveText('Kick');
+      53 | });
+      54 |
+        at /Users/pomelo/dj工作台/tests/djz-import.spec.js:51:108
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/djz-import-bad-archives-le-3300f-ce-and-saved-records-intact/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/djz-import-bad-archives-le-3300f-ce-and-saved-records-intact/error-context.md
+
+  1 failed
+    tests/djz-import.spec.js:32:5 › bad archives leave the current voice and saved records intact ──
+  45 passed (2.0m)

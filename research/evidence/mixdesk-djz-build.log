@@ -1,0 +1,36 @@
+
+> mixdesk@0.8.0 build
+> vite build --base=./
+
+vite v7.3.7 building client environment for production...
+transforming...
+[plugin vite:resolve] Module "module" has been externalized for browser compatibility, imported by "/Users/pomelo/dj工作台/node_modules/7z-wasm/7zz.es6.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+✓ 188 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                0.46 kB │ gzip:   0.32 kB
+dist/assets/mp3-worker-CJE1s9H9.js             1.27 kB
+dist/assets/pcm-worklet-Be78EKQg.js            1.78 kB
+dist/assets/pitch-worklet-iKKUBKXo.js         28.85 kB
+dist/assets/djz-worker-7byAAqmF.js            54.87 kB
+dist/assets/7zz-CgkXYLdN.wasm              1,651.93 kB │ gzip: 669.87 kB
+dist/assets/index-DBwVHxIt.css                57.80 kB │ gzip:  12.82 kB
+dist/assets/AbstractID3Parser-ByX3d3t7.js      0.96 kB │ gzip:   0.47 kB
+dist/assets/DsfParser-C0Edl2Sh.js              2.54 kB │ gzip:   1.03 kB
+dist/assets/WavPackParser-BufsMj48.js          3.52 kB │ gzip:   1.54 kB
+dist/assets/EmbeddedID3v2-DMZ0zC-s.js          3.85 kB │ gzip:   1.29 kB
+dist/assets/AiffParser-jX8ajFFj.js             3.87 kB │ gzip:   1.67 kB
+dist/assets/DsdiffParser-IRAVh8_R.js           4.98 kB │ gzip:   1.55 kB
+dist/assets/MusepackParser-Bz7AdvmX.js         5.46 kB │ gzip:   1.92 kB
+dist/assets/WaveParser-CR1eQj3T.js             6.47 kB │ gzip:   2.38 kB
+dist/assets/CafParser-B9aupLgZ.js              7.48 kB │ gzip:   2.52 kB
+dist/assets/FlacParser-dhM7pbP1.js             7.63 kB │ gzip:   2.77 kB
+dist/assets/OggParser-DXsU-n9l.js             10.51 kB │ gzip:   3.60 kB
+dist/assets/MpegParser-CpWPUB4n.js            10.66 kB │ gzip:   3.63 kB
+dist/assets/ID3v2Parser-60SsnPBy.js           11.51 kB │ gzip:   4.24 kB
+dist/assets/MatroskaParser-DSJCGy90.js        16.71 kB │ gzip:   5.43 kB
+dist/assets/AsfParser-Ck3IMhA5.js             20.00 kB │ gzip:   6.52 kB
+dist/assets/MP4Parser-CIxan8ef.js             27.81 kB │ gzip:   8.30 kB
+dist/assets/core-KcqbNrQg.js                 128.85 kB │ gzip:  39.00 kB
+dist/assets/index-Cz01U-5P.js                232.19 kB │ gzip:  76.24 kB
+✓ built in 1.01s

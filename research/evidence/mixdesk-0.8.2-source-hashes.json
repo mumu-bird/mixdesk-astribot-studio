@@ -1,0 +1,20 @@
+{
+  "time": "2026-10-20T10:56:01.628Z",
+  "validation": "37 sampler/export tests; final production build and smoke; actual export installed and PCM-verified in DJUCED 6.6.1",
+  "hashes": {
+    "src/sample-pack.js": "26003f29a175b19a705c1304bb20a61d9f4c335fb70beb614745d977630651cc",
+    "src/sampler.js": "3ba9d1e4d89bf13cdf8451baf2fa12ed43bb6a79cf10e9b1799ba813250c701f",
+    "src/sampler-ui.js": "48d0ce794af1c682c235337c8c34b6c45128f1110c5c235ee12c5510b500b9e8",
+    "src/sampler.css": "ae1a77ee7e26a5427c7e0a4be32e8c38d77cc38aeac92650cea38f9b1c6b674f",
+    "src/djz.js": "8b3433aa6304a4627db3efad9272b6c18f34954d7132d9ab23c526b82e1bb217",
+    "src/djz-worker.js": "629d4252d1d287b7db578e12af043de41f1b8a0e76b2a2b0bcbf2a7a62277795",
+    "src/main.js": "e79894c99210ba2b355c2787c1dcfdd10875cdc7ec3b20fb84e70ca972750cb8",
+    "src/library.js": "b1e55121cc383166880fb94a687745648bb1dea2853cdc2120e882edfc6daa07",
+    "vite.config.js": "28df859c156db1e91d21c65bdb7f93ac77c7b9aabd065aa15b5148dc884ef980",
+    "package.json": "161c2b090ba146b6b3a13d9fc091be49a27453144c298b92699fd52a7998dd10",
+    "package-lock.json": "5c9b2b67a5c36156ef4bd7a79cdf7bbbdc056953a48cd94760faedd2182c909a",
+    "tests/djz-export.spec.js": "b86ce969b6b7133d217732503a64e7150f607634f8c47b68d238f987f34ee5ce",
+    "tests/fixtures/sevenzip.js": "b18e2992f3b68f4fb70e207a15eaa6f07c9768bf312acb289027c2b6ef1cefcb",
+    "scripts/smoke-djz.mjs": "75d5f072747b0b1cb1285492ab6e3c7acff37a5c13598edcc8c4a25639da6c5a"
+  }
+}

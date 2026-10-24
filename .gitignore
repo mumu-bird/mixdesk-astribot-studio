@@ -1,0 +1,30 @@
+node_modules/
+dist/
+release/
+test-results/
+playwright-report/
+.DS_Store
+research/tools/runtime/
+research/.analysis/
+
+# The AOS DJ Master app is part of this repository. Keep generated files out.
+/app_dj_master/.git-history/
+/app_dj_master/node_modules/
+/app_dj_master/ui/dist/
+/app_dj_master/test-results/
+/app_dj_master/.pytest_cache/
+/app_dj_master/__pycache__/
+/app_dj_master/src/__pycache__/
+/app_dj_master/.venv/
+
+# Other local working material remains outside the repository.
+/djmaster开发参考文档/
+/dj-drive/
+/output/
+
+# Local scratch files and dependency download caches.
+/.tmp-measure.mjs
+/rekordxml-0.1.0.tgz
+.env
+.env.*
+!.env.example

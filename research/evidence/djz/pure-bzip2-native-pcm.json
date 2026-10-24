@@ -1,0 +1,86 @@
+[
+  {
+    "name": "sample-1-1.wav",
+    "params": [
+      2,
+      2,
+      48000,
+      36000,
+      "NONE",
+      "not compressed"
+    ],
+    "same_pcm": true,
+    "same_format": true,
+    "pcm_sha256": "4002f9f6433cfd64e1fe3442d0d6d2a462b21404582495ed397892a0c07639ad"
+  },
+  {
+    "name": "sample-1-3.wav",
+    "params": [
+      2,
+      2,
+      48000,
+      36000,
+      "NONE",
+      "not compressed"
+    ],
+    "same_pcm": true,
+    "same_format": true,
+    "pcm_sha256": "636e9b3be0a868d7e7c45659a5f46f5af97cd5d4b87cf4feb09845209818c9f8"
+  },
+  {
+    "name": "sample-2-1.wav",
+    "params": [
+      2,
+      2,
+      48000,
+      36000,
+      "NONE",
+      "not compressed"
+    ],
+    "same_pcm": true,
+    "same_format": true,
+    "pcm_sha256": "f9e691a1a56c524b1a14389176cf8fbe9d945ded6306610c6fc342996adf9a5d"
+  },
+  {
+    "name": "sample-2-4.wav",
+    "params": [
+      2,
+      2,
+      48000,
+      36000,
+      "NONE",
+      "not compressed"
+    ],
+    "same_pcm": true,
+    "same_format": true,
+    "pcm_sha256": "49628715247dfec246cd3a91b2dbbf327498598165dd2178146b09efde5838ae"
+  },
+  {
+    "name": "sample-3-3.wav",
+    "params": [
+      2,
+      2,
+      48000,
+      36000,
+      "NONE",
+      "not compressed"
+    ],
+    "same_pcm": true,
+    "same_format": true,
+    "pcm_sha256": "a8aec0ad2fff4cae15ccf8122393bc28138e2a37d65b290784c222fc9c574661"
+  },
+  {
+    "name": "sample-4-4.wav",
+    "params": [
+      2,
+      2,
+      48000,
+      36000,
+      "NONE",
+      "not compressed"
+    ],
+    "same_pcm": true,
+    "same_format": true,
+    "pcm_sha256": "7a988b7d3343232b434d9e81a54f8492da927e3217529a2039b59ea235b66d2b"
+  }
+]

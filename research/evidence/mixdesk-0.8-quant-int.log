@@ -1,0 +1,12 @@
+
+> mixdesk@0.8.0 test
+> playwright test tests/sampler-groups.spec.js -g DJS six modes
+
+
+Running 1 test using 1 worker
+
+(node:23749) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/sampler-groups.spec.js:123:5 › DJS six modes, quantization fallback and empty cells apply to the selected deck only (2.8s)
+
+  1 passed (4.7s)

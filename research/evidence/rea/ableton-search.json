@@ -1,0 +1,341 @@
+{
+  "_meta": {
+    "provenance": {
+      "untrusted_content": true,
+      "source": "analysis_target"
+    }
+  },
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"evidence_id\":\"ev_df93fb92174115340c81bb6aa9682401adfa2b751476b046f8e38b367ad1aaf2\",\"subject\":{\"name\":\"DJUCED-arm64\",\"digest\":{\"sha256\":\"3d833a5175d99f6324bad3bd370b97bf46f9e82dad7f886ac6f5b08a83ccf5d8\"},\"local_path\":\"/Users/pomelo/dj工作台/research/.analysis/DJUCED-arm64\",\"format\":\"mach-o\",\"architecture\":\"arm64\"},\"provider\":{\"id\":\"ghidra\",\"name\":\"Ghidra\",\"version\":\"12.1.4\"},\"analysis_profile\":{\"provider\":{\"id\":\"ghidra\",\"name\":\"Ghidra\",\"version\":\"12.1.4\"},\"parameters\":{\"target_kind\":\"executable\",\"target_format\":\"mach-o\",\"architecture\":\"arm64\",\"available_architectures\":[\"arm64\"],\"import_mode\":\"ephemeral-source-immutable\",\"annotation_policy\":\"atomic-function-entry-metadata-v1\",\"load_image_observations\":\"source-mappings-entry-context-v2\",\"function_body_evidence\":\"complete-inclusive-ranges-v1\",\"function_references\":\"complete-body-and-entry-reference-manager-v2\",\"call_relationship_coverage\":\"function-body-call-coverage-v5\",\"function_dossier_coverage\":\"observed-facets-and-call-relationships-v1\",\"string_inventory_evidence\":\"defined-data-coverage-v1\",\"location_resolution\":\"explicit-address-exact-entry-symbol-first-v3\",\"procedure_file_offset_resolution\":\"address-first-unique-target-source-mapping-v2\",\"instruction_flow_evidence\":\"decoded-return-pcode-v1\",\"instruction_references\":\"exact-address-incoming-without-synthetic-entry-v2\",\"function_boundary_observations\":\"ghidra-function-boundary-limitations-v4\",\"no_return_repair\":\"returning-imports-decoded-return-v2\",\"process_launch\":\"inspected-jvm-launch-support-v1\",\"jump_table_evidence\":\"typed-case-default-blocks-v1\",\"decompiler_jump_loads\":true,\"loader\":\"auto-from-header\",\"language_id\":\"auto-from-header\",\"compiler_spec_id\":\"auto-default\",\"analyzer_preset\":\"ghidra-default\"},\"digest\":\"3fc72c9b4b78498fb992b938f8f3389dc670244a293c1d40abf5e1d10162ed3b\"},\"predicate_type\":\"rea.analysis\",\"operation\":\"search_procedures\",\"parameters\":{\"pattern\":\"Ableton\",\"mode\":\"literal\",\"case_sensitive\":false},\"raw_result\":[{\"address\":\"0x1000ddcf4\",\"value\":\"__ZN2dj5audio11BassControl26updateAbletonLinkPeerStateEi\"},{\"address\":\"0x10028e764\",\"value\":\"__ZN2dj10TempoClock19getAbletonLinkStateEv\"},{\"address\":\"0x10028ea00\",\"value\":\"__ZN2dj10TempoClock19setAbletonLinkStateEb\"},{\"address\":\"0x10028ea24\",\"value\":\"__ZN2dj10TempoClock19getAbletonLinkPeersEv\"},{\"address\":\"0x10028ea34\",\"value\":\"__ZN2dj10TempoClock17setAbletonLinkBPMEd\"},{\"address\":\"0x10029d1f0\",\"value\":\"__ZN16link_asio_1_30_26detail27reactive_socket_recvfrom_opINS_17mutable_buffers_1ENS_2ip14basic_endpointINS3_3udpEEEN7ableton4util16SafeAsyncHandlerINS7_9platforms16link_asio_1_30_26SocketILm512EE4ImplEEENS_15any_io_executorEE11do_completeEPvPNS0_19scheduler_operationERKNSt3__110error_codeEm\"},{\"address\":\"0x10029d76c\",\"value\":\"__ZN16link_asio_1_30_26detail22executor_function_view8completeINS0_7binder2IN7ableton4util16SafeAsyncHandlerINS4_9platforms16link_asio_1_30_26SocketILm512EE4ImplEEENSt3__110error_codeEmEEEEvPv\"},{\"address\":\"0x10029d810\",\"value\":\"__ZN16link_asio_1_30_26detail17executor_function8completeINS0_7binder2IN7ableton4util16SafeAsyncHandlerINS4_9platforms16link_asio_1_30_26SocketILm512EE4ImplEEENSt3__110error_codeEmEENSD_9allocatorIvEEEEvPNS1_9impl_baseEb\"},{\"address\":\"0x1002a592c\",\"value\":\"__ZN16link_asio_1_30_26detail12wait_handlerIN7ableton4util16SafeAsyncHandlerINS2_9platforms16link_asio_1_30_29AsioTimer12AsyncHandlerEEENS_15any_io_executorEE11do_completeEPvPNS0_19scheduler_operationERKNSt3__110error_codeEm\"},{\"address\":\"0x1002a5f44\",\"value\":\"__ZN16link_asio_1_30_26detail22executor_function_view8completeINS0_7binder1IN7ableton4util16SafeAsyncHandlerINS4_9platforms16link_asio_1_30_29AsioTimer12AsyncHandlerEEENSt3__110error_codeEEEEEvPv\"},{\"address\":\"0x1002a5fe4\",\"value\":\"__ZN16link_asio_1_30_26detail17executor_function8completeINS0_7binder1IN7ableton4util16SafeAsyncHandlerINS4_9platforms16link_asio_1_30_29AsioTimer12AsyncHandlerEEENSt3__110error_codeEEENSC_9allocatorIvEEEEvPNS1_9impl_baseEb\"},{\"address\":\"0x1002ad5a8\",\"value\":\"__ZN16link_asio_1_30_26detail11executor_opINS0_7binder0IZN7ableton4link10ControllerINSt3__18functionIFvmEEENS7_IFvNS4_5TempoEEEENS7_IFvbEEENS3_9platforms6darwin5ClockENSF_3stl6RandomENSF_16link_asio_1_30_27ContextINSF_5posix13ScanIpIfAddrsENS3_4util7NullLogENSG_13ThreadFactoryEEEE18SessionPeerCounterclEvEUlvE_EENS6_9allocatorIvEENS0_19scheduler_operationEE11do_completeEPvPSY_RKNS6_10error_codeEm\"},{\"address\":\"0x1002af09c\",\"value\":\"__ZN16link_asio_1_30_26detail11executor_opINS0_7binder0IZN7ableton4link10ControllerINSt3__18functionIFvmEEENS7_IFvNS4_5TempoEEEENS7_IFvbEEENS3_9platforms6darwin5ClockENSF_3stl6RandomENSF_16link_asio_1_30_27ContextINSF_5posix13ScanIpIfAddrsENS3_4util7NullLogENSG_13ThreadFactoryEEEE23UdpSendExceptionHandlerclENS3_9discovery16UdpSendExceptionEEUlvE_EENS6_9allocatorIvEENS0_19scheduler_operationEE11do_completeEPvPS10_RKNS6_10error_codeEm\"},{\"address\":\"0x1002af82c\",\"value\":\"__ZN16link_asio_1_30_26detail11executor_opINS0_7binder0IZZN7ableton4link10ControllerINSt3__18functionIFvmEEENS7_IFvNS4_5TempoEEEENS7_IFvbEEENS3_9platforms6darwin5ClockENSF_3stl6RandomENSF_16link_asio_1_30_27ContextINSF_5posix13ScanIpIfAddrsENS3_4util7NullLogENSG_13ThreadFactoryEEEE19RtClientStateSetterC1ERSS_ENKUlvE_clEvEUlvE_EENS6_9allocatorIvEENS0_19scheduler_operationEE11do_completeEPvPS10_RKNS6_10error_codeEm\"},{\"address\":\"0x1002b07e0\",\"value\":\"__ZN16link_asio_1_30_26detail11executor_opINS0_7binder0IZN7ableton4link10ControllerINSt3__18functionIFvmEEENS7_IFvNS4_5TempoEEEENS7_IFvbEEENS3_9platforms6darwin5ClockENSF_3stl6RandomENSF_16link_asio_1_30_27ContextINSF_5posix13ScanIpIfAddrsENS3_4util7NullLogENSG_13ThreadFactoryEEEED1EvEUlvE_EENS6_9allocatorIvEENS0_19scheduler_operationEE11do_completeEPvPSX_RKNS6_10error_codeEm\"},{\"address\":\"0x1002b8f54\",\"value\":\"__ZN7ableton9linkaudio17AbletonLinkHelperC2ERNS_4LinkE\"},{\"address\":\"0x1002b8fcc\",\"value\":\"__ZN7ableton9linkaudio17AbletonLinkHelperC1ERNS_4LinkE\"},{\"address\":\"0x1002b9044\",\"value\":\"__ZN7ableton9linkaudio17AbletonLinkHelper12startPlayingEv\"},{\"address\":\"0x1002b9074\",\"value\":\"__ZN7ableton9linkaudio17AbletonLinkHelper11stopPlayingEv\"},{\"address\":\"0x1002b90a4\",\"value\":\"__ZNK7ableton9linkaudio17AbletonLinkHelper9isPlayingEv\"},{\"address\":\"0x1002b90e0\",\"value\":\"__ZNK7ableton9linkaudio17AbletonLinkHelper8beatTimeEv\"},{\"address\":\"0x1002b922c\",\"value\":\"__ZN7ableton9linkaudio17AbletonLinkHelper8setTempoEd\"},{\"address\":\"0x1002b9264\",\"value\":\"__ZNK7ableton9linkaudio17AbletonLinkHelper7quantumEv\"},{\"address\":\"0x1002b926c\",\"value\":\"__ZN7ableton9linkaudio17AbletonLinkHelper10setQuantumEd\"},{\"address\":\"0x1002b92a4\",\"value\":\"__ZNK7ableton9linkaudio17AbletonLinkHelper22isStartStopSyncEnabledEv\"},{\"address\":\"0x1002b92b8\",\"value\":\"__ZN7ableton9linkaudio17AbletonLinkHelper23setStartStopSyncEnabledEb\"},{\"address\":\"0x1002b92c8\",\"value\":\"__ZN7ableton9linkaudio17AbletonLinkHelper13setBufferSizeEm\"},{\"address\":\"0x1002b9344\",\"value\":\"__ZN7ableton9linkaudio17AbletonLinkHelper13setSampleRateEd\"},{\"address\":\"0x1002b934c\",\"value\":\"__ZN7ableton9linkaudio17AbletonLinkHelper14pullEngineDataEv\"},{\"address\":\"0x1002b93b8\",\"value\":\"__ZN7ableton9linkaudio17AbletonLinkHelper25renderMetronomeIntoBufferENS_9BasicLinkINS_9platforms6darwin5ClockEE12SessionStateEdNSt3__16chrono8durationIxNS8_5ratioILl1ELl1000000EEEEEm\"},{\"address\":\"0x1002b9898\",\"value\":\"__ZN7ableton9linkaudio17AbletonLinkHelper13audioCallbackENSt3__16chrono8durationIxNS2_5ratioILl1ELl1000000EEEEEm\"}],\"normalized_result\":[{\"address\":\"0x1000ddcf4\",\"value\":\"__ZN2dj5audio11BassControl26updateAbletonLinkPeerStateEi\"},{\"address\":\"0x10028e764\",\"value\":\"__ZN2dj10TempoClock19getAbletonLinkStateEv\"},{\"address\":\"0x10028ea00\",\"value\":\"__ZN2dj10TempoClock19setAbletonLinkStateEb\"},{\"address\":\"0x10028ea24\",\"value\":\"__ZN2dj10TempoClock19getAbletonLinkPeersEv\"},{\"address\":\"0x10028ea34\",\"value\":\"__ZN2dj10TempoClock17setAbletonLinkBPMEd\"},{\"address\":\"0x10029d1f0\",\"value\":\"__ZN16link_asio_1_30_26detail27reactive_socket_recvfrom_opINS_17mutable_buffers_1ENS_2ip14basic_endpointINS3_3udpEEEN7ableton4util16SafeAsyncHandlerINS7_9platforms16link_asio_1_30_26SocketILm512EE4ImplEEENS_15any_io_executorEE11do_completeEPvPNS0_19scheduler_operationERKNSt3__110error_codeEm\"},{\"address\":\"0x10029d76c\",\"value\":\"__ZN16link_asio_1_30_26detail22executor_function_view8completeINS0_7binder2IN7ableton4util16SafeAsyncHandlerINS4_9platforms16link_asio_1_30_26SocketILm512EE4ImplEEENSt3__110error_codeEmEEEEvPv\"},{\"address\":\"0x10029d810\",\"value\":\"__ZN16link_asio_1_30_26detail17executor_function8completeINS0_7binder2IN7ableton4util16SafeAsyncHandlerINS4_9platforms16link_asio_1_30_26SocketILm512EE4ImplEEENSt3__110error_codeEmEENSD_9allocatorIvEEEEvPNS1_9impl_baseEb\"},{\"address\":\"0x1002a592c\",\"value\":\"__ZN16link_asio_1_30_26detail12wait_handlerIN7ableton4util16SafeAsyncHandlerINS2_9platforms16link_asio_1_30_29AsioTimer12AsyncHandlerEEENS_15any_io_executorEE11do_completeEPvPNS0_19scheduler_operationERKNSt3__110error_codeEm\"},{\"address\":\"0x1002a5f44\",\"value\":\"__ZN16link_asio_1_30_26detail22executor_function_view8completeINS0_7binder1IN7ableton4util16SafeAsyncHandlerINS4_9platforms16link_asio_1_30_29AsioTimer12AsyncHandlerEEENSt3__110error_codeEEEEEvPv\"},{\"address\":\"0x1002a5fe4\",\"value\":\"__ZN16link_asio_1_30_26detail17executor_function8completeINS0_7binder1IN7ableton4util16SafeAsyncHandlerINS4_9platforms16link_asio_1_30_29AsioTimer12AsyncHandlerEEENSt3__110error_codeEEENSC_9allocatorIvEEEEvPNS1_9impl_baseEb\"},{\"address\":\"0x1002ad5a8\",\"value\":\"__ZN16link_asio_1_30_26detail11executor_opINS0_7binder0IZN7ableton4link10ControllerINSt3__18functionIFvmEEENS7_IFvNS4_5TempoEEEENS7_IFvbEEENS3_9platforms6darwin5ClockENSF_3stl6RandomENSF_16link_asio_1_30_27ContextINSF_5posix13ScanIpIfAddrsENS3_4util7NullLogENSG_13ThreadFactoryEEEE18SessionPeerCounterclEvEUlvE_EENS6_9allocatorIvEENS0_19scheduler_operationEE11do_completeEPvPSY_RKNS6_10error_codeEm\"},{\"address\":\"0x1002af09c\",\"value\":\"__ZN16link_asio_1_30_26detail11executor_opINS0_7binder0IZN7ableton4link10ControllerINSt3__18functionIFvmEEENS7_IFvNS4_5TempoEEEENS7_IFvbEEENS3_9platforms6darwin5ClockENSF_3stl6RandomENSF_16link_asio_1_30_27ContextINSF_5posix13ScanIpIfAddrsENS3_4util7NullLogENSG_13ThreadFactoryEEEE23UdpSendExceptionHandlerclENS3_9discovery16UdpSendExceptionEEUlvE_EENS6_9allocatorIvEENS0_19scheduler_operationEE11do_completeEPvPS10_RKNS6_10error_codeEm\"},{\"address\":\"0x1002af82c\",\"value\":\"__ZN16link_asio_1_30_26detail11executor_opINS0_7binder0IZZN7ableton4link10ControllerINSt3__18functionIFvmEEENS7_IFvNS4_5TempoEEEENS7_IFvbEEENS3_9platforms6darwin5ClockENSF_3stl6RandomENSF_16link_asio_1_30_27ContextINSF_5posix13ScanIpIfAddrsENS3_4util7NullLogENSG_13ThreadFactoryEEEE19RtClientStateSetterC1ERSS_ENKUlvE_clEvEUlvE_EENS6_9allocatorIvEENS0_19scheduler_operationEE11do_completeEPvPS10_RKNS6_10error_codeEm\"},{\"address\":\"0x1002b07e0\",\"value\":\"__ZN16link_asio_1_30_26detail11executor_opINS0_7binder0IZN7ableton4link10ControllerINSt3__18functionIFvmEEENS7_IFvNS4_5TempoEEEENS7_IFvbEEENS3_9platforms6darwin5ClockENSF_3stl6RandomENSF_16link_asio_1_30_27ContextINSF_5posix13ScanIpIfAddrsENS3_4util7NullLogENSG_13ThreadFactoryEEEED1EvEUlvE_EENS6_9allocatorIvEENS0_19scheduler_operationEE11do_completeEPvPSX_RKNS6_10error_codeEm\"},{\"address\":\"0x1002b8f54\",\"value\":\"__ZN7ableton9linkaudio17AbletonLinkHelperC2ERNS_4LinkE\"},{\"address\":\"0x1002b8fcc\",\"value\":\"__ZN7ableton9linkaudio17AbletonLinkHelperC1ERNS_4LinkE\"},{\"address\":\"0x1002b9044\",\"value\":\"__ZN7ableton9linkaudio17AbletonLinkHelper12startPlayingEv\"},{\"address\":\"0x1002b9074\",\"value\":\"__ZN7ableton9linkaudio17AbletonLinkHelper11stopPlayingEv\"},{\"address\":\"0x1002b90a4\",\"value\":\"__ZNK7ableton9linkaudio17AbletonLinkHelper9isPlayingEv\"},{\"address\":\"0x1002b90e0\",\"value\":\"__ZNK7ableton9linkaudio17AbletonLinkHelper8beatTimeEv\"},{\"address\":\"0x1002b922c\",\"value\":\"__ZN7ableton9linkaudio17AbletonLinkHelper8setTempoEd\"},{\"address\":\"0x1002b9264\",\"value\":\"__ZNK7ableton9linkaudio17AbletonLinkHelper7quantumEv\"},{\"address\":\"0x1002b926c\",\"value\":\"__ZN7ableton9linkaudio17AbletonLinkHelper10setQuantumEd\"},{\"address\":\"0x1002b92a4\",\"value\":\"__ZNK7ableton9linkaudio17AbletonLinkHelper22isStartStopSyncEnabledEv\"},{\"address\":\"0x1002b92b8\",\"value\":\"__ZN7ableton9linkaudio17AbletonLinkHelper23setStartStopSyncEnabledEb\"},{\"address\":\"0x1002b92c8\",\"value\":\"__ZN7ableton9linkaudio17AbletonLinkHelper13setBufferSizeEm\"},{\"address\":\"0x1002b9344\",\"value\":\"__ZN7ableton9linkaudio17AbletonLinkHelper13setSampleRateEd\"},{\"address\":\"0x1002b934c\",\"value\":\"__ZN7ableton9linkaudio17AbletonLinkHelper14pullEngineDataEv\"},{\"address\":\"0x1002b93b8\",\"value\":\"__ZN7ableton9linkaudio17AbletonLinkHelper25renderMetronomeIntoBufferENS_9BasicLinkINS_9platforms6darwin5ClockEE12SessionStateEdNSt3__16chrono8durationIxNS8_5ratioILl1ELl1000000EEEEEm\"},{\"address\":\"0x1002b9898\",\"value\":\"__ZN7ableton9linkaudio17AbletonLinkHelper13audioCallbackENSt3__16chrono8durationIxNS2_5ratioILl1ELl1000000EEEEEm\"}],\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"The session serves operations only after Ghidra reports default auto-analysis complete; incomplete analysis does not expose partial results.\",\"The imported Program and temporary project are ephemeral and deleted on close. Annotation operations edit session database metadata; original executable bytes are never written.\",\"Cancelling an active Ghidra request terminates its ephemeral database and discards session annotations. The selected target remains open; the next provider query imports the original artifact again.\",\"Default-space addresses use lowercase 0x-prefixed hexadecimal; other address spaces use <percent-encoded-space>:0x<hex>.\",\"Regex mode uses Java Pattern semantics. Matcher or compiler stack exhaustion returns a resource constraint without closing the session; literal mode avoids regex recursion and returns complete matching values.\",\"macOS sessions require a matching executable Ghidra native decompiler; REA checks for it but does not build native components or change Gatekeeper quarantine state.\"],\"relationship_coverage\":null,\"locations\":[],\"evidence_links\":[]}"
+    }
+  ],
+  "structuredContent": {
+    "evidence_id": "ev_df93fb92174115340c81bb6aa9682401adfa2b751476b046f8e38b367ad1aaf2",
+    "subject": {
+      "name": "DJUCED-arm64",
+      "digest": {
+        "sha256": "3d833a5175d99f6324bad3bd370b97bf46f9e82dad7f886ac6f5b08a83ccf5d8"
+      },
+      "local_path": "/Users/pomelo/dj工作台/research/.analysis/DJUCED-arm64",
+      "format": "mach-o",
+      "architecture": "arm64"
+    },
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    },
+    "analysis_profile": {
+      "provider": {
+        "id": "ghidra",
+        "name": "Ghidra",
+        "version": "12.1.4"
+      },
+      "parameters": {
+        "target_kind": "executable",
+        "target_format": "mach-o",
+        "architecture": "arm64",
+        "available_architectures": [
+          "arm64"
+        ],
+        "import_mode": "ephemeral-source-immutable",
+        "annotation_policy": "atomic-function-entry-metadata-v1",
+        "load_image_observations": "source-mappings-entry-context-v2",
+        "function_body_evidence": "complete-inclusive-ranges-v1",
+        "function_references": "complete-body-and-entry-reference-manager-v2",
+        "call_relationship_coverage": "function-body-call-coverage-v5",
+        "function_dossier_coverage": "observed-facets-and-call-relationships-v1",
+        "string_inventory_evidence": "defined-data-coverage-v1",
+        "location_resolution": "explicit-address-exact-entry-symbol-first-v3",
+        "procedure_file_offset_resolution": "address-first-unique-target-source-mapping-v2",
+        "instruction_flow_evidence": "decoded-return-pcode-v1",
+        "instruction_references": "exact-address-incoming-without-synthetic-entry-v2",
+        "function_boundary_observations": "ghidra-function-boundary-limitations-v4",
+        "no_return_repair": "returning-imports-decoded-return-v2",
+        "process_launch": "inspected-jvm-launch-support-v1",
+        "jump_table_evidence": "typed-case-default-blocks-v1",
+        "decompiler_jump_loads": true,
+        "loader": "auto-from-header",
+        "language_id": "auto-from-header",
+        "compiler_spec_id": "auto-default",
+        "analyzer_preset": "ghidra-default"
+      },
+      "digest": "3fc72c9b4b78498fb992b938f8f3389dc670244a293c1d40abf5e1d10162ed3b"
+    },
+    "predicate_type": "rea.analysis",
+    "operation": "search_procedures",
+    "parameters": {
+      "pattern": "Ableton",
+      "mode": "literal",
+      "case_sensitive": false
+    },
+    "raw_result": [
+      {
+        "address": "0x1000ddcf4",
+        "value": "__ZN2dj5audio11BassControl26updateAbletonLinkPeerStateEi"
+      },
+      {
+        "address": "0x10028e764",
+        "value": "__ZN2dj10TempoClock19getAbletonLinkStateEv"
+      },
+      {
+        "address": "0x10028ea00",
+        "value": "__ZN2dj10TempoClock19setAbletonLinkStateEb"
+      },
+      {
+        "address": "0x10028ea24",
+        "value": "__ZN2dj10TempoClock19getAbletonLinkPeersEv"
+      },
+      {
+        "address": "0x10028ea34",
+        "value": "__ZN2dj10TempoClock17setAbletonLinkBPMEd"
+      },
+      {
+        "address": "0x10029d1f0",
+        "value": "__ZN16link_asio_1_30_26detail27reactive_socket_recvfrom_opINS_17mutable_buffers_1ENS_2ip14basic_endpointINS3_3udpEEEN7ableton4util16SafeAsyncHandlerINS7_9platforms16link_asio_1_30_26SocketILm512EE4ImplEEENS_15any_io_executorEE11do_completeEPvPNS0_19scheduler_operationERKNSt3__110error_codeEm"
+      },
+      {
+        "address": "0x10029d76c",
+        "value": "__ZN16link_asio_1_30_26detail22executor_function_view8completeINS0_7binder2IN7ableton4util16SafeAsyncHandlerINS4_9platforms16link_asio_1_30_26SocketILm512EE4ImplEEENSt3__110error_codeEmEEEEvPv"
+      },
+      {
+        "address": "0x10029d810",
+        "value": "__ZN16link_asio_1_30_26detail17executor_function8completeINS0_7binder2IN7ableton4util16SafeAsyncHandlerINS4_9platforms16link_asio_1_30_26SocketILm512EE4ImplEEENSt3__110error_codeEmEENSD_9allocatorIvEEEEvPNS1_9impl_baseEb"
+      },
+      {
+        "address": "0x1002a592c",
+        "value": "__ZN16link_asio_1_30_26detail12wait_handlerIN7ableton4util16SafeAsyncHandlerINS2_9platforms16link_asio_1_30_29AsioTimer12AsyncHandlerEEENS_15any_io_executorEE11do_completeEPvPNS0_19scheduler_operationERKNSt3__110error_codeEm"
+      },
+      {
+        "address": "0x1002a5f44",
+        "value": "__ZN16link_asio_1_30_26detail22executor_function_view8completeINS0_7binder1IN7ableton4util16SafeAsyncHandlerINS4_9platforms16link_asio_1_30_29AsioTimer12AsyncHandlerEEENSt3__110error_codeEEEEEvPv"
+      },
+      {
+        "address": "0x1002a5fe4",
+        "value": "__ZN16link_asio_1_30_26detail17executor_function8completeINS0_7binder1IN7ableton4util16SafeAsyncHandlerINS4_9platforms16link_asio_1_30_29AsioTimer12AsyncHandlerEEENSt3__110error_codeEEENSC_9allocatorIvEEEEvPNS1_9impl_baseEb"
+      },
+      {
+        "address": "0x1002ad5a8",
+        "value": "__ZN16link_asio_1_30_26detail11executor_opINS0_7binder0IZN7ableton4link10ControllerINSt3__18functionIFvmEEENS7_IFvNS4_5TempoEEEENS7_IFvbEEENS3_9platforms6darwin5ClockENSF_3stl6RandomENSF_16link_asio_1_30_27ContextINSF_5posix13ScanIpIfAddrsENS3_4util7NullLogENSG_13ThreadFactoryEEEE18SessionPeerCounterclEvEUlvE_EENS6_9allocatorIvEENS0_19scheduler_operationEE11do_completeEPvPSY_RKNS6_10error_codeEm"
+      },
+      {
+        "address": "0x1002af09c",
+        "value": "__ZN16link_asio_1_30_26detail11executor_opINS0_7binder0IZN7ableton4link10ControllerINSt3__18functionIFvmEEENS7_IFvNS4_5TempoEEEENS7_IFvbEEENS3_9platforms6darwin5ClockENSF_3stl6RandomENSF_16link_asio_1_30_27ContextINSF_5posix13ScanIpIfAddrsENS3_4util7NullLogENSG_13ThreadFactoryEEEE23UdpSendExceptionHandlerclENS3_9discovery16UdpSendExceptionEEUlvE_EENS6_9allocatorIvEENS0_19scheduler_operationEE11do_completeEPvPS10_RKNS6_10error_codeEm"
+      },
+      {
+        "address": "0x1002af82c",
+        "value": "__ZN16link_asio_1_30_26detail11executor_opINS0_7binder0IZZN7ableton4link10ControllerINSt3__18functionIFvmEEENS7_IFvNS4_5TempoEEEENS7_IFvbEEENS3_9platforms6darwin5ClockENSF_3stl6RandomENSF_16link_asio_1_30_27ContextINSF_5posix13ScanIpIfAddrsENS3_4util7NullLogENSG_13ThreadFactoryEEEE19RtClientStateSetterC1ERSS_ENKUlvE_clEvEUlvE_EENS6_9allocatorIvEENS0_19scheduler_operationEE11do_completeEPvPS10_RKNS6_10error_codeEm"
+      },
+      {
+        "address": "0x1002b07e0",
+        "value": "__ZN16link_asio_1_30_26detail11executor_opINS0_7binder0IZN7ableton4link10ControllerINSt3__18functionIFvmEEENS7_IFvNS4_5TempoEEEENS7_IFvbEEENS3_9platforms6darwin5ClockENSF_3stl6RandomENSF_16link_asio_1_30_27ContextINSF_5posix13ScanIpIfAddrsENS3_4util7NullLogENSG_13ThreadFactoryEEEED1EvEUlvE_EENS6_9allocatorIvEENS0_19scheduler_operationEE11do_completeEPvPSX_RKNS6_10error_codeEm"
+      },
+      {
+        "address": "0x1002b8f54",
+        "value": "__ZN7ableton9linkaudio17AbletonLinkHelperC2ERNS_4LinkE"
+      },
+      {
+        "address": "0x1002b8fcc",
+        "value": "__ZN7ableton9linkaudio17AbletonLinkHelperC1ERNS_4LinkE"
+      },
+      {
+        "address": "0x1002b9044",
+        "value": "__ZN7ableton9linkaudio17AbletonLinkHelper12startPlayingEv"
+      },
+      {
+        "address": "0x1002b9074",
+        "value": "__ZN7ableton9linkaudio17AbletonLinkHelper11stopPlayingEv"
+      },
+      {
+        "address": "0x1002b90a4",
+        "value": "__ZNK7ableton9linkaudio17AbletonLinkHelper9isPlayingEv"
+      },
+      {
+        "address": "0x1002b90e0",
+        "value": "__ZNK7ableton9linkaudio17AbletonLinkHelper8beatTimeEv"
+      },
+      {
+        "address": "0x1002b922c",
+        "value": "__ZN7ableton9linkaudio17AbletonLinkHelper8setTempoEd"
+      },
+      {
+        "address": "0x1002b9264",
+        "value": "__ZNK7ableton9linkaudio17AbletonLinkHelper7quantumEv"
+      },
+      {
+        "address": "0x1002b926c",
+        "value": "__ZN7ableton9linkaudio17AbletonLinkHelper10setQuantumEd"
+      },
+      {
+        "address": "0x1002b92a4",
+        "value": "__ZNK7ableton9linkaudio17AbletonLinkHelper22isStartStopSyncEnabledEv"
+      },
+      {
+        "address": "0x1002b92b8",
+        "value": "__ZN7ableton9linkaudio17AbletonLinkHelper23setStartStopSyncEnabledEb"
+      },
+      {
+        "address": "0x1002b92c8",
+        "value": "__ZN7ableton9linkaudio17AbletonLinkHelper13setBufferSizeEm"
+      },
+      {
+        "address": "0x1002b9344",
+        "value": "__ZN7ableton9linkaudio17AbletonLinkHelper13setSampleRateEd"
+      },
+      {
+        "address": "0x1002b934c",
+        "value": "__ZN7ableton9linkaudio17AbletonLinkHelper14pullEngineDataEv"
+      },
+      {
+        "address": "0x1002b93b8",
+        "value": "__ZN7ableton9linkaudio17AbletonLinkHelper25renderMetronomeIntoBufferENS_9BasicLinkINS_9platforms6darwin5ClockEE12SessionStateEdNSt3__16chrono8durationIxNS8_5ratioILl1ELl1000000EEEEEm"
+      },
+      {
+        "address": "0x1002b9898",
+        "value": "__ZN7ableton9linkaudio17AbletonLinkHelper13audioCallbackENSt3__16chrono8durationIxNS2_5ratioILl1ELl1000000EEEEEm"
+      }
+    ],
+    "normalized_result": [
+      {
+        "address": "0x1000ddcf4",
+        "value": "__ZN2dj5audio11BassControl26updateAbletonLinkPeerStateEi"
+      },
+      {
+        "address": "0x10028e764",
+        "value": "__ZN2dj10TempoClock19getAbletonLinkStateEv"
+      },
+      {
+        "address": "0x10028ea00",
+        "value": "__ZN2dj10TempoClock19setAbletonLinkStateEb"
+      },
+      {
+        "address": "0x10028ea24",
+        "value": "__ZN2dj10TempoClock19getAbletonLinkPeersEv"
+      },
+      {
+        "address": "0x10028ea34",
+        "value": "__ZN2dj10TempoClock17setAbletonLinkBPMEd"
+      },
+      {
+        "address": "0x10029d1f0",
+        "value": "__ZN16link_asio_1_30_26detail27reactive_socket_recvfrom_opINS_17mutable_buffers_1ENS_2ip14basic_endpointINS3_3udpEEEN7ableton4util16SafeAsyncHandlerINS7_9platforms16link_asio_1_30_26SocketILm512EE4ImplEEENS_15any_io_executorEE11do_completeEPvPNS0_19scheduler_operationERKNSt3__110error_codeEm"
+      },
+      {
+        "address": "0x10029d76c",
+        "value": "__ZN16link_asio_1_30_26detail22executor_function_view8completeINS0_7binder2IN7ableton4util16SafeAsyncHandlerINS4_9platforms16link_asio_1_30_26SocketILm512EE4ImplEEENSt3__110error_codeEmEEEEvPv"
+      },
+      {
+        "address": "0x10029d810",
+        "value": "__ZN16link_asio_1_30_26detail17executor_function8completeINS0_7binder2IN7ableton4util16SafeAsyncHandlerINS4_9platforms16link_asio_1_30_26SocketILm512EE4ImplEEENSt3__110error_codeEmEENSD_9allocatorIvEEEEvPNS1_9impl_baseEb"
+      },
+      {
+        "address": "0x1002a592c",
+        "value": "__ZN16link_asio_1_30_26detail12wait_handlerIN7ableton4util16SafeAsyncHandlerINS2_9platforms16link_asio_1_30_29AsioTimer12AsyncHandlerEEENS_15any_io_executorEE11do_completeEPvPNS0_19scheduler_operationERKNSt3__110error_codeEm"
+      },
+      {
+        "address": "0x1002a5f44",
+        "value": "__ZN16link_asio_1_30_26detail22executor_function_view8completeINS0_7binder1IN7ableton4util16SafeAsyncHandlerINS4_9platforms16link_asio_1_30_29AsioTimer12AsyncHandlerEEENSt3__110error_codeEEEEEvPv"
+      },
+      {
+        "address": "0x1002a5fe4",
+        "value": "__ZN16link_asio_1_30_26detail17executor_function8completeINS0_7binder1IN7ableton4util16SafeAsyncHandlerINS4_9platforms16link_asio_1_30_29AsioTimer12AsyncHandlerEEENSt3__110error_codeEEENSC_9allocatorIvEEEEvPNS1_9impl_baseEb"
+      },
+      {
+        "address": "0x1002ad5a8",
+        "value": "__ZN16link_asio_1_30_26detail11executor_opINS0_7binder0IZN7ableton4link10ControllerINSt3__18functionIFvmEEENS7_IFvNS4_5TempoEEEENS7_IFvbEEENS3_9platforms6darwin5ClockENSF_3stl6RandomENSF_16link_asio_1_30_27ContextINSF_5posix13ScanIpIfAddrsENS3_4util7NullLogENSG_13ThreadFactoryEEEE18SessionPeerCounterclEvEUlvE_EENS6_9allocatorIvEENS0_19scheduler_operationEE11do_completeEPvPSY_RKNS6_10error_codeEm"
+      },
+      {
+        "address": "0x1002af09c",
+        "value": "__ZN16link_asio_1_30_26detail11executor_opINS0_7binder0IZN7ableton4link10ControllerINSt3__18functionIFvmEEENS7_IFvNS4_5TempoEEEENS7_IFvbEEENS3_9platforms6darwin5ClockENSF_3stl6RandomENSF_16link_asio_1_30_27ContextINSF_5posix13ScanIpIfAddrsENS3_4util7NullLogENSG_13ThreadFactoryEEEE23UdpSendExceptionHandlerclENS3_9discovery16UdpSendExceptionEEUlvE_EENS6_9allocatorIvEENS0_19scheduler_operationEE11do_completeEPvPS10_RKNS6_10error_codeEm"
+      },
+      {
+        "address": "0x1002af82c",
+        "value": "__ZN16link_asio_1_30_26detail11executor_opINS0_7binder0IZZN7ableton4link10ControllerINSt3__18functionIFvmEEENS7_IFvNS4_5TempoEEEENS7_IFvbEEENS3_9platforms6darwin5ClockENSF_3stl6RandomENSF_16link_asio_1_30_27ContextINSF_5posix13ScanIpIfAddrsENS3_4util7NullLogENSG_13ThreadFactoryEEEE19RtClientStateSetterC1ERSS_ENKUlvE_clEvEUlvE_EENS6_9allocatorIvEENS0_19scheduler_operationEE11do_completeEPvPS10_RKNS6_10error_codeEm"
+      },
+      {
+        "address": "0x1002b07e0",
+        "value": "__ZN16link_asio_1_30_26detail11executor_opINS0_7binder0IZN7ableton4link10ControllerINSt3__18functionIFvmEEENS7_IFvNS4_5TempoEEEENS7_IFvbEEENS3_9platforms6darwin5ClockENSF_3stl6RandomENSF_16link_asio_1_30_27ContextINSF_5posix13ScanIpIfAddrsENS3_4util7NullLogENSG_13ThreadFactoryEEEED1EvEUlvE_EENS6_9allocatorIvEENS0_19scheduler_operationEE11do_completeEPvPSX_RKNS6_10error_codeEm"
+      },
+      {
+        "address": "0x1002b8f54",
+        "value": "__ZN7ableton9linkaudio17AbletonLinkHelperC2ERNS_4LinkE"
+      },
+      {
+        "address": "0x1002b8fcc",
+        "value": "__ZN7ableton9linkaudio17AbletonLinkHelperC1ERNS_4LinkE"
+      },
+      {
+        "address": "0x1002b9044",
+        "value": "__ZN7ableton9linkaudio17AbletonLinkHelper12startPlayingEv"
+      },
+      {
+        "address": "0x1002b9074",
+        "value": "__ZN7ableton9linkaudio17AbletonLinkHelper11stopPlayingEv"
+      },
+      {
+        "address": "0x1002b90a4",
+        "value": "__ZNK7ableton9linkaudio17AbletonLinkHelper9isPlayingEv"
+      },
+      {
+        "address": "0x1002b90e0",
+        "value": "__ZNK7ableton9linkaudio17AbletonLinkHelper8beatTimeEv"
+      },
+      {
+        "address": "0x1002b922c",
+        "value": "__ZN7ableton9linkaudio17AbletonLinkHelper8setTempoEd"
+      },
+      {
+        "address": "0x1002b9264",
+        "value": "__ZNK7ableton9linkaudio17AbletonLinkHelper7quantumEv"
+      },
+      {
+        "address": "0x1002b926c",
+        "value": "__ZN7ableton9linkaudio17AbletonLinkHelper10setQuantumEd"
+      },
+      {
+        "address": "0x1002b92a4",
+        "value": "__ZNK7ableton9linkaudio17AbletonLinkHelper22isStartStopSyncEnabledEv"
+      },
+      {
+        "address": "0x1002b92b8",
+        "value": "__ZN7ableton9linkaudio17AbletonLinkHelper23setStartStopSyncEnabledEb"
+      },
+      {
+        "address": "0x1002b92c8",
+        "value": "__ZN7ableton9linkaudio17AbletonLinkHelper13setBufferSizeEm"
+      },
+      {
+        "address": "0x1002b9344",
+        "value": "__ZN7ableton9linkaudio17AbletonLinkHelper13setSampleRateEd"
+      },
+      {
+        "address": "0x1002b934c",
+        "value": "__ZN7ableton9linkaudio17AbletonLinkHelper14pullEngineDataEv"
+      },
+      {
+        "address": "0x1002b93b8",
+        "value": "__ZN7ableton9linkaudio17AbletonLinkHelper25renderMetronomeIntoBufferENS_9BasicLinkINS_9platforms6darwin5ClockEE12SessionStateEdNSt3__16chrono8durationIxNS8_5ratioILl1ELl1000000EEEEEm"
+      },
+      {
+        "address": "0x1002b9898",
+        "value": "__ZN7ableton9linkaudio17AbletonLinkHelper13audioCallbackENSt3__16chrono8durationIxNS2_5ratioILl1ELl1000000EEEEEm"
+      }
+    ],
+    "confidence": "observed",
+    "authority": "shipped-artifact",
+    "environment": null,
+    "limitations": [
+      "The session serves operations only after Ghidra reports default auto-analysis complete; incomplete analysis does not expose partial results.",
+      "The imported Program and temporary project are ephemeral and deleted on close. Annotation operations edit session database metadata; original executable bytes are never written.",
+      "Cancelling an active Ghidra request terminates its ephemeral database and discards session annotations. The selected target remains open; the next provider query imports the original artifact again.",
+      "Default-space addresses use lowercase 0x-prefixed hexadecimal; other address spaces use <percent-encoded-space>:0x<hex>.",
+      "Regex mode uses Java Pattern semantics. Matcher or compiler stack exhaustion returns a resource constraint without closing the session; literal mode avoids regex recursion and returns complete matching values.",
+      "macOS sessions require a matching executable Ghidra native decompiler; REA checks for it but does not build native components or change Gatekeeper quarantine state."
+    ],
+    "relationship_coverage": null,
+    "locations": [],
+    "evidence_links": []
+  }
+}

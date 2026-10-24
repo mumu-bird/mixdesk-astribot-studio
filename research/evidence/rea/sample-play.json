@@ -1,0 +1,93 @@
+{
+  "_meta": {
+    "provenance": {
+      "untrusted_content": true,
+      "source": "analysis_target"
+    }
+  },
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"evidence_id\":\"ev_fffae1b7a5b5edaacf6a37e8b455ec654ca8bb578dad29e59131d30e2ef4e943\",\"subject\":{\"name\":\"DJUCED-arm64\",\"digest\":{\"sha256\":\"3d833a5175d99f6324bad3bd370b97bf46f9e82dad7f886ac6f5b08a83ccf5d8\"},\"local_path\":\"/Users/pomelo/dj工作台/research/.analysis/DJUCED-arm64\",\"format\":\"mach-o\",\"architecture\":\"arm64\"},\"provider\":{\"id\":\"ghidra\",\"name\":\"Ghidra\",\"version\":\"12.1.4\"},\"analysis_profile\":{\"provider\":{\"id\":\"ghidra\",\"name\":\"Ghidra\",\"version\":\"12.1.4\"},\"parameters\":{\"target_kind\":\"executable\",\"target_format\":\"mach-o\",\"architecture\":\"arm64\",\"available_architectures\":[\"arm64\"],\"import_mode\":\"ephemeral-source-immutable\",\"annotation_policy\":\"atomic-function-entry-metadata-v1\",\"load_image_observations\":\"source-mappings-entry-context-v2\",\"function_body_evidence\":\"complete-inclusive-ranges-v1\",\"function_references\":\"complete-body-and-entry-reference-manager-v2\",\"call_relationship_coverage\":\"function-body-call-coverage-v5\",\"function_dossier_coverage\":\"observed-facets-and-call-relationships-v1\",\"string_inventory_evidence\":\"defined-data-coverage-v1\",\"location_resolution\":\"explicit-address-exact-entry-symbol-first-v3\",\"procedure_file_offset_resolution\":\"address-first-unique-target-source-mapping-v2\",\"instruction_flow_evidence\":\"decoded-return-pcode-v1\",\"instruction_references\":\"exact-address-incoming-without-synthetic-entry-v2\",\"function_boundary_observations\":\"ghidra-function-boundary-limitations-v4\",\"no_return_repair\":\"returning-imports-decoded-return-v2\",\"process_launch\":\"inspected-jvm-launch-support-v1\",\"jump_table_evidence\":\"typed-case-default-blocks-v1\",\"decompiler_jump_loads\":true,\"loader\":\"auto-from-header\",\"language_id\":\"auto-from-header\",\"compiler_spec_id\":\"auto-default\",\"analyzer_preset\":\"ghidra-default\"},\"digest\":\"3fc72c9b4b78498fb992b938f8f3389dc670244a293c1d40abf5e1d10162ed3b\"},\"predicate_type\":\"rea.analysis\",\"operation\":\"procedure_pseudo_code\",\"parameters\":{\"procedure\":\"0x10015a6a0\"},\"raw_result\":{\"value\":\"\\nvoid __ZN2dj5audio11BassSample34playEv(long param_1)\\n\\n{\\n  undefined1 uVar1;\\n  int iVar2;\\n  int *local_80;\\n  undefined8 uStack_78;\\n  undefined8 local_70;\\n  int *local_60;\\n  undefined8 uStack_58;\\n  undefined8 local_50;\\n  int *local_40;\\n  undefined8 uStack_38;\\n  undefined8 local_30;\\n  \\n  *(undefined1 *)(param_1 + 0xbdc) = 1;\\n  *(undefined1 *)(param_1 + 0xb4) = 1;\\n  _BASS_ChannelSetPosition(*(undefined4 *)(param_1 + 0x1c),0,0);\\n  iVar2 = _BASS_Mixer_ChannelFlags(*(undefined4 *)(param_1 + 0x1c),0,0x20000);\\n  if (iVar2 == -1) {\\n    __ZN7QString8fromUtf8E14QByteArrayView(&local_40,4,\\\"play\\\");\\n    uStack_58 = uStack_38;\\n    local_60 = local_40;\\n    local_50 = local_30;\\n    __ZN7QString8fromUtf8E14QByteArrayView(&local_40,0xf,\\\"BassSample3.cpp\\\");\\n    uStack_78 = uStack_38;\\n    local_80 = local_40;\\n    local_70 = local_30;\\n    __ZN2dj5audio14PrintBassErrorE7QStringS1_i(&local_60,&local_80,0x589);\\n    if (local_80 != (int *)0x0) {\\n      LOAcquire();\\n      iVar2 = *local_80;\\n      *local_80 = iVar2 + -1;\\n      LORelease();\\n      if (iVar2 == 1) {\\n        __ZN10QArrayData10deallocateEPS_xx(local_80,2,8);\\n      }\\n    }\\n    if (local_60 != (int *)0x0) {\\n      LOAcquire();\\n      iVar2 = *local_60;\\n      *local_60 = iVar2 + -1;\\n      LORelease();\\n      if (iVar2 == 1) {\\n        __ZN10QArrayData10deallocateEPS_xx(local_60,2,8);\\n      }\\n    }\\n    uVar1 = 0;\\n  }\\n  else {\\n    *(undefined1 *)(param_1 + 0x11f) = 0;\\n    uVar1 = 1;\\n  }\\n  *(undefined1 *)(param_1 + 0xb4) = uVar1;\\n  return;\\n}\\n\\n\",\"limitations\":[]},\"normalized_result\":\"\\nvoid __ZN2dj5audio11BassSample34playEv(long param_1)\\n\\n{\\n  undefined1 uVar1;\\n  int iVar2;\\n  int *local_80;\\n  undefined8 uStack_78;\\n  undefined8 local_70;\\n  int *local_60;\\n  undefined8 uStack_58;\\n  undefined8 local_50;\\n  int *local_40;\\n  undefined8 uStack_38;\\n  undefined8 local_30;\\n  \\n  *(undefined1 *)(param_1 + 0xbdc) = 1;\\n  *(undefined1 *)(param_1 + 0xb4) = 1;\\n  _BASS_ChannelSetPosition(*(undefined4 *)(param_1 + 0x1c),0,0);\\n  iVar2 = _BASS_Mixer_ChannelFlags(*(undefined4 *)(param_1 + 0x1c),0,0x20000);\\n  if (iVar2 == -1) {\\n    __ZN7QString8fromUtf8E14QByteArrayView(&local_40,4,\\\"play\\\");\\n    uStack_58 = uStack_38;\\n    local_60 = local_40;\\n    local_50 = local_30;\\n    __ZN7QString8fromUtf8E14QByteArrayView(&local_40,0xf,\\\"BassSample3.cpp\\\");\\n    uStack_78 = uStack_38;\\n    local_80 = local_40;\\n    local_70 = local_30;\\n    __ZN2dj5audio14PrintBassErrorE7QStringS1_i(&local_60,&local_80,0x589);\\n    if (local_80 != (int *)0x0) {\\n      LOAcquire();\\n      iVar2 = *local_80;\\n      *local_80 = iVar2 + -1;\\n      LORelease();\\n      if (iVar2 == 1) {\\n        __ZN10QArrayData10deallocateEPS_xx(local_80,2,8);\\n      }\\n    }\\n    if (local_60 != (int *)0x0) {\\n      LOAcquire();\\n      iVar2 = *local_60;\\n      *local_60 = iVar2 + -1;\\n      LORelease();\\n      if (iVar2 == 1) {\\n        __ZN10QArrayData10deallocateEPS_xx(local_60,2,8);\\n      }\\n    }\\n    uVar1 = 0;\\n  }\\n  else {\\n    *(undefined1 *)(param_1 + 0x11f) = 0;\\n    uVar1 = 1;\\n  }\\n  *(undefined1 *)(param_1 + 0xb4) = uVar1;\\n  return;\\n}\\n\\n\",\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"The session serves operations only after Ghidra reports default auto-analysis complete; incomplete analysis does not expose partial results.\",\"The imported Program and temporary project are ephemeral and deleted on close. Annotation operations edit session database metadata; original executable bytes are never written.\",\"Cancelling an active Ghidra request terminates its ephemeral database and discards session annotations. The selected target remains open; the next provider query imports the original artifact again.\",\"Default-space addresses use lowercase 0x-prefixed hexadecimal; other address spaces use <percent-encoded-space>:0x<hex>.\",\"Pseudocode is Ghidra decompiler output, not original source and not text-equivalent to Hopper output.\",\"External functions and functions without an analyzable body return null; other decompiler failures remain explicit.\",\"macOS sessions require a matching executable Ghidra native decompiler; REA checks for it but does not build native components or change Gatekeeper quarantine state.\"],\"relationship_coverage\":null,\"locations\":[],\"evidence_links\":[]}"
+    }
+  ],
+  "structuredContent": {
+    "evidence_id": "ev_fffae1b7a5b5edaacf6a37e8b455ec654ca8bb578dad29e59131d30e2ef4e943",
+    "subject": {
+      "name": "DJUCED-arm64",
+      "digest": {
+        "sha256": "3d833a5175d99f6324bad3bd370b97bf46f9e82dad7f886ac6f5b08a83ccf5d8"
+      },
+      "local_path": "/Users/pomelo/dj工作台/research/.analysis/DJUCED-arm64",
+      "format": "mach-o",
+      "architecture": "arm64"
+    },
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    },
+    "analysis_profile": {
+      "provider": {
+        "id": "ghidra",
+        "name": "Ghidra",
+        "version": "12.1.4"
+      },
+      "parameters": {
+        "target_kind": "executable",
+        "target_format": "mach-o",
+        "architecture": "arm64",
+        "available_architectures": [
+          "arm64"
+        ],
+        "import_mode": "ephemeral-source-immutable",
+        "annotation_policy": "atomic-function-entry-metadata-v1",
+        "load_image_observations": "source-mappings-entry-context-v2",
+        "function_body_evidence": "complete-inclusive-ranges-v1",
+        "function_references": "complete-body-and-entry-reference-manager-v2",
+        "call_relationship_coverage": "function-body-call-coverage-v5",
+        "function_dossier_coverage": "observed-facets-and-call-relationships-v1",
+        "string_inventory_evidence": "defined-data-coverage-v1",
+        "location_resolution": "explicit-address-exact-entry-symbol-first-v3",
+        "procedure_file_offset_resolution": "address-first-unique-target-source-mapping-v2",
+        "instruction_flow_evidence": "decoded-return-pcode-v1",
+        "instruction_references": "exact-address-incoming-without-synthetic-entry-v2",
+        "function_boundary_observations": "ghidra-function-boundary-limitations-v4",
+        "no_return_repair": "returning-imports-decoded-return-v2",
+        "process_launch": "inspected-jvm-launch-support-v1",
+        "jump_table_evidence": "typed-case-default-blocks-v1",
+        "decompiler_jump_loads": true,
+        "loader": "auto-from-header",
+        "language_id": "auto-from-header",
+        "compiler_spec_id": "auto-default",
+        "analyzer_preset": "ghidra-default"
+      },
+      "digest": "3fc72c9b4b78498fb992b938f8f3389dc670244a293c1d40abf5e1d10162ed3b"
+    },
+    "predicate_type": "rea.analysis",
+    "operation": "procedure_pseudo_code",
+    "parameters": {
+      "procedure": "0x10015a6a0"
+    },
+    "raw_result": {
+      "value": "\nvoid __ZN2dj5audio11BassSample34playEv(long param_1)\n\n{\n  undefined1 uVar1;\n  int iVar2;\n  int *local_80;\n  undefined8 uStack_78;\n  undefined8 local_70;\n  int *local_60;\n  undefined8 uStack_58;\n  undefined8 local_50;\n  int *local_40;\n  undefined8 uStack_38;\n  undefined8 local_30;\n  \n  *(undefined1 *)(param_1 + 0xbdc) = 1;\n  *(undefined1 *)(param_1 + 0xb4) = 1;\n  _BASS_ChannelSetPosition(*(undefined4 *)(param_1 + 0x1c),0,0);\n  iVar2 = _BASS_Mixer_ChannelFlags(*(undefined4 *)(param_1 + 0x1c),0,0x20000);\n  if (iVar2 == -1) {\n    __ZN7QString8fromUtf8E14QByteArrayView(&local_40,4,\"play\");\n    uStack_58 = uStack_38;\n    local_60 = local_40;\n    local_50 = local_30;\n    __ZN7QString8fromUtf8E14QByteArrayView(&local_40,0xf,\"BassSample3.cpp\");\n    uStack_78 = uStack_38;\n    local_80 = local_40;\n    local_70 = local_30;\n    __ZN2dj5audio14PrintBassErrorE7QStringS1_i(&local_60,&local_80,0x589);\n    if (local_80 != (int *)0x0) {\n      LOAcquire();\n      iVar2 = *local_80;\n      *local_80 = iVar2 + -1;\n      LORelease();\n      if (iVar2 == 1) {\n        __ZN10QArrayData10deallocateEPS_xx(local_80,2,8);\n      }\n    }\n    if (local_60 != (int *)0x0) {\n      LOAcquire();\n      iVar2 = *local_60;\n      *local_60 = iVar2 + -1;\n      LORelease();\n      if (iVar2 == 1) {\n        __ZN10QArrayData10deallocateEPS_xx(local_60,2,8);\n      }\n    }\n    uVar1 = 0;\n  }\n  else {\n    *(undefined1 *)(param_1 + 0x11f) = 0;\n    uVar1 = 1;\n  }\n  *(undefined1 *)(param_1 + 0xb4) = uVar1;\n  return;\n}\n\n",
+      "limitations": []
+    },
+    "normalized_result": "\nvoid __ZN2dj5audio11BassSample34playEv(long param_1)\n\n{\n  undefined1 uVar1;\n  int iVar2;\n  int *local_80;\n  undefined8 uStack_78;\n  undefined8 local_70;\n  int *local_60;\n  undefined8 uStack_58;\n  undefined8 local_50;\n  int *local_40;\n  undefined8 uStack_38;\n  undefined8 local_30;\n  \n  *(undefined1 *)(param_1 + 0xbdc) = 1;\n  *(undefined1 *)(param_1 + 0xb4) = 1;\n  _BASS_ChannelSetPosition(*(undefined4 *)(param_1 + 0x1c),0,0);\n  iVar2 = _BASS_Mixer_ChannelFlags(*(undefined4 *)(param_1 + 0x1c),0,0x20000);\n  if (iVar2 == -1) {\n    __ZN7QString8fromUtf8E14QByteArrayView(&local_40,4,\"play\");\n    uStack_58 = uStack_38;\n    local_60 = local_40;\n    local_50 = local_30;\n    __ZN7QString8fromUtf8E14QByteArrayView(&local_40,0xf,\"BassSample3.cpp\");\n    uStack_78 = uStack_38;\n    local_80 = local_40;\n    local_70 = local_30;\n    __ZN2dj5audio14PrintBassErrorE7QStringS1_i(&local_60,&local_80,0x589);\n    if (local_80 != (int *)0x0) {\n      LOAcquire();\n      iVar2 = *local_80;\n      *local_80 = iVar2 + -1;\n      LORelease();\n      if (iVar2 == 1) {\n        __ZN10QArrayData10deallocateEPS_xx(local_80,2,8);\n      }\n    }\n    if (local_60 != (int *)0x0) {\n      LOAcquire();\n      iVar2 = *local_60;\n      *local_60 = iVar2 + -1;\n      LORelease();\n      if (iVar2 == 1) {\n        __ZN10QArrayData10deallocateEPS_xx(local_60,2,8);\n      }\n    }\n    uVar1 = 0;\n  }\n  else {\n    *(undefined1 *)(param_1 + 0x11f) = 0;\n    uVar1 = 1;\n  }\n  *(undefined1 *)(param_1 + 0xb4) = uVar1;\n  return;\n}\n\n",
+    "confidence": "observed",
+    "authority": "shipped-artifact",
+    "environment": null,
+    "limitations": [
+      "The session serves operations only after Ghidra reports default auto-analysis complete; incomplete analysis does not expose partial results.",
+      "The imported Program and temporary project are ephemeral and deleted on close. Annotation operations edit session database metadata; original executable bytes are never written.",
+      "Cancelling an active Ghidra request terminates its ephemeral database and discards session annotations. The selected target remains open; the next provider query imports the original artifact again.",
+      "Default-space addresses use lowercase 0x-prefixed hexadecimal; other address spaces use <percent-encoded-space>:0x<hex>.",
+      "Pseudocode is Ghidra decompiler output, not original source and not text-equivalent to Hopper output.",
+      "External functions and functions without an analyzable body return null; other decompiler failures remain explicit.",
+      "macOS sessions require a matching executable Ghidra native decompiler; REA checks for it but does not build native components or change Gatekeeper quarantine state."
+    ],
+    "relationship_coverage": null,
+    "locations": [],
+    "evidence_links": []
+  }
+}

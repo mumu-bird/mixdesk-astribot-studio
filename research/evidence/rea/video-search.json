@@ -1,0 +1,581 @@
+{
+  "_meta": {
+    "provenance": {
+      "untrusted_content": true,
+      "source": "analysis_target"
+    }
+  },
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"evidence_id\":\"ev_6cf2969915cca38acb78d5e69f96754f8ab945da120b16773d8df141b77891eb\",\"subject\":{\"name\":\"DJUCED-arm64\",\"digest\":{\"sha256\":\"3d833a5175d99f6324bad3bd370b97bf46f9e82dad7f886ac6f5b08a83ccf5d8\"},\"local_path\":\"/Users/pomelo/dj工作台/research/.analysis/DJUCED-arm64\",\"format\":\"mach-o\",\"architecture\":\"arm64\"},\"provider\":{\"id\":\"ghidra\",\"name\":\"Ghidra\",\"version\":\"12.1.4\"},\"analysis_profile\":{\"provider\":{\"id\":\"ghidra\",\"name\":\"Ghidra\",\"version\":\"12.1.4\"},\"parameters\":{\"target_kind\":\"executable\",\"target_format\":\"mach-o\",\"architecture\":\"arm64\",\"available_architectures\":[\"arm64\"],\"import_mode\":\"ephemeral-source-immutable\",\"annotation_policy\":\"atomic-function-entry-metadata-v1\",\"load_image_observations\":\"source-mappings-entry-context-v2\",\"function_body_evidence\":\"complete-inclusive-ranges-v1\",\"function_references\":\"complete-body-and-entry-reference-manager-v2\",\"call_relationship_coverage\":\"function-body-call-coverage-v5\",\"function_dossier_coverage\":\"observed-facets-and-call-relationships-v1\",\"string_inventory_evidence\":\"defined-data-coverage-v1\",\"location_resolution\":\"explicit-address-exact-entry-symbol-first-v3\",\"procedure_file_offset_resolution\":\"address-first-unique-target-source-mapping-v2\",\"instruction_flow_evidence\":\"decoded-return-pcode-v1\",\"instruction_references\":\"exact-address-incoming-without-synthetic-entry-v2\",\"function_boundary_observations\":\"ghidra-function-boundary-limitations-v4\",\"no_return_repair\":\"returning-imports-decoded-return-v2\",\"process_launch\":\"inspected-jvm-launch-support-v1\",\"jump_table_evidence\":\"typed-case-default-blocks-v1\",\"decompiler_jump_loads\":true,\"loader\":\"auto-from-header\",\"language_id\":\"auto-from-header\",\"compiler_spec_id\":\"auto-default\",\"analyzer_preset\":\"ghidra-default\"},\"digest\":\"3fc72c9b4b78498fb992b938f8f3389dc670244a293c1d40abf5e1d10162ed3b\"},\"predicate_type\":\"rea.analysis\",\"operation\":\"search_procedures\",\"parameters\":{\"pattern\":\"Video\",\"mode\":\"literal\",\"case_sensitive\":false},\"raw_result\":[{\"address\":\"EXTERNAL:0x459\",\"value\":\"@rpath/libopencv_videoio.409.dylib::__ZN2cv12VideoCapture3setEid\"},{\"address\":\"EXTERNAL:0x45a\",\"value\":\"@rpath/libopencv_videoio.409.dylib::__ZN2cv12VideoCapture4openERKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEEi\"},{\"address\":\"EXTERNAL:0x45b\",\"value\":\"@rpath/libopencv_videoio.409.dylib::__ZN2cv12VideoCapture4readERKNS_12_OutputArrayE\"},{\"address\":\"EXTERNAL:0x45c\",\"value\":\"@rpath/libopencv_videoio.409.dylib::__ZN2cv12VideoCapture7releaseEv\"},{\"address\":\"EXTERNAL:0x45d\",\"value\":\"@rpath/libopencv_videoio.409.dylib::__ZN2cv12VideoCaptureC1Ev\"},{\"address\":\"EXTERNAL:0x45e\",\"value\":\"@rpath/libopencv_videoio.409.dylib::__ZN2cv12VideoCaptureD1Ev\"},{\"address\":\"EXTERNAL:0x87a\",\"value\":\"@rpath/libopencv_videoio.409.dylib::__ZNK2cv12VideoCapture3getEi\"},{\"address\":\"EXTERNAL:0x87b\",\"value\":\"@rpath/libopencv_videoio.409.dylib::__ZNK2cv12VideoCapture8isOpenedEv\"},{\"address\":\"0x100726f68\",\"value\":\"__ZN9AvsWindow9showVideoEb\"},{\"address\":\"0x100749a10\",\"value\":\"__ZN5VideoC2E7QStringP7QWidget\"},{\"address\":\"0x10074a4dc\",\"value\":\"__ZN11VideoWindowC1EP7QWidget\"},{\"address\":\"0x10074a52c\",\"value\":\"__ZN5VideoC1E7QStringP7QWidget\"},{\"address\":\"0x10074a530\",\"value\":\"__ZN5VideoD2Ev\"},{\"address\":\"0x10074a5d0\",\"value\":\"__ZN5VideoD1Ev\"},{\"address\":\"0x10074a5d4\",\"value\":\"__ZN5VideoD0Ev\"},{\"address\":\"0x10074a5e8\",\"value\":\"__ZN5Video8setVideoE7QStringbi\"},{\"address\":\"0x10074a624\",\"value\":\"__ZN5Video7setRateEdi\"},{\"address\":\"0x10074a644\",\"value\":\"__ZN5Video3runEv\"},{\"address\":\"0x10074c000\",\"value\":\"__ZN5Video4readEv\"},{\"address\":\"0x10074d2e0\",\"value\":\"__ZN5Video9hideVideoEv\"},{\"address\":\"0x10074d2ec\",\"value\":\"__ZN5Video11resizeVideoEii\"},{\"address\":\"0x10074d308\",\"value\":\"__ZN5Video9moveVideoERK6QPoint\"},{\"address\":\"0x10074d314\",\"value\":\"__ZN5Video4playEi\"},{\"address\":\"0x10074d330\",\"value\":\"__ZN5Video5pauseExi\"},{\"address\":\"0x10074d390\",\"value\":\"__ZN5Video4stopEi\"},{\"address\":\"0x10074d3a8\",\"value\":\"__ZN5Video11setPositionExix\"},{\"address\":\"0x10074d408\",\"value\":\"__ZN5Video9setLoadedEbbi\"},{\"address\":\"0x10074d424\",\"value\":\"__ZN5Video10setOpacityEdi\"},{\"address\":\"0x10074d43c\",\"value\":\"__ZN11VideoWindowC2EP7QWidget\"},{\"address\":\"0x10074d520\",\"value\":\"__ZN11VideoWindowD2Ev\"},{\"address\":\"0x10074d524\",\"value\":\"__ZN11VideoWindowD1Ev\"},{\"address\":\"0x10074d528\",\"value\":\"__ZThn16_N11VideoWindowD1Ev\"},{\"address\":\"0x10074d530\",\"value\":\"__ZN11VideoWindowD0Ev\"},{\"address\":\"0x10074d544\",\"value\":\"__ZThn16_N11VideoWindowD0Ev\"},{\"address\":\"0x10074d55c\",\"value\":\"__ZN11VideoWindow15keyReleaseEventEP9QKeyEvent\"},{\"address\":\"0x10074d5e8\",\"value\":\"__ZN11VideoWindow21mouseDoubleClickEventEP11QMouseEvent\"},{\"address\":\"0x1007c63a8\",\"value\":\"__ZN9AvsWindow17resizeLyricsVideoEii\"},{\"address\":\"0x1007c6414\",\"value\":\"__ZN9AvsWindow15moveLyricsVideoERK6QPoint\"},{\"address\":\"0x1007cc9bc\",\"value\":\"__ZNK11VideoWindow10metaObjectEv\"},{\"address\":\"0x1007cc9d8\",\"value\":\"__ZN11VideoWindow11qt_metacastEPKc\"},{\"address\":\"0x1007cca34\",\"value\":\"__ZN11VideoWindow11qt_metacallEN11QMetaObject4CallEiPPv\"},{\"address\":\"0x1007cca3c\",\"value\":\"__ZNK5Video10metaObjectEv\"},{\"address\":\"0x1007cca58\",\"value\":\"__ZN5Video11qt_metacastEPKc\"},{\"address\":\"0x1007ccab4\",\"value\":\"__ZN5Video11qt_metacallEN11QMetaObject4CallEiPPv\"},{\"address\":\"0x1007ccab8\",\"value\":\"__ZZN9QtPrivate16QMetaTypeForTypeI11VideoWindowE13getDefaultCtrEvENUlPKNS_18QMetaTypeInterfaceEPvE_8__invokeES5_S6_\"},{\"address\":\"0x1007ccac4\",\"value\":\"__ZZN9QtPrivate16QMetaTypeForTypeI11VideoWindowE7getDtorEvENUlPKNS_18QMetaTypeInterfaceEPvE_8__invokeES5_S6_\"},{\"address\":\"0x1007ccad4\",\"value\":\"__ZZN9QtPrivate16QMetaTypeForTypeI5VideoE7getDtorEvENUlPKNS_18QMetaTypeInterfaceEPvE_8__invokeES5_S6_\"},{\"address\":\"0x100f1b6d8\",\"value\":\"__ZN2dj13SettingsVjing8addVideoEb\"},{\"address\":\"0x100f1d9a8\",\"value\":\"__ZN2dj13SettingsVjing9addVideosEb\"},{\"address\":\"0x100f24758\",\"value\":\"__ZN2dj13SettingsVjing9saveVideoERK7QStringS3_S3_b\"},{\"address\":\"0x100f2df4c\",\"value\":\"__ZN2dj13SettingsVjing10saveVideosEv\"},{\"address\":\"0x100f5aa0c\",\"value\":\"__ZN2dj6common15FeatureCarousel18setupWideWithVideoEv\"},{\"address\":\"0x100f5ce6c\",\"value\":\"__ZN2dj6common15FeatureCarousel11setVideoUrlERK7QString\"},{\"address\":\"0x101017db8\",\"value\":\"__ZN2cv12VideoCapture3setEid\"},{\"address\":\"0x101017dc4\",\"value\":\"__ZN2cv12VideoCapture4openERKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEEi\"},{\"address\":\"0x101017dd0\",\"value\":\"__ZN2cv12VideoCapture4readERKNS_12_OutputArrayE\"},{\"address\":\"0x101017ddc\",\"value\":\"__ZN2cv12VideoCapture7releaseEv\"},{\"address\":\"0x101017de8\",\"value\":\"__ZN2cv12VideoCaptureC1Ev\"},{\"address\":\"0x101017df4\",\"value\":\"__ZN2cv12VideoCaptureD1Ev\"},{\"address\":\"0x10101af44\",\"value\":\"__ZNK2cv12VideoCapture3getEi\"},{\"address\":\"0x10101af50\",\"value\":\"__ZNK2cv12VideoCapture8isOpenedEv\"}],\"normalized_result\":[{\"address\":\"EXTERNAL:0x459\",\"value\":\"@rpath/libopencv_videoio.409.dylib::__ZN2cv12VideoCapture3setEid\"},{\"address\":\"EXTERNAL:0x45a\",\"value\":\"@rpath/libopencv_videoio.409.dylib::__ZN2cv12VideoCapture4openERKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEEi\"},{\"address\":\"EXTERNAL:0x45b\",\"value\":\"@rpath/libopencv_videoio.409.dylib::__ZN2cv12VideoCapture4readERKNS_12_OutputArrayE\"},{\"address\":\"EXTERNAL:0x45c\",\"value\":\"@rpath/libopencv_videoio.409.dylib::__ZN2cv12VideoCapture7releaseEv\"},{\"address\":\"EXTERNAL:0x45d\",\"value\":\"@rpath/libopencv_videoio.409.dylib::__ZN2cv12VideoCaptureC1Ev\"},{\"address\":\"EXTERNAL:0x45e\",\"value\":\"@rpath/libopencv_videoio.409.dylib::__ZN2cv12VideoCaptureD1Ev\"},{\"address\":\"EXTERNAL:0x87a\",\"value\":\"@rpath/libopencv_videoio.409.dylib::__ZNK2cv12VideoCapture3getEi\"},{\"address\":\"EXTERNAL:0x87b\",\"value\":\"@rpath/libopencv_videoio.409.dylib::__ZNK2cv12VideoCapture8isOpenedEv\"},{\"address\":\"0x100726f68\",\"value\":\"__ZN9AvsWindow9showVideoEb\"},{\"address\":\"0x100749a10\",\"value\":\"__ZN5VideoC2E7QStringP7QWidget\"},{\"address\":\"0x10074a4dc\",\"value\":\"__ZN11VideoWindowC1EP7QWidget\"},{\"address\":\"0x10074a52c\",\"value\":\"__ZN5VideoC1E7QStringP7QWidget\"},{\"address\":\"0x10074a530\",\"value\":\"__ZN5VideoD2Ev\"},{\"address\":\"0x10074a5d0\",\"value\":\"__ZN5VideoD1Ev\"},{\"address\":\"0x10074a5d4\",\"value\":\"__ZN5VideoD0Ev\"},{\"address\":\"0x10074a5e8\",\"value\":\"__ZN5Video8setVideoE7QStringbi\"},{\"address\":\"0x10074a624\",\"value\":\"__ZN5Video7setRateEdi\"},{\"address\":\"0x10074a644\",\"value\":\"__ZN5Video3runEv\"},{\"address\":\"0x10074c000\",\"value\":\"__ZN5Video4readEv\"},{\"address\":\"0x10074d2e0\",\"value\":\"__ZN5Video9hideVideoEv\"},{\"address\":\"0x10074d2ec\",\"value\":\"__ZN5Video11resizeVideoEii\"},{\"address\":\"0x10074d308\",\"value\":\"__ZN5Video9moveVideoERK6QPoint\"},{\"address\":\"0x10074d314\",\"value\":\"__ZN5Video4playEi\"},{\"address\":\"0x10074d330\",\"value\":\"__ZN5Video5pauseExi\"},{\"address\":\"0x10074d390\",\"value\":\"__ZN5Video4stopEi\"},{\"address\":\"0x10074d3a8\",\"value\":\"__ZN5Video11setPositionExix\"},{\"address\":\"0x10074d408\",\"value\":\"__ZN5Video9setLoadedEbbi\"},{\"address\":\"0x10074d424\",\"value\":\"__ZN5Video10setOpacityEdi\"},{\"address\":\"0x10074d43c\",\"value\":\"__ZN11VideoWindowC2EP7QWidget\"},{\"address\":\"0x10074d520\",\"value\":\"__ZN11VideoWindowD2Ev\"},{\"address\":\"0x10074d524\",\"value\":\"__ZN11VideoWindowD1Ev\"},{\"address\":\"0x10074d528\",\"value\":\"__ZThn16_N11VideoWindowD1Ev\"},{\"address\":\"0x10074d530\",\"value\":\"__ZN11VideoWindowD0Ev\"},{\"address\":\"0x10074d544\",\"value\":\"__ZThn16_N11VideoWindowD0Ev\"},{\"address\":\"0x10074d55c\",\"value\":\"__ZN11VideoWindow15keyReleaseEventEP9QKeyEvent\"},{\"address\":\"0x10074d5e8\",\"value\":\"__ZN11VideoWindow21mouseDoubleClickEventEP11QMouseEvent\"},{\"address\":\"0x1007c63a8\",\"value\":\"__ZN9AvsWindow17resizeLyricsVideoEii\"},{\"address\":\"0x1007c6414\",\"value\":\"__ZN9AvsWindow15moveLyricsVideoERK6QPoint\"},{\"address\":\"0x1007cc9bc\",\"value\":\"__ZNK11VideoWindow10metaObjectEv\"},{\"address\":\"0x1007cc9d8\",\"value\":\"__ZN11VideoWindow11qt_metacastEPKc\"},{\"address\":\"0x1007cca34\",\"value\":\"__ZN11VideoWindow11qt_metacallEN11QMetaObject4CallEiPPv\"},{\"address\":\"0x1007cca3c\",\"value\":\"__ZNK5Video10metaObjectEv\"},{\"address\":\"0x1007cca58\",\"value\":\"__ZN5Video11qt_metacastEPKc\"},{\"address\":\"0x1007ccab4\",\"value\":\"__ZN5Video11qt_metacallEN11QMetaObject4CallEiPPv\"},{\"address\":\"0x1007ccab8\",\"value\":\"__ZZN9QtPrivate16QMetaTypeForTypeI11VideoWindowE13getDefaultCtrEvENUlPKNS_18QMetaTypeInterfaceEPvE_8__invokeES5_S6_\"},{\"address\":\"0x1007ccac4\",\"value\":\"__ZZN9QtPrivate16QMetaTypeForTypeI11VideoWindowE7getDtorEvENUlPKNS_18QMetaTypeInterfaceEPvE_8__invokeES5_S6_\"},{\"address\":\"0x1007ccad4\",\"value\":\"__ZZN9QtPrivate16QMetaTypeForTypeI5VideoE7getDtorEvENUlPKNS_18QMetaTypeInterfaceEPvE_8__invokeES5_S6_\"},{\"address\":\"0x100f1b6d8\",\"value\":\"__ZN2dj13SettingsVjing8addVideoEb\"},{\"address\":\"0x100f1d9a8\",\"value\":\"__ZN2dj13SettingsVjing9addVideosEb\"},{\"address\":\"0x100f24758\",\"value\":\"__ZN2dj13SettingsVjing9saveVideoERK7QStringS3_S3_b\"},{\"address\":\"0x100f2df4c\",\"value\":\"__ZN2dj13SettingsVjing10saveVideosEv\"},{\"address\":\"0x100f5aa0c\",\"value\":\"__ZN2dj6common15FeatureCarousel18setupWideWithVideoEv\"},{\"address\":\"0x100f5ce6c\",\"value\":\"__ZN2dj6common15FeatureCarousel11setVideoUrlERK7QString\"},{\"address\":\"0x101017db8\",\"value\":\"__ZN2cv12VideoCapture3setEid\"},{\"address\":\"0x101017dc4\",\"value\":\"__ZN2cv12VideoCapture4openERKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEEi\"},{\"address\":\"0x101017dd0\",\"value\":\"__ZN2cv12VideoCapture4readERKNS_12_OutputArrayE\"},{\"address\":\"0x101017ddc\",\"value\":\"__ZN2cv12VideoCapture7releaseEv\"},{\"address\":\"0x101017de8\",\"value\":\"__ZN2cv12VideoCaptureC1Ev\"},{\"address\":\"0x101017df4\",\"value\":\"__ZN2cv12VideoCaptureD1Ev\"},{\"address\":\"0x10101af44\",\"value\":\"__ZNK2cv12VideoCapture3getEi\"},{\"address\":\"0x10101af50\",\"value\":\"__ZNK2cv12VideoCapture8isOpenedEv\"}],\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"The session serves operations only after Ghidra reports default auto-analysis complete; incomplete analysis does not expose partial results.\",\"The imported Program and temporary project are ephemeral and deleted on close. Annotation operations edit session database metadata; original executable bytes are never written.\",\"Cancelling an active Ghidra request terminates its ephemeral database and discards session annotations. The selected target remains open; the next provider query imports the original artifact again.\",\"Default-space addresses use lowercase 0x-prefixed hexadecimal; other address spaces use <percent-encoded-space>:0x<hex>.\",\"Regex mode uses Java Pattern semantics. Matcher or compiler stack exhaustion returns a resource constraint without closing the session; literal mode avoids regex recursion and returns complete matching values.\",\"macOS sessions require a matching executable Ghidra native decompiler; REA checks for it but does not build native components or change Gatekeeper quarantine state.\"],\"relationship_coverage\":null,\"locations\":[],\"evidence_links\":[]}"
+    }
+  ],
+  "structuredContent": {
+    "evidence_id": "ev_6cf2969915cca38acb78d5e69f96754f8ab945da120b16773d8df141b77891eb",
+    "subject": {
+      "name": "DJUCED-arm64",
+      "digest": {
+        "sha256": "3d833a5175d99f6324bad3bd370b97bf46f9e82dad7f886ac6f5b08a83ccf5d8"
+      },
+      "local_path": "/Users/pomelo/dj工作台/research/.analysis/DJUCED-arm64",
+      "format": "mach-o",
+      "architecture": "arm64"
+    },
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    },
+    "analysis_profile": {
+      "provider": {
+        "id": "ghidra",
+        "name": "Ghidra",
+        "version": "12.1.4"
+      },
+      "parameters": {
+        "target_kind": "executable",
+        "target_format": "mach-o",
+        "architecture": "arm64",
+        "available_architectures": [
+          "arm64"
+        ],
+        "import_mode": "ephemeral-source-immutable",
+        "annotation_policy": "atomic-function-entry-metadata-v1",
+        "load_image_observations": "source-mappings-entry-context-v2",
+        "function_body_evidence": "complete-inclusive-ranges-v1",
+        "function_references": "complete-body-and-entry-reference-manager-v2",
+        "call_relationship_coverage": "function-body-call-coverage-v5",
+        "function_dossier_coverage": "observed-facets-and-call-relationships-v1",
+        "string_inventory_evidence": "defined-data-coverage-v1",
+        "location_resolution": "explicit-address-exact-entry-symbol-first-v3",
+        "procedure_file_offset_resolution": "address-first-unique-target-source-mapping-v2",
+        "instruction_flow_evidence": "decoded-return-pcode-v1",
+        "instruction_references": "exact-address-incoming-without-synthetic-entry-v2",
+        "function_boundary_observations": "ghidra-function-boundary-limitations-v4",
+        "no_return_repair": "returning-imports-decoded-return-v2",
+        "process_launch": "inspected-jvm-launch-support-v1",
+        "jump_table_evidence": "typed-case-default-blocks-v1",
+        "decompiler_jump_loads": true,
+        "loader": "auto-from-header",
+        "language_id": "auto-from-header",
+        "compiler_spec_id": "auto-default",
+        "analyzer_preset": "ghidra-default"
+      },
+      "digest": "3fc72c9b4b78498fb992b938f8f3389dc670244a293c1d40abf5e1d10162ed3b"
+    },
+    "predicate_type": "rea.analysis",
+    "operation": "search_procedures",
+    "parameters": {
+      "pattern": "Video",
+      "mode": "literal",
+      "case_sensitive": false
+    },
+    "raw_result": [
+      {
+        "address": "EXTERNAL:0x459",
+        "value": "@rpath/libopencv_videoio.409.dylib::__ZN2cv12VideoCapture3setEid"
+      },
+      {
+        "address": "EXTERNAL:0x45a",
+        "value": "@rpath/libopencv_videoio.409.dylib::__ZN2cv12VideoCapture4openERKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEEi"
+      },
+      {
+        "address": "EXTERNAL:0x45b",
+        "value": "@rpath/libopencv_videoio.409.dylib::__ZN2cv12VideoCapture4readERKNS_12_OutputArrayE"
+      },
+      {
+        "address": "EXTERNAL:0x45c",
+        "value": "@rpath/libopencv_videoio.409.dylib::__ZN2cv12VideoCapture7releaseEv"
+      },
+      {
+        "address": "EXTERNAL:0x45d",
+        "value": "@rpath/libopencv_videoio.409.dylib::__ZN2cv12VideoCaptureC1Ev"
+      },
+      {
+        "address": "EXTERNAL:0x45e",
+        "value": "@rpath/libopencv_videoio.409.dylib::__ZN2cv12VideoCaptureD1Ev"
+      },
+      {
+        "address": "EXTERNAL:0x87a",
+        "value": "@rpath/libopencv_videoio.409.dylib::__ZNK2cv12VideoCapture3getEi"
+      },
+      {
+        "address": "EXTERNAL:0x87b",
+        "value": "@rpath/libopencv_videoio.409.dylib::__ZNK2cv12VideoCapture8isOpenedEv"
+      },
+      {
+        "address": "0x100726f68",
+        "value": "__ZN9AvsWindow9showVideoEb"
+      },
+      {
+        "address": "0x100749a10",
+        "value": "__ZN5VideoC2E7QStringP7QWidget"
+      },
+      {
+        "address": "0x10074a4dc",
+        "value": "__ZN11VideoWindowC1EP7QWidget"
+      },
+      {
+        "address": "0x10074a52c",
+        "value": "__ZN5VideoC1E7QStringP7QWidget"
+      },
+      {
+        "address": "0x10074a530",
+        "value": "__ZN5VideoD2Ev"
+      },
+      {
+        "address": "0x10074a5d0",
+        "value": "__ZN5VideoD1Ev"
+      },
+      {
+        "address": "0x10074a5d4",
+        "value": "__ZN5VideoD0Ev"
+      },
+      {
+        "address": "0x10074a5e8",
+        "value": "__ZN5Video8setVideoE7QStringbi"
+      },
+      {
+        "address": "0x10074a624",
+        "value": "__ZN5Video7setRateEdi"
+      },
+      {
+        "address": "0x10074a644",
+        "value": "__ZN5Video3runEv"
+      },
+      {
+        "address": "0x10074c000",
+        "value": "__ZN5Video4readEv"
+      },
+      {
+        "address": "0x10074d2e0",
+        "value": "__ZN5Video9hideVideoEv"
+      },
+      {
+        "address": "0x10074d2ec",
+        "value": "__ZN5Video11resizeVideoEii"
+      },
+      {
+        "address": "0x10074d308",
+        "value": "__ZN5Video9moveVideoERK6QPoint"
+      },
+      {
+        "address": "0x10074d314",
+        "value": "__ZN5Video4playEi"
+      },
+      {
+        "address": "0x10074d330",
+        "value": "__ZN5Video5pauseExi"
+      },
+      {
+        "address": "0x10074d390",
+        "value": "__ZN5Video4stopEi"
+      },
+      {
+        "address": "0x10074d3a8",
+        "value": "__ZN5Video11setPositionExix"
+      },
+      {
+        "address": "0x10074d408",
+        "value": "__ZN5Video9setLoadedEbbi"
+      },
+      {
+        "address": "0x10074d424",
+        "value": "__ZN5Video10setOpacityEdi"
+      },
+      {
+        "address": "0x10074d43c",
+        "value": "__ZN11VideoWindowC2EP7QWidget"
+      },
+      {
+        "address": "0x10074d520",
+        "value": "__ZN11VideoWindowD2Ev"
+      },
+      {
+        "address": "0x10074d524",
+        "value": "__ZN11VideoWindowD1Ev"
+      },
+      {
+        "address": "0x10074d528",
+        "value": "__ZThn16_N11VideoWindowD1Ev"
+      },
+      {
+        "address": "0x10074d530",
+        "value": "__ZN11VideoWindowD0Ev"
+      },
+      {
+        "address": "0x10074d544",
+        "value": "__ZThn16_N11VideoWindowD0Ev"
+      },
+      {
+        "address": "0x10074d55c",
+        "value": "__ZN11VideoWindow15keyReleaseEventEP9QKeyEvent"
+      },
+      {
+        "address": "0x10074d5e8",
+        "value": "__ZN11VideoWindow21mouseDoubleClickEventEP11QMouseEvent"
+      },
+      {
+        "address": "0x1007c63a8",
+        "value": "__ZN9AvsWindow17resizeLyricsVideoEii"
+      },
+      {
+        "address": "0x1007c6414",
+        "value": "__ZN9AvsWindow15moveLyricsVideoERK6QPoint"
+      },
+      {
+        "address": "0x1007cc9bc",
+        "value": "__ZNK11VideoWindow10metaObjectEv"
+      },
+      {
+        "address": "0x1007cc9d8",
+        "value": "__ZN11VideoWindow11qt_metacastEPKc"
+      },
+      {
+        "address": "0x1007cca34",
+        "value": "__ZN11VideoWindow11qt_metacallEN11QMetaObject4CallEiPPv"
+      },
+      {
+        "address": "0x1007cca3c",
+        "value": "__ZNK5Video10metaObjectEv"
+      },
+      {
+        "address": "0x1007cca58",
+        "value": "__ZN5Video11qt_metacastEPKc"
+      },
+      {
+        "address": "0x1007ccab4",
+        "value": "__ZN5Video11qt_metacallEN11QMetaObject4CallEiPPv"
+      },
+      {
+        "address": "0x1007ccab8",
+        "value": "__ZZN9QtPrivate16QMetaTypeForTypeI11VideoWindowE13getDefaultCtrEvENUlPKNS_18QMetaTypeInterfaceEPvE_8__invokeES5_S6_"
+      },
+      {
+        "address": "0x1007ccac4",
+        "value": "__ZZN9QtPrivate16QMetaTypeForTypeI11VideoWindowE7getDtorEvENUlPKNS_18QMetaTypeInterfaceEPvE_8__invokeES5_S6_"
+      },
+      {
+        "address": "0x1007ccad4",
+        "value": "__ZZN9QtPrivate16QMetaTypeForTypeI5VideoE7getDtorEvENUlPKNS_18QMetaTypeInterfaceEPvE_8__invokeES5_S6_"
+      },
+      {
+        "address": "0x100f1b6d8",
+        "value": "__ZN2dj13SettingsVjing8addVideoEb"
+      },
+      {
+        "address": "0x100f1d9a8",
+        "value": "__ZN2dj13SettingsVjing9addVideosEb"
+      },
+      {
+        "address": "0x100f24758",
+        "value": "__ZN2dj13SettingsVjing9saveVideoERK7QStringS3_S3_b"
+      },
+      {
+        "address": "0x100f2df4c",
+        "value": "__ZN2dj13SettingsVjing10saveVideosEv"
+      },
+      {
+        "address": "0x100f5aa0c",
+        "value": "__ZN2dj6common15FeatureCarousel18setupWideWithVideoEv"
+      },
+      {
+        "address": "0x100f5ce6c",
+        "value": "__ZN2dj6common15FeatureCarousel11setVideoUrlERK7QString"
+      },
+      {
+        "address": "0x101017db8",
+        "value": "__ZN2cv12VideoCapture3setEid"
+      },
+      {
+        "address": "0x101017dc4",
+        "value": "__ZN2cv12VideoCapture4openERKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEEi"
+      },
+      {
+        "address": "0x101017dd0",
+        "value": "__ZN2cv12VideoCapture4readERKNS_12_OutputArrayE"
+      },
+      {
+        "address": "0x101017ddc",
+        "value": "__ZN2cv12VideoCapture7releaseEv"
+      },
+      {
+        "address": "0x101017de8",
+        "value": "__ZN2cv12VideoCaptureC1Ev"
+      },
+      {
+        "address": "0x101017df4",
+        "value": "__ZN2cv12VideoCaptureD1Ev"
+      },
+      {
+        "address": "0x10101af44",
+        "value": "__ZNK2cv12VideoCapture3getEi"
+      },
+      {
+        "address": "0x10101af50",
+        "value": "__ZNK2cv12VideoCapture8isOpenedEv"
+      }
+    ],
+    "normalized_result": [
+      {
+        "address": "EXTERNAL:0x459",
+        "value": "@rpath/libopencv_videoio.409.dylib::__ZN2cv12VideoCapture3setEid"
+      },
+      {
+        "address": "EXTERNAL:0x45a",
+        "value": "@rpath/libopencv_videoio.409.dylib::__ZN2cv12VideoCapture4openERKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEEi"
+      },
+      {
+        "address": "EXTERNAL:0x45b",
+        "value": "@rpath/libopencv_videoio.409.dylib::__ZN2cv12VideoCapture4readERKNS_12_OutputArrayE"
+      },
+      {
+        "address": "EXTERNAL:0x45c",
+        "value": "@rpath/libopencv_videoio.409.dylib::__ZN2cv12VideoCapture7releaseEv"
+      },
+      {
+        "address": "EXTERNAL:0x45d",
+        "value": "@rpath/libopencv_videoio.409.dylib::__ZN2cv12VideoCaptureC1Ev"
+      },
+      {
+        "address": "EXTERNAL:0x45e",
+        "value": "@rpath/libopencv_videoio.409.dylib::__ZN2cv12VideoCaptureD1Ev"
+      },
+      {
+        "address": "EXTERNAL:0x87a",
+        "value": "@rpath/libopencv_videoio.409.dylib::__ZNK2cv12VideoCapture3getEi"
+      },
+      {
+        "address": "EXTERNAL:0x87b",
+        "value": "@rpath/libopencv_videoio.409.dylib::__ZNK2cv12VideoCapture8isOpenedEv"
+      },
+      {
+        "address": "0x100726f68",
+        "value": "__ZN9AvsWindow9showVideoEb"
+      },
+      {
+        "address": "0x100749a10",
+        "value": "__ZN5VideoC2E7QStringP7QWidget"
+      },
+      {
+        "address": "0x10074a4dc",
+        "value": "__ZN11VideoWindowC1EP7QWidget"
+      },
+      {
+        "address": "0x10074a52c",
+        "value": "__ZN5VideoC1E7QStringP7QWidget"
+      },
+      {
+        "address": "0x10074a530",
+        "value": "__ZN5VideoD2Ev"
+      },
+      {
+        "address": "0x10074a5d0",
+        "value": "__ZN5VideoD1Ev"
+      },
+      {
+        "address": "0x10074a5d4",
+        "value": "__ZN5VideoD0Ev"
+      },
+      {
+        "address": "0x10074a5e8",
+        "value": "__ZN5Video8setVideoE7QStringbi"
+      },
+      {
+        "address": "0x10074a624",
+        "value": "__ZN5Video7setRateEdi"
+      },
+      {
+        "address": "0x10074a644",
+        "value": "__ZN5Video3runEv"
+      },
+      {
+        "address": "0x10074c000",
+        "value": "__ZN5Video4readEv"
+      },
+      {
+        "address": "0x10074d2e0",
+        "value": "__ZN5Video9hideVideoEv"
+      },
+      {
+        "address": "0x10074d2ec",
+        "value": "__ZN5Video11resizeVideoEii"
+      },
+      {
+        "address": "0x10074d308",
+        "value": "__ZN5Video9moveVideoERK6QPoint"
+      },
+      {
+        "address": "0x10074d314",
+        "value": "__ZN5Video4playEi"
+      },
+      {
+        "address": "0x10074d330",
+        "value": "__ZN5Video5pauseExi"
+      },
+      {
+        "address": "0x10074d390",
+        "value": "__ZN5Video4stopEi"
+      },
+      {
+        "address": "0x10074d3a8",
+        "value": "__ZN5Video11setPositionExix"
+      },
+      {
+        "address": "0x10074d408",
+        "value": "__ZN5Video9setLoadedEbbi"
+      },
+      {
+        "address": "0x10074d424",
+        "value": "__ZN5Video10setOpacityEdi"
+      },
+      {
+        "address": "0x10074d43c",
+        "value": "__ZN11VideoWindowC2EP7QWidget"
+      },
+      {
+        "address": "0x10074d520",
+        "value": "__ZN11VideoWindowD2Ev"
+      },
+      {
+        "address": "0x10074d524",
+        "value": "__ZN11VideoWindowD1Ev"
+      },
+      {
+        "address": "0x10074d528",
+        "value": "__ZThn16_N11VideoWindowD1Ev"
+      },
+      {
+        "address": "0x10074d530",
+        "value": "__ZN11VideoWindowD0Ev"
+      },
+      {
+        "address": "0x10074d544",
+        "value": "__ZThn16_N11VideoWindowD0Ev"
+      },
+      {
+        "address": "0x10074d55c",
+        "value": "__ZN11VideoWindow15keyReleaseEventEP9QKeyEvent"
+      },
+      {
+        "address": "0x10074d5e8",
+        "value": "__ZN11VideoWindow21mouseDoubleClickEventEP11QMouseEvent"
+      },
+      {
+        "address": "0x1007c63a8",
+        "value": "__ZN9AvsWindow17resizeLyricsVideoEii"
+      },
+      {
+        "address": "0x1007c6414",
+        "value": "__ZN9AvsWindow15moveLyricsVideoERK6QPoint"
+      },
+      {
+        "address": "0x1007cc9bc",
+        "value": "__ZNK11VideoWindow10metaObjectEv"
+      },
+      {
+        "address": "0x1007cc9d8",
+        "value": "__ZN11VideoWindow11qt_metacastEPKc"
+      },
+      {
+        "address": "0x1007cca34",
+        "value": "__ZN11VideoWindow11qt_metacallEN11QMetaObject4CallEiPPv"
+      },
+      {
+        "address": "0x1007cca3c",
+        "value": "__ZNK5Video10metaObjectEv"
+      },
+      {
+        "address": "0x1007cca58",
+        "value": "__ZN5Video11qt_metacastEPKc"
+      },
+      {
+        "address": "0x1007ccab4",
+        "value": "__ZN5Video11qt_metacallEN11QMetaObject4CallEiPPv"
+      },
+      {
+        "address": "0x1007ccab8",
+        "value": "__ZZN9QtPrivate16QMetaTypeForTypeI11VideoWindowE13getDefaultCtrEvENUlPKNS_18QMetaTypeInterfaceEPvE_8__invokeES5_S6_"
+      },
+      {
+        "address": "0x1007ccac4",
+        "value": "__ZZN9QtPrivate16QMetaTypeForTypeI11VideoWindowE7getDtorEvENUlPKNS_18QMetaTypeInterfaceEPvE_8__invokeES5_S6_"
+      },
+      {
+        "address": "0x1007ccad4",
+        "value": "__ZZN9QtPrivate16QMetaTypeForTypeI5VideoE7getDtorEvENUlPKNS_18QMetaTypeInterfaceEPvE_8__invokeES5_S6_"
+      },
+      {
+        "address": "0x100f1b6d8",
+        "value": "__ZN2dj13SettingsVjing8addVideoEb"
+      },
+      {
+        "address": "0x100f1d9a8",
+        "value": "__ZN2dj13SettingsVjing9addVideosEb"
+      },
+      {
+        "address": "0x100f24758",
+        "value": "__ZN2dj13SettingsVjing9saveVideoERK7QStringS3_S3_b"
+      },
+      {
+        "address": "0x100f2df4c",
+        "value": "__ZN2dj13SettingsVjing10saveVideosEv"
+      },
+      {
+        "address": "0x100f5aa0c",
+        "value": "__ZN2dj6common15FeatureCarousel18setupWideWithVideoEv"
+      },
+      {
+        "address": "0x100f5ce6c",
+        "value": "__ZN2dj6common15FeatureCarousel11setVideoUrlERK7QString"
+      },
+      {
+        "address": "0x101017db8",
+        "value": "__ZN2cv12VideoCapture3setEid"
+      },
+      {
+        "address": "0x101017dc4",
+        "value": "__ZN2cv12VideoCapture4openERKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEEi"
+      },
+      {
+        "address": "0x101017dd0",
+        "value": "__ZN2cv12VideoCapture4readERKNS_12_OutputArrayE"
+      },
+      {
+        "address": "0x101017ddc",
+        "value": "__ZN2cv12VideoCapture7releaseEv"
+      },
+      {
+        "address": "0x101017de8",
+        "value": "__ZN2cv12VideoCaptureC1Ev"
+      },
+      {
+        "address": "0x101017df4",
+        "value": "__ZN2cv12VideoCaptureD1Ev"
+      },
+      {
+        "address": "0x10101af44",
+        "value": "__ZNK2cv12VideoCapture3getEi"
+      },
+      {
+        "address": "0x10101af50",
+        "value": "__ZNK2cv12VideoCapture8isOpenedEv"
+      }
+    ],
+    "confidence": "observed",
+    "authority": "shipped-artifact",
+    "environment": null,
+    "limitations": [
+      "The session serves operations only after Ghidra reports default auto-analysis complete; incomplete analysis does not expose partial results.",
+      "The imported Program and temporary project are ephemeral and deleted on close. Annotation operations edit session database metadata; original executable bytes are never written.",
+      "Cancelling an active Ghidra request terminates its ephemeral database and discards session annotations. The selected target remains open; the next provider query imports the original artifact again.",
+      "Default-space addresses use lowercase 0x-prefixed hexadecimal; other address spaces use <percent-encoded-space>:0x<hex>.",
+      "Regex mode uses Java Pattern semantics. Matcher or compiler stack exhaustion returns a resource constraint without closing the session; literal mode avoids regex recursion and returns complete matching values.",
+      "macOS sessions require a matching executable Ghidra native decompiler; REA checks for it but does not build native components or change Gatekeeper quarantine state."
+    ],
+    "relationship_coverage": null,
+    "locations": [],
+    "evidence_links": []
+  }
+}

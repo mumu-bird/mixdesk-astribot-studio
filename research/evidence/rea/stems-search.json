@@ -1,0 +1,589 @@
+{
+  "_meta": {
+    "provenance": {
+      "untrusted_content": true,
+      "source": "analysis_target"
+    }
+  },
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"evidence_id\":\"ev_bd6d9cc201dc6181100a23b381e5cc95a61989b824082c6338dcf26bd0015e0b\",\"subject\":{\"name\":\"DJUCED-arm64\",\"digest\":{\"sha256\":\"3d833a5175d99f6324bad3bd370b97bf46f9e82dad7f886ac6f5b08a83ccf5d8\"},\"local_path\":\"/Users/pomelo/dj工作台/research/.analysis/DJUCED-arm64\",\"format\":\"mach-o\",\"architecture\":\"arm64\"},\"provider\":{\"id\":\"ghidra\",\"name\":\"Ghidra\",\"version\":\"12.1.4\"},\"analysis_profile\":{\"provider\":{\"id\":\"ghidra\",\"name\":\"Ghidra\",\"version\":\"12.1.4\"},\"parameters\":{\"target_kind\":\"executable\",\"target_format\":\"mach-o\",\"architecture\":\"arm64\",\"available_architectures\":[\"arm64\"],\"import_mode\":\"ephemeral-source-immutable\",\"annotation_policy\":\"atomic-function-entry-metadata-v1\",\"load_image_observations\":\"source-mappings-entry-context-v2\",\"function_body_evidence\":\"complete-inclusive-ranges-v1\",\"function_references\":\"complete-body-and-entry-reference-manager-v2\",\"call_relationship_coverage\":\"function-body-call-coverage-v5\",\"function_dossier_coverage\":\"observed-facets-and-call-relationships-v1\",\"string_inventory_evidence\":\"defined-data-coverage-v1\",\"location_resolution\":\"explicit-address-exact-entry-symbol-first-v3\",\"procedure_file_offset_resolution\":\"address-first-unique-target-source-mapping-v2\",\"instruction_flow_evidence\":\"decoded-return-pcode-v1\",\"instruction_references\":\"exact-address-incoming-without-synthetic-entry-v2\",\"function_boundary_observations\":\"ghidra-function-boundary-limitations-v4\",\"no_return_repair\":\"returning-imports-decoded-return-v2\",\"process_launch\":\"inspected-jvm-launch-support-v1\",\"jump_table_evidence\":\"typed-case-default-blocks-v1\",\"decompiler_jump_loads\":true,\"loader\":\"auto-from-header\",\"language_id\":\"auto-from-header\",\"compiler_spec_id\":\"auto-default\",\"analyzer_preset\":\"ghidra-default\"},\"digest\":\"3fc72c9b4b78498fb992b938f8f3389dc670244a293c1d40abf5e1d10162ed3b\"},\"predicate_type\":\"rea.analysis\",\"operation\":\"search_procedures\",\"parameters\":{\"pattern\":\"Stems\",\"mode\":\"literal\",\"case_sensitive\":false},\"raw_result\":[{\"address\":\"0x100093d60\",\"value\":\"__ZN2dj5audio10BassStream15sendStemsStatesEv\"},{\"address\":\"0x10009dd28\",\"value\":\"__ZN2dj5audio10BassStream17getStemsModeStateENS_14StemOutputTypeE\"},{\"address\":\"0x10009dd40\",\"value\":\"__ZN2dj5audio10BassStream18setStemsToBeClonedE14QSharedPointerI12StemsManagerE\"},{\"address\":\"0x10009de90\",\"value\":\"__ZN2dj5audio10BassStream15getStemsManagerEv\"},{\"address\":\"0x10009debc\",\"value\":\"__ZN2dj5audio10BassStream14getActiveStemsEv\"},{\"address\":\"0x1000afa28\",\"value\":\"__ZN2dj5audio18BassCircularBuffer18setStemsToBeClonedE14QSharedPointerI12StemsManagerE\"},{\"address\":\"0x1000b0d58\",\"value\":\"__ZN2dj5audio18BassCircularBuffer14getActiveStemsEv\"},{\"address\":\"0x1000b3148\",\"value\":\"__ZN2dj5audio18BassCircularBuffer14setEnableStemsEb\"},{\"address\":\"0x1000b31e0\",\"value\":\"__ZN2dj5audio18BassCircularBuffer14getEnableStemsEv\"},{\"address\":\"0x1000b3228\",\"value\":\"__ZN2dj5audio18BassCircularBuffer17getStemsModeStateENS_14StemOutputTypeE\"},{\"address\":\"0x1000b3454\",\"value\":\"__ZN15QtSharedPointer33ExternalRefCountWithCustomDeleterI12StemsManagerNS_13NormalDeleterEE7deleterEPNS_20ExternalRefCountDataE\"},{\"address\":\"0x1000c38c4\",\"value\":\"__ZN2dj5audio11BassControl15getStemsManagerEi\"},{\"address\":\"0x1002bf078\",\"value\":\"__ZN12StemsManagerC2Eiibi14QSharedPointerIS_E\"},{\"address\":\"0x1002bf314\",\"value\":\"__ZN12StemsManagerC1Eiibi14QSharedPointerIS_E\"},{\"address\":\"0x1002bf318\",\"value\":\"__ZN12StemsManagerD2Ev\"},{\"address\":\"0x1002bf4fc\",\"value\":\"__ZN12StemsManagerD1Ev\"},{\"address\":\"0x1002bf500\",\"value\":\"__ZN12StemsManagerD0Ev\"},{\"address\":\"0x1002bf514\",\"value\":\"__ZN12StemsManager4initEjjb\"},{\"address\":\"0x1002bf660\",\"value\":\"__ZN12StemsManager5cloneEv\"},{\"address\":\"0x1002bfa78\",\"value\":\"__ZN12StemsManager5cloneE14QSharedPointerIS_E\"},{\"address\":\"0x1002bfbdc\",\"value\":\"__ZN12StemsManager16cancelExtractionEv\"},{\"address\":\"0x1002bfbec\",\"value\":\"__ZN12StemsManager16getNumberOfStemsEv\"},{\"address\":\"0x1002bfbf4\",\"value\":\"__ZN12StemsManager6isInitEv\"},{\"address\":\"0x1002bfbfc\",\"value\":\"__ZN12StemsManager16setRawFileHandleEj\"},{\"address\":\"0x1002bfc04\",\"value\":\"__ZN12StemsManager14setActiveStemsE5QListIN2dj14StemOutputTypeEE\"},{\"address\":\"0x1002bfd74\",\"value\":\"__ZN12StemsManager15setStemsEnabledEb\"},{\"address\":\"0x1002bfe24\",\"value\":\"__ZN12StemsManager21setCurentFilePositionEx\"},{\"address\":\"0x1002bff08\",\"value\":\"__ZN12StemsManager3runEv\"},{\"address\":\"0x1002c0428\",\"value\":\"__ZN12StemsManager18processSeparateProEPA2_fy5QListIN2dj14StemOutputTypeEEPPfS7_\"},{\"address\":\"0x1002c0da4\",\"value\":\"__ZN12StemsManager19outputToStereoFloatEPPfPA2_fm\"},{\"address\":\"0x1002c0e6c\",\"value\":\"__ZN12StemsManager15getOutputBufferEPA2_fxx5QListIN2dj14StemOutputTypeEEb\"},{\"address\":\"0x1002c16a0\",\"value\":\"__ZN12StemsManager9createMixEP7MixDatabPfyb\"},{\"address\":\"0x1002c18b0\",\"value\":\"__ZN12StemsManager18getExtracBeforeUseEv\"},{\"address\":\"0x1002c18b8\",\"value\":\"__ZN12StemsManager19setMixedDataNotUsedEv\"},{\"address\":\"0x1002c1a74\",\"value\":\"__ZN12StemsManager27setMixedDataLastActiveStemsE5QListIN2dj14StemOutputTypeEE\"},{\"address\":\"0x1002c1ae8\",\"value\":\"__ZN12StemsManager27getLastMixedDataActiveStemsEv\"},{\"address\":\"0x1002ff4d8\",\"value\":\"__ZN12StemsManager13sendStemReadyEb\"},{\"address\":\"0x1002ff53c\",\"value\":\"__ZN12StemsManager16sendStemPositionEx\"},{\"address\":\"0x1002ff5a0\",\"value\":\"__ZNK12StemsManager10metaObjectEv\"},{\"address\":\"0x1002ff5bc\",\"value\":\"__ZN12StemsManager11qt_metacastEPKc\"},{\"address\":\"0x1002ff618\",\"value\":\"__ZN12StemsManager11qt_metacallEN11QMetaObject4CallEiPPv\"},{\"address\":\"0x1002ff70c\",\"value\":\"__ZZN9QtPrivate16QMetaTypeForTypeI12StemsManagerE7getDtorEvENUlPKNS_18QMetaTypeInterfaceEPvE_8__invokeES5_S6_\"},{\"address\":\"0x100611018\",\"value\":\"__ZN2dj4view11rhythm_view11updateStemsEb\"},{\"address\":\"0x1006dfad0\",\"value\":\"__ZN16GLWaveformWidget11updateStemsEb\"},{\"address\":\"0x1006e6520\",\"value\":\"__ZN20WaveformReaderThread12getStemsDataEN2dj14StemOutputTypeE\"},{\"address\":\"0x1006e65a0\",\"value\":\"__ZN20WaveformReaderThread11getStemsFftEN2dj14StemOutputTypeE\"},{\"address\":\"0x1006e9970\",\"value\":\"__ZN20WaveformReaderThread11updateStemsEb\"},{\"address\":\"0x1007fe074\",\"value\":\"__ZN2dj4view6DJDeck13activateStemsEb\"},{\"address\":\"0x10086af50\",\"value\":\"__ZN2dj4view11StemsButtonC2EP7QWidget7QString\"},{\"address\":\"0x10086b6e0\",\"value\":\"__ZN2dj4view11StemsButtonC1EP7QWidget7QString\"},{\"address\":\"0x10086b6e4\",\"value\":\"__ZN2dj4view11StemsButtonD2Ev\"},{\"address\":\"0x10086b730\",\"value\":\"__ZN2dj4view11StemsButtonD1Ev\"},{\"address\":\"0x10086b77c\",\"value\":\"__ZThn16_N2dj4view11StemsButtonD1Ev\"},{\"address\":\"0x10086b7c8\",\"value\":\"__ZN2dj4view11StemsButtonD0Ev\"},{\"address\":\"0x10086b814\",\"value\":\"__ZThn16_N2dj4view11StemsButtonD0Ev\"},{\"address\":\"0x10086b864\",\"value\":\"__ZN2dj4view11StemsButton14setStemGraphicEi\"},{\"address\":\"0x10086bcc0\",\"value\":\"__ZN2dj4view11StemsButton31received_audio_property_changedENS_9AUDIOEnumEi8QVariant\"},{\"address\":\"0x10086bd9c\",\"value\":\"__ZN2dj4view11StemsButton19receiveUpdateColorsEv\"},{\"address\":\"0x100897854\",\"value\":\"__ZNK2dj4view11StemsButton10metaObjectEv\"},{\"address\":\"0x100897870\",\"value\":\"__ZN2dj4view11StemsButton11qt_metacastEPKc\"},{\"address\":\"0x1008978cc\",\"value\":\"__ZN2dj4view11StemsButton11qt_metacallEN11QMetaObject4CallEiPPv\"},{\"address\":\"0x1008979cc\",\"value\":\"__ZZN9QtPrivate16QMetaTypeForTypeIN2dj4view11StemsButtonEE7getDtorEvENUlPKNS_18QMetaTypeInterfaceEPvE_8__invokeES7_S8_\"}],\"normalized_result\":[{\"address\":\"0x100093d60\",\"value\":\"__ZN2dj5audio10BassStream15sendStemsStatesEv\"},{\"address\":\"0x10009dd28\",\"value\":\"__ZN2dj5audio10BassStream17getStemsModeStateENS_14StemOutputTypeE\"},{\"address\":\"0x10009dd40\",\"value\":\"__ZN2dj5audio10BassStream18setStemsToBeClonedE14QSharedPointerI12StemsManagerE\"},{\"address\":\"0x10009de90\",\"value\":\"__ZN2dj5audio10BassStream15getStemsManagerEv\"},{\"address\":\"0x10009debc\",\"value\":\"__ZN2dj5audio10BassStream14getActiveStemsEv\"},{\"address\":\"0x1000afa28\",\"value\":\"__ZN2dj5audio18BassCircularBuffer18setStemsToBeClonedE14QSharedPointerI12StemsManagerE\"},{\"address\":\"0x1000b0d58\",\"value\":\"__ZN2dj5audio18BassCircularBuffer14getActiveStemsEv\"},{\"address\":\"0x1000b3148\",\"value\":\"__ZN2dj5audio18BassCircularBuffer14setEnableStemsEb\"},{\"address\":\"0x1000b31e0\",\"value\":\"__ZN2dj5audio18BassCircularBuffer14getEnableStemsEv\"},{\"address\":\"0x1000b3228\",\"value\":\"__ZN2dj5audio18BassCircularBuffer17getStemsModeStateENS_14StemOutputTypeE\"},{\"address\":\"0x1000b3454\",\"value\":\"__ZN15QtSharedPointer33ExternalRefCountWithCustomDeleterI12StemsManagerNS_13NormalDeleterEE7deleterEPNS_20ExternalRefCountDataE\"},{\"address\":\"0x1000c38c4\",\"value\":\"__ZN2dj5audio11BassControl15getStemsManagerEi\"},{\"address\":\"0x1002bf078\",\"value\":\"__ZN12StemsManagerC2Eiibi14QSharedPointerIS_E\"},{\"address\":\"0x1002bf314\",\"value\":\"__ZN12StemsManagerC1Eiibi14QSharedPointerIS_E\"},{\"address\":\"0x1002bf318\",\"value\":\"__ZN12StemsManagerD2Ev\"},{\"address\":\"0x1002bf4fc\",\"value\":\"__ZN12StemsManagerD1Ev\"},{\"address\":\"0x1002bf500\",\"value\":\"__ZN12StemsManagerD0Ev\"},{\"address\":\"0x1002bf514\",\"value\":\"__ZN12StemsManager4initEjjb\"},{\"address\":\"0x1002bf660\",\"value\":\"__ZN12StemsManager5cloneEv\"},{\"address\":\"0x1002bfa78\",\"value\":\"__ZN12StemsManager5cloneE14QSharedPointerIS_E\"},{\"address\":\"0x1002bfbdc\",\"value\":\"__ZN12StemsManager16cancelExtractionEv\"},{\"address\":\"0x1002bfbec\",\"value\":\"__ZN12StemsManager16getNumberOfStemsEv\"},{\"address\":\"0x1002bfbf4\",\"value\":\"__ZN12StemsManager6isInitEv\"},{\"address\":\"0x1002bfbfc\",\"value\":\"__ZN12StemsManager16setRawFileHandleEj\"},{\"address\":\"0x1002bfc04\",\"value\":\"__ZN12StemsManager14setActiveStemsE5QListIN2dj14StemOutputTypeEE\"},{\"address\":\"0x1002bfd74\",\"value\":\"__ZN12StemsManager15setStemsEnabledEb\"},{\"address\":\"0x1002bfe24\",\"value\":\"__ZN12StemsManager21setCurentFilePositionEx\"},{\"address\":\"0x1002bff08\",\"value\":\"__ZN12StemsManager3runEv\"},{\"address\":\"0x1002c0428\",\"value\":\"__ZN12StemsManager18processSeparateProEPA2_fy5QListIN2dj14StemOutputTypeEEPPfS7_\"},{\"address\":\"0x1002c0da4\",\"value\":\"__ZN12StemsManager19outputToStereoFloatEPPfPA2_fm\"},{\"address\":\"0x1002c0e6c\",\"value\":\"__ZN12StemsManager15getOutputBufferEPA2_fxx5QListIN2dj14StemOutputTypeEEb\"},{\"address\":\"0x1002c16a0\",\"value\":\"__ZN12StemsManager9createMixEP7MixDatabPfyb\"},{\"address\":\"0x1002c18b0\",\"value\":\"__ZN12StemsManager18getExtracBeforeUseEv\"},{\"address\":\"0x1002c18b8\",\"value\":\"__ZN12StemsManager19setMixedDataNotUsedEv\"},{\"address\":\"0x1002c1a74\",\"value\":\"__ZN12StemsManager27setMixedDataLastActiveStemsE5QListIN2dj14StemOutputTypeEE\"},{\"address\":\"0x1002c1ae8\",\"value\":\"__ZN12StemsManager27getLastMixedDataActiveStemsEv\"},{\"address\":\"0x1002ff4d8\",\"value\":\"__ZN12StemsManager13sendStemReadyEb\"},{\"address\":\"0x1002ff53c\",\"value\":\"__ZN12StemsManager16sendStemPositionEx\"},{\"address\":\"0x1002ff5a0\",\"value\":\"__ZNK12StemsManager10metaObjectEv\"},{\"address\":\"0x1002ff5bc\",\"value\":\"__ZN12StemsManager11qt_metacastEPKc\"},{\"address\":\"0x1002ff618\",\"value\":\"__ZN12StemsManager11qt_metacallEN11QMetaObject4CallEiPPv\"},{\"address\":\"0x1002ff70c\",\"value\":\"__ZZN9QtPrivate16QMetaTypeForTypeI12StemsManagerE7getDtorEvENUlPKNS_18QMetaTypeInterfaceEPvE_8__invokeES5_S6_\"},{\"address\":\"0x100611018\",\"value\":\"__ZN2dj4view11rhythm_view11updateStemsEb\"},{\"address\":\"0x1006dfad0\",\"value\":\"__ZN16GLWaveformWidget11updateStemsEb\"},{\"address\":\"0x1006e6520\",\"value\":\"__ZN20WaveformReaderThread12getStemsDataEN2dj14StemOutputTypeE\"},{\"address\":\"0x1006e65a0\",\"value\":\"__ZN20WaveformReaderThread11getStemsFftEN2dj14StemOutputTypeE\"},{\"address\":\"0x1006e9970\",\"value\":\"__ZN20WaveformReaderThread11updateStemsEb\"},{\"address\":\"0x1007fe074\",\"value\":\"__ZN2dj4view6DJDeck13activateStemsEb\"},{\"address\":\"0x10086af50\",\"value\":\"__ZN2dj4view11StemsButtonC2EP7QWidget7QString\"},{\"address\":\"0x10086b6e0\",\"value\":\"__ZN2dj4view11StemsButtonC1EP7QWidget7QString\"},{\"address\":\"0x10086b6e4\",\"value\":\"__ZN2dj4view11StemsButtonD2Ev\"},{\"address\":\"0x10086b730\",\"value\":\"__ZN2dj4view11StemsButtonD1Ev\"},{\"address\":\"0x10086b77c\",\"value\":\"__ZThn16_N2dj4view11StemsButtonD1Ev\"},{\"address\":\"0x10086b7c8\",\"value\":\"__ZN2dj4view11StemsButtonD0Ev\"},{\"address\":\"0x10086b814\",\"value\":\"__ZThn16_N2dj4view11StemsButtonD0Ev\"},{\"address\":\"0x10086b864\",\"value\":\"__ZN2dj4view11StemsButton14setStemGraphicEi\"},{\"address\":\"0x10086bcc0\",\"value\":\"__ZN2dj4view11StemsButton31received_audio_property_changedENS_9AUDIOEnumEi8QVariant\"},{\"address\":\"0x10086bd9c\",\"value\":\"__ZN2dj4view11StemsButton19receiveUpdateColorsEv\"},{\"address\":\"0x100897854\",\"value\":\"__ZNK2dj4view11StemsButton10metaObjectEv\"},{\"address\":\"0x100897870\",\"value\":\"__ZN2dj4view11StemsButton11qt_metacastEPKc\"},{\"address\":\"0x1008978cc\",\"value\":\"__ZN2dj4view11StemsButton11qt_metacallEN11QMetaObject4CallEiPPv\"},{\"address\":\"0x1008979cc\",\"value\":\"__ZZN9QtPrivate16QMetaTypeForTypeIN2dj4view11StemsButtonEE7getDtorEvENUlPKNS_18QMetaTypeInterfaceEPvE_8__invokeES7_S8_\"}],\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"The session serves operations only after Ghidra reports default auto-analysis complete; incomplete analysis does not expose partial results.\",\"The imported Program and temporary project are ephemeral and deleted on close. Annotation operations edit session database metadata; original executable bytes are never written.\",\"Cancelling an active Ghidra request terminates its ephemeral database and discards session annotations. The selected target remains open; the next provider query imports the original artifact again.\",\"Default-space addresses use lowercase 0x-prefixed hexadecimal; other address spaces use <percent-encoded-space>:0x<hex>.\",\"Regex mode uses Java Pattern semantics. Matcher or compiler stack exhaustion returns a resource constraint without closing the session; literal mode avoids regex recursion and returns complete matching values.\",\"macOS sessions require a matching executable Ghidra native decompiler; REA checks for it but does not build native components or change Gatekeeper quarantine state.\"],\"relationship_coverage\":null,\"locations\":[],\"evidence_links\":[]}"
+    }
+  ],
+  "structuredContent": {
+    "evidence_id": "ev_bd6d9cc201dc6181100a23b381e5cc95a61989b824082c6338dcf26bd0015e0b",
+    "subject": {
+      "name": "DJUCED-arm64",
+      "digest": {
+        "sha256": "3d833a5175d99f6324bad3bd370b97bf46f9e82dad7f886ac6f5b08a83ccf5d8"
+      },
+      "local_path": "/Users/pomelo/dj工作台/research/.analysis/DJUCED-arm64",
+      "format": "mach-o",
+      "architecture": "arm64"
+    },
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    },
+    "analysis_profile": {
+      "provider": {
+        "id": "ghidra",
+        "name": "Ghidra",
+        "version": "12.1.4"
+      },
+      "parameters": {
+        "target_kind": "executable",
+        "target_format": "mach-o",
+        "architecture": "arm64",
+        "available_architectures": [
+          "arm64"
+        ],
+        "import_mode": "ephemeral-source-immutable",
+        "annotation_policy": "atomic-function-entry-metadata-v1",
+        "load_image_observations": "source-mappings-entry-context-v2",
+        "function_body_evidence": "complete-inclusive-ranges-v1",
+        "function_references": "complete-body-and-entry-reference-manager-v2",
+        "call_relationship_coverage": "function-body-call-coverage-v5",
+        "function_dossier_coverage": "observed-facets-and-call-relationships-v1",
+        "string_inventory_evidence": "defined-data-coverage-v1",
+        "location_resolution": "explicit-address-exact-entry-symbol-first-v3",
+        "procedure_file_offset_resolution": "address-first-unique-target-source-mapping-v2",
+        "instruction_flow_evidence": "decoded-return-pcode-v1",
+        "instruction_references": "exact-address-incoming-without-synthetic-entry-v2",
+        "function_boundary_observations": "ghidra-function-boundary-limitations-v4",
+        "no_return_repair": "returning-imports-decoded-return-v2",
+        "process_launch": "inspected-jvm-launch-support-v1",
+        "jump_table_evidence": "typed-case-default-blocks-v1",
+        "decompiler_jump_loads": true,
+        "loader": "auto-from-header",
+        "language_id": "auto-from-header",
+        "compiler_spec_id": "auto-default",
+        "analyzer_preset": "ghidra-default"
+      },
+      "digest": "3fc72c9b4b78498fb992b938f8f3389dc670244a293c1d40abf5e1d10162ed3b"
+    },
+    "predicate_type": "rea.analysis",
+    "operation": "search_procedures",
+    "parameters": {
+      "pattern": "Stems",
+      "mode": "literal",
+      "case_sensitive": false
+    },
+    "raw_result": [
+      {
+        "address": "0x100093d60",
+        "value": "__ZN2dj5audio10BassStream15sendStemsStatesEv"
+      },
+      {
+        "address": "0x10009dd28",
+        "value": "__ZN2dj5audio10BassStream17getStemsModeStateENS_14StemOutputTypeE"
+      },
+      {
+        "address": "0x10009dd40",
+        "value": "__ZN2dj5audio10BassStream18setStemsToBeClonedE14QSharedPointerI12StemsManagerE"
+      },
+      {
+        "address": "0x10009de90",
+        "value": "__ZN2dj5audio10BassStream15getStemsManagerEv"
+      },
+      {
+        "address": "0x10009debc",
+        "value": "__ZN2dj5audio10BassStream14getActiveStemsEv"
+      },
+      {
+        "address": "0x1000afa28",
+        "value": "__ZN2dj5audio18BassCircularBuffer18setStemsToBeClonedE14QSharedPointerI12StemsManagerE"
+      },
+      {
+        "address": "0x1000b0d58",
+        "value": "__ZN2dj5audio18BassCircularBuffer14getActiveStemsEv"
+      },
+      {
+        "address": "0x1000b3148",
+        "value": "__ZN2dj5audio18BassCircularBuffer14setEnableStemsEb"
+      },
+      {
+        "address": "0x1000b31e0",
+        "value": "__ZN2dj5audio18BassCircularBuffer14getEnableStemsEv"
+      },
+      {
+        "address": "0x1000b3228",
+        "value": "__ZN2dj5audio18BassCircularBuffer17getStemsModeStateENS_14StemOutputTypeE"
+      },
+      {
+        "address": "0x1000b3454",
+        "value": "__ZN15QtSharedPointer33ExternalRefCountWithCustomDeleterI12StemsManagerNS_13NormalDeleterEE7deleterEPNS_20ExternalRefCountDataE"
+      },
+      {
+        "address": "0x1000c38c4",
+        "value": "__ZN2dj5audio11BassControl15getStemsManagerEi"
+      },
+      {
+        "address": "0x1002bf078",
+        "value": "__ZN12StemsManagerC2Eiibi14QSharedPointerIS_E"
+      },
+      {
+        "address": "0x1002bf314",
+        "value": "__ZN12StemsManagerC1Eiibi14QSharedPointerIS_E"
+      },
+      {
+        "address": "0x1002bf318",
+        "value": "__ZN12StemsManagerD2Ev"
+      },
+      {
+        "address": "0x1002bf4fc",
+        "value": "__ZN12StemsManagerD1Ev"
+      },
+      {
+        "address": "0x1002bf500",
+        "value": "__ZN12StemsManagerD0Ev"
+      },
+      {
+        "address": "0x1002bf514",
+        "value": "__ZN12StemsManager4initEjjb"
+      },
+      {
+        "address": "0x1002bf660",
+        "value": "__ZN12StemsManager5cloneEv"
+      },
+      {
+        "address": "0x1002bfa78",
+        "value": "__ZN12StemsManager5cloneE14QSharedPointerIS_E"
+      },
+      {
+        "address": "0x1002bfbdc",
+        "value": "__ZN12StemsManager16cancelExtractionEv"
+      },
+      {
+        "address": "0x1002bfbec",
+        "value": "__ZN12StemsManager16getNumberOfStemsEv"
+      },
+      {
+        "address": "0x1002bfbf4",
+        "value": "__ZN12StemsManager6isInitEv"
+      },
+      {
+        "address": "0x1002bfbfc",
+        "value": "__ZN12StemsManager16setRawFileHandleEj"
+      },
+      {
+        "address": "0x1002bfc04",
+        "value": "__ZN12StemsManager14setActiveStemsE5QListIN2dj14StemOutputTypeEE"
+      },
+      {
+        "address": "0x1002bfd74",
+        "value": "__ZN12StemsManager15setStemsEnabledEb"
+      },
+      {
+        "address": "0x1002bfe24",
+        "value": "__ZN12StemsManager21setCurentFilePositionEx"
+      },
+      {
+        "address": "0x1002bff08",
+        "value": "__ZN12StemsManager3runEv"
+      },
+      {
+        "address": "0x1002c0428",
+        "value": "__ZN12StemsManager18processSeparateProEPA2_fy5QListIN2dj14StemOutputTypeEEPPfS7_"
+      },
+      {
+        "address": "0x1002c0da4",
+        "value": "__ZN12StemsManager19outputToStereoFloatEPPfPA2_fm"
+      },
+      {
+        "address": "0x1002c0e6c",
+        "value": "__ZN12StemsManager15getOutputBufferEPA2_fxx5QListIN2dj14StemOutputTypeEEb"
+      },
+      {
+        "address": "0x1002c16a0",
+        "value": "__ZN12StemsManager9createMixEP7MixDatabPfyb"
+      },
+      {
+        "address": "0x1002c18b0",
+        "value": "__ZN12StemsManager18getExtracBeforeUseEv"
+      },
+      {
+        "address": "0x1002c18b8",
+        "value": "__ZN12StemsManager19setMixedDataNotUsedEv"
+      },
+      {
+        "address": "0x1002c1a74",
+        "value": "__ZN12StemsManager27setMixedDataLastActiveStemsE5QListIN2dj14StemOutputTypeEE"
+      },
+      {
+        "address": "0x1002c1ae8",
+        "value": "__ZN12StemsManager27getLastMixedDataActiveStemsEv"
+      },
+      {
+        "address": "0x1002ff4d8",
+        "value": "__ZN12StemsManager13sendStemReadyEb"
+      },
+      {
+        "address": "0x1002ff53c",
+        "value": "__ZN12StemsManager16sendStemPositionEx"
+      },
+      {
+        "address": "0x1002ff5a0",
+        "value": "__ZNK12StemsManager10metaObjectEv"
+      },
+      {
+        "address": "0x1002ff5bc",
+        "value": "__ZN12StemsManager11qt_metacastEPKc"
+      },
+      {
+        "address": "0x1002ff618",
+        "value": "__ZN12StemsManager11qt_metacallEN11QMetaObject4CallEiPPv"
+      },
+      {
+        "address": "0x1002ff70c",
+        "value": "__ZZN9QtPrivate16QMetaTypeForTypeI12StemsManagerE7getDtorEvENUlPKNS_18QMetaTypeInterfaceEPvE_8__invokeES5_S6_"
+      },
+      {
+        "address": "0x100611018",
+        "value": "__ZN2dj4view11rhythm_view11updateStemsEb"
+      },
+      {
+        "address": "0x1006dfad0",
+        "value": "__ZN16GLWaveformWidget11updateStemsEb"
+      },
+      {
+        "address": "0x1006e6520",
+        "value": "__ZN20WaveformReaderThread12getStemsDataEN2dj14StemOutputTypeE"
+      },
+      {
+        "address": "0x1006e65a0",
+        "value": "__ZN20WaveformReaderThread11getStemsFftEN2dj14StemOutputTypeE"
+      },
+      {
+        "address": "0x1006e9970",
+        "value": "__ZN20WaveformReaderThread11updateStemsEb"
+      },
+      {
+        "address": "0x1007fe074",
+        "value": "__ZN2dj4view6DJDeck13activateStemsEb"
+      },
+      {
+        "address": "0x10086af50",
+        "value": "__ZN2dj4view11StemsButtonC2EP7QWidget7QString"
+      },
+      {
+        "address": "0x10086b6e0",
+        "value": "__ZN2dj4view11StemsButtonC1EP7QWidget7QString"
+      },
+      {
+        "address": "0x10086b6e4",
+        "value": "__ZN2dj4view11StemsButtonD2Ev"
+      },
+      {
+        "address": "0x10086b730",
+        "value": "__ZN2dj4view11StemsButtonD1Ev"
+      },
+      {
+        "address": "0x10086b77c",
+        "value": "__ZThn16_N2dj4view11StemsButtonD1Ev"
+      },
+      {
+        "address": "0x10086b7c8",
+        "value": "__ZN2dj4view11StemsButtonD0Ev"
+      },
+      {
+        "address": "0x10086b814",
+        "value": "__ZThn16_N2dj4view11StemsButtonD0Ev"
+      },
+      {
+        "address": "0x10086b864",
+        "value": "__ZN2dj4view11StemsButton14setStemGraphicEi"
+      },
+      {
+        "address": "0x10086bcc0",
+        "value": "__ZN2dj4view11StemsButton31received_audio_property_changedENS_9AUDIOEnumEi8QVariant"
+      },
+      {
+        "address": "0x10086bd9c",
+        "value": "__ZN2dj4view11StemsButton19receiveUpdateColorsEv"
+      },
+      {
+        "address": "0x100897854",
+        "value": "__ZNK2dj4view11StemsButton10metaObjectEv"
+      },
+      {
+        "address": "0x100897870",
+        "value": "__ZN2dj4view11StemsButton11qt_metacastEPKc"
+      },
+      {
+        "address": "0x1008978cc",
+        "value": "__ZN2dj4view11StemsButton11qt_metacallEN11QMetaObject4CallEiPPv"
+      },
+      {
+        "address": "0x1008979cc",
+        "value": "__ZZN9QtPrivate16QMetaTypeForTypeIN2dj4view11StemsButtonEE7getDtorEvENUlPKNS_18QMetaTypeInterfaceEPvE_8__invokeES7_S8_"
+      }
+    ],
+    "normalized_result": [
+      {
+        "address": "0x100093d60",
+        "value": "__ZN2dj5audio10BassStream15sendStemsStatesEv"
+      },
+      {
+        "address": "0x10009dd28",
+        "value": "__ZN2dj5audio10BassStream17getStemsModeStateENS_14StemOutputTypeE"
+      },
+      {
+        "address": "0x10009dd40",
+        "value": "__ZN2dj5audio10BassStream18setStemsToBeClonedE14QSharedPointerI12StemsManagerE"
+      },
+      {
+        "address": "0x10009de90",
+        "value": "__ZN2dj5audio10BassStream15getStemsManagerEv"
+      },
+      {
+        "address": "0x10009debc",
+        "value": "__ZN2dj5audio10BassStream14getActiveStemsEv"
+      },
+      {
+        "address": "0x1000afa28",
+        "value": "__ZN2dj5audio18BassCircularBuffer18setStemsToBeClonedE14QSharedPointerI12StemsManagerE"
+      },
+      {
+        "address": "0x1000b0d58",
+        "value": "__ZN2dj5audio18BassCircularBuffer14getActiveStemsEv"
+      },
+      {
+        "address": "0x1000b3148",
+        "value": "__ZN2dj5audio18BassCircularBuffer14setEnableStemsEb"
+      },
+      {
+        "address": "0x1000b31e0",
+        "value": "__ZN2dj5audio18BassCircularBuffer14getEnableStemsEv"
+      },
+      {
+        "address": "0x1000b3228",
+        "value": "__ZN2dj5audio18BassCircularBuffer17getStemsModeStateENS_14StemOutputTypeE"
+      },
+      {
+        "address": "0x1000b3454",
+        "value": "__ZN15QtSharedPointer33ExternalRefCountWithCustomDeleterI12StemsManagerNS_13NormalDeleterEE7deleterEPNS_20ExternalRefCountDataE"
+      },
+      {
+        "address": "0x1000c38c4",
+        "value": "__ZN2dj5audio11BassControl15getStemsManagerEi"
+      },
+      {
+        "address": "0x1002bf078",
+        "value": "__ZN12StemsManagerC2Eiibi14QSharedPointerIS_E"
+      },
+      {
+        "address": "0x1002bf314",
+        "value": "__ZN12StemsManagerC1Eiibi14QSharedPointerIS_E"
+      },
+      {
+        "address": "0x1002bf318",
+        "value": "__ZN12StemsManagerD2Ev"
+      },
+      {
+        "address": "0x1002bf4fc",
+        "value": "__ZN12StemsManagerD1Ev"
+      },
+      {
+        "address": "0x1002bf500",
+        "value": "__ZN12StemsManagerD0Ev"
+      },
+      {
+        "address": "0x1002bf514",
+        "value": "__ZN12StemsManager4initEjjb"
+      },
+      {
+        "address": "0x1002bf660",
+        "value": "__ZN12StemsManager5cloneEv"
+      },
+      {
+        "address": "0x1002bfa78",
+        "value": "__ZN12StemsManager5cloneE14QSharedPointerIS_E"
+      },
+      {
+        "address": "0x1002bfbdc",
+        "value": "__ZN12StemsManager16cancelExtractionEv"
+      },
+      {
+        "address": "0x1002bfbec",
+        "value": "__ZN12StemsManager16getNumberOfStemsEv"
+      },
+      {
+        "address": "0x1002bfbf4",
+        "value": "__ZN12StemsManager6isInitEv"
+      },
+      {
+        "address": "0x1002bfbfc",
+        "value": "__ZN12StemsManager16setRawFileHandleEj"
+      },
+      {
+        "address": "0x1002bfc04",
+        "value": "__ZN12StemsManager14setActiveStemsE5QListIN2dj14StemOutputTypeEE"
+      },
+      {
+        "address": "0x1002bfd74",
+        "value": "__ZN12StemsManager15setStemsEnabledEb"
+      },
+      {
+        "address": "0x1002bfe24",
+        "value": "__ZN12StemsManager21setCurentFilePositionEx"
+      },
+      {
+        "address": "0x1002bff08",
+        "value": "__ZN12StemsManager3runEv"
+      },
+      {
+        "address": "0x1002c0428",
+        "value": "__ZN12StemsManager18processSeparateProEPA2_fy5QListIN2dj14StemOutputTypeEEPPfS7_"
+      },
+      {
+        "address": "0x1002c0da4",
+        "value": "__ZN12StemsManager19outputToStereoFloatEPPfPA2_fm"
+      },
+      {
+        "address": "0x1002c0e6c",
+        "value": "__ZN12StemsManager15getOutputBufferEPA2_fxx5QListIN2dj14StemOutputTypeEEb"
+      },
+      {
+        "address": "0x1002c16a0",
+        "value": "__ZN12StemsManager9createMixEP7MixDatabPfyb"
+      },
+      {
+        "address": "0x1002c18b0",
+        "value": "__ZN12StemsManager18getExtracBeforeUseEv"
+      },
+      {
+        "address": "0x1002c18b8",
+        "value": "__ZN12StemsManager19setMixedDataNotUsedEv"
+      },
+      {
+        "address": "0x1002c1a74",
+        "value": "__ZN12StemsManager27setMixedDataLastActiveStemsE5QListIN2dj14StemOutputTypeEE"
+      },
+      {
+        "address": "0x1002c1ae8",
+        "value": "__ZN12StemsManager27getLastMixedDataActiveStemsEv"
+      },
+      {
+        "address": "0x1002ff4d8",
+        "value": "__ZN12StemsManager13sendStemReadyEb"
+      },
+      {
+        "address": "0x1002ff53c",
+        "value": "__ZN12StemsManager16sendStemPositionEx"
+      },
+      {
+        "address": "0x1002ff5a0",
+        "value": "__ZNK12StemsManager10metaObjectEv"
+      },
+      {
+        "address": "0x1002ff5bc",
+        "value": "__ZN12StemsManager11qt_metacastEPKc"
+      },
+      {
+        "address": "0x1002ff618",
+        "value": "__ZN12StemsManager11qt_metacallEN11QMetaObject4CallEiPPv"
+      },
+      {
+        "address": "0x1002ff70c",
+        "value": "__ZZN9QtPrivate16QMetaTypeForTypeI12StemsManagerE7getDtorEvENUlPKNS_18QMetaTypeInterfaceEPvE_8__invokeES5_S6_"
+      },
+      {
+        "address": "0x100611018",
+        "value": "__ZN2dj4view11rhythm_view11updateStemsEb"
+      },
+      {
+        "address": "0x1006dfad0",
+        "value": "__ZN16GLWaveformWidget11updateStemsEb"
+      },
+      {
+        "address": "0x1006e6520",
+        "value": "__ZN20WaveformReaderThread12getStemsDataEN2dj14StemOutputTypeE"
+      },
+      {
+        "address": "0x1006e65a0",
+        "value": "__ZN20WaveformReaderThread11getStemsFftEN2dj14StemOutputTypeE"
+      },
+      {
+        "address": "0x1006e9970",
+        "value": "__ZN20WaveformReaderThread11updateStemsEb"
+      },
+      {
+        "address": "0x1007fe074",
+        "value": "__ZN2dj4view6DJDeck13activateStemsEb"
+      },
+      {
+        "address": "0x10086af50",
+        "value": "__ZN2dj4view11StemsButtonC2EP7QWidget7QString"
+      },
+      {
+        "address": "0x10086b6e0",
+        "value": "__ZN2dj4view11StemsButtonC1EP7QWidget7QString"
+      },
+      {
+        "address": "0x10086b6e4",
+        "value": "__ZN2dj4view11StemsButtonD2Ev"
+      },
+      {
+        "address": "0x10086b730",
+        "value": "__ZN2dj4view11StemsButtonD1Ev"
+      },
+      {
+        "address": "0x10086b77c",
+        "value": "__ZThn16_N2dj4view11StemsButtonD1Ev"
+      },
+      {
+        "address": "0x10086b7c8",
+        "value": "__ZN2dj4view11StemsButtonD0Ev"
+      },
+      {
+        "address": "0x10086b814",
+        "value": "__ZThn16_N2dj4view11StemsButtonD0Ev"
+      },
+      {
+        "address": "0x10086b864",
+        "value": "__ZN2dj4view11StemsButton14setStemGraphicEi"
+      },
+      {
+        "address": "0x10086bcc0",
+        "value": "__ZN2dj4view11StemsButton31received_audio_property_changedENS_9AUDIOEnumEi8QVariant"
+      },
+      {
+        "address": "0x10086bd9c",
+        "value": "__ZN2dj4view11StemsButton19receiveUpdateColorsEv"
+      },
+      {
+        "address": "0x100897854",
+        "value": "__ZNK2dj4view11StemsButton10metaObjectEv"
+      },
+      {
+        "address": "0x100897870",
+        "value": "__ZN2dj4view11StemsButton11qt_metacastEPKc"
+      },
+      {
+        "address": "0x1008978cc",
+        "value": "__ZN2dj4view11StemsButton11qt_metacallEN11QMetaObject4CallEiPPv"
+      },
+      {
+        "address": "0x1008979cc",
+        "value": "__ZZN9QtPrivate16QMetaTypeForTypeIN2dj4view11StemsButtonEE7getDtorEvENUlPKNS_18QMetaTypeInterfaceEPvE_8__invokeES7_S8_"
+      }
+    ],
+    "confidence": "observed",
+    "authority": "shipped-artifact",
+    "environment": null,
+    "limitations": [
+      "The session serves operations only after Ghidra reports default auto-analysis complete; incomplete analysis does not expose partial results.",
+      "The imported Program and temporary project are ephemeral and deleted on close. Annotation operations edit session database metadata; original executable bytes are never written.",
+      "Cancelling an active Ghidra request terminates its ephemeral database and discards session annotations. The selected target remains open; the next provider query imports the original artifact again.",
+      "Default-space addresses use lowercase 0x-prefixed hexadecimal; other address spaces use <percent-encoded-space>:0x<hex>.",
+      "Regex mode uses Java Pattern semantics. Matcher or compiler stack exhaustion returns a resource constraint without closing the session; literal mode avoids regex recursion and returns complete matching values.",
+      "macOS sessions require a matching executable Ghidra native decompiler; REA checks for it but does not build native components or change Gatekeeper quarantine state."
+    ],
+    "relationship_coverage": null,
+    "locations": [],
+    "evidence_links": []
+  }
+}

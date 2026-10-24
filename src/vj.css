@@ -1,0 +1,34 @@
+.vj-panel{margin-top:22px;border:1px solid #2d3939;border-radius:8px;background:linear-gradient(145deg,#17201f,#101516);overflow:hidden}
+.vj-panel[hidden]{display:none}
+.vj-toolbar{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 18px;border-bottom:1px solid #2b3738;background:#18201f}
+.vj-toolbar h2{font-size:13px;font-weight:550;margin:4px 0 0;color:#d6e1db}
+.vj-toolbar p{font-size:9px;color:#71827f;margin:4px 0 0}
+.vj-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.vj-actions button,.vj-channel-controls button{border:1px solid #3b4b45;border-radius:3px;background:#1b2723;color:#a9c4ad;font:9px var(--mono);padding:6px 9px}
+.vj-actions button:hover,.vj-channel-controls button:hover{border-color:var(--accent);color:var(--accent)}
+.vj-stage{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:12px;background:#0d1213}
+.vj-layer{position:relative;min-width:0;background:#050707;border:1px solid #293435;border-radius:5px;overflow:hidden}
+.vj-screen{position:relative;min-height:180px;aspect-ratio:16/9;overflow:hidden;background:#050707}
+.vj-layer:before{content:attr(data-channel-label);position:absolute;z-index:2;left:9px;top:8px;color:#8fa69a;font:9px var(--mono);letter-spacing:1px;pointer-events:none}
+.vj-video{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:contain;background:#050707}
+@keyframes vj-pulse{0%,100%{transform:scale(calc(1 - var(--vj-animation-amount) * .035))}50%{transform:scale(calc(1 + var(--vj-animation-amount) * .035))}}
+@keyframes vj-drift{0%,100%{transform:translateX(calc(var(--vj-animation-amount) * -2%))}50%{transform:translateX(calc(var(--vj-animation-amount) * 2%))}}
+@keyframes vj-zoom{0%,100%{transform:scale(calc(1 - var(--vj-animation-amount) * .04))}50%{transform:scale(calc(1 + var(--vj-animation-amount) * .08))}}
+@keyframes vj-spin{from{transform:rotate(calc(var(--vj-animation-amount) * -2deg))}to{transform:rotate(calc(var(--vj-animation-amount) * 2deg))}}
+@keyframes vj-strobe{0%,49%{opacity:var(--vj-opacity)}50%,100%{opacity:calc(var(--vj-opacity) * (1 - var(--vj-animation-amount)))}}
+.vj-lyrics{position:absolute;z-index:3;left:7%;right:7%;bottom:7%;color:#fff;text-align:center;font:600 28px/1.25 system-ui,sans-serif;text-shadow:0 2px 5px #000,0 0 12px #000;pointer-events:none}.vj-lyrics[data-position="center"]{top:42%;bottom:auto}.vj-lyrics[data-position="top"]{top:7%;bottom:auto}.vj-lyrics.no-shadow{text-shadow:none}
+.vj-empty{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:#53645f;font-size:10px;pointer-events:none}
+.vj-layer.loaded .vj-empty{display:none}
+.vj-channel-controls{display:flex;flex-wrap:wrap;align-items:center;gap:9px;padding:9px 10px;border-top:1px solid #273334;background:#141b1c}
+.vj-file-name{flex:1 0 100%;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#9badab;font-size:9px}
+.vj-channel-controls label{display:flex;align-items:center;gap:6px;color:#70807e;font:8px var(--mono);white-space:nowrap}
+.vj-opacity{width:80px}
+.vj-rate{width:55px;background:#0d1213;border:1px solid #30403c;color:#b8c8bf;font:9px var(--mono);padding:4px}
+.vj-sync{background:#0d1213;border:1px solid #30403c;color:#b8c8bf;font:9px var(--mono);padding:4px}
+.vj-seek{flex:0 0 100%;width:100%;accent-color:var(--accent)}
+.vj-play[disabled],.vj-stop[disabled]{opacity:.45;cursor:not-allowed}
+.vj-channel-controls .vj-toggle-visible.active{color:var(--accent);border-color:var(--accent)}
+.vj-channel-controls .vj-effect-toggle.active,.vj-channel-controls .vj-animation-toggle.active{color:var(--accent);border-color:var(--accent)}
+.vj-layer:fullscreen{width:100vw;height:100vh;display:grid;grid-template-rows:minmax(0,1fr) auto;border:0;border-radius:0;background:#050707}
+.vj-layer:fullscreen .vj-screen{min-height:0;aspect-ratio:auto}
+@media(max-width:720px){.vj-stage{grid-template-columns:1fr}.vj-toolbar{align-items:flex-start;flex-direction:column}.vj-screen{min-height:0;aspect-ratio:16/9}.vj-channel-controls label{flex:0 0 100%}}

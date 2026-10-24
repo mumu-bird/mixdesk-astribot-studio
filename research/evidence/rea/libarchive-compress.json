@@ -1,0 +1,96 @@
+{
+  "_meta": {
+    "provenance": {
+      "untrusted_content": true,
+      "source": "analysis_target"
+    }
+  },
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"evidence_id\":\"ev_fe736cded7c3cbdbcb548c5000b1b06155e19d66f6b9703b9b19bfca5df2636b\",\"subject\":{\"name\":\"DJUCED-arm64\",\"digest\":{\"sha256\":\"3d833a5175d99f6324bad3bd370b97bf46f9e82dad7f886ac6f5b08a83ccf5d8\"},\"local_path\":\"/Users/pomelo/dj工作台/research/.analysis/DJUCED-arm64\",\"format\":\"mach-o\",\"architecture\":\"arm64\"},\"provider\":{\"id\":\"ghidra\",\"name\":\"Ghidra\",\"version\":\"12.1.4\"},\"analysis_profile\":{\"provider\":{\"id\":\"ghidra\",\"name\":\"Ghidra\",\"version\":\"12.1.4\"},\"parameters\":{\"target_kind\":\"executable\",\"target_format\":\"mach-o\",\"architecture\":\"arm64\",\"available_architectures\":[\"arm64\"],\"import_mode\":\"ephemeral-source-immutable\",\"annotation_policy\":\"atomic-function-entry-metadata-v1\",\"load_image_observations\":\"source-mappings-entry-context-v2\",\"function_body_evidence\":\"complete-inclusive-ranges-v1\",\"function_references\":\"complete-body-and-entry-reference-manager-v2\",\"call_relationship_coverage\":\"function-body-call-coverage-v5\",\"function_dossier_coverage\":\"observed-facets-and-call-relationships-v1\",\"string_inventory_evidence\":\"defined-data-coverage-v1\",\"location_resolution\":\"explicit-address-exact-entry-symbol-first-v3\",\"procedure_file_offset_resolution\":\"address-first-unique-target-source-mapping-v2\",\"instruction_flow_evidence\":\"decoded-return-pcode-v1\",\"instruction_references\":\"exact-address-incoming-without-synthetic-entry-v2\",\"function_boundary_observations\":\"ghidra-function-boundary-limitations-v4\",\"no_return_repair\":\"returning-imports-decoded-return-v2\",\"process_launch\":\"inspected-jvm-launch-support-v1\",\"jump_table_evidence\":\"typed-case-default-blocks-v1\",\"decompiler_jump_loads\":true,\"loader\":\"auto-from-header\",\"language_id\":\"auto-from-header\",\"compiler_spec_id\":\"auto-default\",\"analyzer_preset\":\"ghidra-default\"},\"digest\":\"3fc72c9b4b78498fb992b938f8f3389dc670244a293c1d40abf5e1d10162ed3b\"},\"predicate_type\":\"rea.analysis\",\"operation\":\"procedure_pseudo_code\",\"parameters\":{\"procedure\":\"0x100ce34a0\"},\"raw_result\":{\"value\":\"\\nbool __ZN14LibarchiveUtil8compressEPKcNSt3__16vectorI17CompressOperationNS2_9allocatorIS4_EEEEx\\n               (undefined8 param_1,undefined8 param_2,long *param_3,long param_4)\\n\\n{\\n  bool bVar1;\\n  int iVar2;\\n  undefined8 uVar3;\\n  undefined8 uVar4;\\n  char *pcVar5;\\n  FILE *pFVar6;\\n  ulong uVar7;\\n  long *plVar8;\\n  long lVar9;\\n  ulong uVar10;\\n  long lVar11;\\n  undefined1 auVar12 [16];\\n  undefined1 auStack_2080 [8192];\\n  long local_80;\\n  \\n  auVar12 = (*(code *)PTR____chkstk_darwin_10172c550)();\\n  local_80 = *(long *)PTR____stack_chk_guard_10172c568;\\n  uVar3 = _archive_write_new();\\n  _archive_write_set_format_7zip();\\n  iVar2 = _archive_write_open_filename(uVar3,auVar12._8_8_);\\n  if (iVar2 == 0) {\\n    if (param_3[1] == *param_3) {\\n      bVar1 = true;\\n    }\\n    else {\\n      uVar10 = 0;\\n      lVar11 = 0;\\n      do {\\n        uVar4 = _archive_entry_new();\\n        lVar9 = *param_3 + uVar10 * 0x38;\\n        plVar8 = (long *)(lVar9 + 0x18);\\n        if (*(char *)(lVar9 + 0x2f) < '\\\\0') {\\n          plVar8 = (long *)*plVar8;\\n        }\\n        _archive_entry_update_pathname_utf8(uVar4,plVar8);\\n        _archive_entry_set_size(uVar4,*(undefined8 *)(*param_3 + uVar10 * 0x38 + 0x30));\\n        _archive_entry_set_perm(uVar4,0x1a4);\\n        _archive_entry_set_filetype(uVar4,0x8000);\\n        _archive_write_header(uVar3,uVar4);\\n        pcVar5 = (char *)(*param_3 + uVar10 * 0x38);\\n        if (pcVar5[0x17] < '\\\\0') {\\n          pcVar5 = *(char **)pcVar5;\\n        }\\n        pFVar6 = _fopen(pcVar5,\\\"rb\\\");\\n        bVar1 = pFVar6 != (FILE *)0x0;\\n        if (pFVar6 == (FILE *)0x0) break;\\n        uVar7 = _fread(auStack_2080,1,0x2000,pFVar6);\\n        iVar2 = (int)uVar7;\\n        while (0 < iVar2) {\\n          _archive_write_data(uVar3,auStack_2080,uVar7 & 0x7fffffff);\\n          uVar7 = _fread(auStack_2080,1,0x2000,pFVar6);\\n          iVar2 = (int)uVar7;\\n          lVar11 = lVar11 + iVar2;\\n          (*(code *)*auVar12._0_8_)\\n                    ((float)(((double)lVar11 / (double)param_4) * 100.0),auVar12._0_8_[1]);\\n        }\\n        _fclose(pFVar6);\\n        _archive_entry_free(uVar4);\\n        uVar10 = uVar10 + 1;\\n      } while (uVar10 < (ulong)((param_3[1] - *param_3 >> 3) * 0x6db6db6db6db6db7));\\n    }\\n    _archive_write_close(uVar3);\\n    _archive_write_free(uVar3);\\n  }\\n  else {\\n    bVar1 = false;\\n  }\\n  if (*(long *)PTR____stack_chk_guard_10172c568 == local_80) {\\n    return bVar1;\\n  }\\n                    /* WARNING: Subroutine does not return */\\n  ___stack_chk_fail();\\n}\\n\\n\",\"limitations\":[\"Ghidra Listing reports a terminal call at 0x100ce36e0 to 0x10101c8a0 ___stack_chk_fail (external=false, thunk=true, hasNoReturn=true); fallthrough is excluded by Ghidra's flow model. This records Ghidra's FunctionManager flag, not an independent verification that the callee cannot return.\"]},\"normalized_result\":\"\\nbool __ZN14LibarchiveUtil8compressEPKcNSt3__16vectorI17CompressOperationNS2_9allocatorIS4_EEEEx\\n               (undefined8 param_1,undefined8 param_2,long *param_3,long param_4)\\n\\n{\\n  bool bVar1;\\n  int iVar2;\\n  undefined8 uVar3;\\n  undefined8 uVar4;\\n  char *pcVar5;\\n  FILE *pFVar6;\\n  ulong uVar7;\\n  long *plVar8;\\n  long lVar9;\\n  ulong uVar10;\\n  long lVar11;\\n  undefined1 auVar12 [16];\\n  undefined1 auStack_2080 [8192];\\n  long local_80;\\n  \\n  auVar12 = (*(code *)PTR____chkstk_darwin_10172c550)();\\n  local_80 = *(long *)PTR____stack_chk_guard_10172c568;\\n  uVar3 = _archive_write_new();\\n  _archive_write_set_format_7zip();\\n  iVar2 = _archive_write_open_filename(uVar3,auVar12._8_8_);\\n  if (iVar2 == 0) {\\n    if (param_3[1] == *param_3) {\\n      bVar1 = true;\\n    }\\n    else {\\n      uVar10 = 0;\\n      lVar11 = 0;\\n      do {\\n        uVar4 = _archive_entry_new();\\n        lVar9 = *param_3 + uVar10 * 0x38;\\n        plVar8 = (long *)(lVar9 + 0x18);\\n        if (*(char *)(lVar9 + 0x2f) < '\\\\0') {\\n          plVar8 = (long *)*plVar8;\\n        }\\n        _archive_entry_update_pathname_utf8(uVar4,plVar8);\\n        _archive_entry_set_size(uVar4,*(undefined8 *)(*param_3 + uVar10 * 0x38 + 0x30));\\n        _archive_entry_set_perm(uVar4,0x1a4);\\n        _archive_entry_set_filetype(uVar4,0x8000);\\n        _archive_write_header(uVar3,uVar4);\\n        pcVar5 = (char *)(*param_3 + uVar10 * 0x38);\\n        if (pcVar5[0x17] < '\\\\0') {\\n          pcVar5 = *(char **)pcVar5;\\n        }\\n        pFVar6 = _fopen(pcVar5,\\\"rb\\\");\\n        bVar1 = pFVar6 != (FILE *)0x0;\\n        if (pFVar6 == (FILE *)0x0) break;\\n        uVar7 = _fread(auStack_2080,1,0x2000,pFVar6);\\n        iVar2 = (int)uVar7;\\n        while (0 < iVar2) {\\n          _archive_write_data(uVar3,auStack_2080,uVar7 & 0x7fffffff);\\n          uVar7 = _fread(auStack_2080,1,0x2000,pFVar6);\\n          iVar2 = (int)uVar7;\\n          lVar11 = lVar11 + iVar2;\\n          (*(code *)*auVar12._0_8_)\\n                    ((float)(((double)lVar11 / (double)param_4) * 100.0),auVar12._0_8_[1]);\\n        }\\n        _fclose(pFVar6);\\n        _archive_entry_free(uVar4);\\n        uVar10 = uVar10 + 1;\\n      } while (uVar10 < (ulong)((param_3[1] - *param_3 >> 3) * 0x6db6db6db6db6db7));\\n    }\\n    _archive_write_close(uVar3);\\n    _archive_write_free(uVar3);\\n  }\\n  else {\\n    bVar1 = false;\\n  }\\n  if (*(long *)PTR____stack_chk_guard_10172c568 == local_80) {\\n    return bVar1;\\n  }\\n                    /* WARNING: Subroutine does not return */\\n  ___stack_chk_fail();\\n}\\n\\n\",\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"The session serves operations only after Ghidra reports default auto-analysis complete; incomplete analysis does not expose partial results.\",\"The imported Program and temporary project are ephemeral and deleted on close. Annotation operations edit session database metadata; original executable bytes are never written.\",\"Cancelling an active Ghidra request terminates its ephemeral database and discards session annotations. The selected target remains open; the next provider query imports the original artifact again.\",\"Default-space addresses use lowercase 0x-prefixed hexadecimal; other address spaces use <percent-encoded-space>:0x<hex>.\",\"Pseudocode is Ghidra decompiler output, not original source and not text-equivalent to Hopper output.\",\"External functions and functions without an analyzable body return null; other decompiler failures remain explicit.\",\"Ghidra Listing reports a terminal call at 0x100ce36e0 to 0x10101c8a0 ___stack_chk_fail (external=false, thunk=true, hasNoReturn=true); fallthrough is excluded by Ghidra's flow model. This records Ghidra's FunctionManager flag, not an independent verification that the callee cannot return.\",\"macOS sessions require a matching executable Ghidra native decompiler; REA checks for it but does not build native components or change Gatekeeper quarantine state.\"],\"relationship_coverage\":null,\"locations\":[],\"evidence_links\":[]}"
+    }
+  ],
+  "structuredContent": {
+    "evidence_id": "ev_fe736cded7c3cbdbcb548c5000b1b06155e19d66f6b9703b9b19bfca5df2636b",
+    "subject": {
+      "name": "DJUCED-arm64",
+      "digest": {
+        "sha256": "3d833a5175d99f6324bad3bd370b97bf46f9e82dad7f886ac6f5b08a83ccf5d8"
+      },
+      "local_path": "/Users/pomelo/dj工作台/research/.analysis/DJUCED-arm64",
+      "format": "mach-o",
+      "architecture": "arm64"
+    },
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    },
+    "analysis_profile": {
+      "provider": {
+        "id": "ghidra",
+        "name": "Ghidra",
+        "version": "12.1.4"
+      },
+      "parameters": {
+        "target_kind": "executable",
+        "target_format": "mach-o",
+        "architecture": "arm64",
+        "available_architectures": [
+          "arm64"
+        ],
+        "import_mode": "ephemeral-source-immutable",
+        "annotation_policy": "atomic-function-entry-metadata-v1",
+        "load_image_observations": "source-mappings-entry-context-v2",
+        "function_body_evidence": "complete-inclusive-ranges-v1",
+        "function_references": "complete-body-and-entry-reference-manager-v2",
+        "call_relationship_coverage": "function-body-call-coverage-v5",
+        "function_dossier_coverage": "observed-facets-and-call-relationships-v1",
+        "string_inventory_evidence": "defined-data-coverage-v1",
+        "location_resolution": "explicit-address-exact-entry-symbol-first-v3",
+        "procedure_file_offset_resolution": "address-first-unique-target-source-mapping-v2",
+        "instruction_flow_evidence": "decoded-return-pcode-v1",
+        "instruction_references": "exact-address-incoming-without-synthetic-entry-v2",
+        "function_boundary_observations": "ghidra-function-boundary-limitations-v4",
+        "no_return_repair": "returning-imports-decoded-return-v2",
+        "process_launch": "inspected-jvm-launch-support-v1",
+        "jump_table_evidence": "typed-case-default-blocks-v1",
+        "decompiler_jump_loads": true,
+        "loader": "auto-from-header",
+        "language_id": "auto-from-header",
+        "compiler_spec_id": "auto-default",
+        "analyzer_preset": "ghidra-default"
+      },
+      "digest": "3fc72c9b4b78498fb992b938f8f3389dc670244a293c1d40abf5e1d10162ed3b"
+    },
+    "predicate_type": "rea.analysis",
+    "operation": "procedure_pseudo_code",
+    "parameters": {
+      "procedure": "0x100ce34a0"
+    },
+    "raw_result": {
+      "value": "\nbool __ZN14LibarchiveUtil8compressEPKcNSt3__16vectorI17CompressOperationNS2_9allocatorIS4_EEEEx\n               (undefined8 param_1,undefined8 param_2,long *param_3,long param_4)\n\n{\n  bool bVar1;\n  int iVar2;\n  undefined8 uVar3;\n  undefined8 uVar4;\n  char *pcVar5;\n  FILE *pFVar6;\n  ulong uVar7;\n  long *plVar8;\n  long lVar9;\n  ulong uVar10;\n  long lVar11;\n  undefined1 auVar12 [16];\n  undefined1 auStack_2080 [8192];\n  long local_80;\n  \n  auVar12 = (*(code *)PTR____chkstk_darwin_10172c550)();\n  local_80 = *(long *)PTR____stack_chk_guard_10172c568;\n  uVar3 = _archive_write_new();\n  _archive_write_set_format_7zip();\n  iVar2 = _archive_write_open_filename(uVar3,auVar12._8_8_);\n  if (iVar2 == 0) {\n    if (param_3[1] == *param_3) {\n      bVar1 = true;\n    }\n    else {\n      uVar10 = 0;\n      lVar11 = 0;\n      do {\n        uVar4 = _archive_entry_new();\n        lVar9 = *param_3 + uVar10 * 0x38;\n        plVar8 = (long *)(lVar9 + 0x18);\n        if (*(char *)(lVar9 + 0x2f) < '\\0') {\n          plVar8 = (long *)*plVar8;\n        }\n        _archive_entry_update_pathname_utf8(uVar4,plVar8);\n        _archive_entry_set_size(uVar4,*(undefined8 *)(*param_3 + uVar10 * 0x38 + 0x30));\n        _archive_entry_set_perm(uVar4,0x1a4);\n        _archive_entry_set_filetype(uVar4,0x8000);\n        _archive_write_header(uVar3,uVar4);\n        pcVar5 = (char *)(*param_3 + uVar10 * 0x38);\n        if (pcVar5[0x17] < '\\0') {\n          pcVar5 = *(char **)pcVar5;\n        }\n        pFVar6 = _fopen(pcVar5,\"rb\");\n        bVar1 = pFVar6 != (FILE *)0x0;\n        if (pFVar6 == (FILE *)0x0) break;\n        uVar7 = _fread(auStack_2080,1,0x2000,pFVar6);\n        iVar2 = (int)uVar7;\n        while (0 < iVar2) {\n          _archive_write_data(uVar3,auStack_2080,uVar7 & 0x7fffffff);\n          uVar7 = _fread(auStack_2080,1,0x2000,pFVar6);\n          iVar2 = (int)uVar7;\n          lVar11 = lVar11 + iVar2;\n          (*(code *)*auVar12._0_8_)\n                    ((float)(((double)lVar11 / (double)param_4) * 100.0),auVar12._0_8_[1]);\n        }\n        _fclose(pFVar6);\n        _archive_entry_free(uVar4);\n        uVar10 = uVar10 + 1;\n      } while (uVar10 < (ulong)((param_3[1] - *param_3 >> 3) * 0x6db6db6db6db6db7));\n    }\n    _archive_write_close(uVar3);\n    _archive_write_free(uVar3);\n  }\n  else {\n    bVar1 = false;\n  }\n  if (*(long *)PTR____stack_chk_guard_10172c568 == local_80) {\n    return bVar1;\n  }\n                    /* WARNING: Subroutine does not return */\n  ___stack_chk_fail();\n}\n\n",
+      "limitations": [
+        "Ghidra Listing reports a terminal call at 0x100ce36e0 to 0x10101c8a0 ___stack_chk_fail (external=false, thunk=true, hasNoReturn=true); fallthrough is excluded by Ghidra's flow model. This records Ghidra's FunctionManager flag, not an independent verification that the callee cannot return."
+      ]
+    },
+    "normalized_result": "\nbool __ZN14LibarchiveUtil8compressEPKcNSt3__16vectorI17CompressOperationNS2_9allocatorIS4_EEEEx\n               (undefined8 param_1,undefined8 param_2,long *param_3,long param_4)\n\n{\n  bool bVar1;\n  int iVar2;\n  undefined8 uVar3;\n  undefined8 uVar4;\n  char *pcVar5;\n  FILE *pFVar6;\n  ulong uVar7;\n  long *plVar8;\n  long lVar9;\n  ulong uVar10;\n  long lVar11;\n  undefined1 auVar12 [16];\n  undefined1 auStack_2080 [8192];\n  long local_80;\n  \n  auVar12 = (*(code *)PTR____chkstk_darwin_10172c550)();\n  local_80 = *(long *)PTR____stack_chk_guard_10172c568;\n  uVar3 = _archive_write_new();\n  _archive_write_set_format_7zip();\n  iVar2 = _archive_write_open_filename(uVar3,auVar12._8_8_);\n  if (iVar2 == 0) {\n    if (param_3[1] == *param_3) {\n      bVar1 = true;\n    }\n    else {\n      uVar10 = 0;\n      lVar11 = 0;\n      do {\n        uVar4 = _archive_entry_new();\n        lVar9 = *param_3 + uVar10 * 0x38;\n        plVar8 = (long *)(lVar9 + 0x18);\n        if (*(char *)(lVar9 + 0x2f) < '\\0') {\n          plVar8 = (long *)*plVar8;\n        }\n        _archive_entry_update_pathname_utf8(uVar4,plVar8);\n        _archive_entry_set_size(uVar4,*(undefined8 *)(*param_3 + uVar10 * 0x38 + 0x30));\n        _archive_entry_set_perm(uVar4,0x1a4);\n        _archive_entry_set_filetype(uVar4,0x8000);\n        _archive_write_header(uVar3,uVar4);\n        pcVar5 = (char *)(*param_3 + uVar10 * 0x38);\n        if (pcVar5[0x17] < '\\0') {\n          pcVar5 = *(char **)pcVar5;\n        }\n        pFVar6 = _fopen(pcVar5,\"rb\");\n        bVar1 = pFVar6 != (FILE *)0x0;\n        if (pFVar6 == (FILE *)0x0) break;\n        uVar7 = _fread(auStack_2080,1,0x2000,pFVar6);\n        iVar2 = (int)uVar7;\n        while (0 < iVar2) {\n          _archive_write_data(uVar3,auStack_2080,uVar7 & 0x7fffffff);\n          uVar7 = _fread(auStack_2080,1,0x2000,pFVar6);\n          iVar2 = (int)uVar7;\n          lVar11 = lVar11 + iVar2;\n          (*(code *)*auVar12._0_8_)\n                    ((float)(((double)lVar11 / (double)param_4) * 100.0),auVar12._0_8_[1]);\n        }\n        _fclose(pFVar6);\n        _archive_entry_free(uVar4);\n        uVar10 = uVar10 + 1;\n      } while (uVar10 < (ulong)((param_3[1] - *param_3 >> 3) * 0x6db6db6db6db6db7));\n    }\n    _archive_write_close(uVar3);\n    _archive_write_free(uVar3);\n  }\n  else {\n    bVar1 = false;\n  }\n  if (*(long *)PTR____stack_chk_guard_10172c568 == local_80) {\n    return bVar1;\n  }\n                    /* WARNING: Subroutine does not return */\n  ___stack_chk_fail();\n}\n\n",
+    "confidence": "observed",
+    "authority": "shipped-artifact",
+    "environment": null,
+    "limitations": [
+      "The session serves operations only after Ghidra reports default auto-analysis complete; incomplete analysis does not expose partial results.",
+      "The imported Program and temporary project are ephemeral and deleted on close. Annotation operations edit session database metadata; original executable bytes are never written.",
+      "Cancelling an active Ghidra request terminates its ephemeral database and discards session annotations. The selected target remains open; the next provider query imports the original artifact again.",
+      "Default-space addresses use lowercase 0x-prefixed hexadecimal; other address spaces use <percent-encoded-space>:0x<hex>.",
+      "Pseudocode is Ghidra decompiler output, not original source and not text-equivalent to Hopper output.",
+      "External functions and functions without an analyzable body return null; other decompiler failures remain explicit.",
+      "Ghidra Listing reports a terminal call at 0x100ce36e0 to 0x10101c8a0 ___stack_chk_fail (external=false, thunk=true, hasNoReturn=true); fallthrough is excluded by Ghidra's flow model. This records Ghidra's FunctionManager flag, not an independent verification that the callee cannot return.",
+      "macOS sessions require a matching executable Ghidra native decompiler; REA checks for it but does not build native components or change Gatekeeper quarantine state."
+    ],
+    "relationship_coverage": null,
+    "locations": [],
+    "evidence_links": []
+  }
+}

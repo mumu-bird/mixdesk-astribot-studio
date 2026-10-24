@@ -1,0 +1,164 @@
+{
+  "version": "0.8.4",
+  "date": "2026-10-22",
+  "fullSuite": {
+    "startTime": "2026-10-22T10:16:44.844Z",
+    "duration": 764835.493,
+    "expected": 171,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "measurements": [
+    {
+      "test": "transport fades bound PCM discontinuities on play, seek and pause",
+      "status": "passed",
+      "metrics": {
+        "step": 0.002604186534881592,
+        "tail": 0,
+        "stereoError": 0,
+        "initial": 0,
+        "forward": 0.25,
+        "jumped": -0.25
+      }
+    },
+    {
+      "test": "Slip scratch restores the forward audio clock",
+      "status": "passed",
+      "metrics": {
+        "shadow": 2.0100000000000002,
+        "released": 2.0100000000000002,
+        "held": 0.5266666666666668,
+        "expected": 2.0100000000000002,
+        "playing": true,
+        "frequency": 710.4
+      }
+    },
+    {
+      "test": "Slip scratch restores the forward audio clock inside a loop",
+      "status": "passed",
+      "metrics": {
+        "shadow": 1.0100000000000002,
+        "released": 1.0100000000000002,
+        "held": 0.5266666666666668,
+        "expected": 1.0100000000000002,
+        "playing": true,
+        "frequency": 710.4
+      }
+    },
+    {
+      "test": "Slip scratch restores the reverse audio clock",
+      "status": "passed",
+      "metrics": {
+        "shadow": 1.19,
+        "released": 1.19,
+        "held": 0.27333333333333343,
+        "expected": 1.19,
+        "playing": true,
+        "frequency": 700.8
+      }
+    },
+    {
+      "test": "Slip scratch restores the reverse audio clock inside a loop",
+      "status": "passed",
+      "metrics": {
+        "shadow": 1.19,
+        "released": 1.19,
+        "held": 0.27333333333333343,
+        "expected": 1.19,
+        "playing": true,
+        "frequency": 700.8
+      }
+    },
+    {
+      "test": "Slip Hot Cue release during a scratch rebases the held transport; pause cancels late releases",
+      "status": "passed",
+      "metrics": {
+        "expected": 5.208,
+        "actual": 5.208,
+        "playing": true,
+        "stopped": 5.208,
+        "after": 5.208,
+        "restarted": false
+      }
+    },
+    {
+      "test": "live stereo key changes keep audio flowing without refilling the pitch processor",
+      "status": "passed",
+      "metrics": [
+        {
+          "silence": 0,
+          "original": 440,
+          "up": 880,
+          "down": 220
+        },
+        {
+          "silence": 0,
+          "original": 653.3333333333334,
+          "up": 1320,
+          "down": 330
+        }
+      ]
+    },
+    {
+      "test": "replacing held scratch transport and disabling Slip discard its old background clock",
+      "status": "passed",
+      "metrics": [
+        {
+          "action": "pause",
+          "discarded": true,
+          "held": 3,
+          "position": 3,
+          "playing": false
+        },
+        {
+          "action": "seek",
+          "discarded": true,
+          "held": 3,
+          "position": 7,
+          "playing": false
+        },
+        {
+          "action": "load",
+          "discarded": true,
+          "held": 3,
+          "position": 0,
+          "playing": false
+        },
+        {
+          "action": "play",
+          "discarded": true,
+          "held": 3,
+          "position": 3.032,
+          "playing": true
+        },
+        {
+          "action": "disableSlip",
+          "discarded": true,
+          "held": 3,
+          "position": 3.0266666666666664,
+          "playing": true
+        }
+      ]
+    },
+    {
+      "test": "rapid pitch-enabled transport replacements drain old voices without cutting the current voice",
+      "status": "passed",
+      "metrics": {
+        "playing": true,
+        "sameVoice": true,
+        "newestClosed": false,
+        "retiredClosed": true,
+        "remaining": 0,
+        "rms": 0.11112412886365912,
+        "disposed": true
+      }
+    }
+  ],
+  "audioCoreSha256": {
+    "src/audio.js": "3032b3dd9d70ac6dab6f28df901705254964dc0277487f47a4443d4d1e4da023",
+    "src/deck-performance.js": "7aa54e7a46b26533cff776899d4f3a6b130ad7fd11e588e976d2664a3db562f4",
+    "src/pitch-worklet.js": "98d5cf9e8b12c3556a96096595db38f4b23e121559c086a9b693825ccc16584b",
+    "tests/audio-core.spec.js": "0da18368ce3777953d49d75e89e0c4acd388cfa19801c89c5255d952ab40f053"
+  }
+}

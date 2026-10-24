@@ -1,0 +1,150 @@
+{
+  "source": "DJUCED 6.6.1 bundled controller XML mappings, re-extracted from existing inventory",
+  "note": "Mapping proves names/values and temporary semantics only, not original DSP, timing tolerance, or physical hardware behavior. MIX has no direct loop_roll or slicer mapping.",
+  "mappings": [
+    {
+      "file": "DJControl_Mix.djm",
+      "control": "CUE_A",
+      "action_name": "cue_stop",
+      "expression": "chann=1  action=cue_stop value=\"auto temporary\""
+    },
+    {
+      "file": "DJControl_Mix.djm",
+      "control": "CUE_B",
+      "action_name": "cue_stop",
+      "expression": "chann=2  action=cue_stop value=\"auto temporary\""
+    },
+    {
+      "file": "Hercules DJ Inpulse 500.djm",
+      "control": "ROLL1_A",
+      "action_name": "loop_roll",
+      "expression": "chann=1  action=loop_roll value=\"0.0625 temporary\""
+    },
+    {
+      "file": "Hercules DJ Inpulse 500.djm",
+      "control": "ROLL1_B",
+      "action_name": "loop_roll",
+      "expression": "chann=2  action=loop_roll value=\"0.0625 temporary\""
+    },
+    {
+      "file": "Hercules DJ Inpulse 500.djm",
+      "control": "ROLL2_A",
+      "action_name": "loop_roll",
+      "expression": "chann=1  action=loop_roll value=\"0.125 temporary\""
+    },
+    {
+      "file": "Hercules DJ Inpulse 500.djm",
+      "control": "ROLL2_B",
+      "action_name": "loop_roll",
+      "expression": "chann=2  action=loop_roll value=\"0.125 temporary\""
+    },
+    {
+      "file": "Hercules DJ Inpulse 500.djm",
+      "control": "ROLL3_A",
+      "action_name": "loop_roll",
+      "expression": "chann=1  action=loop_roll value=\"0.25 temporary\""
+    },
+    {
+      "file": "Hercules DJ Inpulse 500.djm",
+      "control": "ROLL3_B",
+      "action_name": "loop_roll",
+      "expression": "chann=2  action=loop_roll value=\"0.25 temporary\""
+    },
+    {
+      "file": "Hercules DJ Inpulse 500.djm",
+      "control": "ROLL4_A",
+      "action_name": "loop_roll",
+      "expression": "chann=1  action=loop_roll value=\"0.5 temporary\""
+    },
+    {
+      "file": "Hercules DJ Inpulse 500.djm",
+      "control": "ROLL4_B",
+      "action_name": "loop_roll",
+      "expression": "chann=2  action=loop_roll value=\"0.5 temporary\""
+    },
+    {
+      "file": "Hercules DJ Inpulse 500.djm",
+      "control": "ROLL5_A",
+      "action_name": "loop_roll",
+      "expression": "chann=1  action=loop_roll value=\"1 temporary\""
+    },
+    {
+      "file": "Hercules DJ Inpulse 500.djm",
+      "control": "ROLL5_B",
+      "action_name": "loop_roll",
+      "expression": "chann=2  action=loop_roll value=\"1 temporary\""
+    },
+    {
+      "file": "Hercules DJ Inpulse 500.djm",
+      "control": "ROLL6_A",
+      "action_name": "loop_roll",
+      "expression": "chann=1  action=loop_roll value=\"2 temporary\""
+    },
+    {
+      "file": "Hercules DJ Inpulse 500.djm",
+      "control": "ROLL6_B",
+      "action_name": "loop_roll",
+      "expression": "chann=2  action=loop_roll value=\"2 temporary\""
+    },
+    {
+      "file": "Hercules DJ Inpulse 500.djm",
+      "control": "ROLL7_A",
+      "action_name": "loop_roll",
+      "expression": "chann=1  action=loop_roll value=\"4 temporary\""
+    },
+    {
+      "file": "Hercules DJ Inpulse 500.djm",
+      "control": "ROLL7_B",
+      "action_name": "loop_roll",
+      "expression": "chann=2  action=loop_roll value=\"4 temporary\""
+    },
+    {
+      "file": "Hercules DJ Inpulse 500.djm",
+      "control": "ROLL8_A",
+      "action_name": "loop_roll",
+      "expression": "chann=1  action=loop_roll value=\"8 temporary\""
+    },
+    {
+      "file": "Hercules DJ Inpulse 500.djm",
+      "control": "ROLL8_B",
+      "action_name": "loop_roll",
+      "expression": "chann=2  action=loop_roll value=\"8 temporary\""
+    },
+    {
+      "file": "Hercules DJ Inpulse 500.djm",
+      "control": "SLC_FIX_TOG_A",
+      "action_name": "toggle_fixed_slicer",
+      "expression": "chann=1  action=toggle_fixed_slicer value=\"4\""
+    },
+    {
+      "file": "Hercules DJ Inpulse 500.djm",
+      "control": "SLC_FIX_TOG_B",
+      "action_name": "toggle_fixed_slicer",
+      "expression": "chann=2  action=toggle_fixed_slicer value=\"4\""
+    },
+    {
+      "file": "Hercules DJ Inpulse 500.djm",
+      "control": "SLC_TOG_A",
+      "action_name": "toggle_slicer",
+      "expression": "chann=1  action=toggle_slicer value=\"4\""
+    },
+    {
+      "file": "Hercules DJ Inpulse 500.djm",
+      "control": "SLC_TOG_B",
+      "action_name": "toggle_slicer",
+      "expression": "chann=2  action=toggle_slicer value=\"4\""
+    },
+    {
+      "file": "Hercules DJ Inpulse 500.djm",
+      "control": "Slip_A",
+      "action_name": "slip_mode",
+      "expression": "chann=1  action=slip_mode value=\"auto\""
+    },
+    {
+      "file": "Hercules DJ Inpulse 500.djm",
+      "control": "Slip_B",
+      "action_name": "slip_mode",
+      "expression": "chann=2  action=slip_mode value=\"auto\""
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "production": true,
+  "version": "0.8.4",
+  "channels": 2,
+  "bitDepth": 24,
+  "sampleRate": 48000,
+  "duration": 3.546666666666667,
+  "rms": 0.05276497389992455,
+  "peak": 0.39626145362854004,
+  "errors": [],
+  "remoteRequests": [],
+  "actions": [
+    "Key Lock",
+    "live +7/-5/0 semitones",
+    "Slip scratch",
+    "reverse",
+    "pause",
+    "WAV download"
+  ]
+}

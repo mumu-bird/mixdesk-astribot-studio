@@ -1,0 +1,19 @@
+{
+  "time": "2026-10-20T10:28:03.571Z",
+  "result": "not-passed",
+  "reason": "Original application displayed 100% unpack progress; all three destination directories remained empty.",
+  "observed": [
+    {
+      "path": "/Users/pomelo/Music/DJUCED/Samples/MIXDESK-interop",
+      "files": []
+    },
+    {
+      "path": "/Users/pomelo/Music/DJUCED/Samples/MIXDESK-interop-20261020-A",
+      "files": []
+    },
+    {
+      "path": "/Users/pomelo/Music/DJUCED/Samples/MIXDESK-libarchive-20261020",
+      "files": []
+    }
+  ]
+}

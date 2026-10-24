@@ -1,0 +1,269 @@
+{
+  "_meta": {
+    "provenance": {
+      "untrusted_content": true,
+      "source": "analysis_target"
+    }
+  },
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"evidence_id\":\"ev_8081ea4c19c5a0b6e75a86d02ef27d699b9a5ad462fa33146bc7e5a6f5bb3162\",\"subject\":{\"name\":\"DJUCED-arm64\",\"digest\":{\"sha256\":\"3d833a5175d99f6324bad3bd370b97bf46f9e82dad7f886ac6f5b08a83ccf5d8\"},\"local_path\":\"/Users/pomelo/dj工作台/research/.analysis/DJUCED-arm64\",\"format\":\"mach-o\",\"architecture\":\"arm64\"},\"provider\":{\"id\":\"ghidra\",\"name\":\"Ghidra\",\"version\":\"12.1.4\"},\"analysis_profile\":{\"provider\":{\"id\":\"ghidra\",\"name\":\"Ghidra\",\"version\":\"12.1.4\"},\"parameters\":{\"target_kind\":\"executable\",\"target_format\":\"mach-o\",\"architecture\":\"arm64\",\"available_architectures\":[\"arm64\"],\"import_mode\":\"ephemeral-source-immutable\",\"annotation_policy\":\"atomic-function-entry-metadata-v1\",\"load_image_observations\":\"source-mappings-entry-context-v2\",\"function_body_evidence\":\"complete-inclusive-ranges-v1\",\"function_references\":\"complete-body-and-entry-reference-manager-v2\",\"call_relationship_coverage\":\"function-body-call-coverage-v5\",\"function_dossier_coverage\":\"observed-facets-and-call-relationships-v1\",\"string_inventory_evidence\":\"defined-data-coverage-v1\",\"location_resolution\":\"explicit-address-exact-entry-symbol-first-v3\",\"procedure_file_offset_resolution\":\"address-first-unique-target-source-mapping-v2\",\"instruction_flow_evidence\":\"decoded-return-pcode-v1\",\"instruction_references\":\"exact-address-incoming-without-synthetic-entry-v2\",\"function_boundary_observations\":\"ghidra-function-boundary-limitations-v4\",\"no_return_repair\":\"returning-imports-decoded-return-v2\",\"process_launch\":\"inspected-jvm-launch-support-v1\",\"jump_table_evidence\":\"typed-case-default-blocks-v1\",\"decompiler_jump_loads\":true,\"loader\":\"auto-from-header\",\"language_id\":\"auto-from-header\",\"compiler_spec_id\":\"auto-default\",\"analyzer_preset\":\"ghidra-default\"},\"digest\":\"3fc72c9b4b78498fb992b938f8f3389dc670244a293c1d40abf5e1d10162ed3b\"},\"predicate_type\":\"rea.analysis\",\"operation\":\"search_procedures\",\"parameters\":{\"pattern\":\"Video::|Video[0-9]|hideVideo|setOpacity|setRate\",\"mode\":\"regex\",\"case_sensitive\":false},\"raw_result\":[{\"address\":\"EXTERNAL:0x440\",\"value\":\"@rpath/QtWidgets.framework/Versions/A/QtWidgets::__ZN22QGraphicsOpacityEffect10setOpacityEd\"},{\"address\":\"EXTERNAL:0x673\",\"value\":\"@rpath/QtGui.framework/Versions/A/QtGui::__ZN8QPainter10setOpacityEd\"},{\"address\":\"0x10074a5e8\",\"value\":\"__ZN5Video8setVideoE7QStringbi\"},{\"address\":\"0x10074a624\",\"value\":\"__ZN5Video7setRateEdi\"},{\"address\":\"0x10074a644\",\"value\":\"__ZN5Video3runEv\"},{\"address\":\"0x10074c000\",\"value\":\"__ZN5Video4readEv\"},{\"address\":\"0x10074d2e0\",\"value\":\"__ZN5Video9hideVideoEv\"},{\"address\":\"0x10074d2ec\",\"value\":\"__ZN5Video11resizeVideoEii\"},{\"address\":\"0x10074d308\",\"value\":\"__ZN5Video9moveVideoERK6QPoint\"},{\"address\":\"0x10074d314\",\"value\":\"__ZN5Video4playEi\"},{\"address\":\"0x10074d330\",\"value\":\"__ZN5Video5pauseExi\"},{\"address\":\"0x10074d390\",\"value\":\"__ZN5Video4stopEi\"},{\"address\":\"0x10074d3a8\",\"value\":\"__ZN5Video11setPositionExix\"},{\"address\":\"0x10074d408\",\"value\":\"__ZN5Video9setLoadedEbbi\"},{\"address\":\"0x10074d424\",\"value\":\"__ZN5Video10setOpacityEdi\"},{\"address\":\"0x100750300\",\"value\":\"__ZN6Lyrics7setRateEfx\"},{\"address\":\"0x1007c65c8\",\"value\":\"__ZN9AvsWindow7setRateEfx\"},{\"address\":\"0x1007cca3c\",\"value\":\"__ZNK5Video10metaObjectEv\"},{\"address\":\"0x1007cca58\",\"value\":\"__ZN5Video11qt_metacastEPKc\"},{\"address\":\"0x1007ccab4\",\"value\":\"__ZN5Video11qt_metacallEN11QMetaObject4CallEiPPv\"},{\"address\":\"0x101017c8c\",\"value\":\"__ZN22QGraphicsOpacityEffect10setOpacityEd\"},{\"address\":\"0x1010196f0\",\"value\":\"__ZN8QPainter10setOpacityEd\"}],\"normalized_result\":[{\"address\":\"EXTERNAL:0x440\",\"value\":\"@rpath/QtWidgets.framework/Versions/A/QtWidgets::__ZN22QGraphicsOpacityEffect10setOpacityEd\"},{\"address\":\"EXTERNAL:0x673\",\"value\":\"@rpath/QtGui.framework/Versions/A/QtGui::__ZN8QPainter10setOpacityEd\"},{\"address\":\"0x10074a5e8\",\"value\":\"__ZN5Video8setVideoE7QStringbi\"},{\"address\":\"0x10074a624\",\"value\":\"__ZN5Video7setRateEdi\"},{\"address\":\"0x10074a644\",\"value\":\"__ZN5Video3runEv\"},{\"address\":\"0x10074c000\",\"value\":\"__ZN5Video4readEv\"},{\"address\":\"0x10074d2e0\",\"value\":\"__ZN5Video9hideVideoEv\"},{\"address\":\"0x10074d2ec\",\"value\":\"__ZN5Video11resizeVideoEii\"},{\"address\":\"0x10074d308\",\"value\":\"__ZN5Video9moveVideoERK6QPoint\"},{\"address\":\"0x10074d314\",\"value\":\"__ZN5Video4playEi\"},{\"address\":\"0x10074d330\",\"value\":\"__ZN5Video5pauseExi\"},{\"address\":\"0x10074d390\",\"value\":\"__ZN5Video4stopEi\"},{\"address\":\"0x10074d3a8\",\"value\":\"__ZN5Video11setPositionExix\"},{\"address\":\"0x10074d408\",\"value\":\"__ZN5Video9setLoadedEbbi\"},{\"address\":\"0x10074d424\",\"value\":\"__ZN5Video10setOpacityEdi\"},{\"address\":\"0x100750300\",\"value\":\"__ZN6Lyrics7setRateEfx\"},{\"address\":\"0x1007c65c8\",\"value\":\"__ZN9AvsWindow7setRateEfx\"},{\"address\":\"0x1007cca3c\",\"value\":\"__ZNK5Video10metaObjectEv\"},{\"address\":\"0x1007cca58\",\"value\":\"__ZN5Video11qt_metacastEPKc\"},{\"address\":\"0x1007ccab4\",\"value\":\"__ZN5Video11qt_metacallEN11QMetaObject4CallEiPPv\"},{\"address\":\"0x101017c8c\",\"value\":\"__ZN22QGraphicsOpacityEffect10setOpacityEd\"},{\"address\":\"0x1010196f0\",\"value\":\"__ZN8QPainter10setOpacityEd\"}],\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"The session serves operations only after Ghidra reports default auto-analysis complete; incomplete analysis does not expose partial results.\",\"The imported Program and temporary project are ephemeral and deleted on close. Annotation operations edit session database metadata; original executable bytes are never written.\",\"Cancelling an active Ghidra request terminates its ephemeral database and discards session annotations. The selected target remains open; the next provider query imports the original artifact again.\",\"Default-space addresses use lowercase 0x-prefixed hexadecimal; other address spaces use <percent-encoded-space>:0x<hex>.\",\"Regex mode uses Java Pattern semantics. Matcher or compiler stack exhaustion returns a resource constraint without closing the session; literal mode avoids regex recursion and returns complete matching values.\",\"macOS sessions require a matching executable Ghidra native decompiler; REA checks for it but does not build native components or change Gatekeeper quarantine state.\"],\"relationship_coverage\":null,\"locations\":[],\"evidence_links\":[]}"
+    }
+  ],
+  "structuredContent": {
+    "evidence_id": "ev_8081ea4c19c5a0b6e75a86d02ef27d699b9a5ad462fa33146bc7e5a6f5bb3162",
+    "subject": {
+      "name": "DJUCED-arm64",
+      "digest": {
+        "sha256": "3d833a5175d99f6324bad3bd370b97bf46f9e82dad7f886ac6f5b08a83ccf5d8"
+      },
+      "local_path": "/Users/pomelo/dj工作台/research/.analysis/DJUCED-arm64",
+      "format": "mach-o",
+      "architecture": "arm64"
+    },
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    },
+    "analysis_profile": {
+      "provider": {
+        "id": "ghidra",
+        "name": "Ghidra",
+        "version": "12.1.4"
+      },
+      "parameters": {
+        "target_kind": "executable",
+        "target_format": "mach-o",
+        "architecture": "arm64",
+        "available_architectures": [
+          "arm64"
+        ],
+        "import_mode": "ephemeral-source-immutable",
+        "annotation_policy": "atomic-function-entry-metadata-v1",
+        "load_image_observations": "source-mappings-entry-context-v2",
+        "function_body_evidence": "complete-inclusive-ranges-v1",
+        "function_references": "complete-body-and-entry-reference-manager-v2",
+        "call_relationship_coverage": "function-body-call-coverage-v5",
+        "function_dossier_coverage": "observed-facets-and-call-relationships-v1",
+        "string_inventory_evidence": "defined-data-coverage-v1",
+        "location_resolution": "explicit-address-exact-entry-symbol-first-v3",
+        "procedure_file_offset_resolution": "address-first-unique-target-source-mapping-v2",
+        "instruction_flow_evidence": "decoded-return-pcode-v1",
+        "instruction_references": "exact-address-incoming-without-synthetic-entry-v2",
+        "function_boundary_observations": "ghidra-function-boundary-limitations-v4",
+        "no_return_repair": "returning-imports-decoded-return-v2",
+        "process_launch": "inspected-jvm-launch-support-v1",
+        "jump_table_evidence": "typed-case-default-blocks-v1",
+        "decompiler_jump_loads": true,
+        "loader": "auto-from-header",
+        "language_id": "auto-from-header",
+        "compiler_spec_id": "auto-default",
+        "analyzer_preset": "ghidra-default"
+      },
+      "digest": "3fc72c9b4b78498fb992b938f8f3389dc670244a293c1d40abf5e1d10162ed3b"
+    },
+    "predicate_type": "rea.analysis",
+    "operation": "search_procedures",
+    "parameters": {
+      "pattern": "Video::|Video[0-9]|hideVideo|setOpacity|setRate",
+      "mode": "regex",
+      "case_sensitive": false
+    },
+    "raw_result": [
+      {
+        "address": "EXTERNAL:0x440",
+        "value": "@rpath/QtWidgets.framework/Versions/A/QtWidgets::__ZN22QGraphicsOpacityEffect10setOpacityEd"
+      },
+      {
+        "address": "EXTERNAL:0x673",
+        "value": "@rpath/QtGui.framework/Versions/A/QtGui::__ZN8QPainter10setOpacityEd"
+      },
+      {
+        "address": "0x10074a5e8",
+        "value": "__ZN5Video8setVideoE7QStringbi"
+      },
+      {
+        "address": "0x10074a624",
+        "value": "__ZN5Video7setRateEdi"
+      },
+      {
+        "address": "0x10074a644",
+        "value": "__ZN5Video3runEv"
+      },
+      {
+        "address": "0x10074c000",
+        "value": "__ZN5Video4readEv"
+      },
+      {
+        "address": "0x10074d2e0",
+        "value": "__ZN5Video9hideVideoEv"
+      },
+      {
+        "address": "0x10074d2ec",
+        "value": "__ZN5Video11resizeVideoEii"
+      },
+      {
+        "address": "0x10074d308",
+        "value": "__ZN5Video9moveVideoERK6QPoint"
+      },
+      {
+        "address": "0x10074d314",
+        "value": "__ZN5Video4playEi"
+      },
+      {
+        "address": "0x10074d330",
+        "value": "__ZN5Video5pauseExi"
+      },
+      {
+        "address": "0x10074d390",
+        "value": "__ZN5Video4stopEi"
+      },
+      {
+        "address": "0x10074d3a8",
+        "value": "__ZN5Video11setPositionExix"
+      },
+      {
+        "address": "0x10074d408",
+        "value": "__ZN5Video9setLoadedEbbi"
+      },
+      {
+        "address": "0x10074d424",
+        "value": "__ZN5Video10setOpacityEdi"
+      },
+      {
+        "address": "0x100750300",
+        "value": "__ZN6Lyrics7setRateEfx"
+      },
+      {
+        "address": "0x1007c65c8",
+        "value": "__ZN9AvsWindow7setRateEfx"
+      },
+      {
+        "address": "0x1007cca3c",
+        "value": "__ZNK5Video10metaObjectEv"
+      },
+      {
+        "address": "0x1007cca58",
+        "value": "__ZN5Video11qt_metacastEPKc"
+      },
+      {
+        "address": "0x1007ccab4",
+        "value": "__ZN5Video11qt_metacallEN11QMetaObject4CallEiPPv"
+      },
+      {
+        "address": "0x101017c8c",
+        "value": "__ZN22QGraphicsOpacityEffect10setOpacityEd"
+      },
+      {
+        "address": "0x1010196f0",
+        "value": "__ZN8QPainter10setOpacityEd"
+      }
+    ],
+    "normalized_result": [
+      {
+        "address": "EXTERNAL:0x440",
+        "value": "@rpath/QtWidgets.framework/Versions/A/QtWidgets::__ZN22QGraphicsOpacityEffect10setOpacityEd"
+      },
+      {
+        "address": "EXTERNAL:0x673",
+        "value": "@rpath/QtGui.framework/Versions/A/QtGui::__ZN8QPainter10setOpacityEd"
+      },
+      {
+        "address": "0x10074a5e8",
+        "value": "__ZN5Video8setVideoE7QStringbi"
+      },
+      {
+        "address": "0x10074a624",
+        "value": "__ZN5Video7setRateEdi"
+      },
+      {
+        "address": "0x10074a644",
+        "value": "__ZN5Video3runEv"
+      },
+      {
+        "address": "0x10074c000",
+        "value": "__ZN5Video4readEv"
+      },
+      {
+        "address": "0x10074d2e0",
+        "value": "__ZN5Video9hideVideoEv"
+      },
+      {
+        "address": "0x10074d2ec",
+        "value": "__ZN5Video11resizeVideoEii"
+      },
+      {
+        "address": "0x10074d308",
+        "value": "__ZN5Video9moveVideoERK6QPoint"
+      },
+      {
+        "address": "0x10074d314",
+        "value": "__ZN5Video4playEi"
+      },
+      {
+        "address": "0x10074d330",
+        "value": "__ZN5Video5pauseExi"
+      },
+      {
+        "address": "0x10074d390",
+        "value": "__ZN5Video4stopEi"
+      },
+      {
+        "address": "0x10074d3a8",
+        "value": "__ZN5Video11setPositionExix"
+      },
+      {
+        "address": "0x10074d408",
+        "value": "__ZN5Video9setLoadedEbbi"
+      },
+      {
+        "address": "0x10074d424",
+        "value": "__ZN5Video10setOpacityEdi"
+      },
+      {
+        "address": "0x100750300",
+        "value": "__ZN6Lyrics7setRateEfx"
+      },
+      {
+        "address": "0x1007c65c8",
+        "value": "__ZN9AvsWindow7setRateEfx"
+      },
+      {
+        "address": "0x1007cca3c",
+        "value": "__ZNK5Video10metaObjectEv"
+      },
+      {
+        "address": "0x1007cca58",
+        "value": "__ZN5Video11qt_metacastEPKc"
+      },
+      {
+        "address": "0x1007ccab4",
+        "value": "__ZN5Video11qt_metacallEN11QMetaObject4CallEiPPv"
+      },
+      {
+        "address": "0x101017c8c",
+        "value": "__ZN22QGraphicsOpacityEffect10setOpacityEd"
+      },
+      {
+        "address": "0x1010196f0",
+        "value": "__ZN8QPainter10setOpacityEd"
+      }
+    ],
+    "confidence": "observed",
+    "authority": "shipped-artifact",
+    "environment": null,
+    "limitations": [
+      "The session serves operations only after Ghidra reports default auto-analysis complete; incomplete analysis does not expose partial results.",
+      "The imported Program and temporary project are ephemeral and deleted on close. Annotation operations edit session database metadata; original executable bytes are never written.",
+      "Cancelling an active Ghidra request terminates its ephemeral database and discards session annotations. The selected target remains open; the next provider query imports the original artifact again.",
+      "Default-space addresses use lowercase 0x-prefixed hexadecimal; other address spaces use <percent-encoded-space>:0x<hex>.",
+      "Regex mode uses Java Pattern semantics. Matcher or compiler stack exhaustion returns a resource constraint without closing the session; literal mode avoids regex recursion and returns complete matching values.",
+      "macOS sessions require a matching executable Ghidra native decompiler; REA checks for it but does not build native components or change Gatekeeper quarantine state."
+    ],
+    "relationship_coverage": null,
+    "locations": [],
+    "evidence_links": []
+  }
+}

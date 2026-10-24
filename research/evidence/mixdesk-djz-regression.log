@@ -1,0 +1,19 @@
+
+> mixdesk@0.8.0 test
+> playwright test tests/djz-export.spec.js
+
+
+Running 5 tests using 1 worker
+
+(node:25008) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+  ✓  1 tests/djz-export.spec.js:14:5 › DJZ is readable by libarchive and preserves six modes, holes and real cropped stereo PCM (4.4s)
+
+  ✓  2 tests/djz-export.spec.js:48:5 › empty decks export four groups, quantize off and no invented audio (1.6s)
+
+  ✓  3 tests/djz-export.spec.js:55:5 › export reports clipping, preserves the source and rejects unsupported channels (1.6s)
+  ✓  4 tests/djz-export.spec.js:65:5 › export can cancel a loading compressor and recover for another download (1.8s)
+  ✓  5 tests/djz-export.spec.js:73:5 › export works on mobile with local assets only (1.6s)
+
+  5 passed (12.3s)

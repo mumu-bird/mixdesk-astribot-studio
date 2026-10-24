@@ -1,0 +1,14 @@
+id: com.astribot.app.dj-master
+name: DJ Master
+description: 本地双曲目音乐预排与真实转场试听
+icon: music-2
+port: 12340
+uiType: "html"
+
+dependencies:
+  python: ">= 3.9"
+  pip:
+    - "fastapi>=0.110"
+    - "uvicorn[standard]>=0.27"
+    - "python-multipart>=0.0.9"
+
